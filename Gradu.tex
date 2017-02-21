@@ -8,6 +8,7 @@
 \usepackage{amsfonts}         
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{enumerate}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -15,6 +16,8 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\No}{\mathbb{N}_0}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Pot}{\mathcal{P}}
 \newcommand{\diam}{\operatorname{diam}}
 
 \theoremstyle{plain}
@@ -74,11 +77,52 @@
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
 \chapter{Esitietoja}
-
-
+Olkoon $X$ joukko ja $V,W$ sen osajoukkoja.
+Merkitään tällöin joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
+\chapter{Uniformiset rakenteet}
+Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
+%\\
+%\\
+%Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
+\begin{maar}
+Uniforminen rakenne (tai uniformisuus) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
+\begin{enumerate} [(U1)]
+\item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
+\item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
+\item\label{U_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in\U$ osajoukko,
+\item\label{U_II} Jos $V\in\U$, niin $V^{-1}=\{(y,x)\mid (x,y)\in V\}\in\U$,
+\item\label{U_III} Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+\end{enumerate}
+Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U$ lähistöksi. Joukkoa $X$ joka on varustettu uniformisuudella $\U$ sanotaan univormiseksi avaruudeksi.
+\end{maar}
+\begin{huom}
+Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvien pisteiden $x,y\in V$ sanotaan olevan $V-$lähellä, tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
+\end{huom}
+\begin{huom}
+Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
+\begin{enumerate}[(U$\ref{U_II}$a)]
+\item \label{Uaehto} 
+Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subset V$.
+\end{enumerate}
+%Ehto (U$\ref{U_II}$\ref{Uaehto}) seuraa
+%ehdoista (U$\ref{U_II}$) ja (U$\ref{U_III}$), sillä\dots
+%
+%Ehdot 
+\end{huom}
+\begin{huom}
+Jos joukko $X$ on tyhjä, niin ehdon (U$\ref{U_I}$) nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
+\end{huom}
+\begin{maar}
+Olkoon $X$ joukko ja joukko $\U\subset X\times X$ sen uniformiteetti. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
+\end{maar}
+\begin{huom}
+\end{huom}
 \begin{thebibliography}{9}
 
-\bibitem{Eom}
+\bibitem{Eom1}
+Nicolas Bourbaki: General Topology Part 1, 1.\ painos, Hermann, 1966.
+
+\bibitem{Eom2}
 Nicolas Bourbaki: General Topology Part 2, 1.\ painos, Hermann, 1966.
 
 %\bibitem{Bor}
