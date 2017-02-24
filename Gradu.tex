@@ -96,7 +96,7 @@ Uniforminen rakenne (tai uniformisuus) joukolle $X$ annetaan karteesisen tulon $
 Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U$ lähistöksi. Joukkoa $X$ joka on varustettu uniformisuudella $\U$ sanotaan univormiseksi avaruudeksi.
 \end{maar}
 \begin{huom}
-Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvien pisteiden $x,y\in V$ sanotaan olevan $V-$lähellä, tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
+Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
 \begin{huom}
 Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
@@ -128,8 +128,14 @@ $,
 \end{maar}
 \begin{maar}
 \emph{Uniformisen avaruuden topologia.}
-Olkoon joukko $X$ varustettu uniformisuudella $\U$ ja $x\in X$. 
-Olkoon $V(x)=\{ y\in X\mid (x,y)\in V \}$ lähistön $V\in \U$ määräämä ympäristö alkiolle $x\in X$.
+Olkoon joukko $X$ varustettu uniformisuudella $\U$.
+Olkoon $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Olkoon %$V(x)\subset X$,
+\begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
+\text{ ja }
+B(x)=\{ V(x)\mid V\in\U \}
+\end{equation*}
+joukkoja.
+Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö alkiolle $x$ ja joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko kyseisessä topologiassa.
 \end{maar}
 \begin{huom}
 \end{huom}
