@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{enumerate}
+\usepackage{enumitem}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
@@ -84,9 +85,9 @@ Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin 
 %\\
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
-\begin{maar}
+\begin{maar}\label{uniformi_maar}
 Uniforminen rakenne (tai uniformisuus) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
-\begin{enumerate} [(U1)]
+\begin{enumerate} [label=(U\arabic*),ref=(U\arabic*)]
 \item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
 \item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
 \item\label{U_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in\U$ osajoukko,
@@ -99,9 +100,11 @@ Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U
 Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
 \begin{huom}
-Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
-\begin{enumerate}[(U$\ref{U_II}$a)]
-\item \label{Uaehto} 
+%Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
+Mikäli muut ehdot pätevät, voidaan ehdot \ref{U_II} ja \ref{U_III}) korvata yhtäpitävällä ehdolla 
+\begin{enumerate}
+%\item[(U$\ref{U_II}$a)] \label{Uaehto} 
+\item[(Ua)] \label{Uaehto} 
 Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subset V$.
 \end{enumerate}
 %Ehto (U$\ref{U_II}$\ref{Uaehto}) seuraa
@@ -110,7 +113,9 @@ Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subse
 %Ehdot 
 \end{huom}
 \begin{huom}
-Jos joukko $X$ on tyhjä, niin ehdon (U$\ref{U_I}$) nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
+%Jos joukko $X$ on tyhjä, niin ehdon (U$\ref{U_I}$) 
+Jos joukko $X$ on tyhjä, niin ehdon \ref{U_I} 
+nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
 \end{huom}
 \begin{maar}
 Olkoon $X$ joukko ja joukko $\U\subset X\times X$ sen uniformiteetti. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
@@ -118,7 +123,7 @@ Olkoon $X$ joukko ja joukko $\U\subset X\times X$ sen uniformiteetti. Tällöin 
 \begin{maar}
 Olkoon $X$ joukko. Joukko $B\subset \Pot (X\times X)$ on joukon $X$ uniformisuuden kanta, jos joukolle $B$ pätee
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
-\begin{enumerate} [(B1)]
+\begin{enumerate} [label=(B\arabic*)]
 \item\label{B_I} Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item\label{U'_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item\label{U'_II} Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
@@ -126,8 +131,9 @@ $,
 \item\label{U'_III} Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 \end{maar}
-\begin{maar}
-\emph{Uniformisen avaruuden topologia.}
+\begin{lause}
+%\emph{Uniformisen avaruuden topologia.}
+Uniformisen avaruuden topologia.
 Olkoon joukko $X$ varustettu uniformisuudella $\U$.
 Olkoon $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Olkoon %$V(x)\subset X$,
 \begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
@@ -136,7 +142,29 @@ B(x)=\{ V(x)\mid V\in\U \}
 \end{equation*}
 joukkoja.
 Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö alkiolle $x$ ja joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko kyseisessä topologiassa.
-\end{maar}
+\begin{proof}
+Olkoon joukko $X$ varustettu uniformisuudella $\U$.
+Olkoon $x\in X$ alkio, $V\in\U$ lähistö avaruudessa $X$ ja joukot $V(x)$ ja $B(x)$ kuten edellä. 
+%
+Alkiolle $x$ pätee $x\in V(x)$, joten joukko $V(x)$ on epätyhjä. 
+Jokaiselle lähistölle $V,W\in\U$ pätee 
+\begin{align*}
+V(x)\cup W(x) =&\{ y\in X\mid (x,y)\in V \text{ tai } (x,y)\in W \}\\
+=&\{ y\in X\mid (x,y)\in V\cup W \}
+\in B(x),
+\end{align*} 
+ja 
+\begin{align*}
+V(x)\cap W(x) =&\{ y\in X\mid (x,y)\in V \text{ ja } (x,y)\in W \}\\
+=&\{ y\in X\mid (x,y)\in V\cap W \}
+\in B(x)
+\end{align*} 
+sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojalla $ V\cup W \in B$ ja $ V\cap W \in B$. Tällöin on olemassa yksikäsitteinen topologia, jossa $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko.\cite{Eom1}
+%yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
+\end{proof}
+\end{lause}
+\begin{lause}
+\end{lause}
 \begin{huom}
 \end{huom}
 \begin{lause}
