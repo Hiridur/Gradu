@@ -18,6 +18,7 @@
 \newcommand{\No}{\mathbb{N}_0}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\U}{\mathcal{U}}
+\newcommand{\T}{\mathcal{T}}
 \newcommand{\Pot}{\mathcal{P}}
 \newcommand{\diam}{\operatorname{diam}}
 
@@ -80,6 +81,24 @@
 \chapter{Esitietoja}
 Olkoon $X$ joukko ja $V,W$ sen osajoukkoja.
 Merkitään tällöin joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
+\begin{maar}%Topo2 2.14
+Topologian ympäristökanta. 
+Olkoon $(X,d)$ topologinen avaruus ja $x\in X$. 
+Kokoelma $B(x)$ alkion $x$ ympäristöjä on alkion $x$ ympäristökanta (topologiassa $\T$), jos jokainen alkion $x$ ympäristö sisältää kokoelman $B(x)$ jonkin jäsenen. 
+\end{maar}
+\begin{esim}
+Jos $B$ on avaruuden $(X,\T)$ kanta ja $x\in X$, niin $\{A\mid x\in A\in B\}$ on alkion $x$ eräs ympäristökanta.
+Käänteisesti, jos jokaisella $x\in X$ on annettu ympäristökanta $B(x)$ avaruudessa $(X,\T)$, niin $\bigcup\{B(x)\mid x\in X\}$ on avaruuden $(X,\T)$ kanta.
+\end{esim}
+%\begin{maar}
+%Joukon $X$ peite $A$ virittää yksikäsitteisesti
+%\end{maar}
+\begin{lause}
+Olkoon $A$ joukon $X$ peite. Tällöin $A$ on joukon $X$ erään topologian $\T$ esikanta. Lisäksi $\T$ on karkein niistä joukon $X$ topologioista, joilla $A\in\T$. Tämä topologia $\T$ on peitteen $A$ yksikäsitteisesti määräämä, ja sitä sanotaan peitteen $A$ virittämäksi joukon $X$ topologiaksi.
+\begin{proof}
+%topo2 2.19
+\end{proof}
+\end{lause}
 \chapter{Uniformiset rakenteet}
 Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
 %\\
@@ -163,16 +182,6 @@ sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojall
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
 \end{proof}
 \end{lause}
-\begin{lause}
-\end{lause}
-\begin{huom}
-\end{huom}
-\begin{lause}
-\end{lause}
-\begin{maar}
-\end{maar}
-\begin{kor}
-\end{kor}
 \begin{maar}
 %Uniformisesti jatkuvat kuvaukset. 
 Olkoon $X$ ja $X'$ uniformeja avaruuksia 
@@ -203,6 +212,7 @@ Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarr
 Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on jatkuva.
 \end{proof}
 \end{lause}
+
 \begin{huom}
 \end{huom}
 \begin{lause}
