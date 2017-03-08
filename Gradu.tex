@@ -171,6 +171,46 @@ sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojall
 \end{lause}
 \begin{maar}
 \end{maar}
+\begin{kor}
+\end{kor}
+\begin{maar}
+%Uniformisesti jatkuvat kuvaukset. 
+Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ kuvaus.
+Kuvaus $f$ on \emph{uniformisti jatkuva}, jos jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$ niin, että jokaiselle $(x,y)\in V$ pätee $(f(x),f(y))\in V'$. 
+%Toisin sanoen jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa.
+\end{maar}
+\begin{kor}\label{uniformi alkukuva}
+Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
+kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
+Tällöin jos $V'$ on avaruuden $X'$ lähistö, niin alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
+\end{kor}
+\begin{lause}
+Jokainen uniformisti jatkuva kuvaus on jatkuva uniformien määräämien topologioiden suhteen.
+\begin{proof}
+Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
+kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
+Olkoon $V'$ avaruuden $X'$ lähistö ja $x'\in X'$ alkio. 
+Korollaarin \ref{uniformi alkukuva} mukaan lähistön $V'$ alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö. 
+Avaruuden $X'$ uniformiteetin määrittämässä topologiassa kaava $V'(x')$ määrää alkion $x'$ ympäristön.
+Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarrow}V'(g^{\leftarrow}(x'))$ on alkion $x'$ alkukuvan $g^{\leftarrow}(x')\in X$ ympäristö. 
+%erikseen 1-käs? eli alkukuva ympäristöstä lähistön sijaan?
+
+Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on jatkuva.
+\end{proof}
+\end{lause}
+\begin{huom}
+\end{huom}
+\begin{lause}
+\end{lause}
+\begin{maar}
+\end{maar}
+\begin{kor}
+\end{kor}
 \begin{thebibliography}{9}
 
 \bibitem{Eom1}
