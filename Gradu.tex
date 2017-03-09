@@ -120,7 +120,7 @@ Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y
 \end{huom}
 \begin{huom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
-Mikäli muut ehdot pätevät, voidaan ehdot \ref{U_II} ja \ref{U_III}) korvata yhtäpitävällä ehdolla 
+Mikäli muut ehdot pätevät, voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla 
 \begin{enumerate}
 %\item[(U$\ref{U_II}$a)] \label{Uaehto} 
 \item[(Ua)] \label{Uaehto} 
@@ -182,6 +182,9 @@ sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojall
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
 \end{proof}
 \end{lause}
+\begin{huom}
+Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
+\end{huom}
 \begin{maar}
 %Uniformisesti jatkuvat kuvaukset. 
 Olkoon $X$ ja $X'$ uniformeja avaruuksia 
@@ -212,6 +215,36 @@ Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarr
 Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on jatkuva.
 \end{proof}
 \end{lause}
+\begin{lause}
+Olkoon $X$, $X'$ ja $X''$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia. Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
+\begin{proof}
+Lisätään myöhemmin.
+\end{proof}
+\end{lause}
+\begin{maar}
+Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. Kuvaus $f$ on isomorfia, jos sekä kuvaus $f$ että sen käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
+\end{maar}
+\begin{maar}
+\emph{Uniformiteettien vertailtavuus.} 
+Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
+Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$, 
+jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$. 
+Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
+Kahta uniformiteettia $\U_1$ ja $\U_2$ on mahdollista vertailla, jos $\U_1$ on hienompi kuin $\U_2$.
+\end{maar}
+\begin{kor}
+Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
+Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$ jos ja vain jos jokaisella lähistöllä $V\in\U_2$ pätee $V\in\U_1$.
+\end{kor}
+\begin{kor}
+Olkoon $X$ joukko, $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$ ja 
+$\U_1$ on hienompi kuin $\U_2$. Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin uniformiteetin $\U_2$ indusoima topologia.
+\begin{proof}
+Ympäristökannat.
+\end{proof}
+\end{kor}
 
 \begin{huom}
 \end{huom}
@@ -221,6 +254,8 @@ Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on
 \end{maar}
 \begin{kor}
 \end{kor}
+\begin{lem}
+\end{lem}
 \begin{thebibliography}{9}
 
 \bibitem{Eom1}
