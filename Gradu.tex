@@ -271,8 +271,34 @@ Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten met
 %\\
 \begin{maar}
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,\infty]$ sellainen kuvaus, joka täyttää seuraavat ehdot:
-
+\begin{enumerate} [label=(P\arabic*),ref=(P\arabic*)]
+\item\label{EC_I} $f(x,x)=0$ kaikilla $x\in X$,
+\item\label{EC_II} $f(x,y)=f(y,x)$ kaikilla $x,y\in X$,
+\item\label{EC_III} $f(x,y)\leq f(x,z)+f(z,y)$ kaikilla $x,y,z\in X$.
+\end{enumerate}
 \end{maar}
+\begin{esim}%1)
+Euklidinen etäisyys on pseudometriikka.
+\end{esim}
+\begin{esim}%2)
+Olkoon $X$ epätyhjä joukko ja $f\colon X\times X\rightarrow [0,\infty]$ sellainen kuvaus, jolla
+\begin{equation*}
+f(x,y) = \begin{cases} 0, & \mbox{jos } x=y\\
+\infty, & \mbox{muulloin. } \end{cases}
+\end{equation*}
+Tällöin $f$ on pseudometriikka.
+\end{esim}
+\begin{esim}%3)
+
+\end{esim}
+\begin{huom}
+%Metriikka %$m\colon X\times X\rightarrow 
+%on sellainen pseudometriikka, jolta lisäksi vaaditaan, että joukko $X$ on epätyhjä ja että 
+Pseudometriikasta saadaan metriikka, jos rajoitutaan äärellisiin arvoihin ja vahvistetaan ehtoa \ref{EC_I} muotoon
+\begin{enumerate} [label=(M\arabic*),ref=(M\arabic*)]
+\item\label{M1} $f(x,y)=0\Leftrightarrow x=y$ kaikilla $x,y\in X.$
+\end{enumerate}
+\end{huom}
 
 \begin{huom}
 \end{huom}
@@ -282,6 +308,8 @@ Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,\infty]$ sellainen kuvaus,
 \end{maar}
 \begin{kor}
 \end{kor}
+\begin{esim}
+\end{esim}
 \begin{lem}
 \end{lem}
 \begin{thebibliography}{9}
