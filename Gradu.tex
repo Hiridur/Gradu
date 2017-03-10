@@ -315,11 +315,48 @@ Olkoon $f$ pseudometriikka. Tällöin myös $\lambda f$ on pseudometriikka, jos 
 \end{esim}
 \begin{esim}%2
 Olkoon $(f_i)_{i\in I}$ perhe joukon $X$ pseudometriikoita. 
-Tällöin summakuvaus $f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $ f(x,y)=\sum_{i\in I}f_i(x,y)$ kaikilla $x,y\in X$ on pseudometriikka.
+Tällöin summakuvaus 
+\begin{equation*}
+f\colon X\times X\rightarrow [0,+\infty],
+%\text{ kaavalla } 
+f(x,y)=\sum_{i\in I}f_i(x,y)%\text{ kaikilla }x,y\in X
+\end{equation*} 
+%$f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $ f(x,y)=\sum_{i\in I}f_i(x,y)$ 
+kaikilla $x,y\in X$ 
+on pseudometriikka.
 \end{esim}
 \begin{esim}%3
-
+Olkoon $(f_i)_{i\in I}$ perhe joukon $X$ pseudometriikoita. 
+Tällöin kaikilla alkioilla $x,y\in X$ kaavasta $$f_i(x,y)\leq f_i(x,z)+f_i(z,y)$$ seuraa kaava $$\sup_{i\in I}f_i(x,y)\leq \sup_{i\in I}\left(f_i(x,z)+f_i(z,y)\right).$$
+%\begin{align*}
+%&f_i(x,y)\leq f_i(x,z)+f_i(z,y)\\
+%\Rightarrow &\sup_{i\in I}f_i(x,y)\leq \sup_{i\in I}\left(f_i(x,z)+f_i(z,y)\right)
+%\end{align*} 
+Tällöin kuvaus 
+\begin{equation*}
+f\colon X\times X\rightarrow [0,+\infty],
+%\text{ kaavalla } 
+f(x,y)=\sup_{i\in I}f_i(x,y)
+\end{equation*} 
+kaikilla $x,y\in X$ on pseudometriikka. 
 \end{esim}
+\chapter{Pseudometriikan määrittämä uniformisuus}\label{pseudo_uniformi}
+Oletamme koko luvun \ref{pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
+\begin{maar}
+Olkoon $a\in\R_+$ reaaliluku ja $ \U_a\in\Pot( \R^n\times\R^n)$ joukko kaavalla
+$$\U_a=\{ (x,y)\mid |x-y|\leq a,x,y\in\R^n\}$$
+Nyt $B=\{\U_a\mid a\in\R_+\}$ muodostaa uniformisuuden kannan avaruudelle $\R^n$:
+\begin{enumerate} [label=(B\arabic*)]
+\item %\ref{B_I} 
+%Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
+\item%\ref{U'_I} 
+%Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
+\item%\ref{U'_II} 
+%Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
+\item%\ref{U'_III} 
+%Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+\end{enumerate}
+\end{maar}
 
 \begin{huom}
 \end{huom}
