@@ -139,7 +139,7 @@ nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti $\{\emptyset\}$ on
 \begin{maar}
 Olkoon $X$ joukko ja joukko $\U\subset X\times X$ sen uniformiteetti. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
 \end{maar}
-\begin{maar}
+\begin{maar}\label{uniformin kannan maar}
 Olkoon $X$ joukko. Joukko $B\subset \Pot (X\times X)$ on joukon $X$ uniformisuuden kanta, jos joukolle $B$ pätee
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
 \begin{enumerate} [label=(B\arabic*)]
@@ -342,21 +342,49 @@ kaikilla $x,y\in X$ on pseudometriikka.
 \end{esim}
 \chapter{Pseudometriikan määrittämä uniformisuus}\label{pseudo_uniformi}
 Oletamme koko luvun \ref{pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
-\begin{maar}
-Olkoon $a\in\R_+$ reaaliluku ja $ \U_a\in\Pot( \R^n\times\R^n)$ joukko kaavalla
-$$\U_a=\{ (x,y)\mid |x-y|\leq a,x,y\in\R^n\}$$
-Nyt $B=\{\U_a\mid a\in\R_+\}$ muodostaa uniformisuuden kannan avaruudelle $\R^n$:
+\begin{lause}
+Olkoon $a\in\R_+$ reaaliluku ja $\U_a\subset \R^n\times\R^n$ joukko kaavalla
+$$\U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
+Kokoelma $B=\{\U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+\begin{proof}
+Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
+%Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $\U_{a_3}\subset\U_{a_1}\cap \U_{a_2}$
+Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. Olkoon $x,y\in\R$ ja jos $|x-y|\leq a_1$, niin $|x-y|\leq a_2$. Näin ollen $\,\U_{a_1}\subset\U_{a_2}$ ja siis $\U_{a_1}\subset\U_{a_1}\cap \U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
+Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\R_+$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $\U_a\in B$ osajoukko,
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
+Olkoon $x',y'\in\R^n$ ja $a\in\R_+$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
+%Olkoon $a\in\R_+$ ja $(x,y)\in\U_a$. Tällöin koska $(x,y)\in\U_a$ niin $|x'-y'|\leq a$ ja koska $\U_a\subset \R^n\times\R^n$ niin $|y'-x'|\leq a$. Näin ollen 
+\begin{align*}
+\U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
+=&\{ (y,x)\mid x,y\in\R^n,|x-y|\leq a\}\\
+=&\U_a^{-1}.
+\end{align*}
+Siis jokaiselle $\U_a$ pätee $\U_a\subset \U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $|x-z|\leq a$ ja $|z-y|\leq a$, eli $(x,z)\in\U_a$ ja $(z,y)\in\U_a$.
+%Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
+Tällöin kolmioepäyhtälön avulla saadaan 
+$$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$ 
+eli $|x-y|\leq 2a$. Tästä seuraa, että $\U_a^2=\U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $\U_b$ löytyy joukko $\U_{b/2}$, jolla $\U_{b/2}^2\subset\U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-\end{maar}
+Siis kokoelma $B=\{\U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+\end{proof}
+\end{lause}
+\begin{lause}
+Yleistetään nyt edellistä lausetta. 
+Olkoon $X$ joukko, $f$ pseudomeriikka joukolle $X$, $a\in\R_+$ reaaliluku ja 
+$\U_a\subset X\times X$ joukko kaavalla $\U_a=f^{\rightarrow}[0,a]$. Tällöin kokoelma $B=\{ \U_a\mid a\in\R_+\}$ on uniformisuuden kanta joukolle $X$.
+\begin{proof}
+
+\end{proof}
+\end{lause}
 
 \begin{huom}
 \end{huom}
