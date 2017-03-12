@@ -340,8 +340,8 @@ f(x,y)=\sup_{i\in I}f_i(x,y)
 \end{equation*} 
 kaikilla $x,y\in X$ on pseudometriikka. 
 \end{esim}
-\chapter{Pseudometriikan määrittämä uniformisuus}\label{pseudo_uniformi}
-Oletamme koko luvun \ref{pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
+\chapter{Pseudometriikan määrittämä uniformisuus}\label{luku_pseudo_uniformi}
+Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
 \begin{lause}
 Olkoon $a\in\R_+$ reaaliluku ja $\U_a\subset \R^n\times\R^n$ joukko kaavalla
 $$\U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
@@ -377,14 +377,45 @@ eli $|x-y|\leq 2a$. Tästä seuraa, että $\U_a^2=\U_{2a} $, joten jokaiselle re
 Siis kokoelma $B=\{\U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
 \end{proof}
 \end{lause}
-\begin{lause}
-Yleistetään nyt edellistä lausetta. 
-Olkoon $X$ joukko, $f$ pseudomeriikka joukolle $X$, $a\in\R_+$ reaaliluku ja 
-$\U_a\subset X\times X$ joukko kaavalla $\U_a=f^{\rightarrow}[0,a]$. Tällöin kokoelma $B=\{ \U_a\mid a\in\R_+\}$ on uniformisuuden kanta joukolle $X$.
+\begin{lause}\label{pseudo_uniformi_maar}
+Edeltävää lausetta voidaan yleistää seuraavasti: 
+Olkoon $X$ joukko ja $f$ pseudomeriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittää sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $B=\{ f^{\rightarrow}[0,a]\mid a\in\R_+\}$.
 \begin{proof}
-
+Olkoon $a\in\R_+$ reaaliluku ja merkitään 
+joukkoa $f^{\rightarrow}[0,a]\subset X\times X$ kaavalla $f^{\rightarrow}[0,a]=\U_a$. 
+Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
+\begin{enumerate} [label=(B\arabic*)]
+\item %\ref{B_I} 
+Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. 
+Tällöin $$\U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=\U_{a_2}$$ ja siis $\U_{a_1}\subset\U_{a_1}\cap \U_{a_2}$,
+%Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
+\item%\ref{U'_I} 
+Kuvaus $f$ on pseudometriikka, joten pseudometriikan ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. Toisin sanoen jokainen alkio pistepareista $(x,x)$ muodostuvasta joukosta $\{(x,x)\mid x\in X\}$ kuvautuu pseudomeriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ kuuluu sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
+%Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
+\item%\ref{U'_II} 
+Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\in X$. 
+Tällöin $(x,y)\in\U_a\Leftrightarrow (y,x)\in\U_a$ ja siis $\U_a^{-1}=\U_a$, eli jokaiselle $\U_a$ pätee $\U_a\subset \U_a^{-1}. $
+%Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
+\item%\ref{U'_III} 
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in X$ sellaisia alkioita, joilla $f(x,z)\leq a$ ja $f(z,y)\leq a$, eli $(x,z)\in\U_a$ ja $(z,y)\in\U_a$.
+%Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
+Tällöin pseudometriikan ehdosta \ref{EC_III} seuraa 
+$$f(x,y)\leq f(x,z)+f(z,y)\leq a+a=2a,$$ 
+eli $f(x,y)\leq 2a$. Tästä seuraa, että $\U_a^2=\U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $\U_b$ löytyy joukko $\U_{b/2}$, jolla $\U_{b/2}^2\subset\U_b$.
+%Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+\end{enumerate}
+Siis kokoelma $B=\{\U_a\mid a\in\R_+\}
+=\{f^{\leftarrow}[0,a]\mid a\in\R_+\}
+$ muodostaa joukon $\R^n$ uniformisuuden kannan ja voimme nyt muodostaa seuraavan määritelmän.
 \end{proof}
 \end{lause}
+\begin{maar}
+Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
+Tällöin lauseen \ref{pseudo_uniformi_maar} nojalla 
+pseudometriikat $f$ ja $g$ määrittävät jotkut uniformiteetit joukolle $X$.
+%kokoelmat $B_f=\{ f^{\rightarrow}[0,a]\mid a\in\R_+\}$ ja $B_g=\{ g^{\rightarrow}[0,a]\mid a\in\R_+\}$ ovat uniformiteettien kantoja joukolle $X$. 
+Pseudometriikat $f$ ja $g$ ovat ekvivalentteja, jos ne määräävät saman uniformiteetin.
+\end{maar}
 
 \begin{huom}
 \end{huom}
