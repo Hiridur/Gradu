@@ -185,7 +185,7 @@ sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojall
 \begin{huom}
 Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
 \end{huom}
-\begin{maar}
+\begin{maar}\label{uniformisti_jatkuva}
 %Uniformisesti jatkuvat kuvaukset. 
 Olkoon $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ kuvaus.
@@ -226,13 +226,13 @@ Lisätään myöhemmin.
 Olkoon $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. Kuvaus $f$ on isomorfia, jos sekä kuvaus $f$ että sen käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
 \end{maar}
-\begin{maar}
+\begin{maar}\label{uniformi_vertailu}
 \emph{Uniformiteettien vertailtavuus.} 
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
 Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$, 
 jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$. 
 Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
-Kahta uniformiteettia $\U_1$ ja $\U_2$ on mahdollista vertailla, jos $\U_1$ on hienompi kuin $\U_2$.
+Kahta uniformiteettia $\U_1$ ja $\U_2$ on mahdollista vertailla, jos $\U_1$ on hienompi kuin $\U_2$. Uniformiteetit $\U_1$ ja $\U_2$ ovat samoja, jos $\U_1$ on sekä hienompi että karkeampi kuin $\U_2$.
 \end{maar}
 \begin{kor}
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
@@ -343,79 +343,114 @@ kaikilla $x,y\in X$ on pseudometriikka.
 \chapter{Pseudometriikan määrittämä uniformisuus}\label{luku_pseudo_uniformi}
 Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
 \begin{lause}
-Olkoon $a\in\R_+$ reaaliluku ja $\U_a\subset \R^n\times\R^n$ joukko kaavalla
-$$\U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
-Kokoelma $B=\{\U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+Olkoon $a\in\R_+$ reaaliluku ja $U_a\subset \R^n\times\R^n$ joukko kaavalla
+$$U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
+Kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
 \begin{proof}
 Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
-%Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $\U_{a_3}\subset\U_{a_1}\cap \U_{a_2}$
-Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. Olkoon $x,y\in\R$ ja jos $|x-y|\leq a_1$, niin $|x-y|\leq a_2$. Näin ollen $\,\U_{a_1}\subset\U_{a_2}$ ja siis $\U_{a_1}\subset\U_{a_1}\cap \U_{a_2}$,
+%Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $U_{a_3}\subset U_{a_1}\cap U_{a_2}$
+Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. Olkoon $x,y\in\R$ ja jos $|x-y|\leq a_1$, niin $|x-y|\leq a_2$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
-Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\R_+$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $\U_a\in B$ osajoukko,
+Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\R_+$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $U_a\in B$ osajoukko,
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
 Olkoon $x',y'\in\R^n$ ja $a\in\R_+$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
-%Olkoon $a\in\R_+$ ja $(x,y)\in\U_a$. Tällöin koska $(x,y)\in\U_a$ niin $|x'-y'|\leq a$ ja koska $\U_a\subset \R^n\times\R^n$ niin $|y'-x'|\leq a$. Näin ollen 
+%Olkoon $a\in\R_+$ ja $(x,y)\in U_a$. Tällöin koska $(x,y)\in U_a$ niin $|x'-y'|\leq a$ ja koska $U_a\subset \R^n\times\R^n$ niin $|y'-x'|\leq a$. Näin ollen 
 \begin{align*}
-\U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
+U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
 =&\{ (y,x)\mid x,y\in\R^n,|x-y|\leq a\}\\
-=&\U_a^{-1}.
+=&U_a^{-1}.
 \end{align*}
-Siis jokaiselle $\U_a$ pätee $\U_a\subset \U_a^{-1}. $
+Siis jokaiselle $U_a$ pätee $U_a\subset  U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $|x-z|\leq a$ ja $|z-y|\leq a$, eli $(x,z)\in\U_a$ ja $(z,y)\in\U_a$.
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $|x-z|\leq a$ ja $|z-y|\leq a$, eli $(x,z)\in U_a$ ja $(z,y)\in U_a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin kolmioepäyhtälön avulla saadaan 
 $$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$ 
-eli $|x-y|\leq 2a$. Tästä seuraa, että $\U_a^2=\U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $\U_b$ löytyy joukko $\U_{b/2}$, jolla $\U_{b/2}^2\subset\U_b$.
+eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2=U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Siis kokoelma $B=\{\U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
 \end{proof}
 \end{lause}
-\begin{lause}\label{pseudo_uniformi_maar}
 Edeltävää lausetta voidaan yleistää seuraavasti: 
-Olkoon $X$ joukko ja $f$ pseudomeriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittää sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $B=\{ f^{\rightarrow}[0,a]\mid a\in\R_+\}$.
+\begin{lause}\label{pseudo_uniformi_maar}
+Olkoon $X$ joukko ja $f$ pseudomeriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittää sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$.
 \begin{proof}
 Olkoon $a\in\R_+$ reaaliluku ja merkitään 
-joukkoa $f^{\rightarrow}[0,a]\subset X\times X$ kaavalla $f^{\rightarrow}[0,a]=\U_a$. 
+joukkoa $f^{\leftarrow}[0,a]\subset X\times X$ kaavalla $f^{\leftarrow}[0,a]=U_a$. 
 Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. 
-Tällöin $$\U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=\U_{a_2}$$ ja siis $\U_{a_1}\subset\U_{a_1}\cap \U_{a_2}$,
+Tällöin $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
 Kuvaus $f$ on pseudometriikka, joten pseudometriikan ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. Toisin sanoen jokainen alkio pistepareista $(x,x)$ muodostuvasta joukosta $\{(x,x)\mid x\in X\}$ kuvautuu pseudomeriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ kuuluu sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
 Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\in X$. 
-Tällöin $(x,y)\in\U_a\Leftrightarrow (y,x)\in\U_a$ ja siis $\U_a^{-1}=\U_a$, eli jokaiselle $\U_a$ pätee $\U_a\subset \U_a^{-1}. $
+Tällöin $(x,y)\in U_a\Leftrightarrow (y,x)\in U_a$ ja siis $U_a^{-1}=U_a$, eli jokaiselle $U_a$ pätee $U_a\subset U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in X$ sellaisia alkioita, joilla $f(x,z)\leq a$ ja $f(z,y)\leq a$, eli $(x,z)\in\U_a$ ja $(z,y)\in\U_a$.
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in X$ sellaisia alkioita, joilla $f(x,z)\leq a$ ja $f(z,y)\leq a$, eli $(x,z)\in U_a$ ja $(z,y)\in U_a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin pseudometriikan ehdosta \ref{EC_III} seuraa 
 $$f(x,y)\leq f(x,z)+f(z,y)\leq a+a=2a,$$ 
-eli $f(x,y)\leq 2a$. Tästä seuraa, että $\U_a^2=\U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $\U_b$ löytyy joukko $\U_{b/2}$, jolla $\U_{b/2}^2\subset\U_b$.
+eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2=U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Siis kokoelma $B=\{\U_a\mid a\in\R_+\}
+Siis kokoelma $B=\{U_a\mid a\in\R_+\}
 =\{f^{\leftarrow}[0,a]\mid a\in\R_+\}
 $ muodostaa joukon $\R^n$ uniformisuuden kannan ja voimme nyt muodostaa seuraavan määritelmän.
 \end{proof}
 \end{lause}
-\begin{maar}
+\begin{maar}\label{pseudo_equiv}
 Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
 Tällöin lauseen \ref{pseudo_uniformi_maar} nojalla 
 pseudometriikat $f$ ja $g$ määrittävät jotkut uniformiteetit joukolle $X$.
-%kokoelmat $B_f=\{ f^{\rightarrow}[0,a]\mid a\in\R_+\}$ ja $B_g=\{ g^{\rightarrow}[0,a]\mid a\in\R_+\}$ ovat uniformiteettien kantoja joukolle $X$. 
+%kokoelmat $B_f=\{ f^{\leftarrow}[0,a]\mid a\in\R_+\}$ ja $B_g=\{ g^{\leftarrow}[0,a]\mid a\in\R_+\}$ ovat uniformiteettien kantoja joukolle $X$. 
 Pseudometriikat $f$ ja $g$ ovat ekvivalentteja, jos ne määräävät saman uniformiteetin.
 \end{maar}
+\begin{kor}
+Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
+Määritelmästä \ref{pseudo_equiv} seuraa, että pseudometriikan $f$ määräämä uniformiteetti 
+$\U_f$ 
+on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
+$a\in\R_+$ on olemassa $b\in\R_+$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
+ 
+Lisäksi, jos kaikilla $x,y\in X$ pätee $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+\begin{proof}
+Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
+Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittämän uniformiteetin $\U_f$ kannan muodostaa kokoelma $B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$. 
+Tällöin uniformiteetti $ \U_f$ on kokoelma 
+$$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\R_+\}.$$
+Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$ ja uniformiteetti $ \U_g$ on kokoelma 
+$$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\R_+\}.$$ 
+Osoitetaan väitteen implikaatio molempiin suuntiin.
+\begin{enumerate}
+\item[$\Rightarrow$] 
+Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on uniformisti jatkuva. 
+Määritelmän \ref{uniformisti_jatkuva} mukaan tällöin jokaiselle %avaruuden $(X,\U_f)$ 
+lähistölle $V'\in\U_f $ on olemassa %avaruden $(X,\U_g)$ 
+lähistö $V\in\U_g $, jolla pätee jos $(x,y)\in V$, niin $(x,y)\in V'$ kaikila $x,y\in X$. Tarkastelemalla uniformiteettien kantojen jäseniä saamme edeltävän seuraavaan muotoon: Jokaisella $a\in\R_+$ on olemassa $b\in\R_+$ niin, että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
+\item[$\Leftarrow$] Olkoon jokaiselle 
+$a\in\R_+$ on olemassa $b\in\R_+$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$, eli $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, kaikilla $x,y\in X$. 
+%Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
+Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle $f^{\leftarrow}[0,a'],a'\in\R_+ $ on olemassa uniformiteetin $\U_g$ kannan jäsen $g^{\leftarrow}[0,b'],b'\in\R_+$ niin, että $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
+Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. %Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
+Siis pseudometriikan $f$ määräämä uniformiteetti 
+$\U_f$ 
+on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$.
+\end{enumerate}
+Lisäksi 
+määritelmistä \ref{uniformi_vertailu} ja \ref{pseudo_equiv} seuraa, että jos $\U_f$ on sekä hienompi että karkeampi kuin $\U_g$, niin pseudometriikat $f$ ja $g$ ovat ekvivalentteja.
+\end{proof}
+\end{kor}
 
 \begin{huom}
 \end{huom}
