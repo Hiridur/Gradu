@@ -79,9 +79,13 @@
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
 \chapter{Esitietoja}
-Olkoon $X$ joukko ja $V$ ja $W$ potenssijoukon $\Pot(X\times X)$ osajoukkoja.
+Olkoon $X$ joukko ja $V$ ja $W$ karteesisen tulon $X\times X$ osajoukkoja.
 Merkitään tällöin %joukkoilla $V$ ja $W$ 
 seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
+\begin{maar}%Topo2 ?
+\emph{Ympäristö.} 
+%TODO ympäristön määritelmä
+\end{maar}
 \begin{maar}%Topo2 2.14
 \emph{Topologian ympäristökanta.} 
 Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$. 
@@ -99,10 +103,17 @@ Olkoon $A$ joukon $X$ peite. Tällöin $A$ on joukon $X$ erään topologian $\T$
 Lisäksi $\T$ on karkein niistä joukon $X$ topologioista, joilla $A\subset\T$. 
 Tämä topologia $\T$ on peitteen $A$ yksikäsitteisesti määräämä, ja sitä sanotaan peitteen $A$ virittämäksi joukon $X$ topologiaksi.
 \begin{proof}
-Topologia II lause 2.19.\cite{Topo2}
+Topologia II \cite{Topo2} lause 2.19.
 %topo2 2.19
 \end{proof}
 \end{lause}
+\begin{maar}
+\emph{Topologioiden vertailu.}
+Olkoon $X$ joukko ja $\T_1$ ja $\T_2$ topologioita joukolle $X$.
+Topologia $\T_2$ on karkeampi kuin topologia $\T_1$, 
+jos jokaisella $ U\in\T_2$ pätee $ U\in\T_1$, eli $ \T_2\subset\T_1$. 
+Tällöin $\T_1$ on hienompi kuin $\T_2$.
+\end{maar}
 \chapter{Uniformiset rakenteet}
 Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
 %\\
@@ -121,7 +132,8 @@ Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U
 Joukkoa $X$ joka on varustettu uniformisuudella $\U$ sanotaan uniformiseksi avaruudeksi.
 \end{maar}
 \begin{huom}
-Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
+Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, "tarpeeksi lähellä" \, tai 
+"mielivaltaisen lähellä"\, toisiaan.
 \end{huom}
 \begin{huom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
@@ -166,7 +178,7 @@ Uniformisen avaruuden topologia.
 Olkoon joukko $X$ varustettu uniformisuudella $\U$.
 Olkoon $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Olkoon %$V(x)\subset X$,
 \begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
-\text{ ja }
+\quad\text{ ja }\quad
 B(x)=\{ V(x)\mid V\in\U \}
 \end{equation*}
 joukkoja.
@@ -197,44 +209,79 @@ Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi t
 \end{huom}
 \begin{maar}\label{uniformisti_jatkuva}
 %Uniformisesti jatkuvat kuvaukset. 
-Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ kuvaus.
-Kuvaus $f$ on \emph{uniformisti jatkuva}, jos jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$ niin, että jokaiselle $(x,y)\in V$ pätee $(f(x),f(y))\in V'$. 
+Kuvaus $f$ on \emph{uniformisti jatkuva} (tasaisesti jatkuva), jos jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$ niin, että jokaiselle $(x,y)\in V$ pätee $(f(x),f(y))\in V'$. 
 %Toisin sanoen jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa.
 \end{maar}
 \begin{kor}\label{uniformi alkukuva}
-Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
 Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Tällöin jos $V'$ on avaruuden $X'$ lähistö, niin alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
+\begin{proof}
+Suora seuraus edellisestä määritelmästä ja uniformisuuden ehdosta \ref{F_I}.
+\end{proof}
 \end{kor}
 \begin{lause}
-Jokainen uniformisti jatkuva kuvaus on jatkuva uniformien määräämien topologioiden suhteen.
+%Jokainen uniformisti jatkuva kuvaus on jatkuva myös lähtö- ja maalijoukkojen uniformien määräämien topologioiden suhteen.
+Olkoot $X$ ja $X'$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+Tällöin kuvaus $f$ on jatkuva, %myös topologioiden kannalta, 
+kun varustetaan joukot $X$ ja $Y$ uniformiteettiensa indusoimilla topologioilla.
 \begin{proof}
-Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
 Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Olkoon $V'$ avaruuden $X'$ lähistö ja $x'\in X'$ alkio. 
-Korollaarin \ref{uniformi alkukuva} mukaan lähistön $V'$ alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö. 
-Avaruuden $X'$ uniformiteetin määrittämässä topologiassa kaava $V'(x')$ määrää alkion $x'$ ympäristön.
-Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarrow}V'(g^{\leftarrow}(x'))$ on alkion $x'$ alkukuvan $g^{\leftarrow}(x')\in X$ ympäristö. 
+Avaruuden $X'$ uniformiteetin indusoimassa topologiassa kaava 
+$$V'(x')=\{ y'\in X'\mid (x',y')\in V'\}$$
+määrää alkion $x'$ ympäristön avaruudessa $X$.
+Korollaarin \ref{uniformi alkukuva} mukaan lähistön $V'$ alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
+Olkoon nyt $x\in X$ sellainen alkio, jolla $f(x)=x'$.
+Tällöin joukko $g^{\leftarrow}V'(x)$ on alkion $x$ ympäristö. 
+%Olkoon nyt $x\in g^\leftarrow (x')$ alkio, jolloin 
+Erityisesti ympäristö $g^{\leftarrow}V'(x)$ kuvautuu ympäristöön $V'(x')$, 
+sillä ehdosta $(x,y)\in g^\leftarrow V'$ seuraa $(x',f(y))\in V' $ kaikilla $y\in X$.
+%
+%Tällöin olkoon $x\in X$ sellainen alkio, jolla $f(x)=x'$. 
+%Nyt koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, 
+%niin $g^{\leftarrow}V'(x)$ on alkion $x'$ alkukuvaan $g^{\leftarrow}(x')$ kuuluvan alkion $x$ ympäristö. 
+%
+%Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarrow}V'(g^{\leftarrow}(x'))$ on alkion $x'$ alkukuvan $g^{\leftarrow}(x')\in X$ ympäristö. 
 %erikseen 1-käs? eli alkukuva ympäristöstä lähistön sijaan?
 
 Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on jatkuva.
 \end{proof}
 \end{lause}
 \begin{lause}
-Olkoon $X$, $X'$ ja $X''$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia. Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
+Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia 
+ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia. 
+Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
 \begin{proof}
-Lisätään myöhemmin.
-%TODO
+Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia, 
+$f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia ja 
+$V''$ avaruuden $X''$ lähistö. 
+Tällöin uniformisti jatkuvan kuvauksen määritelmän nojalla 
+on olemassa avaruuden $X'$ lähistö $V'$, 
+jolla jokaisella $(x',y')\in V'$ pätee $ (g(x'),g(y'))\in V''$.
+Edelleen lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$, 
+jolla jokaisella $(x,y)\in V$ pätee $ (f(x),f(y))\in V'$.
+Näin ollen lähistölle $V''$ on olemassa lähistö $V$, 
+jolla jokaisella $(x,y)\in V$ pätee $ (g(f(x)),g(f(y)))\in V''$, 
+%ja koska yhdistetyllä kuvauksella pätee $g(f(x))=(g\circ f)(x)$, 
+%niin jokaisella $(x,y)\in V$ pätee 
+eli $ ((g\circ f)(x),(g\circ f)(y))\in V''$.
+%Yhdistetyllä kuvauksella $g\circ f\colon X\rightarrow X''$ 
+%pätee $(g\circ f)(x)$ 
+
+Siis yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
 \end{proof}
 \end{lause}
 \begin{maar}
-Olkoon $X$ ja $X'$ uniformeja avaruuksia 
+Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. Kuvaus $f$ on isomorfismi, jos sekä kuvaus $f$ että sen käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
 \end{maar}
 \begin{maar}\label{uniformi_vertailu}
@@ -243,8 +290,9 @@ Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$.
 Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$, 
 jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$. 
 Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
-Kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, jos $\U_1$ on hienompi kuin $\U_2$. 
-Uniformiteetit $\U_1$ ja $\U_2$ ovat keskenään identtisiä, jos $\U_1$ on sekä hienompi että karkeampi kuin $\U_2$.
+Sanotaan, että kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, jos $\U_1$ on hienompi kuin $\U_2$. 
+Uniformiteeteille $\U_1$ ja $\U_2$ pätee $\U_1=\U_2$, 
+jos $\U_1$ on sekä hienompi että karkeampi kuin $\U_2$.
 \end{maar}
 \begin{kor}
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
@@ -252,14 +300,12 @@ Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$ jos ja vain jos jok
 \end{kor}
 \begin{kor}
 Olkoon $X$ joukko, $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$ ja 
-$\U_1$ on hienompi kuin $\U_2$. Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin uniformiteetin $\U_2$ indusoima topologia.
-\begin{proof}
-Ympäristökannat.
-%TODO kunnollinen todistus (tai kokonaan tyhjäksi)
-\end{proof}
+$\U_1$ on hienompi kuin $\U_2$. 
+Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin 
+uniformiteetin $\U_2$ indusoima topologia.
 \end{kor}
 \begin{maar}\label{kuvausperheen indusoima}
-\emph{Initial uniformities. Kuvausperheen indusoima uniformiteetti.} 
+\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformities).
 Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
 Olkoon $f_i\colon X\rightarrow Y_i$ uniformisti jatkuvia kuvauksia kaikilla $i\in I$. 
@@ -299,7 +345,10 @@ Pseudometriikan määritelmästä saadaan metriikan määritelmä, jos rajoituta
 \begin{enumerate} %[label=(M\arabic*),ref=(M\arabic*)]
 \item[(M1)]\label{M1} $f(x,y)=0\Leftrightarrow x=y$ kaikilla $x,y\in X.$
 \end{enumerate}
-Siis pseudometriikka on metriikan yleistys ja siten jokainen metriikka on myös pseudometriikka.
+Metriikan ehdot täyttävä kuvaus on pseudometriikka, 
+joten %pseudometriikka on metriikan yleistys 
+%ja siten 
+jokainen metriikka on myös pseudometriikka.
 \end{huom}
 \begin{esim}%1)
 Euklidinen etäisyys on pseudometriikka.
@@ -325,15 +374,20 @@ Ehdosta \ref{EC_III} seuraa, että jos $f(x,z)+f(z,y)<\infty$ niin $f(x,y)<\inft
 \end{huom}
 \begin{esim}%1
 %Olkoon $f\colon X\times X\rightarrow$ pseudometriikka
-Olkoon $f$ pseudometriikka ja $\lambda\in\R,\lambda >0$ reaaliluku. 
-Tällöin kuvaus $\lambda f$, jolla $(\lambda f) (x)=\lambda (f (x))$ on pseudometriikka.
+Olkoon $f$ pseudometriikka joukolle $X$ ja 
+$\lambda\in\R$ reaaliluku, jolla $\lambda >0$. 
+Tällöin kuvaus $\lambda f$, jolla 
+%$(\lambda f) (x,y)=\lambda (f (x,y))$ 
+$(\lambda f) (x)=\lambda (f (x))$ 
+%kaikilla $x,y\in X$ on pseudometriikka.
+kaikilla $x\in X\times X$ on pseudometriikka.
 %Tällöin myös $\lambda f$ on pseudometriikka, jos määritellään kuvaus $\lambda f$ pisteittäin $(\lambda f) (x)=\lambda (f (x))$.
 \end{esim}
 \begin{esim}%2
 Olkoon $(f_i)_{i\in I}$ perhe joukon $X$ pseudometriikoita. 
 Tällöin summakuvaus 
 \begin{equation*}
-f\colon X\times X\rightarrow [0,+\infty],
+f\colon X\times X\rightarrow [0,+\infty],\quad
 %\text{ kaavalla } 
 f(x,y)=\sum_{i\in I}f_i(x,y)%\text{ kaikilla }x,y\in X
 \end{equation*} 
@@ -350,7 +404,7 @@ Tällöin kaikilla alkioilla $x,y\in X$ kaavasta $$f_i(x,y)\leq f_i(x,z)+f_i(z,y
 %\end{align*} 
 Tällöin kuvaus 
 \begin{equation*}
-f\colon X\times X\rightarrow [0,+\infty],
+f\colon X\times X\rightarrow [0,+\infty],\quad
 %\text{ kaavalla } 
 f(x,y)=\sup_{i\in I}f_i(x,y)
 \end{equation*} 
@@ -393,7 +447,7 @@ eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2=U_{2a} $, joten jokaiselle rea
 Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
 \end{proof}
 \end{lause}
-Edeltävää lausetta voidaan yleistää seuraavasti: 
+\noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
 \begin{lause}\label{pseudo_uniformi_maar}
 Olkoon $X$ joukko ja $f$ pseudomeriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittää sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$.
 \begin{proof}
@@ -479,6 +533,106 @@ Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittämät unif
 %\begin{esim}
 %Olkoon $X$ joukko ja $(f_i)_{i\in I}$ mielivaltainen perhe (äärellisiä) reaaliarvoisia kuvauksia $f_i\colon X\rightarrow \R$ kaikilla $i\in I$.
 %\end{esim}
+\begin{maar}
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ perhe pseudometriikoita joukolle $X$. 
+Olkoon $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
+jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$ ja $H\subset I$ äärellinen joukko.
+Nyt 
+$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R , a>0 \}$$
+on joukon $X$ erään uniformiteetin kanta. 
+Olkoon $g_{H'}$ pseudometriikoita ja $H'\subset\Pot(I)$ äärellinen potenssijoukon osajoukko. 
+Nyt 
+%$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
+$$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $$ 
+ja $H\subset I$ äärellinen joukko.
+Tällöin sanotaan, että perhe $(g_H)$ on \emph{saturoitu} (saturated), 
+ekvivalentti perheen $(f_i)_{i\in I}$ kanssa 
+ja saatu saturoimalla perhe $(f_i)_{i\in I}$. 
+
+Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määräämä 
+uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
+\end{maar}
+\begin{maar}
+Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
+$(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
+Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
+jos jokaisella $i\in I$ ja $a\in\R$, $a>0$ löytyy $j\in J$ ja $b\in\R$, $b>0$, 
+joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
+\end{maar}
+%
+%
+\chapter{Uniformisoituvat avaruudet}
+Tässä luvussa perehdytään uniformisoituviin avaruuksiin (uniformizable space). 
+\begin{maar}
+%Olkoon $X$ topologinen avaruus.
+Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos seuraava 
+ominaisuus pätee:
+\begin{enumerate} [label=(Z1),ref=(Z1)]
+\item Kaikille alkioilla $x_0\in X$ ja kaikille 
+alkion $x_0$ ympäristöillä $V_0$ on olemassa jatkuva 
+reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
+jolla $f(x_0)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V_0$.
+\end{enumerate}
+\end{maar}
+%
+%
+\chapter{Hausdorff uniforminen avaruus}
+Tässä luvussa määritellään Hausdorff uniformiset avaruudet ja 
+esitetään niiden ominaisuuksia, 
+oleellisimpana täydelliseen Hausdorff uniformiseen avaruuteen laajentaminen.
+\begin{maar}
+Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
+Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille $x,y\in X,x\neq y$ on 
+olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, jolla $f_i(x,y)\neq 0$. 
+Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
+ja yhden pseudometriikan $f$ määrittämä, 
+niin $f(x,y)\neq 0$ kaikilla $x,y\in X$.
+
+Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_i(x,y)=0$ kaikilla $i\in I$.
+\end{maar}
+\begin{lem}
+Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+ja $f$ pseudometriikka joukolle $X$. 
+Tällöin pseudometriikan rajoittuma 
+$f|_A\colon A\times A\rightarrow [0,\infty]$ kaavalla $ f|_A(x)=f(x)$ 
+kaikilla $x\in A\times A$ 
+on pseudometriikka joukolle $A$. 
+\end{lem}
+\begin{lem}
+Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+ja $(f_i)_{i\in I}$ pseudometriikkaperhe, 
+joka määrää joukon $X$ uniformiteetin. 
+Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
+kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
+\end{lem}
+\begin{maar}
+Olkoon $X$ uniforminen avaruus. 
+Tällöin on olemassa täydellinen (complete) Hausdorff 
+uniforminen avaruus $\hat X$ ja uniformisti jatkuva 
+kuvaus $i\colon X\rightarrow\hat X$, jolle pätee seuraava ominaisuus:
+\begin{enumerate} [label=(P),ref=(P)]
+%\begin{enumerate}
+\item %[(P)] 
+\label{ominaisuusP}
+Olkoon $Y$ täydellinen Hausdorff uniforminen avaruus 
+ja $f\colon X\rightarrow Y$ uniformisti jatkuva kuvaus. 
+Tällöin on olemassa yksikäsitteinen uniformisti 
+jatkuva $g\colon \hat X\rightarrow Y$, 
+jolla pätee $f=g\circ i$
+\end{enumerate}
+%\end{maar}
+%\begin{maar}
+Olkoon lisäksi $X_1$ täydellinen Hausdorff 
+uniforminen avaruus ja $i_1\colon X\rightarrow X_1$
+uniformisti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
+Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
+\end{maar}
+\begin{kor}
+Jos $X$ on Hausdorff uniforminen avaruus, niin 
+"kanoninen kuvaus" $i\colon X\rightarrow\hat X$ määrää 
+isomorfismin $X\rightarrow X'$, jossa $X'$ on tiheä joukossa $\hat X$.
+\end{kor}
+
 
 \begin{huom}
 \end{huom}
