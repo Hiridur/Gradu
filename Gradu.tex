@@ -562,6 +562,102 @@ Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$,
 jos jokaisella $i\in I$ ja $a\in\R$, $a>0$ löytyy $j\in J$ ja $b\in\R$, $b>0$, 
 joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
 \end{maar}
+%Toisaalta on myös mahdollista määritellä i
+\begin{lem}
+Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
+Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittää uniformiteetin $\U$.
+\begin{proof}
+Jokaiselle $U\in\U$ määritellään perhe $(U_n)$, 
+jolla $V_1\subset U$ ja $V_{n+1}^2\subset V_n$ kaikilla $n\in\N, n\geq 1$. 
+Nyt perhe $(V_n)$ on kanta eräälle joukon $X$ uniformiteetille $\U_V$, 
+joka on karkeampi kuin $\U$. 
+Erityisesti $\U$ on uniformiteettien 
+$\U_V,V\in\U$ pienin yläraja. %uniformiteetti $\U$. 
+Tällöin lemma on seuraus seuraavasta lauseesta, sillä 
+$(U_n)$ on uniformiteetin $\U$ numeroituva kanta.
+\end{proof}
+\end{lem}
+\begin{lause}
+Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
+Jos uniformiteetilla $\U$ on numeroituva kanta, 
+niin on olemassa pseudometriikka $f\colon X\times X\rightarrow R_+$, 
+jonka määräämä uniformiteetti on identtinen uniformiteetin $\U$ kanssa.
+\begin{proof}
+Olkoon $(V_n)$ numeroituva kanta uniformiteetille $\U$. 
+Tällöin olkoon $(U_n)$ perhe symmetrisiä uniformiteetin $\U$ lähistöjä, 
+joilla $U_1\subset V_1$ ja $U_{n+1}^3\subset U_n\cap V_n$, kun $n\geq 1$. 
+Nyt $(U_n)$ on myös uniformiteetin $\U$ kanta ja erityisesti 
+$U_{n+1}^3\subset U_n\cap V_n$, kun $n\geq 1$. \\
+\\
+Olkoon $g\colon X\times X\rightarrow \R_+$ kuvaus, jolla 
+%$g(x,y)=0$, jos $(x,y)\in U_n$ kaikilla $n\geq 1$. 
+%$g(x,y)=1$, jos $(x,y)\not\in U_1$. 
+%$g(x,y)=0$, jos $(x,y)\in U_n$ kaikilla $n\geq 1$. 
+\begin{equation*}
+g(x,y)=
+\begin{cases}
+0&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\geq 1 \\
+1&\text{, jos }(x,y)\not\in U_1. \\
+2^{-k}&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\leq k 
+\text{ ja } (x,y)\not\in U_{k+1}
+\end{cases}
+\end{equation*}
+Nyt $g$ on symmetrinen, positiivinen ja $g(x,x)=0$ kaikilla $x\in X$. 
+
+Olkoon nyt $f\colon X\times X\rightarrow R_+$ kuvaus, 
+jolla 
+$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1}),$$
+missä $p\in\N,p\geq 1$ ja $(z_i)_{0\leq i\leq p}$ 
+joukon $X$ alkioista muodostuva jono, jossa $z_0=x$ ja $z_p=y$. 
+Kuvauksen $f$ määrittelystä seuraa, 
+että $f$ on symmetrinen, kolmioepäyhtälö pätee ja kaavat 
+$f(x,y)\geq 0$ ja $f(x,x)=0$ pätevät kaikilla $x,y\in X$.
+Siis $f$ on pseudometriikka. 
+Näytetään seuraavaksi, että epäyhtälöt 
+\begin{equation}\label{numeroituvakantapm}
+\frac{1}{2}\,g(x,y)\leq f(x,y)\leq g(x,y)
+\end{equation}
+pätevät. 
+Kaavan oikea puoli, eli $f(x,y)\leq g(x,y)$ seuraa siitä, 
+että 
+$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1})\leq\sum_{i=0}^1g(z_i,z_i+1)=g(z_0,z_1)=g(x,y).$$
+Yhtälön vasen puoli osoitetaan induktion avulla. 
+Olkoon $p\in\N$ luku. 
+Nyt jokaisella $p+1$ alkion jonolla joukon $X$ 
+alkioita $ (z_i)_{0\leq i\leq p}$, 
+jolla $z_0=x$ ja $z_p=y$, saadaan 
+\begin{equation}\label{numeroituvakantapm2}
+\sum_{i=0}^{p-1}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(x,y).
+\end{equation}
+Jos $p=1$, niin summassa on vain yksi termi
+$$g(z_0,z_{1})=g(x,y)\geq \frac{1}{2}\,g(x,y).$$
+Merkitään 
+$$a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}).$$
+Määrittelyn nojalla $g(x,y)\leq 1$, joten jos $a\geq 1/2$, 
+niin yhtälö \ref{numeroituvakantapm2} pätee muodossa 
+$a\geq \frac{1}{2}\geq \frac{1}{2}g(x,y)$. 
+Oletetaan, että $a<1/2$ ja että $h$ on suurin niistä indekseistä $q$, 
+joilla $\sum_{i<q}g(z_i,z_{i+1})\leq a/2$. 
+Tällöin $$\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja }\quad
+\sum_{i<h+1}g(z_i,z_{i+1})> a/2,$$ 
+joten $\sum_{i>h}g(z_i,z_{i+1})\leq a/2$. 
+Induktio-oletuksen nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
+toisaalta myös $g(x,z_h)\leq a$ pätevät. 
+Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$. 
+Tällöin $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että 
+$(x,z_h)\in U_k,(z_h,z_{h+1})\in U_k$ ja $(z_{h+1},y)\in U_k$. 
+Nyt $(x,y)\in U_k^3\subset U_{k-1}$ ja edelleen 
+$g(x,y)\leq 2^{-(k-1)}=2^{1-k}\leq 2a$, eli $1/2g(x,y)\leq a.$ 
+Nyt epäyhtälöt \ref{numeroituvakantapm} on osoitettu päteviksi ja 
+niistä seuraa, että jokaisella $a>0$ pätee 
+$U_k\subset f^\leftarrow([0,a])$, kun $2^{-k}<a$. 
+Toisaalta myös $f^\leftarrow([0,a])\subset U_k$, 
+joten joukot $f^\leftarrow([0,a])$ muodostavat kannan uniformiteetille $\U$. 
+Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
+\end{proof}
+\end{lause}
+\begin{kor}
+\end{kor}
 %
 %
 \chapter{Uniformisoituvat avaruudet}
