@@ -661,18 +661,41 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %
 %
 \chapter{Uniformisoituvat avaruudet}
-Tässä luvussa perehdytään uniformisoituviin avaruuksiin (uniformizable space). 
+Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
 \begin{maar}
-%Olkoon $X$ topologinen avaruus.
-Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos seuraava 
-ominaisuus pätee:
-\begin{enumerate} [label=(Z1),ref=(Z1)]
-\item Kaikille alkioilla $x_0\in X$ ja kaikille 
+Olkoon $(X,\T)$ topologinen avaruus ja 
+$\U$ uniformiteetti joukolle $X$. 
+%Merkitään uniformiteetin uniformiteetin $\U$ indusoimaa topologiaa $\T_{\U}$. 
+Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
+jos uniformiteetin $\U$ indusoima topologia 
+$\T_{\U}$ on karkeampi kuin topologia $\T$.
+\end{maar}
+%\begin{kor}
+%
+%\end{kor}
+\begin{maar}
+Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
+\end{maar}
+\begin{lause}
+Olkoon $(X,\T)$ topologinen avaruus.
+%Topologinen avaruus $(X,\T)$ on uniformisoituva, jos seuraava ominaisuus pätee:
+Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
+\begin{itemize}
+%\begin{enumerate} [label=(Z1),ref=(Z1)]
+\item\label{O_IV} Kaikille alkioilla $x_0\in X$ ja kaikille 
 alkion $x_0$ ympäristöillä $V_0$ on olemassa jatkuva 
 reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
 jolla $f(x_0)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V_0$.
-\end{enumerate}
-\end{maar}
+\end{itemize}
+%\end{enumerate}
+\begin{proof}
+Näytetään ensin, että ehto on välttämätön. 
+Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
+määrittää pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
+Lisäksi uniformiteetin indusoima pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} nojalla olevan saturoitu. 
+Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$ ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$
+\end{proof}
+\end{lause}
 %
 %
 \chapter{Hausdorff uniforminen avaruus}
