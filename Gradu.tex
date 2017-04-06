@@ -81,22 +81,44 @@
 \chapter{Esitietoja}
 Olkoon $X$ joukko ja $V$ ja $W$ karteesisen tulon $X\times X$ osajoukkoja.
 Merkitään tällöin %joukkoilla $V$ ja $W$ 
-seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
+seuraavasti: 
+$$V\circ W=\{(x,z)\mid \text{on olemassa sellainen }y \in X,\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\},$$ 
+%$V\circ W=\{(x,z)\mid$ on olemassa sellainen $y \in X$, jolla $(x,y)\in V$ ja $(y,z)\in W\},$ 
+$W^2=W\circ W$ ja $W^n=W\circ W^{n-1}$.
 \begin{maar}%Topo2 ?
 \emph{Ympäristö.} 
 Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
-Osajoukko $A\in X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
+Osa\-jouk\-ko $A\in X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
 jos on olemassa avoin osajoukko $B\subset X $, joka sisältää osajoukon $A$.
-%TODO ympäristön määritelmä
+\end{maar}
+\begin{maar}
+Topologisen avaruuden $(X,\T)$ osajoukko $A\subset X$ on avoin, jos se on 
+jokaisen alkionsa $x\in A$ ympäristö.
 \end{maar}
 \begin{maar}%Topo2 2.14
 \emph{Ympäristökanta.} 
 Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
-Kokoelma $B(x)$ alkion $x$ ympäristöjä on alkion $x$ \emph{ympäristökanta} (topologiassa $\T$), jos jokainen alkion $x$ ympäristö sisältää kokoelman $B(x)$ jonkin jäsenen. 
+Kokoelma $B(x)$ alkion $x$ ympäristöjä on alkion $x$ \emph{ympäristökanta} 
+(topologiassa $\T$), jos jokainen alkion $x$ ympäristö sisältää 
+kokoelman $B(x)$ jonkin jäsenen. 
 \end{maar}
+%\begin{maar}
+%Olkoon $(X,\T)$ topologinen avaruus, $x\in X$ alkio ja . 
+%Alkion $x$ kaikkien ympäristöjen kokoelmalle pätee seuraavat ehdot: 
+%\begin{enumerate} [label=(V\arabic*),ref=(V\arabic*)]
+%\item Jos 
+%\end{enumerate} 
+%\end{maar}
+\begin{kor}\label{kaikki_ystöt}
+Topologisen avaruuden $(X,\T)$ alkion $x\in X$ kaikkien ympäristöjen kokoelma $B(x)$ on alkion $x$ ympäristökanta.
+\end{kor}
 \begin{esim}
-Jos $B$ on avaruuden $(X,\T)$ kanta ja $x\in X$, niin $\{A\mid x\in A\in B\}$ on alkion $x$ eräs ympäristökanta.
-Käänteisesti, jos jokaisella $x\in X$ on annettu ympäristökanta $B(x)$ avaruudessa $(X,\T)$, niin $\bigcup\{B(x)\mid x\in X\}$ on avaruuden $(X,\T)$ kanta.
+Jos joukkoperhe $B\subset\Pot(X)$ on avaruuden $(X,\T)$ kanta ja 
+$x\in X$ alkio, niin joukko 
+$B(x)=\{A\mid x\in A\in B\}$ on alkion $x$ eräs ympäristökanta.
+Käänteisesti, jos jokaisella alkiolla $x\in X$ on annettu ympäristökanta 
+$B(x)$ avaruudessa $(X,\T)$, niin kokoelma $\bigcup\{B(x)\mid x\in X\}$ 
+on avaruuden $(X,\T)$ kanta.
 \end{esim}
 %\begin{maar}
 %Joukon $X$ peite $A$ virittää yksikäsitteisesti
@@ -170,40 +192,52 @@ $,
 \item\label{U'_III} Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 \end{maar}
-\begin{maar}
-
-%TODO 
-Seuraavan lauseen olemassaolon peruste.
-\end{maar}
 \begin{lause}
 %\emph{Uniformisen avaruuden topologia.}
 Uniformisen avaruuden topologia.
 Olkoon joukko $X$ varustettu uniformisuudella $\U$.
-Olkoon $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Olkoon %$V(x)\subset X$,
+Olkoon $x\in X$ 
+alkio ja $V\in\U$ lähistö. 
+%alkio, $V\in\U$ lähistö ja $B\subset\U$ uniformiteetin $\U$ kanta. 
+Olkoon tällöin %$V(x)\subset X$,
 \begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
 \quad\text{ ja }\quad
 B(x)=\{ V(x)\mid V\in\U \}
 \end{equation*}
 joukkoja.
-Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö alkiolle $x$ ja joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko kyseisessä topologiassa.
+Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, 
+että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö 
+alkiolle $x$ ja joukko $B(x)$ on alkion $x$ 
+ympäristökanta kyseisessä topologiassa.
 \begin{proof}
-Olkoon joukko $X$ varustettu uniformisuudella $\U$.
-Olkoon $x\in X$ alkio, $V\in\U$ lähistö avaruudessa $X$ ja joukot $V(x)$ ja $B(x)$ kuten edellä. 
+Olkoon joukko $X$ varustettu uniformisuudella $\U$, 
+$x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Lisäksi olkoot joukot $V(x)$ ja $B(x)$ kuten edellä. 
 %
-Alkiolle $x$ pätee $x\in V(x)$, joten joukko $V(x)$ on epätyhjä. 
-Jokaiselle lähistölle $V,W\in\U$ pätee 
-\begin{align*}
-V(x)\cup W(x) =&\{ y\in X\mid (x,y)\in V \text{ tai } (x,y)\in W \}\\
-=&\{ y\in X\mid (x,y)\in V\cup W \}
-\in B(x),
-\end{align*} 
-ja 
+Joukko $V(x)$ on epätyhjä, sillä $x\in V(x)$.
+%Alkio $x$ kuuluu joukkoon $V(x)$, joten joukko $V(x)$ on epätyhjä. 
+%Jokaiselle lähistölle $V,W\in\U$ pätee 
+%\begin{align*}
+%V(x)\cup W(x) =&\{ y\in X\mid (x,y)\in V \text{ tai } (x,y)\in W \}\\
+%=&\{ y\in X\mid (x,y)\in V\cup W \}
+%\in B(x),
+%\end{align*} 
+%ja 
+Olkoon $W\in\U$ lähistö, jolloin $W(x)$ on alkion $x$ ympäristö. 
+Alkion $x$ ympäristöille $V(x)$ ja $W(x)$ pätee
 \begin{align*}
 V(x)\cap W(x) =&\{ y\in X\mid (x,y)\in V \text{ ja } (x,y)\in W \}\\
 =&\{ y\in X\mid (x,y)\in V\cap W \}
-\in B(x)
+\in B(x),
 \end{align*} 
-sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojalla $ V\cup W \in B$ ja $ V\cap W \in B$. Tällöin on olemassa yksikäsitteinen topologia, jossa $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko.\cite{Eom1}
+%sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojalla $ V\cup W \in B$ ja $ V\cap W \in B$. 
+sillä määritelmän \ref{uniformi_maar} ehdon \ref{F_II} 
+nojalla $ V\cap W \in B$. 
+%Olkoon lisäksi $U\subset X$ joukko, jolle pätee $V(x)\subset U$. 
+%Nyt joukkoa $U$ vastaa jokin $U'\in X\times X$, 
+%jolla pätee  $U'\in \U$.
+Tällöin joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko ja siten 
+korollaarin \ref{kaikki_ystöt} nojalla ympäristökanta.
+%Tällöin on olemassa yksikäsitteinen topologia, jossa $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko.\cite{Eom1}
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
 \end{proof}
 \end{lause}
