@@ -597,7 +597,7 @@ jos jokaisella $i\in I$ ja $a\in\R$, $a>0$ löytyy $j\in J$ ja $b\in\R$, $b>0$,
 joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
 \end{maar}
 %Toisaalta on myös mahdollista määritellä i
-\begin{lem}
+\begin{lem}\label{pseudo_uniformista}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittää uniformiteetin $\U$.
 \begin{proof}
@@ -726,8 +726,14 @@ jolla $f(x_0)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V_0$.
 Näytetään ensin, että ehto on välttämätön. 
 Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
 määrittää pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoima pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} nojalla olevan saturoitu. 
-Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$ ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$
+Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} nojalla olevan saturoitu. 
+Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$, $\alpha\in I$ 
+ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
+jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
+Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
+pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
+
+Toisaalta ehto on myös riittävä:
 \end{proof}
 \end{lause}
 %
