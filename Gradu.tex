@@ -162,7 +162,7 @@ Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y
 \end{huom}
 \begin{huom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
-Mikäli muut ehdot pätevät, voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla 
+Mikäli muut ehdot pätevät voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla: 
 \begin{enumerate}
 %\item[(U$\ref{U_II}$a)] \label{Uaehto} 
 \item[(Ua)] \label{Uaehto} 
@@ -175,14 +175,18 @@ Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subse
 \end{huom}
 \begin{huom}
 %Jos joukko $X$ on tyhjä, niin ehdon (U$\ref{U_I}$) 
-Jos joukko $X$ on tyhjä, niin ehdon \ref{U_I} 
-nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
+%Jos joukko $X$ on tyhjä, niin ehdon \ref{U_I} 
+%nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti kokoelma $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
+Kokoelma $\{\emptyset\}$ on ainoa ehdot täyttävä uniformiteetti tyhjälle joukolle.
 \end{huom}
-\begin{maar}
-Olkoon $X$ joukko ja joukko $\U\subset X\times X$ sen uniformiteetti. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
+\begin{maar}\label{uniformi_kanta}
+Olkoon $X$ joukko ja kokoelma $\U\subset X\times X$ uniformiteetti joukolle $X$. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
 \end{maar}
+%\begin{kor}
+%Uniformiteetin kannas
+%\end{kor}
 \begin{maar}\label{uniformin kannan maar}
-Olkoon $X$ joukko. Joukko $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformisuuden kanta, jos joukolle $B$ pätee
+Olkoon $X$ joukko. Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformiteetin kanta, jos kokoelmalle $B$ pätee
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
 \begin{enumerate} [label=(B\arabic*)]
 \item\label{B_I} Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
@@ -572,12 +576,12 @@ Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittämät unif
 %\end{esim}
 \begin{maar}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ perhe pseudometriikoita joukolle $X$. 
-Olkoon $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
-jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$ ja $H\subset I$ äärellinen joukko.
+Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
+jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$.
 Nyt 
 $$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R , a>0 \}$$
 on joukon $X$ erään uniformiteetin kanta. 
-Olkoon $g_{H'}$ pseudometriikoita ja $H'\subset\Pot(I)$ äärellinen potenssijoukon osajoukko. 
+Olkoon $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
 Nyt 
 %$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
 $$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $$ 
@@ -690,8 +694,8 @@ joten joukot $f^\leftarrow([0,a])$ muodostavat kannan uniformiteetille $\U$.
 Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 \end{proof}
 \end{lause}
-\begin{kor}
-\end{kor}
+%\begin{kor}
+%\end{kor}
 %
 %
 \chapter{Uniformisoituvat avaruudet}
@@ -714,19 +718,20 @@ Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan
 Olkoon $(X,\T)$ topologinen avaruus.
 %Topologinen avaruus $(X,\T)$ on uniformisoituva, jos seuraava ominaisuus pätee:
 Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
-\begin{itemize}
-%\begin{enumerate} [label=(Z1),ref=(Z1)]
-\item\label{O_IV} Kaikille alkioilla $x_0\in X$ ja kaikille 
-alkion $x_0$ ympäristöillä $V_0$ on olemassa jatkuva 
+%\begin{itemize}
+\begin{enumerate} [label=(Z),ref=(Z)]
+\item\label{O_IV} Kaikkien alkioiden $x\in X$ kaikilla 
+ympäristöillä $V\in X$ on olemassa jatkuva 
 reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
-jolla $f(x_0)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V_0$.
-\end{itemize}
-%\end{enumerate}
+jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
+%\end{itemize}
+\end{enumerate}
 \begin{proof}
 Näytetään ensin, että ehto on välttämätön. 
 Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
 määrittää pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} nojalla olevan saturoitu. 
+Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} 
+nojalla olevan saturoitu. 
 Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
 jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
@@ -734,6 +739,23 @@ Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\fr
 pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
 
 Toisaalta ehto on myös riittävä:
+Olkoon $(X,\T)$ topologinen avaruus, jolla ehto \ref{O_IV} pätee. 
+Olkoon $x_0\in X$ alkio, $V_0\subset X$ alkion $x_0$ ympäristö 
+ja $f$ ehdon \ref{O_IV} mukainen kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
+Tällöin kuvaus $g\colon X\times X\to [0,\infty]$ kaavalla $g(x_0,x)=f(x)$ on pseudometriikka. 
+
+
+Olkoon $ a\in R_+$, jolloin joukko $U_a=g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on lähistö pseudometriikan $g$ määräämässä uniformiteetissa. 
+%Merkitään $U_a=g^\leftarrow[0,a]$. 
+%Nyt joukko $$U_a(x)=\{y\mid (x,y)\in U_a\}=\{y\mid g(x,y)\leq a\}$$ on alkion $x$ ympäristö uniformiteetin $\U$ 
+Nyt joukko $U_a(x)=\{y\mid g(x,y)\leq a\}$ on alkion $x$ ympäristö uniformiteetin $\U$ 
+indusoimassa topologiassa $\T'$. 
+%Toisaalta kokoelma $B=\{U_a\mid a\in\R,a>0 \}$ muodostaa kannan uniformiteetille $\U$ 
+%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R,a>0 \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
+%
+%Toisaalta topologian $\T$ ympäristökanta on myös 
+
+Siis avaruus $(X,\T)$ on uniformisoituva.
 \end{proof}
 \end{lause}
 %
@@ -796,18 +818,18 @@ isomorfismin $X\rightarrow X'$, jossa $X'$ on tiheä joukossa $\hat X$.
 \end{kor}
 
 
-\begin{huom}
-\end{huom}
-\begin{lause}
-\end{lause}
-\begin{maar}
-\end{maar}
-\begin{kor}
-\end{kor}
-\begin{esim}
-\end{esim}
-\begin{lem}
-\end{lem}
+%\begin{huom}
+%\end{huom}
+%\begin{lause}
+%\end{lause}
+%\begin{maar}
+%\end{maar}
+%\begin{kor}
+%\end{kor}
+%\begin{esim}
+%\end{esim}
+%\begin{lem}
+%\end{lem}
 \begin{thebibliography}{9}
 
 \bibitem{Eom1}
