@@ -741,21 +741,28 @@ pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
 Toisaalta ehto on myös riittävä:
 Olkoon $(X,\T)$ topologinen avaruus, jolla ehto \ref{O_IV} pätee. 
 Olkoon $x_0\in X$ alkio, $V_0\subset X$ alkion $x_0$ ympäristö 
-ja $f$ ehdon \ref{O_IV} mukainen kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
+ja $f\colon X\rightarrow [0,1]$ ehdon \ref{O_IV} antama kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
 Tällöin kuvaus $g\colon X\times X\to [0,\infty]$ kaavalla $g(x_0,x)=f(x)$ on pseudometriikka. 
-
-
-Olkoon $ a\in R_+$, jolloin joukko $U_a=g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on lähistö pseudometriikan $g$ määräämässä uniformiteetissa. 
-%Merkitään $U_a=g^\leftarrow[0,a]$. 
+%Olkoon $(g_i)_{i\in I}$ näin muodostettujen pseudometriikkojen perhe ja olkoon $\U$ kyseisen pseudometriikkaperheen määräämä uniformiteetti.
+%, jonka määrää pseudometriikkaperhe $(g_i)_{i\in I}$ joukon $X$.
+Olkoon $\U$ pseudometriikan $g$ määräämä uniformiteetti ja 
+$ a\in R_+$ reaaliluku. 
+Tällöin $g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on 
+lähistö pseudometriikan $g$ määräämässä uniformiteetissa $\U$. 
+%Merkitään $U_a=g^\leftarrow[0,a]$ joukko.
+%Merkitään joukkoa $g^\leftarrow[0,a]$ kaavalla $U_a$, jolloin  
+Merkitään $g^\leftarrow[0,a]=U_a$, jolloin  
 %Nyt joukko $$U_a(x)=\{y\mid (x,y)\in U_a\}=\{y\mid g(x,y)\leq a\}$$ on alkion $x$ ympäristö uniformiteetin $\U$ 
-Nyt joukko $U_a(x)=\{y\mid g(x,y)\leq a\}$ on alkion $x$ ympäristö uniformiteetin $\U$ 
+joukko $U_a(x_0)=\{y\mid g(x_0,y)\leq a\}$ on alkion $x_0$ ympäristö uniformiteetin $\U$ 
 indusoimassa topologiassa $\T'$. 
+Joukkojen määrittelyistä seuraa, että jos $a<1$, niin $U_a(x)\subset V_0$ ja tällöin kokoelma $B=\{U_a(x_0)\mid g(x_0,y)\leq a\}$ 
+on alkion $x_0$ ympäristökanta topologiassa $\T$.
 %Toisaalta kokoelma $B=\{U_a\mid a\in\R,a>0 \}$ muodostaa kannan uniformiteetille $\U$ 
 %ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R,a>0 \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
 %
 %Toisaalta topologian $\T$ ympäristökanta on myös 
 
-Siis avaruus $(X,\T)$ on uniformisoituva.
+Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
 \end{proof}
 \end{lause}
 %
