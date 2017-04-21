@@ -79,6 +79,9 @@
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
 \chapter{Esitietoja}
+Oletamme koko tutkielman ajan, että $\R_+=\{a\in\R\mid a>0\}$.
+\\
+\\
 Olkoon $X$ joukko ja $V$ ja $W$ karteesisen tulon $X\times X$ osajoukkoja.
 Merkitään tällöin %joukkoilla $V$ ja $W$ 
 seuraavasti: 
@@ -423,7 +426,7 @@ Olkoon $X$ epätyhjä joukko ja $g\colon X\rightarrow \R$ (äärellisarvoinen) k
 \end{esim}
 \begin{esim}%4)
 Olkoon $X$ kaikkien muotoa $g\colon [0,1]\rightarrow \R$ olevien jatkuvien kuvausten joukko. % väliltä $[0,1]$ reaaliluvuille. 
-Tällöin kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määrittää pseudometriikan joukolle $X$.
+Tällöin kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määrittelee pseudometriikan joukolle $X$.
 \end{esim}
 \begin{huom}
 %Metriikoista tutut ominaisuudet, kuten
@@ -467,18 +470,18 @@ f(x,y)=\sup_{i\in I}f_i(x,y)
 \end{equation*} 
 kaikilla $x,y\in X$ on pseudometriikka. 
 \end{esim}
-\chapter{Pseudometriikan määrittämä uniformisuus}\label{luku_pseudo_uniformi}
-Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
+\chapter{Pseudometriikan määrittelemä uniformisuus}\label{luku_pseudo_uniformi}
+%Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
 \begin{lause}
 Olkoon $a\in\R_+$ reaaliluku ja $U_a\subset \R^n\times\R^n$ joukko kaavalla
 $$U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
 Kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
 \begin{proof}
-Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
+Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 %Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $U_{a_3}\subset U_{a_1}\cap U_{a_2}$
-Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. Olkoon $x,y\in\R$ ja jos $|x-y|\leq a_1$, niin $|x-y|\leq a_2$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
+Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. Tällöin kaavasta $|x-y|\leq a_1$ seuraa $|x-y|\leq a_2$ kaikilla $x,y\in\R$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
 Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\R_+$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $U_a\in B$ osajoukko,
@@ -494,11 +497,11 @@ U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
 Siis jokaiselle $U_a$ pätee $U_a\subset  U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $|x-z|\leq a$ ja $|z-y|\leq a$, eli $(x,z)\in U_a$ ja $(z,y)\in U_a$.
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, eli $|x-z|\leq a$ ja $|z-y|\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin kolmioepäyhtälön avulla saadaan 
 $$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$ 
-eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2=U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
+eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2\subset U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
@@ -506,29 +509,29 @@ Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden ka
 \end{lause}
 \noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
 \begin{lause}\label{pseudo_uniformi_maar}
-Olkoon $X$ joukko ja $f$ pseudomeriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittää sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$.
+Olkoon $X$ joukko ja $f$ pseudometriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittelee sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $$B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}.$$
 \begin{proof}
 Olkoon $a\in\R_+$ reaaliluku ja merkitään 
 joukkoa $f^{\leftarrow}[0,a]\subset X\times X$ kaavalla $f^{\leftarrow}[0,a]=U_a$. 
-Määritelmän \ref{uniformin kannan maar} ehdot pätevät:
+Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
-Olkoon $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. 
+Olkoot $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. 
 Tällöin $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
-Kuvaus $f$ on pseudometriikka, joten pseudometriikan ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. Toisin sanoen jokainen alkio pistepareista $(x,x)$ muodostuvasta joukosta $\{(x,x)\mid x\in X\}$ kuvautuu pseudomeriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ kuuluu sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
+Kuvaus $f$ on pseudometriikka, joten pseudometriikan ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. Toisin sanoen jokainen alkio pistepareista $(x,x)$ muodostuvasta joukosta $\{(x,x)\mid x\in X\}$ kuvautuu pseudometriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
 Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\in X$. 
 Tällöin $(x,y)\in U_a\Leftrightarrow (y,x)\in U_a$ ja siis $U_a^{-1}=U_a$, eli jokaiselle $U_a$ pätee $U_a\subset U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in X$ sellaisia alkioita, joilla $f(x,z)\leq a$ ja $f(z,y)\leq a$, eli $(x,z)\in U_a$ ja $(z,y)\in U_a$.
+Olkoon $a\in\R_+$ reaaliluku ja $x,y,z\in X$ sellaisia alkioita, joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, eli $f(x,z)\leq a$ ja $f(z,y)\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin pseudometriikan ehdosta \ref{EC_III} seuraa 
 $$f(x,y)\leq f(x,z)+f(z,y)\leq a+a=2a,$$ 
-eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2=U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
+eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2\subset U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 Siis kokoelma $B=\{U_a\mid a\in\R_+\}
@@ -537,36 +540,45 @@ $ muodostaa joukon $\R^n$ uniformisuuden kannan ja voimme nyt muodostaa seuraava
 \end{proof}
 \end{lause}
 \begin{maar}\label{pseudo_equiv}
-Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
+Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Tällöin lauseen \ref{pseudo_uniformi_maar} nojalla 
-pseudometriikat $f$ ja $g$ määrittävät jotkut uniformiteetit joukolle $X$.
+pseudometriikat $f$ ja $g$ määrittelevät jotkut uniformiteetit joukolle $X$.
 %kokoelmat $B_f=\{ f^{\leftarrow}[0,a]\mid a\in\R_+\}$ ja $B_g=\{ g^{\leftarrow}[0,a]\mid a\in\R_+\}$ ovat uniformiteettien kantoja joukolle $X$. 
-Pseudometriikat $f$ ja $g$ ovat ekvivalentteja, jos ne määräävät saman uniformiteetin.
+Pseudometriikat $f$ ja $g$ ovat \emph{ekvivalentteja}, jos ne määräävät saman uniformiteetin.
 \end{maar}
 \begin{kor}
-Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
+Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmästä \ref{pseudo_equiv} seuraa, että pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
-$a\in\R_+$ on olemassa $b\in\R_+$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
- 
-Lisäksi, jos kaikilla $x,y\in X$ pätee $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+$a\in\R_+$ on olemassa sellainen $b\in\R_+$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
+
+Lisäksi, jos jokaiselle $a\in\R_+$ on olemassa $b\in\R_+$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
 \begin{proof}
-Olkoon $X$ joukko ja $f$ ja $g$ pseudomeriikoita joukolle $X$. 
-Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittämän uniformiteetin $\U_f$ kannan muodostaa kokoelma $B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$. 
+Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
+Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittelemän uniformiteetin $\U_f$ kannan muodostaa kokoelma 
+$$B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}.$$ 
 Tällöin uniformiteetti $ \U_f$ on kokoelma 
 $$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\R_+\}.$$
-Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$ ja uniformiteetti $ \U_g$ on kokoelma 
+Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $$B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in\R_+\}$$ ja uniformiteetti $ \U_g$ on kokoelma 
 $$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\R_+\}.$$ 
 Osoitetaan väitteen implikaatio molempiin suuntiin.
 \begin{enumerate}
 \item[$\Rightarrow$] 
 Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on uniformisti jatkuva. 
-Määritelmän \ref{uniformisti_jatkuva} mukaan tällöin jokaiselle %avaruuden $(X,\U_f)$ 
+Tällöin määritelmän \ref{uniformisti_jatkuva} 
+mukaan jokaiselle %avaruuden $(X,\U_f)$ 
 lähistölle $V'\in\U_f $ on olemassa %avaruden $(X,\U_g)$ 
-lähistö $V\in\U_g $, jolla pätee jos $(x,y)\in V$, niin $(x,y)\in V'$ kaikila $x,y\in X$. Tarkastelemalla uniformiteettien kantojen jäseniä saamme edeltävän seuraavaan muotoon: Jokaisella $a\in\R_+$ on olemassa $b\in\R_+$ niin, että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
-\item[$\Leftarrow$] Olkoon jokaiselle 
-$a\in\R_+$ on olemassa $b\in\R_+$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$, eli $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, kaikilla $x,y\in X$. 
+sellainen lähistö $V\in\U_g $, 
+jolla seuraava ehto pätee: Jos $(x,y)\in V$, 
+niin $(x,y)\in V'$ kaikilla $x,y\in X$. Tarkastelemalla uniformiteettien kantojen jäseniä saamme edeltävän seuraavaan muotoon: Jokaisella $a\in\R_+$ on olemassa $b\in\R_+$ niin, että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
+\item[$\Leftarrow$] Oletetaan, että jokaiselle reaaliluvulle 
+$a\in\R_+$ on olemassa sellainen $b\in\R_+$, jolla 
+$g(x,y)\leq b \Rightarrow f(x,y)\leq a,
+$ %\text{ 
+eli %}
+$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a],$ 
+kaikilla $x,y\in X$. 
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
 Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle $f^{\leftarrow}[0,a'],a'\in\R_+ $ on olemassa uniformiteetin $\U_g$ kannan jäsen $g^{\leftarrow}[0,b'],b'\in\R_+$ niin, että $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
 Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. %Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
@@ -579,28 +591,29 @@ määritelmistä \ref{uniformi_vertailu} ja \ref{pseudo_equiv} seuraa, että jos
 \end{proof}
 \end{kor}
 \begin{maar}
-Olkoon $X$ joukko ja $(f_i)_{i\in I} $ perhe pseudometriikkoja joukolle $X$. 
-Tällöin pseudometriikkojen $f_i$ määrittämien uniformiteettien $\U_{f_i}$ pienintä ylärajaa sanotaan perheen $(f_i)_{i\in I}$ määrittämäksi uniformiteetiksi. 
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
+Tällöin pseudometriikkojen $f_i$ määrittelemien uniformiteettien $\U_{f_i}$ pienintä ylärajaa sanotaan perheen $(f_i)_{i\in I}$ määrittelemäksi uniformiteetiksi. 
 %uniformiteettien pienin yläraja
 \end{maar}
 \begin{maar}
-Olkoon $X$ joukko ja $(f_i)_{i\in I} $ ja $(g_j)_{j\in J} $ perheitä pseudometriikoista joukolle $X$. 
-Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittämät uniformiteetit ovat samoja.
+Olkoon $X$ joukko ja olkoot $(f_i)_{i\in I} $ ja $(g_j)_{j\in J} $ joukon $X$ pseudometriikkaperheitä. 
+Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittelemät uniformiteetit ovat samoja.
 \end{maar}
 %\begin{esim}
 %Olkoon $X$ joukko ja $(f_i)_{i\in I}$ mielivaltainen perhe (äärellisiä) reaaliarvoisia kuvauksia $f_i\colon X\rightarrow \R$ kaikilla $i\in I$.
 %\end{esim}
 \begin{maar}
-Olkoon $X$ joukko ja $(f_i)_{i\in I} $ perhe pseudometriikoita joukolle $X$. 
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
 Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
 jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$.
 Nyt 
-$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R , a>0 \}$$
+$$B=\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R , a>0 \}$$
 on joukon $X$ erään uniformiteetin kanta. 
-Olkoon $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
+%Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
+Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ potenssijoukon äärellinen osajoukko ja $g_{J}$ kuvaus, jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
 Nyt 
 %$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
-$$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $$ 
+$$\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $$ 
 ja $H\subset I$ äärellinen joukko.
 Tällöin sanotaan, että perhe $(g_H)$ on \emph{saturoitu} (saturated), 
 ekvivalentti perheen $(f_i)_{i\in I}$ kanssa 
@@ -619,7 +632,7 @@ joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
 %Toisaalta on myös mahdollista määritellä i
 \begin{lem}\label{pseudo_uniformista}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
-Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittää uniformiteetin $\U$.
+Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittelee uniformiteetin $\U$.
 \begin{proof}
 Jokaiselle $U\in\U$ määritellään perhe $(U_n)$, 
 jolla $V_1\subset U$ ja $V_{n+1}^2\subset V_n$ kaikilla $n\in\N, n\geq 1$. 
@@ -745,7 +758,7 @@ jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
 \begin{proof}
 Näytetään ensin, että ehto on välttämätön. 
 Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
-määrittää pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
+määrittelee pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
 Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} 
 nojalla olevan saturoitu. 
 Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$, $\alpha\in I$ 
@@ -792,7 +805,7 @@ Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$.
 Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille $x,y\in X,x\neq y$ on 
 olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, jolla $f_i(x,y)\neq 0$. 
 Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
-ja yhden pseudometriikan $f$ määrittämä, 
+ja yhden pseudometriikan $f$ määrittelemä, 
 niin $f(x,y)\neq 0$ kaikilla $x,y\in X$.
 
 Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_i(x,y)=0$ kaikilla $i\in I$.
