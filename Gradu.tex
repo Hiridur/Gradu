@@ -85,16 +85,20 @@ seuraavasti:
 $$V\circ W=\{(x,z)\mid \text{on olemassa sellainen }y \in X,\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\},$$ 
 %$V\circ W=\{(x,z)\mid$ on olemassa sellainen $y \in X$, jolla $(x,y)\in V$ ja $(y,z)\in W\},$ 
 $W^2=W\circ W$ ja $W^n=W\circ W^{n-1}$.
+\begin{maar}
+Topologisen avaruuden $(X,\T)$ osajoukko $A\subset X$ on avoin, 
+jos se on kokoelman $\T\subset\Pot(X)$ alkio.
+\end{maar}
 \begin{maar}%Topo2 ?
 \emph{Ympäristö.} 
 Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
-Osa\-jouk\-ko $A\in X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
+Osa\-jouk\-ko $A\subset X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
 jos on olemassa avoin osajoukko $B\subset X $, joka sisältää osajoukon $A$.
 \end{maar}
-\begin{maar}
-Topologisen avaruuden $(X,\T)$ osajoukko $A\subset X$ on avoin, jos se on 
+\begin{huom}
+Topologisen avaruuden $(X,\T)$ avoin osajoukko $A\subset X$ on 
 jokaisen alkionsa $x\in A$ ympäristö.
-\end{maar}
+\end{huom}
 \begin{maar}%Topo2 2.14
 \emph{Ympäristökanta.} 
 Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
@@ -157,8 +161,9 @@ Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U
 Joukkoa $X$ joka on varustettu uniformisuudella $\U$ sanotaan uniformiseksi avaruudeksi.
 \end{maar}
 \begin{huom}
-Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, "tarpeeksi lähellä" \, tai 
-"mielivaltaisen lähellä"\, toisiaan.
+Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan 
+pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, 
+tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
 \begin{huom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
@@ -180,12 +185,15 @@ Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subse
 Kokoelma $\{\emptyset\}$ on ainoa ehdot täyttävä uniformiteetti tyhjälle joukolle.
 \end{huom}
 \begin{maar}\label{uniformi_kanta}
-Olkoon $X$ joukko ja kokoelma $\U\subset X\times X$ uniformiteetti joukolle $X$. Tällöin lähistöjen joukko $B\subset \U$ on uniformiteetin $\U$ kanta, jos jokaiselle lähistölle $V\in\U$ löytyy kannan alkio $W\in B$, jolla pätee $W\subset V$.
+Olkoon $X$ joukko ja kokoelma $\U\subset X\times X$ uniformiteetti 
+joukolle $X$. Tällöin lähistöjen joukko $B\subset \U$ on 
+uniformiteetin $\U$ \emph{kanta}, jos jokaiselle lähistölle $V\in\U$ löytyy 
+kannan alkio $W\in B$, jolla pätee $W\subset V$.
 \end{maar}
 %\begin{kor}
 %Uniformiteetin kannas
 %\end{kor}
-\begin{maar}\label{uniformin kannan maar}
+\begin{lause}\label{uniformin kannan maar}
 Olkoon $X$ joukko. Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformiteetin kanta, jos kokoelmalle $B$ pätee
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
 \begin{enumerate} [label=(B\arabic*)]
@@ -195,7 +203,10 @@ Olkoon $X$ joukko. Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään un
 $,
 \item\label{U'_III} Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-\end{maar}
+\begin{proof}
+%TODO
+\end{proof}
+\end{lause}
 \begin{lause}
 %\emph{Uniformisen avaruuden topologia.}
 Uniformisen avaruuden topologia.
@@ -235,11 +246,12 @@ V(x)\cap W(x) =&\{ y\in X\mid (x,y)\in V \text{ ja } (x,y)\in W \}\\
 \end{align*} 
 %sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojalla $ V\cup W \in B$ ja $ V\cap W \in B$. 
 sillä määritelmän \ref{uniformi_maar} ehdon \ref{F_II} 
-nojalla $ V\cap W \in B$. 
+nojalla pätee $ V\cap W \in B$. 
 %Olkoon lisäksi $U\subset X$ joukko, jolle pätee $V(x)\subset U$. 
 %Nyt joukkoa $U$ vastaa jokin $U'\in X\times X$, 
 %jolla pätee  $U'\in \U$.
-Tällöin joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko ja siten 
+Ehdosta \ref{F_I} seuraa, että 
+joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko ja siten 
 korollaarin \ref{kaikki_ystöt} nojalla ympäristökanta.
 %Tällöin on olemassa yksikäsitteinen topologia, jossa $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko.\cite{Eom1}
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
@@ -282,9 +294,9 @@ $$V'(x')=\{ y'\in X'\mid (x',y')\in V'\}$$
 määrää alkion $x'$ ympäristön avaruudessa $X$.
 Korollaarin \ref{uniformi alkukuva} mukaan lähistön $V'$ alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
 Olkoon nyt $x\in X$ sellainen alkio, jolla $f(x)=x'$.
-Tällöin joukko $g^{\leftarrow}V'(x)$ on alkion $x$ ympäristö. 
+Tällöin joukko $(g^{\leftarrow}V')(x)$ on alkion $x$ ympäristö. 
 %Olkoon nyt $x\in g^\leftarrow (x')$ alkio, jolloin 
-Erityisesti ympäristö $g^{\leftarrow}V'(x)$ kuvautuu ympäristöön $V'(x')$, 
+Erityisesti ympäristö $(g^{\leftarrow}V')(x)$ kuvautuu ympäristöön $V'(x')$, 
 sillä ehdosta $(x,y)\in g^\leftarrow V'$ seuraa $(x',f(y))\in V' $ kaikilla $y\in X$.
 %
 %Tällöin olkoon $x\in X$ sellainen alkio, jolla $f(x)=x'$. 
@@ -299,7 +311,8 @@ Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on
 \end{lause}
 \begin{lause}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia. 
+ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ 
+uniformisti jatkuvia kuvauksia. 
 Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
 \begin{proof}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia, 
@@ -323,7 +336,9 @@ Siis yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
 \end{lause}
 \begin{maar}
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. Kuvaus $f$ on isomorfismi, jos sekä kuvaus $f$ että sen käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
+ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. 
+Kuvaus $f$ on \emph{isomorfismi}, jos sekä kuvaus $f$ että sen 
+käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
 \end{maar}
 \begin{maar}\label{uniformi_vertailu}
 \emph{Uniformiteettien vertailtavuus.} 
@@ -331,7 +346,8 @@ Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$.
 Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$, 
 jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$. 
 Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
-Sanotaan, että kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, jos $\U_1$ on hienompi kuin $\U_2$. 
+Sanotaan, että kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, 
+jos $\U_1$ on hienompi tai karkeampi kuin $\U_2$. 
 Uniformiteeteille $\U_1$ ja $\U_2$ pätee $\U_1=\U_2$, 
 jos $\U_1$ on sekä hienompi että karkeampi kuin $\U_2$.
 \end{maar}
