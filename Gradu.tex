@@ -277,7 +277,7 @@ Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Tällöin jos $V'$ on avaruuden $X'$ lähistö, niin alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
 \begin{proof}
-Suora seuraus edellisestä määritelmästä ja uniformisuuden ehdosta \ref{F_I}.
+Korollaari on suora seuraus määritelmästä \ref{uniformisti_jatkuva} ja uniformisuuden määritelmän \ref{uniformi_maar} ehdosta \ref{F_I}.
 \end{proof}
 \end{kor}
 \begin{lause}
@@ -319,7 +319,7 @@ uniformisti jatkuvia kuvauksia.
 Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
 \begin{proof}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia, 
-$f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvaksia ja 
+$f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvauksia ja 
 $V''$ avaruuden $X''$ lähistö. 
 Tällöin uniformisti jatkuvan kuvauksen määritelmän nojalla 
 on olemassa avaruuden $X'$ lähistö $V'$, 
@@ -388,7 +388,7 @@ Tällöin perheen $(\U_i)_{i\in I}$ \emph{pienin yläraja} on uniformiteetti $\U
 \chapter{Pseudometriikat}
 Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. Lisää aiheesta \cite{Eom2}.
 %\\
-\begin{maar}
+\begin{maar}\label{pseudo_maar}
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ 
 % sellainen kuvaus, joka täyttää seuraavat ehdot:
 kuvaus. Kuvaus $f$ on \emph{pseudometriikka}, jos seuraavat ehdot pätevät:
@@ -430,7 +430,15 @@ Tällöin kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $f(x,y)=\in
 \end{esim}
 \begin{huom}
 %Metriikoista tutut ominaisuudet, kuten
-Ehdosta \ref{EC_III} seuraa, että jos $f(x,z)+f(z,y)<\infty$ niin $f(x,y)<\infty$. Tällöin koska kaavat $f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ pätevät, niin myös kaava $|f(x,z)-f(z,y)|\leq f(x,y)$ pätee.
+%Määritelmän \ref{pseudo_maar} ehdosta \ref{EC_III} seuraa, että jos $f(x,z)+f(z,y)<\infty$ niin $f(x,y)<\infty$. 
+Määritelmän \ref{pseudo_maar} ehdon \ref{EC_III} nojalla epäyhtälöstä $f(x,z)+f(z,y)<\infty$ seuraa $f(x,y)<\infty$. 
+%Tällöin koska kaavat $f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ pätevät, niin myös kaava $|f(x,z)-f(z,y)|\leq f(x,y)$ pätee.
+Näin ollen epäyhtälöistä 
+\begin{equation*}
+f(x,z)\leq f(x,y)+f(y,z)\text{ ja }f(y,z)\leq f(y,x)+f(x,z)
+\end{equation*}
+%$f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ 
+seuraa epäyhtälö $|f(x,z)-f(z,y)|\leq f(x,y)$.
 \end{huom}
 \begin{esim}%1
 %Olkoon $f\colon X\times X\rightarrow$ pseudometriikka
@@ -517,10 +525,11 @@ Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 Olkoot $a_1,a_2\in\R_+$ reaalilukuja, joilla $a_1\leq a_2$. 
-Tällöin $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
+Tällöin pätee $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
-Kuvaus $f$ on pseudometriikka, joten pseudometriikan ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. Toisin sanoen jokainen alkio pistepareista $(x,x)$ muodostuvasta joukosta $\{(x,x)\mid x\in X\}$ kuvautuu pseudometriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
+Kuvaus $f$ on pseudometriikka, joten pseudometriikan määritelmän \ref{pseudo_maar} ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. 
+Toisin sanoen pistepareista $(x,x)$ muodostuvan joukon $\{(x,x)\mid x\in X\}$ jokainen alkio kuvautuu pseudometriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in \R_+$.
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
 Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\in X$. 
@@ -607,7 +616,7 @@ Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe.
 Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
 jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$.
 Nyt 
-$$B=\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R , a>0 \}$$
+$$B=\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
 on joukon $X$ erään uniformiteetin kanta. 
 %Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
 Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ potenssijoukon äärellinen osajoukko ja $g_{J}$ kuvaus, jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
@@ -626,7 +635,7 @@ uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
-jos jokaisella $i\in I$ ja $a\in\R$, $a>0$ löytyy $j\in J$ ja $b\in\R$, $b>0$, 
+jos jokaisella $i\in I$ ja $a\in\R_+$ löytyy $j\in J$ ja $b\in\R_+$, 
 joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
 \end{maar}
 %Toisaalta on myös mahdollista määritellä i
@@ -715,7 +724,7 @@ Tällöin $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että
 $(x,z_h)\in U_k,(z_h,z_{h+1})\in U_k$ ja $(z_{h+1},y)\in U_k$. 
 Nyt $(x,y)\in U_k^3\subset U_{k-1}$ ja edelleen 
 $g(x,y)\leq 2^{-(k-1)}=2^{1-k}\leq 2a$, eli $1/2g(x,y)\leq a.$ 
-Nyt epäyhtälöt \ref{numeroituvakantapm} on osoitettu päteviksi ja 
+Näin ollen kaavan \ref{numeroituvakantapm} epäyhtälöt pätevät ja 
 niistä seuraa, että jokaisella $a>0$ pätee 
 $U_k\subset f^\leftarrow([0,a])$, kun $2^{-k}<a$. 
 Toisaalta myös $f^\leftarrow([0,a])\subset U_k$, 
@@ -761,7 +770,7 @@ Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan
 määrittelee pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
 Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} 
 nojalla olevan saturoitu. 
-Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R,a>0$, $\alpha\in I$ 
+Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R_+$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
 jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
 Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
@@ -786,8 +795,8 @@ joukko $U_a(x_0)=\{y\mid g(x_0,y)\leq a\}$ on alkion $x_0$ ympäristö uniformit
 indusoimassa topologiassa $\T'$. 
 Joukkojen määrittelyistä seuraa, että jos $a<1$, niin $U_a(x)\subset V_0$ ja tällöin kokoelma $B=\{U_a(x_0)\mid g(x_0,y)\leq a\}$ 
 on alkion $x_0$ ympäristökanta topologiassa $\T$.
-%Toisaalta kokoelma $B=\{U_a\mid a\in\R,a>0 \}$ muodostaa kannan uniformiteetille $\U$ 
-%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R,a>0 \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
+%Toisaalta kokoelma $B=\{U_a\mid a\in\R_+ \}$ muodostaa kannan uniformiteetille $\U$ 
+%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R_+ \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
 %
 %Toisaalta topologian $\T$ ympäristökanta on myös 
 
