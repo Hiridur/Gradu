@@ -465,18 +465,24 @@ on pseudometriikka.
 \end{esim}
 \begin{esim}%3
 Olkoon $(f_i)_{i\in I}$ perhe joukon $X$ pseudometriikoita. 
-Tällöin kaikilla alkioilla $x,y\in X$ kaavasta $$f_i(x,y)\leq f_i(x,z)+f_i(z,y)$$ seuraa kaava $$\sup_{i\in I}f_i(x,y)\leq \sup_{i\in I}\left(f_i(x,z)+f_i(z,y)\right).$$
+Tällöin kaikilla alkioilla $x,y\in X$ epäyhtälöstä 
+$f_i(x,y)\leq f_i(x,z)+f_i(z,y)$ seuraa epäyhtälö 
+$$\sup_{i\in I}f_i(x,y)\leq \sup_{i\in I}\left(f_i(x,z)+f_i(z,y)\right).$$
 %\begin{align*}
 %&f_i(x,y)\leq f_i(x,z)+f_i(z,y)\\
 %\Rightarrow &\sup_{i\in I}f_i(x,y)\leq \sup_{i\in I}\left(f_i(x,z)+f_i(z,y)\right)
 %\end{align*} 
 Tällöin kuvaus 
+$f\colon X\times X\rightarrow [0,+\infty]$
+ missä  
+%\quad\text{ kaavalla } 
 \begin{equation*}
-f\colon X\times X\rightarrow [0,+\infty],\quad
-%\text{ kaavalla } 
 f(x,y)=\sup_{i\in I}f_i(x,y)
+%$f(x,y)=\sup_{i\in I}f_i(x,y)$
+\quad\text{kaikilla }x,y\in X 
+%kaikilla $x,y\in X$
 \end{equation*} 
-kaikilla $x,y\in X$ on pseudometriikka. 
+on pseudometriikka. 
 \end{esim}
 \chapter{Pseudometriikan määrittelemä uniformisuus}\label{luku_pseudo_uniformi}
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
@@ -576,11 +582,21 @@ Osoitetaan väitteen implikaatio molempiin suuntiin.
 \item[$\Rightarrow$] 
 Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on uniformisti jatkuva. 
 Tällöin määritelmän \ref{uniformisti_jatkuva} 
-mukaan jokaiselle %avaruuden $(X,\U_f)$ 
+mukaan jokaiselle maalijoukon %avaruuden $(X,\U_f)$ 
 lähistölle $V'\in\U_f $ on olemassa %avaruden $(X,\U_g)$ 
-sellainen lähistö $V\in\U_g $, 
-jolla seuraava ehto pätee: Jos $(x,y)\in V$, 
-niin $(x,y)\in V'$ kaikilla $x,y\in X$. Tarkastelemalla uniformiteettien kantojen jäseniä saamme edeltävän seuraavaan muotoon: Jokaisella $a\in\R_+$ on olemassa $b\in\R_+$ niin, että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
+%sellainen lähistö $V\in\U_g $, 
+lähtöjoukon lähistö $V\in\U_g $ niin, että 
+%jolla seuraava ehto pätee: Jos $(x,y)\in V$, 
+%jolla ehto $(x,y)\in V\Rightarrow (x,y)\in V'$ pätee kaikilla $x,y\in X$. 
+jokaiselle $(x,y)\in V$ pätee $(x,y)\in V'$ kaikilla $x,y\in X$. 
+%niin $(x,y)\in V'$ kaikilla $x,y\in X$. 
+Tarkas\-tele\-mal\-la uniformiteettien kantojen jäseniä 
+%saamme edeltävän ehdon seuraavaan muotoon: 
+voidaan edeltävä ehto muotoilla seuraavasti: 
+Jokaisella $a\in\R_+$ on olemassa $b\in\R_+$ niin, 
+että kaikilla $x,y\in X$ pätee 
+$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, 
+eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
 \item[$\Leftarrow$] Oletetaan, että jokaiselle reaaliluvulle 
 $a\in\R_+$ on olemassa sellainen $b\in\R_+$, jolla 
 $g(x,y)\leq b \Rightarrow f(x,y)\leq a,
@@ -589,8 +605,13 @@ eli %}
 $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a],$ 
 kaikilla $x,y\in X$. 
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
-Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle $f^{\leftarrow}[0,a'],a'\in\R_+ $ on olemassa uniformiteetin $\U_g$ kannan jäsen $g^{\leftarrow}[0,b'],b'\in\R_+$ niin, että $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
-Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. %Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
+Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle 
+$f^{\leftarrow}[0,a']$ missä $a'\in\R_+ $ on olemassa uniformiteetin $\U_g$ 
+kannan jäsen $g^{\leftarrow}[0,b'],b'\in\R_+$ niin, 
+että $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
+Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on 
+uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. 
+%Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
 Siis pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$.
@@ -616,19 +637,23 @@ Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe.
 Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
 jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$.
 Nyt 
-$$B=\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
+$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
 on joukon $X$ erään uniformiteetin kanta. 
 %Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
-Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ potenssijoukon äärellinen osajoukko ja $g_{J}$ kuvaus, jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
-Nyt 
+Olkoon nyt $J=\{H\mid H\subset I, H\text{ äärellinen }\}$ 
+potenssijoukon $\Pot(I)$ äärellinen osajoukko ja $g_{J}$ kuvaus, 
+jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
+
+Nyt siis 
 %$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
-$$\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $$ 
-ja $H\subset I$ äärellinen joukko.
+$\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $ 
+ja $H\subset I$ on äärellinen joukko.
 Tällöin sanotaan, että perhe $(g_H)$ on \emph{saturoitu} (saturated), 
-ekvivalentti perheen $(f_i)_{i\in I}$ kanssa 
+\emph{ekvivalentti} perheen $(f_i)_{i\in I}$ kanssa 
 ja saatu saturoimalla perhe $(f_i)_{i\in I}$. 
 
 Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määräämä 
+%uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
 uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
 \end{maar}
 \begin{maar}
@@ -643,7 +668,7 @@ joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittelee uniformiteetin $\U$.
 \begin{proof}
-Jokaiselle $U\in\U$ määritellään perhe $(U_n)$, 
+Jokaiselle $U\in\U$ määritellään perhe $(V_n)$, 
 jolla $V_1\subset U$ ja $V_{n+1}^2\subset V_n$ kaikilla $n\in\N, n\geq 1$. 
 Nyt perhe $(V_n)$ on kanta eräälle joukon $X$ uniformiteetille $\U_V$, 
 joka on karkeampi kuin $\U$. 
@@ -656,7 +681,7 @@ $(U_n)$ on uniformiteetin $\U$ numeroituva kanta.
 \begin{lause}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Jos uniformiteetilla $\U$ on numeroituva kanta, 
-niin on olemassa pseudometriikka $f\colon X\times X\rightarrow R_+$, 
+niin on olemassa pseudometriikka $f\colon X\times X\rightarrow \R_+$, 
 jonka määräämä uniformiteetti on identtinen uniformiteetin $\U$ kanssa.
 \begin{proof}
 Olkoon $(V_n)$ numeroituva kanta uniformiteetille $\U$. 
@@ -680,7 +705,7 @@ g(x,y)=
 \end{equation*}
 Nyt $g$ on symmetrinen, positiivinen ja $g(x,x)=0$ kaikilla $x\in X$. 
 
-Olkoon nyt $f\colon X\times X\rightarrow R_+$ kuvaus, 
+Olkoon nyt $f\colon X\times X\rightarrow \R_+$ kuvaus, 
 jolla 
 $$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1}),$$
 missä $p\in\N,p\geq 1$ ja $(z_i)_{0\leq i\leq p}$ 
@@ -723,7 +748,7 @@ Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$.
 Tällöin $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että 
 $(x,z_h)\in U_k,(z_h,z_{h+1})\in U_k$ ja $(z_{h+1},y)\in U_k$. 
 Nyt $(x,y)\in U_k^3\subset U_{k-1}$ ja edelleen 
-$g(x,y)\leq 2^{-(k-1)}=2^{1-k}\leq 2a$, eli $1/2g(x,y)\leq a.$ 
+$g(x,y)\leq 2^{-(k-1)}=2^{1-k}\leq 2a$, eli $\frac{1}{2}g(x,y)\leq a.$ 
 Näin ollen kaavan \ref{numeroituvakantapm} epäyhtälöt pätevät ja 
 niistä seuraa, että jokaisella $a>0$ pätee 
 $U_k\subset f^\leftarrow([0,a])$, kun $2^{-k}<a$. 
