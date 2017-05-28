@@ -20,6 +20,7 @@
 \newcommand{\U}{\,\mathcal{U}}
 \newcommand{\T}{\mathcal{T}}
 \newcommand{\Pot}{\mathcal{P}}
+\newcommand{\F}{\mathcal{F}}
 \newcommand{\diam}{\operatorname{diam}}
 
 \theoremstyle{plain}
@@ -82,12 +83,14 @@
 Oletamme koko tutkielman ajan, että $\R_+=\{a\in\R\mid a>0\}$.
 \\
 \\
+\begin{maar}
 Olkoon $X$ joukko ja $V$ ja $W$ karteesisen tulon $X\times X$ osajoukkoja.
 Merkitään tällöin %joukkoilla $V$ ja $W$ 
 seuraavasti: 
 $$V\circ W=\{(x,z)\mid \text{on olemassa sellainen }y \in X,\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\},$$ 
 %$V\circ W=\{(x,z)\mid$ on olemassa sellainen $y \in X$, jolla $(x,y)\in V$ ja $(y,z)\in W\},$ 
 $W^2=W\circ W$ ja $W^n=W\circ W^{n-1}$.
+\end{maar}
 \begin{maar}
 Topologisen avaruuden $(X,\T)$ osajoukko $A\subset X$ on avoin, 
 jos se on kokoelman $\T\subset\Pot(X)$ alkio.
@@ -344,10 +347,11 @@ Kuvaus $f$ on \emph{isomorfismi}, jos sekä kuvaus $f$ että sen
 käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
 \end{maar}
 \begin{maar}\label{uniformi_vertailu}
-\emph{Uniformiteettien vertailtavuus.} 
+\emph{Uniformiteettien vertailu.} 
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
-Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$, 
-jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$. 
+Uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$, 
+jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin $\U_1$ on hienompi kuin $\U_2$. 
+
 Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
 Sanotaan, että kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, 
 jos $\U_1$ on hienompi tai karkeampi kuin $\U_2$. 
@@ -634,12 +638,13 @@ Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittelemät uni
 %\end{esim}
 \begin{maar}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\rightarrow [0,\infty]$ kuvaus, 
-jolla $g_{H}(x)=\sup_{i\in H}f_i(x)$.
+Olkoon $H'\subset I$ äärellinen joukko ja $g_{H'}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
+jolla $g_{H'}(x)=\sup_{i\in H'}f_i(x)$.
 Nyt 
 $$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
 on joukon $X$ erään uniformiteetin kanta. 
 %Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
+%Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ 
 Olkoon nyt $J=\{H\mid H\subset I, H\text{ äärellinen }\}$ 
 potenssijoukon $\Pot(I)$ äärellinen osajoukko ja $g_{J}$ kuvaus, 
 jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
@@ -656,12 +661,13 @@ Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määr�
 %uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
 uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
 \end{maar}
-\begin{maar}
+\begin{maar}\label{saturoitu}
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
 jos jokaisella $i\in I$ ja $a\in\R_+$ löytyy $j\in J$ ja $b\in\R_+$, 
-joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$.
+joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$. 
+Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.
 \end{maar}
 %Toisaalta on myös mahdollista määritellä i
 \begin{lem}\label{pseudo_uniformista}
@@ -793,8 +799,8 @@ jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
 \begin{proof}
 Näytetään ensin, että ehto on välttämätön. 
 Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
-määrittelee pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa tuloksen \ref{saturoitu} 
+määritellä pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
+Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa määritelmän \ref{saturoitu} 
 nojalla olevan saturoitu. 
 Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R_+$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
@@ -831,6 +837,68 @@ Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
 \end{lause}
 %
 %
+\chapter{Täydellinen uniforminen avaruus}
+Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy filtterien avulla.
+
+Sellaiselle joukolle, jolle on määritelty uniformiteetti voidaan määritellä myös 
+\emph{mielivaltaisen pieni} osa\-jouk\-ko kyseisen uniformiteetin suhteen. 
+Osajoukko on mielivaltaisen pieni silloin, kun kaikki osajoukon alkiot ovat 
+mielivaltaisen lähellä toisiaan. 
+Näin saadaan seuraava määritelmä.
+\begin{maar}
+Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
+Osajoukko $A\subset X$ on \emph{$V-$pieni}, jos $(x,y)\in V$ jokaisella $x,y\in X$, eli jos $A\times A\subset V$.
+\end{maar}
+\begin{lause}
+Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
+Olkoon lisäksi $A,B\subset X$ $V-$pieniä osajoukkoja, 
+joiden leikkaus on epätyhjä. 
+Tällöin yhdiste $A\cup B$ on $V^2-$pieni.
+\begin{proof}
+Olkoot $x\in A$, $y\in B$ ja $z\in A\cap B$ alkioita. 
+Tällöin alkioparit $(x,z)$ ja $(z,y)$ kuuluvat lähistöön $V$ 
+ja näin ollen alkiopari $(x,y)$ kuuluu joukkoon $V^2$.
+\end{proof}
+\end{lause}
+\begin{maar}
+\emph{Filtteri.} Olkoon $X$ joukko ja $\F\subset \Pot(X)$ potenssijoukon osajoukko. 
+Joukko $F$ on \emph{filtteri} joukolle $X$, jos sille pätee 
+uniformiteetin ehtojen \ref{F_I} ja \ref{F_II} lisäksi 
+seuraava ehto:
+\begin{enumerate}
+\item[(F)] Tyhjä joukko ei kuulu joukkoon $\F$.
+\end{enumerate} 
+%Tällöin sanotaan, että
+\end{maar}
+\begin{maar}
+Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
+Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
+jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
+joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
+\\
+\\
+Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
+\end{maar}
+\begin{maar}
+\emph{Filttereiden vertailu.}
+Olkoon $X$ joukko ja $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
+Filtteri $\F_2$ on karkeampi kuin filtteri $\F_1$, jos $\F_2\subset \F_1$. 
+Tällöin $\F_1$ on hienompi kuin $\F_2$. 
+
+Jos lisäksi pätee $\F_1\neq\F_2$, niin $\F_1$ on aidosti hienompi kuin $\F_2$ ja vastaavasti $\F_2$ on aidosti karkeampi kuin $\F_1$. 
+Sanotaan, että kahta filtteriä $\U_1$ ja $\U_2$ voidaan vertailla, 
+jos $\F_1$ on hienompi tai karkeampi kuin $\F_2$. 
+Filttereille $\F_1$ ja $\F_2$ pätee $\F_1=\F_2$, 
+jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
+\end{maar}
+\begin{lause}
+Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
+\end{lause}
+\begin{maar}
+
+\end{maar}
+%
+%
 \chapter{Hausdorff uniforminen avaruus}
 Tässä luvussa määritellään Hausdorff uniformiset avaruudet ja 
 esitetään niiden ominaisuuksia, 
@@ -860,9 +928,9 @@ joka määrää joukon $X$ uniformiteetin.
 Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
 kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
 \end{lem}
-\begin{maar}
+\begin{maar}\label{complete}
 Olkoon $X$ uniforminen avaruus. 
-Tällöin on olemassa täydellinen (complete) Hausdorff 
+Tällöin on olemassa täydellinen (com\-plete) Hausdorff 
 uniforminen avaruus $\hat X$ ja uniformisti jatkuva 
 kuvaus $i\colon X\rightarrow\hat X$, jolle pätee seuraava ominaisuus:
 \begin{enumerate} [label=(P),ref=(P)]
@@ -883,9 +951,9 @@ uniformisti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}.
 Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
 \end{maar}
 \begin{kor}
-Jos $X$ on Hausdorff uniforminen avaruus, niin 
-"kanoninen kuvaus" $i\colon X\rightarrow\hat X$ määrää 
-isomorfismin $X\rightarrow X'$, jossa $X'$ on tiheä joukossa $\hat X$.
+Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorf uniforminen avaruus. 
+Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
+isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
 \end{kor}
 
 
