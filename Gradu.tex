@@ -174,9 +174,10 @@ tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \begin{huom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
 Mikäli muut ehdot pätevät voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla: 
-\begin{enumerate}
+\begin{enumerate} [label=(Ua),ref=(Ua)]
 %\item[(U$\ref{U_II}$a)] \label{Uaehto} 
-\item[(Ua)] \label{Uaehto} 
+\item \label{Uaehto} 
+%\item[(Ua)] \label{Uaehto} 
 Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subset V$.
 \end{enumerate}
 %Ehto (U$\ref{U_II}$\ref{Uaehto}) seuraa
@@ -871,6 +872,24 @@ seuraava ehto:
 %Tällöin sanotaan, että
 \end{maar}
 \begin{maar}
+Olkoon $X$ uniforminen avaruus. Joukko $B\subset\Pot(X)$ on erään filtterin $\F$ kanta, jos seuraavat ehdot pätevät:
+\begin{enumerate} 
+\item Jos $A_1,A_2\in B$, niin on olemassa sellainen $A_3\in B$, 
+jolla $A_3\subset A_1\cap A_2$.
+\item joukko $B$ on epätyhjä eikä tyhjä joukko ole joukon $B$ alkio.
+\end{enumerate}
+Tällöin kanta $B$ virittää filtterin $\F$. 
+%Lisäksi filttereiden $\F_1$ ja $\F_2$ kannat $B_1$ ja $B_2$ ovat 
+%\emph{ekvivalentteja}, jos $\F_1=\F_2$.
+Lisäksi kaksi kantaa ovat 
+\emph{ekvivalentteja}, jos ne virittävät saman filtterin.
+\end{maar}
+\begin{lause}
+Joukon $X$ filtteri $\F$ kannalla $B$ on hienompi kuin 
+filtteri $\F'$ kannalla $B'$ jos ja vain jos jokaiselle $M\in B$ löytyy 
+sellainen $M'\in B'$, jolla $M'\subset M$.
+\end{lause}
+\begin{maar}\label{Cauchy_filtteri}
 Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
 Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
 jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
@@ -907,9 +926,75 @@ ja alkio $x$ on filtterin $\F$ raja-arvo,
 niin alkio $x$ on myös kannan $B$ raja-arvo ja 
 kanta $B$ suppenee kohti alkiota $x$.
 \end{maar}
-\begin{maar}
+\begin{lause}
+Filtterikanta $B$ suppenee kohti alkiota $x\in X$, jos ja vain jos 
+jokainen alkion $x$ ympäristö sisältää filtterikannan jäsenen.
+\begin{proof}
+%TODO
+\end{proof}
+\end{lause}
+\begin{lause}
+Filtteri $\F$ suppenee kohti alkiota $x\in X$, 
+jos ja vain jos jokainen 
+filtteriä $\F$ hienompi ultrafiltteri suppenee kohti alkiota $x$.
+\begin{proof}
+%TODO
+\end{proof}
+\end{lause}
+\begin{lause}
+Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy filtteri.
+\begin{proof}
+Olkoon $X$ joukko, $\F$ suppeneva filtteri joukolle $X$ ja $x\in X$ 
+sellainen alkio, jota kohti $\F$ suppenee. 
+Tällöin alkion $x$ ympäristöfiltteri $B(x)$ sisältyy filtteriin $\F$. 
+Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'\in\F$. 
 
-\end{maar}
+Olkoon nyt $V\in\U$ lähistö ja $x\in X$ alkio. Ehdon \ref{Uaehto} nojalla on olemassa 
+sellainen lähistö $W\in\U$, jolla $W^{-1}\circ W\subset V$. 
+Huomataan, että joukko 
+$$W(x)\times W(x)=\{ (y_1,y_2)\mid (x,y_1)\in W,(x,y_2)\in W\} $$
+sisältyy joukkoon 
+$$W^{-1}\circ W=\{ (y_1,y_2)\mid \text{on olemassa }x',\text{ jolla }(y_1,x')\in W^{-1},(x',y_2)\in W\}.$$ 
+Näin ollen lähistölle $V$ löydettiin osajoukko $W(x)\in X$, 
+jolla $W(x)\times W(x)\subset W^{-1}\circ W\subset V$ ja $W(x)\in\F$. 
+Määritelmän \ref{Cauchy_filtteri} nojalla $\F$ on Cauchy filtteri.
+\end{proof}
+\end{lause}
+\begin{lause}
+\emph{Minimaalinen Cauchy filtteri.} 
+Olkoon $(X,\U)$ uniforminen avaruus. 
+Jokaiselle joukon $X$ Cauchy filtterille on olemassa yksikäsitteinen 
+minimaalinen Cauchy filtteri $\F_0$, joka on karkeampi kuin $\F$, 
+eli $\F_0\subset \F$. 
+Jos $B$ on kanta filtterille $\F$ ja $G$ on uniformiteetin $\U$ symmetristen lähistöjen kanta, 
+niin joukot $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ missä $M\in B$ ja $V\in G$ muodostavat 
+filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
+%niin joukko $\{V(M)\mid M\in B, V\in G \}$ muodostaa 
+%filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
+%niin joukko $\{y\mid (x,y)\in V,x\in M, M\in B, V\in G \}$ muodostaa 
+%filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
+%$V(M)=\{ y\mid (x,y)\in V,x\in M \}$
+\begin{proof}
+%Lauseessa määritelty $B_0$ on kanta, sillä kannan ehdot pätevät: 
+Tarkistetaan kannan ehdot joukolle $B_0$:
+\begin{enumerate}
+\item Olkoot $V_1(M_1),V_2(M_2)\in B_0$ joukkoja. 
+Nyt $M_1,M_2\in B$, joten on olemassa joukko $M_3\in B$, 
+jolla pätee $M_3\subset M_1\cap M_2$. 
+Toisaalta $V_1,V_2\in \U$, joten on olemassa joukko $V_3\in\U$, 
+jolla pätee $V_3\subset V_1\cap V_2$. 
+Nyt joukko $ V_3(M_3)=\{ y\mid (x,y)\in V_3, x\in M_3 \}$ on joukon 
+$(V_1\cap V_2)(M_1\cap M_2)= V_1(M_1)\cap V_2(M_2)$ osajoukko, 
+eli $ V_3(M_3)\subset V_1(M_1)\cap V_2(M_2)$.
+\item Olkoon $M\in B$ joukko ja $V\in \U$ lähistö. 
+Tällöin joukko $M$ on epätyhjä, joten myös joukko $V(M)$ on epätyhjä. 
+Näin ollen tyhjä joukko ei ole joukon $B_0$ alkio.
+\end{enumerate}
+Kannan $B_0$ virittämä filtteri $\F_0$ on karkeampi kuin kannan $B$ virittämä $\F$, 
+sillä jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$. 
+%TODO 1-käs
+\end{proof}
+\end{lause}
 \begin{maar}
 
 \end{maar}
