@@ -729,15 +729,17 @@ pätevät.
 Kaavan oikea puoli, eli $f(x,y)\leq g(x,y)$ seuraa siitä, 
 että 
 $$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1})\leq\sum_{i=0}^1g(z_i,z_i+1)=g(z_0,z_1)=g(x,y).$$
-Kaavan \ref{numeroituvakantapm} vasen puoli 
+Kaavan \ref{numeroituvakantapm} vasen puoli, 
+eli $\frac{1}{2}\,g(x,y)\leq f(x,y)$ 
 osoitetaan induktion avulla. 
 Olkoon $p\in\N$ luonnollinen luku. 
 Nyt jokaisella $p+1$ alkion jonolla joukon $X$ 
 alkioita $ (z_i)_{0\leq i\leq p}$, 
-jolla $z_0=x$ ja $z_p=y$, saadaan 
+jolla $z_0=x$ ja $z_p=y$, saadaan induktio-oletukseksi 
 \begin{equation}\label{numeroituvakantapm2}
 \sum_{i=0}^{p-1}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(x,y).
 \end{equation}
+%Tämä kaava . 
 Jos $p=1$, niin summassa on vain yksi termi
 $$g(z_0,z_{1})=g(x,y)\geq \frac{1}{2}\,g(x,y).$$
 Merkitään 
@@ -750,8 +752,10 @@ joilla $\sum_{i<q}g(z_i,z_{i+1})\leq a/2$.
 Tällöin $$\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja }\quad
 \sum_{i<h+1}g(z_i,z_{i+1})> a/2,$$ 
 joten $\sum_{i>h}g(z_i,z_{i+1})\leq a/2$. 
-Induktio-oletuksen nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
+%TODO tästä eteenpäin vaatii viimeistelyä
+Induktio-oletuksen, eli kaavan \ref{numeroituvakantapm2} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
 toisaalta myös $g(x,z_h)\leq a$ pätevät. 
+
 Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$. 
 Tällöin $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että 
 $(x,z_h)\in U_k,(z_h,z_{h+1})\in U_k$ ja $(z_{h+1},y)\in U_k$. 
