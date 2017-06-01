@@ -744,8 +744,10 @@ Jos $p=1$, niin summassa on vain yksi termi
 $$g(z_0,z_{1})=g(x,y)\geq \frac{1}{2}\,g(x,y).$$
 Merkitään 
 \begin{equation}\label{numeroituvakantapm3}
-a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}).
+a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}),
 \end{equation}
+jolloin induktio-oletus voidaan kirjoittaa 
+muodossa $\frac{1}{2}g(x,y)\leq a $.
 Määrittelyn nojalla $g(x,y)\leq 1$, joten jos $a\geq 1/2$, 
 niin yhtälö \ref{numeroituvakantapm2} pätee muodossa 
 $a\geq \frac{1}{2}\geq \frac{1}{2}g(x,y)$. 
@@ -753,12 +755,23 @@ Oletetaan, että $a<1/2$ ja että $h$ on suurin niistä indekseistä $q$,
 joilla $\sum_{i<q}g(z_i,z_{i+1})\leq a/2$. 
 Tällöin 
 \begin{equation}\label{numeroituvakantapm4}
-\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja }\quad
-\sum_{i<h+1}g(z_i,z_{i+1})> a/2,
+\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja lisäksi }\quad
+\sum_{i>h}g(z_i,z_{i+1})\leq a/2,
 \end{equation}
-joten $\sum_{i>h}g(z_i,z_{i+1})\leq a/2$. 
+koska $\sum_{i<h+1}g(z_i,z_{i+1})> a/2$. 
+%Nyt siis $\frac{1}{2}g(x,y)\leq a$, 
 %TODO tästä eteenpäin vaatii viimeistelyä
-Kaavojen \ref{numeroituvakantapm2}, \ref{numeroituvakantapm3} ja \ref{numeroituvakantapm4} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
+Edeltävien kaavojen ja induktio-oletuksen nojalla 
+sijoituksella $p=h$ pätee
+\begin{equation*}
+\frac{1}{2}a\geq \sum_{i<h}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(x,z_h),
+\end{equation*}
+ja toisaalta %sijoituksella "$0=h+1$"
+\begin{equation*}
+\frac{1}{2}a\geq \sum_{i<h}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(z_{h+1},y).
+\end{equation*}
+Tällöin kaavojen %\ref{numeroituvakantapm2}, 
+\ref{numeroituvakantapm3} ja \ref{numeroituvakantapm4} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
 toisaalta myös $g(x,z_h)\leq a$ pätevät. 
 
 Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$. 
