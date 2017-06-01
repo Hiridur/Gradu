@@ -743,17 +743,22 @@ jolla $z_0=x$ ja $z_p=y$, saadaan induktio-oletukseksi
 Jos $p=1$, niin summassa on vain yksi termi
 $$g(z_0,z_{1})=g(x,y)\geq \frac{1}{2}\,g(x,y).$$
 Merkitään 
-$$a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}).$$
+\begin{equation}\label{numeroituvakantapm3}
+a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}).
+\end{equation}
 Määrittelyn nojalla $g(x,y)\leq 1$, joten jos $a\geq 1/2$, 
 niin yhtälö \ref{numeroituvakantapm2} pätee muodossa 
 $a\geq \frac{1}{2}\geq \frac{1}{2}g(x,y)$. 
 Oletetaan, että $a<1/2$ ja että $h$ on suurin niistä indekseistä $q$, 
 joilla $\sum_{i<q}g(z_i,z_{i+1})\leq a/2$. 
-Tällöin $$\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja }\quad
-\sum_{i<h+1}g(z_i,z_{i+1})> a/2,$$ 
+Tällöin 
+\begin{equation}\label{numeroituvakantapm4}
+\sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja }\quad
+\sum_{i<h+1}g(z_i,z_{i+1})> a/2,
+\end{equation}
 joten $\sum_{i>h}g(z_i,z_{i+1})\leq a/2$. 
 %TODO tästä eteenpäin vaatii viimeistelyä
-Induktio-oletuksen, eli kaavan \ref{numeroituvakantapm2} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
+Kaavojen \ref{numeroituvakantapm2}, \ref{numeroituvakantapm3} ja \ref{numeroituvakantapm4} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
 toisaalta myös $g(x,z_h)\leq a$ pätevät. 
 
 Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$. 
