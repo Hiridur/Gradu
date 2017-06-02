@@ -612,8 +612,12 @@ kaikilla $x,y\in X$.
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
 Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle 
 $f^{\leftarrow}[0,a']$ missä $a'\in\R_+ $ on olemassa uniformiteetin $\U_g$ 
-kannan jäsen $g^{\leftarrow}[0,b'],b'\in\R_+$ niin, 
-että $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
+kannan jäsen $g^{\leftarrow}[0,b']$ missä $b'\in\R_+$ niin, 
+että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$. 
+%että ehdosta $(x,y)\in g^{\leftarrow}[0,b']$ 
+%%\Rightarrow 
+%seuraa 
+%$(x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
 Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on 
 uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. 
 %Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
@@ -675,7 +679,7 @@ Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittelee uniformiteetin $\U$.
 \begin{proof}
-Jokaiselle $U\in\U$ määritellään perhe $(V_n)$, 
+Jokaiselle lähistölle $U\in\U$ määritellään karteesisen tulon $X\times X$ osajoukoista muodostuva perhe $(V_n)$, 
 jolla $V_1\subset U$ ja $V_{n+1}^2\subset V_n$ kaikilla $n\in\N, n\geq 1$. 
 Nyt perhe $(V_n)$ on kanta eräälle joukon $X$ uniformiteetille $\U_V$, 
 joka on karkeampi kuin $\U$. 
@@ -704,10 +708,10 @@ Olkoon $g\colon X\times X\rightarrow \R_+$ kuvaus, jolla
 \begin{equation*}
 g(x,y)=
 \begin{cases}
-0&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\geq 1 \\
-1&\text{, jos }(x,y)\not\in U_1. \\
+0&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\geq 1, \\
+1&\text{, jos }(x,y)\not\in U_1, \\
 2^{-k}&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\leq k 
-\text{ ja } (x,y)\not\in U_{k+1}
+\text{ ja } (x,y)\not\in U_{k+1}.
 \end{cases}
 \end{equation*}
 Nyt $g$ on symmetrinen, positiivinen ja $g(x,x)=0$ kaikilla $x\in X$. 
@@ -747,38 +751,53 @@ Merkitään
 a=\sum_{i=0}^{p-1}g(z_i,z_{i+1}),
 \end{equation}
 jolloin induktio-oletus voidaan kirjoittaa 
-muodossa $\frac{1}{2}g(x,y)\leq a $.
+muodossa $a\geq \frac{1}{2}g(x,y) $. 
+%$\frac{1}{2}g(x,y)\leq a $.
 Määrittelyn nojalla $g(x,y)\leq 1$, joten jos $a\geq 1/2$, 
 niin yhtälö \ref{numeroituvakantapm2} pätee muodossa 
 $a\geq \frac{1}{2}\geq \frac{1}{2}g(x,y)$. 
 Oletetaan, että $a<1/2$ ja että $h$ on suurin niistä indekseistä $q$, 
 joilla $\sum_{i<q}g(z_i,z_{i+1})\leq a/2$. 
 Tällöin 
-\begin{equation}\label{numeroituvakantapm4}
+\begin{equation*}\label{numeroituvakantapm4}
 \sum_{i<h}g(z_i,z_{i+1})\leq a/2\quad\text{ ja lisäksi }\quad
 \sum_{i>h}g(z_i,z_{i+1})\leq a/2,
-\end{equation}
-koska $\sum_{i<h+1}g(z_i,z_{i+1})> a/2$. 
+\end{equation*}
+sillä $\sum_{i<h+1}g(z_i,z_{i+1})> a/2$. 
 %Nyt siis $\frac{1}{2}g(x,y)\leq a$, 
-%TODO tästä eteenpäin vaatii viimeistelyä
 Edeltävien kaavojen ja induktio-oletuksen nojalla 
-sijoituksella $p=h$ pätee
+(sijoituksella $p=h$) pätee
 \begin{equation*}
 \frac{1}{2}a\geq \sum_{i<h}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(x,z_h),
 \end{equation*}
-ja toisaalta %sijoituksella "$0=h+1$"
+eli $g(x,z_h)\leq a$. 
+Toisaalta yllä olevien kaavojen nojalla pätee myös 
+%sijoituksella "$0=h+1$"
 \begin{equation*}
-\frac{1}{2}a\geq \sum_{i<h}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(z_{h+1},y).
+\frac{1}{2}a\geq \sum_{i>h}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(z_{h+1},y),
 \end{equation*}
-Tällöin kaavojen %\ref{numeroituvakantapm2}, 
-\ref{numeroituvakantapm3} ja \ref{numeroituvakantapm4} nojalla $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
-toisaalta myös $g(x,z_h)\leq a$ pätevät. 
+eli $g(z_{h+1},y)\leq a$. 
+%Tällöin kaavojen %\ref{numeroituvakantapm2}, 
+%\ref{numeroituvakantapm3} ja \ref{numeroituvakantapm4} nojalla 
+%Näin ollen $g(x,z_h)\leq a$, $g(z_{h+1},y)\leq a$ ja 
+Toisaalta luvun $a$ 
+%on summa positiivisista luvuista, joten 
+määrittelyn nojalla 
+$g(z_h,z_{h+1})\leq a$. 
 
 Olkoon $k\in \N$ pienin luku, jolla $2^{-k}\leq a$. 
-Tällöin $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että 
+Tällöin oletuksesta $a<1/2$ seuraa $k\geq 2$ ja kuvauksen $g$ määrittelystä seuraa, että 
 $(x,z_h)\in U_k,(z_h,z_{h+1})\in U_k$ ja $(z_{h+1},y)\in U_k$. 
-Nyt $(x,y)\in U_k^3\subset U_{k-1}$ ja edelleen 
+%TODO tästä eteenpäin vaatii viimeistelyä
+%Näin ollen 
+Nyt 
+%eli 
+$(x,y)\in U_k^3$ ja 
+lähistöperheen $(U_n)$ määrittelyn nojalla $ (x,y)\in U_{k-1}$. 
+%$ U_k^3\subset U_{k-1}$ 
+Kuvauksen $g$ määrittelyn nojalla 
 $g(x,y)\leq 2^{-(k-1)}=2^{1-k}\leq 2a$, eli $\frac{1}{2}g(x,y)\leq a.$ 
+
 Näin ollen kaavan \ref{numeroituvakantapm} epäyhtälöt pätevät ja 
 niistä seuraa, että jokaisella $a>0$ pätee 
 $U_k\subset f^\leftarrow([0,a])$, kun $2^{-k}<a$. 
