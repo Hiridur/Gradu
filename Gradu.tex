@@ -80,7 +80,7 @@
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
 \chapter{Esitietoja}
-Oletamme koko tutkielman ajan, että $\R_+=\{a\in\R\mid a>0\}$.
+Käytämme koko tutkielman ajan merkintää $\R_+=\{a\in\R\mid a>0\}$.
 \\
 \\
 \begin{maar}
@@ -96,10 +96,13 @@ Topologisen avaruuden $(X,\T)$ osajoukko $A\subset X$ on avoin,
 jos se on kokoelman $\T\subset\Pot(X)$ alkio.
 \end{maar}
 \begin{maar}%Topo2 ?
-\emph{Ympäristö.} 
-Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
-Osa\-jouk\-ko $A\subset X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
-jos on olemassa avoin osajoukko $B\subset X $, joka sisältää osajoukon $A$.
+%\emph{Ympäristö.} 
+%Olkoon $(X,\T)$ topologinen avaruus ja $x\in X$ alkio. 
+%Osa\-jouk\-ko $A\subset X$, johon alkio $x$ kuuluu, on alkion $x$ \emph{ympäristö}, 
+%jos on olemassa avoin osajoukko $B\subset X $, joka sisältää osajoukon $A$.
+Topologisen avaruuden $(X,\T)$ 
+osa\-jouk\-ko $A\subset X$ on alkion $x$ \emph{ympäristö}, 
+jos on olemassa sellainen avoin osajoukko $B\subset X $, jolla $x\in B\subset A$.
 \end{maar}
 \begin{huom}
 Topologisen avaruuden $(X,\T)$ avoin osajoukko $A\subset X$ on 
@@ -373,12 +376,14 @@ uniformiteetin $\U_2$ indusoima topologia.
 \emph{Kuvausperheen indusoima uniformiteetti} (initial uniformities).
 Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
-Olkoon $f_i\colon X\rightarrow Y_i$ uniformisti jatkuvia kuvauksia kaikilla $i\in I$. 
-Olkoon $g=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
+Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
+Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
 %kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
-kuvaus kaikilla $i\in I$.
-Olkoon $$B=\left\{\bigcap_{i\in I}g^{\leftarrow}(V_i)\mid V_i \in\U_i \right\}$$
-missä $\U_i$ on avaruuden $Y_i$ uniformiteetti.
+kuvauksia kaikilla $i\in I$.
+Olkoon 
+$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
+\mid V_{i_k} \in\U_{i_k},i_k \in I \right\}$$
+missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
 Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
 Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat uniformisti jatkuvia.
 \end{maar}
@@ -818,7 +823,7 @@ $\U$ uniformiteetti joukolle $X$.
 %Merkitään uniformiteetin uniformiteetin $\U$ indusoimaa topologiaa $\T_{\U}$. 
 Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
 jos uniformiteetin $\U$ indusoima topologia 
-$\T_{\U}$ on karkeampi kuin topologia $\T$.
+$\T_{\U}$ on sama kuin topologia $\T$.
 \end{maar}
 %\begin{kor}
 %
@@ -833,7 +838,7 @@ Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
 %\begin{itemize}
 \begin{enumerate} [label=(Z),ref=(Z)]
 \item\label{O_IV} Kaikkien alkioiden $x\in X$ kaikilla 
-ympäristöillä $V\in X$ on olemassa jatkuva 
+ympäristöillä $V\subset X$ on olemassa jatkuva 
 reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
 jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
 %\end{itemize}
