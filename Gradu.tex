@@ -158,7 +158,7 @@ Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin 
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
 \begin{maar}\label{uniformi_maar}
-Uniforminen rakenne (tai uniformisuus) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
+Uniforminen rakenne (tai uniformiteetti) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
 \begin{enumerate} [label=(U\arabic*),ref=(U\arabic*)]
 \item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
 \item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
@@ -166,11 +166,11 @@ Uniforminen rakenne (tai uniformisuus) joukolle $X$ annetaan karteesisen tulon $
 \item\label{U_II} Jos $V\in\U$, niin $V^{-1}=\{(y,x)\mid (x,y)\in V\}\in\U$,
 \item\label{U_III} Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformisuuden $\U$ lähistöiksi. 
-Joukkoa $X$ joka on varustettu uniformisuudella $\U$ sanotaan uniformiseksi avaruudeksi.
+Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformiteetin $\U$ lähistöiksi. 
+Uniformiteetilla $\U$ varustettua joukkoa $X$ sanotaan uniformiseksi avaruudeksi.
 \end{maar}
 \begin{huom}
-Uniformisuuden $\U$ lähistöön (entourage) $V\in\U $ kuuluvan 
+Uniformiteetin $\U$ lähistöön (entourage) $V\in\U $ kuuluvan 
 pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, 
 tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
@@ -220,7 +220,7 @@ $,
 \begin{lause}
 %\emph{Uniformisen avaruuden topologia.}
 Uniformisen avaruuden topologia.
-Olkoon joukko $X$ varustettu uniformisuudella $\U$.
+Olkoon joukko $X$ varustettu uniformiteetilla $\U$.
 Olkoon $x\in X$ 
 alkio ja $V\in\U$ lähistö. 
 %alkio, $V\in\U$ lähistö ja $B\subset\U$ uniformiteetin $\U$ kanta. 
@@ -235,7 +235,7 @@ että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö
 alkiolle $x$ ja joukko $B(x)$ on alkion $x$ 
 ympäristökanta kyseisessä topologiassa.
 \begin{proof}
-Olkoon joukko $X$ varustettu uniformisuudella $\U$, 
+Olkoon joukko $X$ varustettu uniformiteetilla $\U$, 
 $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Lisäksi olkoot joukot $V(x)$ ja $B(x)$ kuten edellä. 
 %
 Joukko $V(x)$ on epätyhjä, sillä $x\in V(x)$.
@@ -284,7 +284,7 @@ Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Tällöin jos $V'$ on avaruuden $X'$ lähistö, niin alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
 \begin{proof}
-Korollaari on suora seuraus määritelmästä \ref{uniformisti_jatkuva} ja uniformisuuden määritelmän \ref{uniformi_maar} ehdosta \ref{F_I}.
+Korollaari on suora seuraus määritelmästä \ref{uniformisti_jatkuva} ja uniformiteetin määritelmän \ref{uniformi_maar} ehdosta \ref{F_I}.
 \end{proof}
 \end{kor}
 \begin{lause}
@@ -494,12 +494,12 @@ f(x,y)=\sup_{i\in I}f_i(x,y)
 \end{equation*} 
 on pseudometriikka. 
 \end{esim}
-\chapter{Pseudometriikan määrittelemä uniformisuus}\label{luku_pseudo_uniformi}
+\chapter{Pseudometriikan määrittelemä uniformiteetti}\label{luku_pseudo_uniformi}
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $\R_+=\{a\in\R\mid a>0\}$.
 \begin{lause}
 Olkoon $a\in\R_+$ reaaliluku ja $U_a\subset \R^n\times\R^n$ joukko kaavalla
 $$U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
-Kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+Kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
 \begin{proof}
 Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
@@ -528,7 +528,7 @@ $$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$
 eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2\subset U_{2a} $, joten jokaiselle reaaliluvun $b\in\R_+$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformisuuden kannan.
+Siis kokoelma $B=\{U_a\mid a\in\R_+\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
 \noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
@@ -561,7 +561,7 @@ eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2\subset U_{2a} $, joten jokaise
 \end{enumerate}
 Siis kokoelma $B=\{U_a\mid a\in\R_+\}
 =\{f^{\leftarrow}[0,a]\mid a\in\R_+\}
-$ muodostaa joukon $\R^n$ uniformisuuden kannan ja voimme nyt muodostaa seuraavan määritelmän.
+$ muodostaa joukon $\R^n$ uniformiteetin kannan ja voimme nyt muodostaa seuraavan määritelmän.
 \end{proof}
 \end{lause}
 \begin{maar}\label{pseudo_equiv}
