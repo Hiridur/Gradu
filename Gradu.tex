@@ -373,18 +373,22 @@ Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin
 uniformiteetin $\U_2$ indusoima topologia.
 \end{kor}
 \begin{maar}\label{kuvausperheen indusoima}
-\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformities).
+\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
 Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
 Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
-Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
+Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+%Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
 %kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
-kuvauksia kaikilla $i\in I$.
+%kuvauksia 
+kaikilla $i\in I$.
 Olkoon 
 $$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
-\mid V_{i_k} \in\U_{i_k},i_k \in I \right\}$$
-missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
-Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
+joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
+%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
+avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
 Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat uniformisti jatkuvia.
 \end{maar}
 \begin{maar}
