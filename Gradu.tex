@@ -270,32 +270,32 @@ korollaarin \ref{kaikki_ystöt} nojalla ympäristökanta.
 \begin{huom}
 Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
 \end{huom}
-\begin{maar}\label{uniformisti_jatkuva}
+\begin{maar}\label{tasaisesti_jatkuva}
 %Uniformisesti jatkuvat kuvaukset. 
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ kuvaus.
-Kuvaus $f$ on \emph{uniformisti jatkuva} (tasaisesti jatkuva), jos jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$ niin, että jokaiselle $(x,y)\in V$ pätee $(f(x),f(y))\in V'$. 
+Kuvaus $f$ on \emph{tasaisesti jatkuva} (uniformly continuous), jos jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$ niin, että jokaiselle $(x,y)\in V$ pätee $(f(x),f(y))\in V'$. 
 %Toisin sanoen jokaiselle avaruuden $X'$ lähistölle $V'$ on olemassa.
 \end{maar}
 \begin{kor}\label{uniformi alkukuva}
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+ja $f\colon X\rightarrow X'$ tasaisesti jatkuva kuvaus. 
 Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Tällöin jos $V'$ on avaruuden $X'$ lähistö, niin alkukuva $g^{\leftarrow}V'$ on avaruuden $X$ lähistö.
 \begin{proof}
-Korollaari on suora seuraus määritelmästä \ref{uniformisti_jatkuva} ja uniformiteetin määritelmän \ref{uniformi_maar} ehdosta \ref{F_I}.
+Korollaari on suora seuraus määritelmästä \ref{tasaisesti_jatkuva} ja uniformiteetin määritelmän \ref{uniformi_maar} ehdosta \ref{F_I}.
 \end{proof}
 \end{kor}
 \begin{lause}
-%Jokainen uniformisti jatkuva kuvaus on jatkuva myös lähtö- ja maalijoukkojen uniformien määräämien topologioiden suhteen.
+%Jokainen tasaisesti jatkuva kuvaus on jatkuva myös lähtö- ja maalijoukkojen uniformien määräämien topologioiden suhteen.
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+ja $f\colon X\rightarrow X'$ tasaisesti jatkuva kuvaus. 
 Tällöin kuvaus $f$ on jatkuva, %myös topologioiden kannalta, 
 kun varustetaan joukot $X$ ja $Y$ uniformiteettiensa indusoimilla topologioilla.
 \begin{proof}
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ uniformisti jatkuva kuvaus. 
+ja $f\colon X\rightarrow X'$ tasaisesti jatkuva kuvaus. 
 Olkoon $g\colon X\times X\rightarrow X'\times X'$ %sellainen 
 kuvaus, jolla pätee $g(x,y)=(f(x),f(y))$ kaikilla $x,y\in X$. 
 Olkoon $V'$ avaruuden $X'$ lähistö ja $x'\in X'$ alkio. 
@@ -316,19 +316,19 @@ sillä ehdosta $(x,y)\in g^\leftarrow V'$ seuraa $(x',f(y))\in V' $ kaikilla $y\
 %Tällöin koska $g^{\leftarrow}V'$ on avaruuden $X$ lähistö, niin $g^{\leftarrow}V'(g^{\leftarrow}(x'))$ on alkion $x'$ alkukuvan $g^{\leftarrow}(x')\in X$ ympäristö. 
 %erikseen 1-käs? eli alkukuva ympäristöstä lähistön sijaan?
 
-Siis ympäristön alkukuva on ympäristö ja siten uniformisti jatkuva kuvaus on jatkuva.
+Siis ympäristön alkukuva on ympäristö ja siten tasaisesti jatkuva kuvaus on jatkuva.
 \end{proof}
 \end{lause}
 \begin{lause}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ 
-uniformisti jatkuvia kuvauksia. 
-Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
+tasaisesti jatkuvia kuvauksia. 
+Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on tasaisesti jatkuva.
 \begin{proof}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia, 
-$f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ uniformisti jatkuvia kuvauksia ja 
+$f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ tasaisesti jatkuvia kuvauksia ja 
 $V''$ avaruuden $X''$ lähistö. 
-Tällöin uniformisti jatkuvan kuvauksen määritelmän nojalla 
+Tällöin tasaisesti jatkuvan kuvauksen määritelmän nojalla 
 on olemassa avaruuden $X'$ lähistö $V'$, 
 jolla jokaisella $(x',y')\in V'$ pätee $ (g(x'),g(y'))\in V''$.
 Edelleen lähistölle $V'$ on olemassa avaruuden $X$ lähistö $V$, 
@@ -341,20 +341,20 @@ eli $ ((g\circ f)(x),(g\circ f)(y))\in V''$.
 %Yhdistetyllä kuvauksella $g\circ f\colon X\rightarrow X''$ 
 %pätee $(g\circ f)(x)$ 
 
-Siis yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on uniformisti jatkuva.
+Siis yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on tasaisesti jatkuva.
 \end{proof}
 \end{lause}
 \begin{maar}
 Olkoot $X$ ja $X'$ uniformeja avaruuksia 
 ja $f\colon X\rightarrow X'$ bijektiivinen kuvaus. 
 Kuvaus $f$ on \emph{isomorfismi}, jos sekä kuvaus $f$ että sen 
-käänteiskuvaus $f^{-1}$ ovat uniformisti jatkuvia.
+käänteiskuvaus $f^{-1}$ ovat tasaisesti jatkuvia.
 \end{maar}
 \begin{maar}\label{uniformi_vertailu}
 \emph{Uniformiteettien vertailu.} 
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
 Uniformiteetti $\U_2$ on karkeampi kuin uniformiteetti $\U_1$, 
-jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on uniformisti jatkuva. Tällöin $\U_1$ on hienompi kuin $\U_2$. 
+jos identtinen kuvaus $id\colon (X,\U_1)\rightarrow (X,\U_2)$ on tasaisesti jatkuva. Tällöin $\U_1$ on hienompi kuin $\U_2$. 
 
 Jos lisäksi pätee $\U_1\neq\U_2$, niin $\U_1$ on aidosti hienompi kuin $\U_2$ ja vastaavasti $\U_2$ on aidosti karkeampi kuin $\U_1$. 
 Sanotaan, että kahta uniformiteettia $\U_1$ ja $\U_2$ voidaan vertailla, 
@@ -389,7 +389,7 @@ joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
 %Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
 Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
 avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
-Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat uniformisti jatkuvia.
+Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
 \end{maar}
 \begin{maar}
 \emph{Uniformiteettien pienin yläraja.}
@@ -594,8 +594,8 @@ $$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } 
 Osoitetaan väitteen implikaatio molempiin suuntiin.
 \begin{enumerate}
 \item[$\Rightarrow$] 
-Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on uniformisti jatkuva. 
-Tällöin määritelmän \ref{uniformisti_jatkuva} 
+Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on tasaisesti jatkuva. 
+Tällöin määritelmän \ref{tasaisesti_jatkuva} 
 mukaan jokaiselle maalijoukon %avaruuden $(X,\U_f)$ 
 lähistölle $V'\in\U_f $ on olemassa %avaruden $(X,\U_g)$ 
 %sellainen lähistö $V\in\U_g $, 
@@ -628,7 +628,7 @@ että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)
 %seuraa 
 %$(x,y)\in f^{\leftarrow}[0,a']$, kaikilla $x,y\in X$. 
 Näin ollen identtinen kuvaus $id\colon (X,\U_g)\rightarrow (X,\U_f)$ on 
-uniformisti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. 
+tasaisesti jatkuva ja siten uniformiteetti $\U_g$ on uniformiteettia $\U_f$ hienompi. 
 %Siis uniformiteetti $\U_f$ on karkeampi kuin uniformiteetti $\U_g$. 
 Siis pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
@@ -1082,15 +1082,15 @@ kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
 \begin{maar}\label{complete}
 Olkoon $X$ uniforminen avaruus. 
 Tällöin on olemassa täydellinen (com\-plete) Hausdorff 
-uniforminen avaruus $\hat X$ ja uniformisti jatkuva 
+uniforminen avaruus $\hat X$ ja tasaisesti jatkuva 
 kuvaus $i\colon X\rightarrow\hat X$, jolle pätee seuraava ominaisuus:
 \begin{enumerate} [label=(P),ref=(P)]
 %\begin{enumerate}
 \item %[(P)] 
 \label{ominaisuusP}
 Olkoon $Y$ täydellinen Hausdorff uniforminen avaruus 
-ja $f\colon X\rightarrow Y$ uniformisti jatkuva kuvaus. 
-Tällöin on olemassa yksikäsitteinen uniformisti 
+ja $f\colon X\rightarrow Y$ tasaisesti jatkuva kuvaus. 
+Tällöin on olemassa yksikäsitteinen tasaisesti 
 jatkuva $g\colon \hat X\rightarrow Y$, 
 jolla pätee $f=g\circ i$
 \end{enumerate}
@@ -1098,7 +1098,7 @@ jolla pätee $f=g\circ i$
 %\begin{maar}
 Olkoon lisäksi $X_1$ täydellinen Hausdorff 
 uniforminen avaruus ja $i_1\colon X\rightarrow X_1$
-uniformisti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
+tasaisesti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
 Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
 \end{maar}
 \begin{kor}
