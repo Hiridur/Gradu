@@ -195,7 +195,7 @@ Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subse
 Kokoelma $\{\emptyset\}$ on ainoa ehdot täyttävä uniformiteetti tyhjälle joukolle.
 \end{huom}
 \begin{maar}\label{uniformi_kanta}
-Olkoon $X$ joukko ja kokoelma $\U\subset X\times X$ uniformiteetti 
+Olkoon $X$ joukko ja kokoelma $\U\subset \Pot (X\times X)$ uniformiteetti 
 joukolle $X$. Tällöin lähistöjen joukko $B\subset \U$ on 
 uniformiteetin $\U$ \emph{kanta}, jos jokaiselle lähistölle $V\in\U$ löytyy 
 kannan alkio $W\in B$, jolla pätee $W\subset V$.
@@ -204,7 +204,11 @@ kannan alkio $W\in B$, jolla pätee $W\subset V$.
 %Uniformiteetin kannas
 %\end{kor}
 \begin{lause}\label{uniformin kannan maar}
-Olkoon $X$ joukko. Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformiteetin kanta, jos kokoelmalle $B$ pätee
+Olkoon $X$ joukko. 
+%Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
+%Kokoelma $B\subset \U$ on uniformiteetin $\U$ kanta, 
+Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformiteetin kanta, 
+jos kokoelmalle $B$ pätee
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
 \begin{enumerate} [label=(B\arabic*)]
 \item\label{B_I} Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
@@ -214,6 +218,8 @@ $,
 \item\label{U'_III} Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 \begin{proof}
+%Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
+Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ kokoelma joukon $X\times X$ osajoukkoja. 
 %TODO
 \end{proof}
 \end{lause}
