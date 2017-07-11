@@ -21,6 +21,7 @@
 \newcommand{\T}{\mathcal{T}}
 \newcommand{\Pot}{\mathcal{P}}
 \newcommand{\F}{\mathcal{F}}
+\newcommand{\B}{\mathcal{B}}
 \newcommand{\diam}{\operatorname{diam}}
 
 \theoremstyle{plain}
@@ -219,7 +220,30 @@ $,
 \end{enumerate}
 \begin{proof}
 %Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
-Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ kokoelma joukon $X\times X$ osajoukkoja. 
+Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen kokoelma, jolle pätevät ehdot \ref{B_I}-\ref{U'_III}. %karteesisen tulon $X\times X$ osajoukkoja. 
+Tällöin olkoon 
+%$$B'=\{V\subset X\times X\mid \text{on olemassa } U\in B\}$$ 
+$\U_B\subset\Pot (X\times X)$ sellainen kokoelma, 
+%jonka alkioina ovat kaikki sellaiset joukot $V'\subset$
+jolla pätee seuraava ehto: Jos $V\in B$ ja $V\subset W\subset X\times X$ niin $ W\in\U_B$. 
+Ehdosta seuraa $ B\subset\U_B$ ja että jokaiselle lähistölle $W\in\U$ löytyy 
+kannan alkio $V\in B$, jolla pätee $V\subset W$. 
+Näin ollen riittää tarkistaa, että $\U_B$ on uniformiteetti. 
+%Tällöin olkoon 
+%%$$B'=\{V\subset X\times X\mid \text{on olemassa } U\in B\}$$ 
+%$\U\subset\Pot (X\times X)$ karkein sellainen uniformiteetti, jolla $B\subset \U$.
+%%jolla pätee seuraava ehto: Jos $V\in B$ ja $V\subset W\subset X\times X$ niin $ W\in\U_B$. 
+%%Ehdosta seuraa $ B\subset\U_B$ ja että jokaiselle lähistölle $W\in\U$ löytyy 
+%%kannan alkio $V\in B$, jolla pätee $V\subset W$. 
+%%Näin ollen riittää tarkistaa, että $\U_B$ on uniformiteetti. 
+Käydään läpi uniformiteetin määritelmän \ref{uniformi_maar} ehdot:
+\begin{enumerate} 
+\item[\ref{F_I}] Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
+\item[\ref{F_II}] Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
+\item[\ref{U_I}] Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in\U$ osajoukko,
+\item[\ref{U_II}] Jos $V\in\U$, niin $V^{-1}=\{(y,x)\mid (x,y)\in V\}\in\U$,
+\item[\ref{U_III}] Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+\end{enumerate}
 %TODO
 \end{proof}
 \end{lause}
