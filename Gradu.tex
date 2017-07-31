@@ -220,14 +220,18 @@ $,
 \end{enumerate}
 \begin{proof}
 %Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
-Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen kokoelma, jolle pätevät ehdot \ref{B_I}-\ref{U'_III}. %karteesisen tulon $X\times X$ osajoukkoja. 
+Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen kokoelma, 
+jolle pätevät ehdot \ref{B_I}-\ref{U'_III}. %karteesisen tulon $X\times X$ osajoukkoja. 
 Tällöin olkoon 
 $$\U_B=\{W\subset X\times X\mid V\subset W\text{ jollain } V\in B\}$$ 
+joukko. 
 %$\U_B\subset\Pot (X\times X)$ sellainen kokoelma, 
 %jonka alkioina ovat kaikki sellaiset joukot $V'\subset$
 %jolla pätee seuraava ehto: Jos $V\in B$ ja $V\subset W\subset X\times X$ niin $ W\in\U_B$. 
-Joukon määrittelystä seuraa $ B\subset\U_B$ ja että jokaiselle lähistölle $W\in\U$ löytyy 
+Joukon $\U_B$ määrittelystä seuraa, 
+että jokaiselle alkiolle $W\in\U_B$ löytyy 
 kannan alkio $V\in B$, jolla pätee $V\subset W$. 
+Lisäksi $ B\subset\U_B$.
 Näin ollen riittää tarkistaa, että $\U_B$ on uniformiteetti. 
 %Tällöin olkoon 
 %%$$B'=\{V\subset X\times X\mid \text{on olemassa } U\in B\}$$ 
@@ -238,13 +242,19 @@ Näin ollen riittää tarkistaa, että $\U_B$ on uniformiteetti.
 %%Näin ollen riittää tarkistaa, että $\U_B$ on uniformiteetti. 
 Käydään läpi uniformiteetin määritelmän \ref{uniformi_maar} ehdot:
 \begin{enumerate} 
-\item[\ref{F_I}] Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
-
-Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
+\item[\ref{F_I}] 
+Jos $W\in \U_B$, niin on olemassa sellainen $V\in B$, jolla pätee $V\subset W$. 
+Toisaalta jos osajoukolle $W'\subset X\times X$ pätee $V\subset W'$, 
+niin $W'\in\U_B$. \\
+Siis jos $W\in \U_B$ ja $W\subset W'\subset X\times X$ niin $ W'\in\U_B$,
+%Jos $V\in \U_B$ ja $V\subset W\subset X\times X$ 
+%niin joukon $\U_B$ määrittelyn nojalla $ W\in\U_B$,
+%Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
 \item[\ref{F_II}] Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
 \item[\ref{U_I}] Vastaa ehtoa \ref{U'_I},
 \item[\ref{U_II}] Jos $V\in B$, niin ehdon \ref{U'_II} nojalla on olemassa sellainen $V'\in B$, 
-jolla $V'\subset V^{-1}$ ja näin ollen $V^{-1}\in\U_B$,
+jolla $V'\subset V^{-1}$. 
+Näin ollen joukon $\U_B$ määrittelyn nojalla $V^{-1}\in\U_B$,
 \item[\ref{U_III}] Vastaa ehtoa \ref{U'_III}.
 \end{enumerate}
 %TODO
