@@ -244,20 +244,36 @@ Käydään läpi uniformiteetin määritelmän \ref{uniformi_maar} ehdot:
 \begin{enumerate} 
 \item[\ref{F_I}] 
 Jos $W\in \U_B$, niin on olemassa sellainen $V\in B$, jolla pätee $V\subset W$. 
-Toisaalta jos osajoukolle $W'\subset X\times X$ pätee $V\subset W'$, 
+Toisaalta jos osajoukolle $W'\subset X\times X$ pätee $V\subset W \subset W'$, 
 niin $W'\in\U_B$. \\
-Siis jos $W\in \U_B$ ja $W\subset W'\subset X\times X$ niin $ W'\in\U_B$,
+Siis jos $W\in \U_B$ ja $W\subset W'\subset X\times X$ niin $ W'\in\U_B$.
 %Jos $V\in \U_B$ ja $V\subset W\subset X\times X$ 
 %niin joukon $\U_B$ määrittelyn nojalla $ W\in\U_B$,
 %Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
-\item[\ref{F_II}] Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
-\item[\ref{U_I}] Vastaa ehtoa \ref{U'_I},
-\item[\ref{U_II}] Olkoon $V\in\U_B$. 
-Tällöin pätee joko $V\in B$ tai $V\not\in B$. 
-Jos $V\in B$, niin ehdon \ref{U'_II} nojalla on olemassa sellainen $V'\in B$, 
+\item[\ref{F_II}] Olkoon $W\in\U_B$ ja $W'\in\U_B$ joukkoja. 
+Joukon $\U_B$ määrittelyn nojalla tällöin on olemassa 
+sellaiset $V\in B$ ja $V'\in B$, 
+joille pätee $V\subset W$ ja $V'\subset W'$ ja 
+erityisesti $V\cap V'\subset W\cap W'$. 
+Edelleen ehdon \ref{B_I} nojalla on olemassa sellainen $V''\in B$, 
+jolle pätee $V''\subset V\cap V'$ ja siis $V''\subset W\cap W'$. 
+Näin ollen leikkaus $W\cap W'$ kuuluu kokoelmaan $\U_B$. 
+Lisäksi joukoiksi $W$ ja $W'$ voidaan valita mielivaltaisia kokoelman $\U_B$ alkioita, 
+joten induktiivisesti jokainen äärellinen leikkaus joukon $\U_B$ alkioista kuuluu joukkoon $\U_B$.
+\item[\ref{U_I}] Vastaa ehtoa \ref{U'_I}.
+\item[\ref{U_II}] Olkoon $W\in\U_B$. 
+Tällöin joukon $\U_B$ määrittelyn nojalla on olemassa sellainen $V\in B$, 
+jolla $V\subset W$. %(Jos $W\in B$, niin voidaan valita $V=W$.) 
+%Tällöin pätee joko $V\in B$ tai $V\not\in B$. 
+%Jos $V\in B$, niin ehdon \ref{U'_II} nojalla on olemassa sellainen $V'\in B$, 
+%jolla $V'\subset V^{-1}$. 
+%Näin ollen joukon $\U_B$ määrittelyn nojalla $V^{-1}\in\U_B$. 
+%Jos $V\not\in B$, niin 
+Tällöin ehdon \ref{U'_II} nojalla joukolle $V$ on olemassa sellainen $V'\in B$, 
 jolla $V'\subset V^{-1}$. 
-Näin ollen joukon $\U_B$ määrittelyn nojalla $V^{-1}\in\U_B$. 
-Jos $V\not\in B$, niin
+Näin ollen joukon $\U_B$ määrittelyn nojalla $V^{-1}\in\U_B$ ja 
+edelleen $W^{-1}\in\U_B$. 
+%Nyt $V\subset W$ ja $V^{-1}\in\U_B $
 \item[\ref{U_III}] Vastaa ehtoa \ref{U'_III}.
 \end{enumerate}
 %TODO
