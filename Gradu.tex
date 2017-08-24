@@ -276,7 +276,6 @@ edelleen $W^{-1}\in\U_B$.
 %Nyt $V\subset W$ ja $V^{-1}\in\U_B $
 \item[\ref{U_III}] Vastaa ehtoa \ref{U'_III}.
 \end{enumerate}
-%TODO
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -434,8 +433,7 @@ $\U_1$ on hienompi kuin $\U_2$.
 Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin 
 uniformiteetin $\U_2$ indusoima topologia.
 \end{kor}
-\begin{maar}\label{kuvausperheen indusoima}
-\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
+\begin{lause}\label{kuvausperheen indusoima lause}
 Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
 Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
@@ -445,14 +443,62 @@ Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y
 %kuvauksia 
 kaikilla $i\in I$.
 Olkoon 
-$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
-\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
-joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
-%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
-Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
-avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
+%$(i_k)$ jono joukon $I$ alkioita ja olkoon 
+%$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
+%\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
+$$B=\left\{\bigcap_{j\in A}g^{\leftarrow}_{j}(V_{j})
+\mid V_{j} \in\U_{j},A\subset I\text{ äärellinen}\right\}$$
+joukko missä $\U_{j}$ on avaruuden $Y_{j}$ uniformiteetti.
+Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+%Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
+%avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
 Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+\begin{proof}
+Lisätään myöhemmin. %TODO
+\end{proof}
+%TODO epäselvyyksien korjauksia
+\end{lause}
+\begin{maar}\label{kuvausperheen indusoima}
+%\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
+%Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
+%%Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
+%Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
+%Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+%%Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
+%%kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
+%%kuvauksia 
+%kaikilla $i\in I$.
+%Olkoon 
+%$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
+%\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
+%joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
+%%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+Edellisen lauseen \ref{kuvausperheen indusoima lause} uniformiteetti $\U$ on kuvausperheen $(f_i)_{i\in I}$ indusoima uniformiteetti joukolle $X$.
+%Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
+%avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
+%Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+%TODO epäselvyyksien korjauksia
 \end{maar}
+%\begin{maar}\label{kuvausperheen indusoima}
+%\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
+%Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
+%%Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
+%Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
+%Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+%%Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
+%%kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
+%%kuvauksia 
+%kaikilla $i\in I$.
+%Olkoon 
+%$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
+%\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
+%joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
+%%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+%Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
+%avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
+%Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+%%TODO epäselvyyksien korjauksia
+%\end{maar}
 \begin{maar}
 \emph{Uniformiteettien pienin yläraja.}
 %Olkoon $X$ joukko%, $I$ indeksijoukko
@@ -736,15 +782,19 @@ ja saatu saturoimalla perhe $(f_i)_{i\in I}$.
 Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määräämä 
 %uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
 uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
+%TODO epäselvyyksien korjauksia
 \end{maar}
-\begin{maar}\label{saturoitu}
+\begin{lause}\label{saturoitu}
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
 jos jokaisella $i\in I$ ja $a\in\R_+$ löytyy $j\in J$ ja $b\in\R_+$, 
 joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$. 
-Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.
-\end{maar}
+Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.$\qed$
+%\begin{proof}
+%TODO ?
+%\end{proof}
+\end{lause}
 %Toisaalta on myös mahdollista määritellä i
 \begin{lem}\label{pseudo_uniformista}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
