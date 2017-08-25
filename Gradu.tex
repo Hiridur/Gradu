@@ -170,7 +170,7 @@ Uniforminen rakenne (tai uniformiteetti) joukolle $X$ annetaan karteesisen tulon
 Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformiteetin $\U$ lähistöiksi. 
 Uniformiteetilla $\U$ varustettua joukkoa $X$ sanotaan uniformiseksi avaruudeksi.
 \end{maar}
-\begin{huom}
+\begin{huom}\label{V-close}
 Uniformiteetin $\U$ lähistöön (entourage) $V\in\U $ kuuluvan 
 pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, 
 tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
@@ -1004,17 +1004,18 @@ Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
 Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy filtterien avulla.
 
 Sellaiselle joukolle, jolle on määritelty uniformiteetti voidaan määritellä myös 
-\emph{mielivaltaisen pieni} osa\-jouk\-ko kyseisen uniformiteetin suhteen. 
-Osajoukko on mielivaltaisen pieni silloin, kun kaikki osajoukon alkiot ovat 
-mielivaltaisen lähellä toisiaan. 
+\emph{tarpeeksi pieni} osa\-jouk\-ko kyseisen uniformiteetin suhteen. 
+Osajoukko on tarpeeksi pieni silloin, kun kaikki osajoukon alkiot ovat 
+tarpeeksi lähellä toisiaan (huomautus \ref{V-close}). 
 Näin saadaan seuraava määritelmä.
 \begin{maar}
 Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
-Osajoukko $A\subset X$ on \emph{$V-$pieni}, jos $(x,y)\in V$ jokaisella $x,y\in X$, eli jos $A\times A\subset V$.
+Osajoukko $A\subset X$ on \emph{$V-$pieni}, jos 
+jokaisella pisteparilla $x,y\in A$ pätee $(x,y)\in V$, eli jos $A\times A\subset V$.
 \end{maar}
 \begin{lause}
 Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
-Olkoon lisäksi $A,B\subset X$ $V-$pieniä osajoukkoja, 
+Olkoon lisäksi $A\subset X$ ja $B\subset X$ $V-$pieniä osajoukkoja, 
 joiden leikkaus on epätyhjä. 
 Tällöin yhdiste $A\cup B$ on $V^2-$pieni.
 \begin{proof}
@@ -1025,7 +1026,7 @@ ja näin ollen alkiopari $(x,y)$ kuuluu joukkoon $V^2$.
 \end{lause}
 \begin{maar}
 \emph{Filtteri.} Olkoon $X$ joukko ja $\F\subset \Pot(X)$ potenssijoukon osajoukko. 
-Joukko $F$ on \emph{filtteri} joukolle $X$, jos sille pätee 
+Joukko $\F$ on \emph{filtteri} joukolle $X$, jos sille pätee 
 uniformiteetin ehtojen \ref{F_I} ja \ref{F_II} lisäksi 
 seuraava ehto:
 \begin{enumerate}
@@ -1045,20 +1046,7 @@ Tällöin kanta $B$ virittää filtterin $\F$.
 %\emph{ekvivalentteja}, jos $\F_1=\F_2$.
 Lisäksi kaksi kantaa ovat 
 \emph{ekvivalentteja}, jos ne virittävät saman filtterin.
-\end{maar}
-\begin{lause}
-Joukon $X$ filtteri $\F$ kannalla $B$ on hienompi kuin 
-filtteri $\F'$ kannalla $B'$ jos ja vain jos jokaiselle $M\in B$ löytyy 
-sellainen $M'\in B'$, jolla $M'\subset M$.
-\end{lause}
-\begin{maar}\label{Cauchy_filtteri}
-Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
-Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
-jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
-joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
-\\
-\\
-Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
+%TODO lisäys kannan suhteesta filtteriin
 \end{maar}
 \begin{maar}
 \emph{Filttereiden vertailu.}
@@ -1069,8 +1057,23 @@ Tällöin $\F_1$ on hienompi kuin $\F_2$.
 Jos lisäksi pätee $\F_1\neq\F_2$, niin $\F_1$ on aidosti hienompi kuin $\F_2$ ja vastaavasti $\F_2$ on aidosti karkeampi kuin $\F_1$. 
 Sanotaan, että kahta filtteriä $\U_1$ ja $\U_2$ voidaan vertailla, 
 jos $\F_1$ on hienompi tai karkeampi kuin $\F_2$. 
-Filttereille $\F_1$ ja $\F_2$ pätee $\F_1=\F_2$, 
+%Filttereille $\F_1$ ja $\F_2$ pätee $\F_1=\F_2$, 
+Filtterit $\F_1$ ja $\F_2$ ovat samoja, eli $\F_1=\F_2$,
 jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
+\end{maar}
+\begin{lause}
+Joukon $X$ filtteri $\F$ kantana $B$ on hienompi kuin 
+filtteri $\F'$ kantana $B'$ jos ja vain jos jokaiselle $M\in B$ löytyy 
+sellainen $M'\in B'$, jolla $M'\subset M$.
+\end{lause}
+\begin{maar}\label{Cauchy_filtteri}
+Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
+Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
+jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
+joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
+\\
+\\
+Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
 \end{maar}
 \begin{lause}
 Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
