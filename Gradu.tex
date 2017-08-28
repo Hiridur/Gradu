@@ -175,7 +175,7 @@ Uniformiteetin $\U$ lähistöön (entourage) $V\in\U $ kuuluvan
 pisteparin $(x,y)\in V$ pisteiden $x,y\in X$ sanotaan olevan $V-$lähellä, 
 tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
-\begin{huom}
+\begin{huom}\label{UaHuom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
 Mikäli muut ehdot pätevät voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla: 
 \begin{enumerate} [label=(Ua),ref=(Ua)]
@@ -1093,19 +1093,19 @@ kanta $B$ suppenee kohti alkiota $x$.
 \end{maar}
 \begin{lause}
 Filtterikanta $B$ suppenee kohti alkiota $x\in X$, jos ja vain jos 
-jokainen alkion $x$ ympäristö sisältää filtterikannan jäsenen.
-\begin{proof}
-%TODO
-\end{proof}
+jokainen alkion $x$ ympäristö sisältää filtterikannan jäsenen.\qed
+%\begin{proof}
+%TODO ?
+%\end{proof}
 \end{lause}
-\begin{lause}
-Filtteri $\F$ suppenee kohti alkiota $x\in X$, 
-jos ja vain jos jokainen 
-filtteriä $\F$ hienompi ultrafiltteri suppenee kohti alkiota $x$.
-\begin{proof}
-%TODO
-\end{proof}
-\end{lause}
+%\begin{lause}
+%Filtteri $\F$ suppenee kohti alkiota $x\in X$, 
+%jos ja vain jos jokainen 
+%filtteriä $\F$ hienompi ultrafiltteri suppenee kohti alkiota $x$.
+%\begin{proof}
+%%TODO
+%\end{proof}
+%\end{lause}
 \begin{lause}
 Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy filtteri.
 \begin{proof}
@@ -1114,7 +1114,7 @@ sellainen alkio, jota kohti $\F$ suppenee.
 Tällöin alkion $x$ ympäristöfiltteri $B(x)$ sisältyy filtteriin $\F$. 
 Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'\in\F$. 
 
-Olkoon nyt $V\in\U$ lähistö ja $x\in X$ alkio. Ehdon \ref{Uaehto} nojalla on olemassa 
+Olkoon nyt $V\in\U$ lähistö ja $x\in X$ alkio. Huomautuksen \ref{UaHuom} ehdon \ref{Uaehto} nojalla on olemassa 
 sellainen lähistö $W\in\U$, jolla $W^{-1}\circ W\subset V$. 
 Huomataan, että joukko 
 $$W(x)\times W(x)=\{ (y_1,y_2)\mid (x,y_1)\in W,(x,y_2)\in W\} $$
@@ -1171,11 +1171,13 @@ esitetään niiden ominaisuuksia,
 oleellisimpana täydelliseen Hausdorff uniformiseen avaruuteen laajentaminen.
 \begin{maar}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
-Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille $x,y\in X,x\neq y$ on 
-olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, jolla $f_i(x,y)\neq 0$. 
+Olkoon lisäksi $(f_i)_{i\in I}$ pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
+Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille alkioille $x,y\in X$ on 
+olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, 
+jolla ehdosta $x\neq y$ seuraa $f_i(x,y)\neq 0$. 
 Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
 ja yhden pseudometriikan $f$ määrittelemä, 
-niin $f(x,y)\neq 0$ kaikilla $x,y\in X$.
+niin $f(x,y)\neq 0$ kaikilla $x,y\in X$, $x\neq y$.
 
 Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_i(x,y)=0$ kaikilla $i\in I$.
 \end{maar}
