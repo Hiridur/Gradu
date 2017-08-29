@@ -1071,10 +1071,8 @@ Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X
 Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
 jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
 joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
-\\
-\\
-Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
 \end{maar}
+\noindent Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
 \begin{lause}
 Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
 \end{lause}
@@ -1106,10 +1104,23 @@ jokainen alkion $x$ ympäristö sisältää filtterikannan jäsenen.\qed
 %%TODO
 %\end{proof}
 %\end{lause}
+
+\noindent Uniformeissa avaruuksissa Cauchy filttereillä ei välttämättä ole raja-arvoa.
+
+\begin{maar}
+%\emph{Täydellinen uniforminen avaruus} 
+%on uniforminen avaruus, 
+%jossa jokainen Cauchy filtteri suppenee. 
+%Olkoon $X$ uniforminen avaruus. 
+Uniforminen avaruus on \emph{täydellinen}, 
+jos sen jokainen Cauchy filtteri suppenee.
+\end{maar}
 \begin{lause}
-Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy filtteri.
+%Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy filtteri.
+Uniformisessa avaruudessa jokainen suppeneva filtteri on Cauchy filtteri.
 \begin{proof}
-Olkoon $X$ joukko, $\F$ suppeneva filtteri joukolle $X$ ja $x\in X$ 
+%TODO uniformisen avaruuden formaatti
+Olkoon $(X,\U)$ uniforminen avaruus, $\F$ suppeneva filtteri joukolle $X$ ja $x\in X$ 
 sellainen alkio, jota kohti $\F$ suppenee. 
 Tällöin alkion $x$ ympäristöfiltteri $B(x)$ sisältyy filtteriin $\F$. 
 Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'\in\F$. 
