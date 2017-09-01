@@ -328,7 +328,7 @@ korollaarin \ref{kaikki_ystöt} nojalla ympäristökanta.
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
 \end{proof}
 \end{lause}
-\begin{huom}
+\begin{huom}\label{unif_indusoitu_topo}
 Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
 \end{huom}
 \begin{maar}\label{tasaisesti_jatkuva}
@@ -932,14 +932,19 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %
 %
 \chapter{Uniformisoituvat avaruudet}
-Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
+%Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
+Tässä luvussa esitellään uniformisoituva (uniformizable) topologinen avaruus ja annetaan tätä karakterisoiva ehto.
 \begin{maar}
 Olkoon $(X,\T)$ topologinen avaruus ja 
 $\U$ uniformiteetti joukolle $X$. 
-%Merkitään uniformiteetin uniformiteetin $\U$ indusoimaa topologiaa $\T_{\U}$. 
+%Olkoon $X$ joukko, $\T$ topologia $X$:lle ja $\U$ uniformiteetti $X$:lle.
+Olkoon lisäksi $\T_{\U}$ uniformiteetin $\U$ indusoima topologia joukolle $X$. 
+%(Huom \ref{unif_indusoitu_topo}) 
 Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
-jos uniformiteetin $\U$ indusoima topologia 
-$\T_{\U}$ on sama kuin topologia $\T$.
+%jos uniformiteetin $\U$ indusoima topologia 
+%$\T_{\U}$ 
+%on sama kuin topologia $\T$.
+jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
 \end{maar}
 %\begin{kor}
 %
@@ -1171,9 +1176,9 @@ sillä jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$.
 %TODO 1-käs
 \end{proof}
 \end{lause}
-\begin{maar}
-
-\end{maar}
+%\begin{maar}
+%
+%\end{maar}
 %
 %
 \chapter{Hausdorff uniforminen avaruus}
