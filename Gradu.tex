@@ -1009,14 +1009,30 @@ Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja
 $(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
 jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
 kaikilla $i\in I$. 
-Perheen $(f_i)_{i\in I}$ määrittelemää uniformiteettia sanotaan avaruuden $(X,\T)$ universaaliksi (universal) uniformiteetiksi. 
+Perheen $(f_i)_{i\in I}$ määrittelemää uniformiteettia sanotaan avaruuden $(X,\T)$ universaaliksi (universal) uniformiteetiksi, 
+jota merkitsemme symbolilla $\U_0$. 
 \end{maar}
 \begin{lause}
-Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
+Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
 \begin{proof}
 %TODO
 \end{proof}
 \end{lause}
+\begin{lause}
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
+%Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+Olkoon $Y$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+jatkuva kuvaus (topologian $\T$ suhteen). 
+%niin $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen). 
+Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen), 
+jos ja vain jos uniformiteetti $\U$ on 
+avaruuden $(X,\T)$ universaali uniformiteetti. 
+\end{lause}
+\begin{huom}
+
+\end{huom}
 %
 %
 \chapter{Täydellinen uniforminen avaruus}
@@ -1253,6 +1269,30 @@ Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{comp
 Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
 isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
 \end{kor}
+\begin{lause}
+Olkoon $X$ ja $Y$ uniformeja avaruuksia ja $i_X\colon X\rightarrow\hat{X}$ ja $i_Y\colon Y\rightarrow\hat{Y}$ kanonisia kuvauksia. 
+Jokaiselle tasaisesti jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ 
+löytyy yksikäsitteinen tasaisesti jatkuva kuvaus $\hat{f}\colon \hat{X}\rightarrow \hat{Y}$, jolla oheinen diagrammi kommutoi. 
+%TODO diagrammi 
+%X--->Y
+%|    |
+%v    v
+%^X->^Y
+\end{lause}
+\chapter{Kompakti uniforminen avaruus}
+\begin{maar}
+%\emph{Esikompakti avaruus. Uniformisen avaruuden kompaktius.} 
+Uniformi avaruus $X,\U$ on \emph{esikompakti}, 
+jos Hausdorff täydennys (completion) $\hat{X}$ on kompakti. 
+Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikompakti. 
+(Rajoitettu uniformiteetti $\U\vert _A=\{U\cap (A\times A)\mid U\in\U\}$.)
+\end{maar}
+
+\begin{maar}
+Topologinen avaruus on \emph{täydennetysti säännöllinen} (completely regular), 
+jos se on uniformisoituva ja Hausdorff.
+%TODO muistiinpanoista lisätietoja tähän
+\end{maar}
 
 
 %\begin{huom}
