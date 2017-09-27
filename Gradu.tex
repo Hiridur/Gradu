@@ -931,116 +931,6 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %\end{kor}
 %
 %
-\chapter{Uniformisoituvat avaruudet}
-%Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
-Tässä luvussa esitellään uniformisoituva (uniformizable) topologinen avaruus ja annetaan tätä karakterisoiva ehto.
-\begin{maar}
-Olkoon $(X,\T)$ topologinen avaruus ja 
-$\U$ uniformiteetti joukolle $X$. 
-%Olkoon $X$ joukko, $\T$ topologia $X$:lle ja $\U$ uniformiteetti $X$:lle.
-Olkoon lisäksi $\T_{\U}$ uniformiteetin $\U$ indusoima topologia joukolle $X$. 
-%(Huom \ref{unif_indusoitu_topo}) 
-Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
-%jos uniformiteetin $\U$ indusoima topologia 
-%$\T_{\U}$ 
-%on sama kuin topologia $\T$.
-jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
-\end{maar}
-%\begin{kor}
-%
-%\end{kor}
-\begin{maar}
-Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
-\end{maar}
-\begin{lause}
-Olkoon $(X,\T)$ topologinen avaruus.
-%Topologinen avaruus $(X,\T)$ on uniformisoituva, jos seuraava ominaisuus pätee:
-Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
-%\begin{itemize}
-\begin{enumerate} [label=(Z),ref=(Z)]
-\item\label{O_IV} Kaikkien alkioiden $x\in X$ kaikilla 
-ympäristöillä $V\subset X$ on olemassa jatkuva 
-reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
-jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
-%\end{itemize}
-\end{enumerate}
-\begin{proof}
-Näytetään ensin, että ehto on välttämätön. 
-Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
-määritellä pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa määritelmän \ref{saturoitu} 
-nojalla olevan saturoitu. 
-Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R_+$, $\alpha\in I$ 
-ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
-jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
-Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
-pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
-
-Toisaalta ehto on myös riittävä:
-Olkoon $(X,\T)$ topologinen avaruus, jolla ehto \ref{O_IV} pätee. 
-Olkoon $x_0\in X$ alkio, $V_0\subset X$ alkion $x_0$ ympäristö 
-ja $f\colon X\rightarrow [0,1]$ ehdon \ref{O_IV} antama kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
-Tällöin kuvaus $g\colon X\times X\to [0,\infty]$ kaavalla $g(x_0,x)=f(x)$ on pseudometriikka. 
-%Olkoon $(g_i)_{i\in I}$ näin muodostettujen pseudometriikkojen perhe ja olkoon $\U$ kyseisen pseudometriikkaperheen määräämä uniformiteetti.
-%, jonka määrää pseudometriikkaperhe $(g_i)_{i\in I}$ joukon $X$.
-Olkoon $\U$ pseudometriikan $g$ määräämä uniformiteetti ja 
-$ a\in R_+$ reaaliluku. 
-Tällöin $g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on 
-lähistö pseudometriikan $g$ määräämässä uniformiteetissa $\U$. 
-%Merkitään $U_a=g^\leftarrow[0,a]$ joukko.
-%Merkitään joukkoa $g^\leftarrow[0,a]$ kaavalla $U_a$, jolloin  
-Merkitään $g^\leftarrow[0,a]=U_a$, jolloin  
-%Nyt joukko $$U_a(x)=\{y\mid (x,y)\in U_a\}=\{y\mid g(x,y)\leq a\}$$ on alkion $x$ ympäristö uniformiteetin $\U$ 
-joukko $U_a(x_0)=\{y\mid g(x_0,y)\leq a\}$ on alkion $x_0$ ympäristö uniformiteetin $\U$ 
-indusoimassa topologiassa $\T'$. 
-Joukkojen määrittelyistä seuraa, että jos $a<1$, niin $U_a(x)\subset V_0$ ja tällöin kokoelma $B=\{U_a(x_0)\mid g(x_0,y)\leq a\}$ 
-on alkion $x_0$ ympäristökanta topologiassa $\T$.
-%Toisaalta kokoelma $B=\{U_a\mid a\in\R_+ \}$ muodostaa kannan uniformiteetille $\U$ 
-%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R_+ \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
-%
-%Toisaalta topologian $\T$ ympäristökanta on myös 
-
-Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
-\end{proof}
-\end{lause}
-\begin{maar}
-\emph{Universaali uniformiteetti.} 
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
-jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
-kaikilla $i\in I$. 
-Perheen $(f_i)_{i\in I}$ määrittelemää uniformiteettia sanotaan avaruuden $(X,\T)$ universaaliksi (universal) uniformiteetiksi, 
-jota merkitsemme symbolilla $\U_0$. 
-\end{maar}
-\begin{lause}
-Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
-\begin{proof}
-%TODO
-\end{proof}
-\end{lause}
-\begin{lause}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
-%Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-Olkoon $Y$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-jatkuva kuvaus (topologian $\T$ suhteen). 
-%niin $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen). 
-Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen), 
-jos ja vain jos uniformiteetti $\U$ on 
-avaruuden $(X,\T)$ universaali uniformiteetti. 
-\end{lause}
-\begin{lause}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-Olkoon tällöin  
-$\U$ sellainen joukon $X$ uniformiteetti, 
-joka on yhteensopiva topologian $\T$ kanssa ja 
-avaruus $(X,\U)$ on täydellinen. 
-%TODO siirrettävä uniformisoituva ja täydellinen luvut keskenään?
-\end{lause}
-%
-%
 \chapter{Täydellinen uniforminen avaruus}
 Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy filtterien avulla.
 
@@ -1215,6 +1105,116 @@ sillä jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$.
 %\begin{maar}
 %
 %\end{maar}
+%
+%
+\chapter{Uniformisoituvat avaruudet}
+%Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
+Tässä luvussa esitellään uniformisoituva (uniformizable) topologinen avaruus ja annetaan tätä karakterisoiva ehto.
+\begin{maar}
+Olkoon $(X,\T)$ topologinen avaruus ja 
+$\U$ uniformiteetti joukolle $X$. 
+%Olkoon $X$ joukko, $\T$ topologia $X$:lle ja $\U$ uniformiteetti $X$:lle.
+Olkoon lisäksi $\T_{\U}$ uniformiteetin $\U$ indusoima topologia joukolle $X$. 
+%(Huom \ref{unif_indusoitu_topo}) 
+Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
+%jos uniformiteetin $\U$ indusoima topologia 
+%$\T_{\U}$ 
+%on sama kuin topologia $\T$.
+jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
+\end{maar}
+%\begin{kor}
+%
+%\end{kor}
+\begin{maar}
+Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
+\end{maar}
+\begin{lause}
+Olkoon $(X,\T)$ topologinen avaruus.
+%Topologinen avaruus $(X,\T)$ on uniformisoituva, jos seuraava ominaisuus pätee:
+Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
+%\begin{itemize}
+\begin{enumerate} [label=(Z),ref=(Z)]
+\item\label{O_IV} Kaikkien alkioiden $x\in X$ kaikilla 
+ympäristöillä $V\subset X$ on olemassa jatkuva 
+reaaliarvoinen kuvaus $f\colon X\rightarrow [0,1]$, 
+jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
+%\end{itemize}
+\end{enumerate}
+\begin{proof}
+Näytetään ensin, että ehto on välttämätön. 
+Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
+määritellä pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
+Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa määritelmän \ref{saturoitu} 
+nojalla olevan saturoitu. 
+Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R_+$, $\alpha\in I$ 
+ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
+jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
+Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
+pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
+
+Toisaalta ehto on myös riittävä:
+Olkoon $(X,\T)$ topologinen avaruus, jolla ehto \ref{O_IV} pätee. 
+Olkoon $x_0\in X$ alkio, $V_0\subset X$ alkion $x_0$ ympäristö 
+ja $f\colon X\rightarrow [0,1]$ ehdon \ref{O_IV} antama kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
+Tällöin kuvaus $g\colon X\times X\to [0,\infty]$ kaavalla $g(x_0,x)=f(x)$ on pseudometriikka. 
+%Olkoon $(g_i)_{i\in I}$ näin muodostettujen pseudometriikkojen perhe ja olkoon $\U$ kyseisen pseudometriikkaperheen määräämä uniformiteetti.
+%, jonka määrää pseudometriikkaperhe $(g_i)_{i\in I}$ joukon $X$.
+Olkoon $\U$ pseudometriikan $g$ määräämä uniformiteetti ja 
+$ a\in R_+$ reaaliluku. 
+Tällöin $g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on 
+lähistö pseudometriikan $g$ määräämässä uniformiteetissa $\U$. 
+%Merkitään $U_a=g^\leftarrow[0,a]$ joukko.
+%Merkitään joukkoa $g^\leftarrow[0,a]$ kaavalla $U_a$, jolloin  
+Merkitään $g^\leftarrow[0,a]=U_a$, jolloin  
+%Nyt joukko $$U_a(x)=\{y\mid (x,y)\in U_a\}=\{y\mid g(x,y)\leq a\}$$ on alkion $x$ ympäristö uniformiteetin $\U$ 
+joukko $U_a(x_0)=\{y\mid g(x_0,y)\leq a\}$ on alkion $x_0$ ympäristö uniformiteetin $\U$ 
+indusoimassa topologiassa $\T'$. 
+Joukkojen määrittelyistä seuraa, että jos $a<1$, niin $U_a(x)\subset V_0$ ja tällöin kokoelma $B=\{U_a(x_0)\mid g(x_0,y)\leq a\}$ 
+on alkion $x_0$ ympäristökanta topologiassa $\T$.
+%Toisaalta kokoelma $B=\{U_a\mid a\in\R_+ \}$ muodostaa kannan uniformiteetille $\U$ 
+%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\R_+ \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
+%
+%Toisaalta topologian $\T$ ympäristökanta on myös 
+
+Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
+\end{proof}
+\end{lause}
+\begin{maar}
+\emph{Universaali uniformiteetti.} 
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+$(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
+jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
+kaikilla $i\in I$. 
+Perheen $(f_i)_{i\in I}$ määrittelemää uniformiteettia sanotaan avaruuden $(X,\T)$ universaaliksi (universal) uniformiteetiksi, 
+jota merkitsemme symbolilla $\U_0$. 
+\end{maar}
+\begin{lause}
+Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
+\begin{proof}
+%TODO
+\end{proof}
+\end{lause}
+\begin{lause}
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
+%Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+Olkoon $Y$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+jatkuva kuvaus (topologian $\T$ suhteen). 
+%niin $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen). 
+Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen), 
+jos ja vain jos uniformiteetti $\U$ on 
+avaruuden $(X,\T)$ universaali uniformiteetti. 
+\end{lause}
+\begin{lause}
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon tällöin  
+$\U$ sellainen joukon $X$ uniformiteetti, 
+joka on yhteensopiva topologian $\T$ kanssa ja 
+avaruus $(X,\U)$ on täydellinen. 
+%TODO siirrettävä uniformisoituva ja täydellinen luvut keskenään?
+\end{lause}
 %
 %
 \chapter{Hausdorff uniforminen avaruus}
