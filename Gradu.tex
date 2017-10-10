@@ -434,26 +434,80 @@ Tällöin uniformiteetin $\U_1$ indusoima topologia on hienompi kuin
 uniformiteetin $\U_2$ indusoima topologia.
 \end{kor}
 \begin{lause}\label{kuvausperheen indusoima lause}
-Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
+%Olkoot $X$ ja $I$ epätyhjiä joukkoja ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$. %, jollain indeksijoukolla $I$. 
+Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
-Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
-Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+Olkoon $f_i\colon X\rightarrow Y_i$ kuvaus jokaisella $i\in I$ ja  
+%Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+%Olkoon nyt 
+$g_i\colon X\times X\rightarrow Y_i\times Y_i$ kuvaus, jolla $g_i(x,y)=(f_i(x), f_i(y))$ kaikilla $x,y\in X$, 
 %Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
 %kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
 %kuvauksia 
-kaikilla $i\in I$.
-Olkoon 
+%kaikilla 
+$i\in I$.
+%Olkoon 
 %$(i_k)$ jono joukon $I$ alkioita ja olkoon 
 %$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
 %\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
-$$B=\left\{\bigcap_{j\in A}g^{\leftarrow}_{j}(V_{j})
-\mid V_{j} \in\U_{j},A\subset I\text{ äärellinen}\right\}$$
-joukko missä $\U_{j}$ on avaruuden $Y_{j}$ uniformiteetti.
-Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+Tällöin joukko 
+$$B=\left\{\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})
+\mid J\subset I\text{ äärellinen},V_{i} \in\U_{i}\text{ kaikilla } i\in J\right\}$$
+%$$B=\left\{\bigcap_{j\in A}g^{\leftarrow}_{j}(V_{j})
+%\mid A\subset I\text{ äärellinen},V_{j} \in\U_{j}\right\}$$
+%joukko missä $\U_{j}$ on avaruuden $Y_{j}$ uniformiteetti.
+%Tällöin $B$ 
+on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
 %Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
 %avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
-Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
+%ja se on karkein niistä uniformiteeteista, 
+joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+
+Uniformiteettia $\U$ sanotaan 
+%kuvausten $f_i$, tai 
+kuvausperheen $(f_i)_{i\in I}$ indusoimaksi uniformiteetiksi.  
 \begin{proof}
+Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$. 
+%, jollain indeksijoukolla $I$. 
+Olkoon lisäksi kuvaukset $f_i$ ja $g_i$ ja joukko $B$ kuten yllä.
+%Olkoon $f_i\colon X\rightarrow Y_i$ kuvaus jokaisella $i\in I$ ja  
+%$g_i\colon X\times X\rightarrow Y_i\times Y_i$ kuvaus, jolla $g_i(x,y)=(f_i(x), f_i(y))$ kaikilla $x,y\in X$, 
+%$i\in I$.
+%Joukko 
+%$$B=\left\{\bigcap_{i\in A}g^{\leftarrow}_{i}(V_{i})
+%\mid A\subset I\text{ äärellinen},V_{i} \in\U_{i}\text{ kaikilla } i\in I\right\}$$
+%$B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+Selvitetään, onko joukko $B$ uniformiteetin kanta käymällä läpi 
+kantalauseen \ref{uniformin kannan maar} ehdot:
+\begin{enumerate} %[label=(B\arabic*)]
+\item[\ref{B_I}] 
+Olkoon $U_1,U_2\in B$. 
+Tällöin olemassa äärelliset osajoukot $J_1,J_2\subset I$ 
+ja lähistöt $V_i\in\U_i$ kaikilla $i\in J_1$ 
+ja $V_j\in\U_j$ kaikilla $j\in J_2$, 
+%ja $V_i\in\U_i$
+%ja kaikilla $i\in J_2$, 
+joilla 
+\begin{equation*}
+U_1=\bigcap_{i\in J_1}g^{\leftarrow}_{i}(V_{i})\quad\text{ ja 
+ }\quad U_2=\bigcap_{j\in J_2}g^{\leftarrow}_{j}(V_{j}).
+\end{equation*}
+%kun $V_i\in \U_i$ kaikilla $i\in A_1$.
+Yhdiste $J_1\cup J_2$ on äärellinen indeksijoukon $I$ osajoukko, 
+joten 
+ $$U_3=\bigcap_{j\in J_1\cup J_2}g^{\leftarrow}_{j}(V_{j})\in B$$
+ ja erityisesti $U_3\subset U_1\cap U_2$.
+% niin on olemassa sellainen $U_3\in B$, jolla $U_3\subset U_1\cap U_2$,
+\item[\ref{U'_I}] 
+%TODO tästä eteenpäin
+Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
+\item[\ref{U'_II}] Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
+$,
+\item[\ref{U'_III}] Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+\end{enumerate}
+Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
+joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
 Lisätään myöhemmin. %TODO
 \end{proof}
 %TODO epäselvyyksien korjauksia
@@ -1190,9 +1244,10 @@ jota merkitsemme symbolilla $\U_0$.
 \end{maar}
 \begin{lause}
 Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
-\begin{proof}
+%\begin{proof}
 %TODO
-\end{proof}
+%\end{proof}
+\qed
 \end{lause}
 \begin{lause}
 Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
@@ -1202,9 +1257,21 @@ $\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa.
 Olkoon $Y$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
 jatkuva kuvaus (topologian $\T$ suhteen). 
 %niin $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen). 
-Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen), 
+Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
 jos ja vain jos uniformiteetti $\U$ on 
 avaruuden $(X,\T)$ universaali uniformiteetti. 
+\begin{proof}
+Osoitetaan väitteen implikaatio molempiin suuntiin.
+\begin{enumerate}
+\item[$\Rightarrow$]
+Olkoon kuvaus $f$ tasaisesti jatkuva. 
+\item[$\Leftarrow$]
+Olkoon uniformiteetti $\U$ on 
+avaruuden $(X,\T)$ universaali uniformiteetti. 
+Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
+\end{enumerate}
+%TODO
+\end{proof}
 \end{lause}
 \begin{lause}
 Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
