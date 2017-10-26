@@ -460,11 +460,11 @@ $$B=\left\{\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})
 on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
 %Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
 %avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
-Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
-%ja se on karkein niistä uniformiteeteista, 
-joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
-
-Uniformiteettia $\U$ sanotaan 
+%Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
+%%ja se on karkein niistä uniformiteeteista, 
+%joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+%
+Kyseistä uniformiteettia $\U$ sanotaan 
 %kuvausten $f_i$, tai 
 kuvausperheen $(f_i)_{i\in I}$ indusoimaksi uniformiteetiksi.  
 \begin{proof}
@@ -582,7 +582,7 @@ jokaisella $i\in J$, joten
 \begin{equation*}
 (x,z)\in \bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}^2)\subset  \bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})=U.
 \end{equation*}
-Siis $A^2\subset U$.
+Näin ollen $A^2\subset U$.
 %
 %Huomataan ensin, että 
 %\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
@@ -637,11 +637,12 @@ Siis $A^2\subset U$.
 %%TODO
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
+Siis joukko $B$ on joukon $X$ erään uniformiteetin kanta.
 %TODO
-Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
-joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
-
-Lisätään myöhemmin. %TODO
+%Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
+%joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+%
+%Lisätään myöhemmin. %TODO
 \end{proof}
 %TODO epäselvyyksien korjauksia
 \end{lause}
@@ -686,6 +687,15 @@ Edellisen lauseen \ref{kuvausperheen indusoima lause} uniformiteetti $\U$ on kuv
 %Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
 %%TODO epäselvyyksien korjauksia
 %\end{maar}
+\begin{lause}
+Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$, jollain indeksijoukolla $I$. 
+Olkoon $f_i\colon X\rightarrow Y_i$ kuvaus jokaisella $i\in I$.
+Tällöin kuvausperheen $(f_i)_{i\in I}$ indusoima uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
+joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+\begin{proof}
+%TODO
+\end{proof}
+\end{lause}
 \begin{maar}
 \emph{Uniformiteettien pienin yläraja.}
 %Olkoon $X$ joukko%, $I$ indeksijoukko
