@@ -500,11 +500,120 @@ joten
  ja erityisesti $U_3\subset U_1\cap U_2$.
 % niin on olemassa sellainen $U_3\in B$, jolla $U_3\subset U_1\cap U_2$,
 \item[\ref{U'_I}] 
-%TODO tästä eteenpäin
-Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
-\item[\ref{U'_II}] Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
-$,
-\item[\ref{U'_III}] Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+Olkoon $U\in B$. Tällöin on olemassa äärellinen $J\subset I$, 
+ja lähistöt $V_i\in\U_i$, kaikilla $i\in J$, 
+joilla
+\begin{equation*}
+U=\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i}).
+%,\quad\text{ jossa }V_i\in\U_i.
+%,\quad V_i\in\U_i.
+\end{equation*}
+Jokaisella $V_i\in \U_i$ pätee $\{(y_i,y_i)\mid y_i\in Y_i\}\subset V_i$ 
+ja näin ollen myös jokaisella $g_i^{\leftarrow}(V_i)$ pätee 
+$\{(x,x)\mid x\in X\}\subset g_i^{\leftarrow}(V_i)$. 
+%Nyt myös joukolla $U\in B$ pätee $\{(x,x)\mid x\in X\}\subset U$, 
+Siis pätee $\{(x,x)\mid x\in X\}\subset U$, 
+koska $U$ on leikkaus joukoista $g_i^{\leftarrow}(V_i)$.
+%Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
+\item[\ref{U'_II}] 
+Olkoon $U\in B$. Tällöin on olemassa äärellinen $J\subset I$, 
+ja lähistöt $V_i\in\U_i$, kaikilla $i\in J$, 
+joilla
+\begin{equation*}
+U=\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i}).
+%,\quad\text{ jossa }V_i\in\U_i.
+%,\quad V_i\in\U_i.
+\end{equation*}
+%Kuitenkin tällöin jokaiselle $V_i\in\U_i$ löytyy $V'_i\in\U_i$, 
+%jolla 
+%Kuitenkin tällöin 
+Uniformiteetin määritelmän ehdon \ref{U_II} nojalla jos $V_i\in\U_i$ niin $V^{-1}_i\in\U_i$. 
+%ja siis  
+Näin ollen 
+%Siis 
+\begin{equation*}
+U^{-1}=\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}))^{-1}
+=\bigcap_{i\in J}g^{\leftarrow}_{i}(V^{-1}_{i})\in B.
+%,\quad\text{ jossa }V_i\in\U_i.
+%,\quad V_i\in\U_i.
+\end{equation*}
+Nyt $U\in B$ ja $U^{-1}\in B$, joten ehdon \ref{F_II} nojalla $U\cap U^{-1}\in B$. 
+Tällöin joukolle $ U\in B$ on löydetty 
+joukko $U\cap U^{-1}\in B$, jolla $U\cap U^{-1}\subset U^{-1}$.
+%
+%Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
+%$,
+\item[\ref{U'_III}] 
+Olkoon $U\in B$. Tällöin on olemassa äärellinen $J\subset I$, 
+ja lähistöt $V_i\in\U_i$, kaikilla $i\in J$, 
+joilla
+\begin{equation*}
+U=\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i}).
+\end{equation*}
+Uniformiteetin määritelmän ehdon \ref{U_III} nojalla jos $V_i\in\U_i$ niin on olemassa sellainen $W_i\in\U_i$, jolla $W^2_i\subset V_i$. 
+Olkoon 
+\begin{equation*}
+A=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}),
+\end{equation*}
+jolloin $A\in B$ ja riittää osoittaa, että $A^2\subset U$. %ja erityisesti $A\subset U$.
+%Suoralla laskulla saadaan 
+%\begin{equation*}
+%A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}
+%\end{equation*}
+Huomataan ensin, että 
+\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
+=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
+=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
+=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
+=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
+\end{equation*}
+%Nyt siis $A^2=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})$
+%TODO
+Nyt siis $A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}$
+Seuraavaksi huomataan, että %$W_i\cap $
+%TODO
+\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
+=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
+=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
+=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
+=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
+\end{equation*}
+
+%\begin{equation*}
+%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\in B
+%\quad\text{ja erityisesti }\quad
+%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\subset U
+%\end{equation*}
+
+
+
+Olkoon 
+%$U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.$
+\begin{equation*}
+U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.
+\end{equation*}
+Tällöin 
+\begin{equation*}
+U'\circ U'=\{(x,z)\mid \text{on olemassa }y\in X,\text{ jolla }(x,y),(y,z)\in U' \}
+%=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\circ\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})
+\end{equation*}
+%
+%Tällöin joukkoon $U'\circ U'$ kuuluvat kaikki sellaiset joukon $X$ 
+%alkioista muodostetut parit $(x,z)$, joille löytyy $y\in X$ niin, 
+%että $(x,y)\in U'$ ja $(y,z)\in U'$.
+ja erityisesti $(x,z)\in U'\circ U'$, 
+jos ja vain jos $(x,y)\in g^{\leftarrow}_{i}(W_{i})$ ja $(y,z)\in g^{\leftarrow}_{i}(W_{i})$ jokaisella $i\in J$.
+
+
+
+\begin{equation*}
+U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}\circ W_{i})\subset U
+\end{equation*}
+
+
+
+%TODO
+Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
 joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
