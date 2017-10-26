@@ -555,68 +555,92 @@ Olkoon
 \begin{equation*}
 A=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}),
 \end{equation*}
-jolloin $A\in B$ ja riittää osoittaa, että $A^2\subset U$. %ja erityisesti $A\subset U$.
+jolloin $A\in B$ ja näin ollen riittää osoittaa, että $A^2\subset U$. %ja erityisesti $A\subset U$.
 %Suoralla laskulla saadaan 
 %\begin{equation*}
 %A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}
 %\end{equation*}
-Huomataan ensin, että 
-\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
-=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
-=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
-=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
-=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
-\end{equation*}
-%Nyt siis $A^2=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})$
-%TODO
-Nyt siis $A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}$
-Seuraavaksi huomataan, että %$W_i\cap $
-%TODO
-\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
-=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
-=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
-=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
-=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
-\end{equation*}
-
+Määritelmän mukaan $A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}$. 
+Siis alkioilla $x,z\in X$ pätee $(x,z)\in A^2$ tasan silloin, 
+kun on olemassa sellainen $y\in X$, 
+jolla $(x,y)\in A$ ja $(y,z)\in A$. 
+Toisaalta jos $(x,y)\in A$ ja $(y,z)\in A$ 
+niin $(x,y)\in g^{\leftarrow}_{i}(W_{i})$ 
+ja $(y,z)\in g^{\leftarrow}_{i}(W_{i})$ 
+jokaisella $i\in J$. 
+%Tällöin $(x,z)\in g^{\leftarrow}_{i}(W_{i})^2$
+Tällöin $g_i(x,y)\in W_{i}$ ja $g_i(y,z)\in W_{i}$, 
+joten $g_i(x,z)\in W_{i}^2$. 
+%jokaisella $i\in J$. 
+Näin ollen $(x,z)\in g^{\leftarrow}_{i}(W_{i}^2)$ 
+jokaisella $i\in J$, joten 
+%jokaisella $i\in J$. Siis jos $(x,z)\in A^2$, niin 
 %\begin{equation*}
-%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\in B
-%\quad\text{ja erityisesti }\quad
-%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\subset U
+%(x,z)\in \bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}^2)
+%%\subset  \bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})=U.
 %\end{equation*}
-
-
-
-Olkoon 
-%$U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.$
 \begin{equation*}
-U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.
+(x,z)\in \bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}^2)\subset  \bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})=U.
 \end{equation*}
-Tällöin 
-\begin{equation*}
-U'\circ U'=\{(x,z)\mid \text{on olemassa }y\in X,\text{ jolla }(x,y),(y,z)\in U' \}
-%=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\circ\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})
-\end{equation*}
+Siis $A^2\subset U$.
 %
-%Tällöin joukkoon $U'\circ U'$ kuuluvat kaikki sellaiset joukon $X$ 
-%alkioista muodostetut parit $(x,z)$, joille löytyy $y\in X$ niin, 
-%että $(x,y)\in U'$ ja $(y,z)\in U'$.
-ja erityisesti $(x,z)\in U'\circ U'$, 
-jos ja vain jos $(x,y)\in g^{\leftarrow}_{i}(W_{i})$ ja $(y,z)\in g^{\leftarrow}_{i}(W_{i})$ jokaisella $i\in J$.
-
-
-
-\begin{equation*}
-U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}\circ W_{i})\subset U
-\end{equation*}
-
-
-
-%TODO
-Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
+%Huomataan ensin, että 
+%\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
+%=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
+%=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
+%=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
+%=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
+%\end{equation*}
+%%Nyt siis $A^2=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})$
+%%TODO
+%Seuraavaksi huomataan, että %$W_i\cap $
+%\begin{equation*}\begin{split}g^{\leftarrow}_{i}(W_{i})^2
+%=&\{(x,z)\mid (x,y)\in g^{\leftarrow}_{i}(W_{i})\text{ ja }(y,z)\in g^{\leftarrow}_{i}(W_{i})\}\\
+%=&\{(x,z)\mid g_i(x,y)\in W_{i}\text{ ja }g_i(y,z)\in W_{i}\}\\
+%=&\{g^{\leftarrow}_{i}(x',z')\mid (x',y')\in W_{i}\text{ ja }(y',z')\in W_{i}\}\\
+%=&g^{\leftarrow}_{i}(W^2_{i}) \end{split}
+%\end{equation*}
+%
+%%\begin{equation*}
+%%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\in B
+%%\quad\text{ja erityisesti }\quad
+%%\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})\subset U
+%%\end{equation*}
+%
+%
+%
+%Olkoon 
+%%$U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.$
+%\begin{equation*}
+%U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\in B.
+%\end{equation*}
+%Tällöin 
+%\begin{equation*}
+%U'\circ U'=\{(x,z)\mid \text{on olemassa }y\in X,\text{ jolla }(x,y),(y,z)\in U' \}
+%%=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})\circ\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i})
+%\end{equation*}
+%%
+%%Tällöin joukkoon $U'\circ U'$ kuuluvat kaikki sellaiset joukon $X$ 
+%%alkioista muodostetut parit $(x,z)$, joille löytyy $y\in X$ niin, 
+%%että $(x,y)\in U'$ ja $(y,z)\in U'$.
+%ja erityisesti $(x,z)\in U'\circ U'$, 
+%jos ja vain jos $(x,y)\in g^{\leftarrow}_{i}(W_{i})$ ja $(y,z)\in g^{\leftarrow}_{i}(W_{i})$ jokaisella $i\in J$.
+%
+%
+%
+%\begin{equation*}
+%U'=\bigcap_{i\in J}g^{\leftarrow}_{i}(W^2_{i})=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}\circ W_{i})\subset U
+%\end{equation*}
+%
+%
+%
+%%TODO
+%Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
+%TODO
 Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
 joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+
 Lisätään myöhemmin. %TODO
 \end{proof}
 %TODO epäselvyyksien korjauksia
