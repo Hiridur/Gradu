@@ -448,9 +448,8 @@ on kuvausperheen $(f_i)_{i\in I}$ indusoiman uniformiteetin kanta.
 %kuvausperheen $(f_i)_{i\in I}$ indusoimaksi uniformiteetiksi.  
 \end{maar}
 \begin{lause}\label{kuvausperheen indusoima lause}
-Kuvausperheen indusoiman uniformiteetin kanta on todella uniformiteetin kanta.
-
-
+%Edellisessä määritelmässä \ref{kuvausperheen indusoima maar} annettu kuvausperheen indusoiman uniformiteetin kanta todella on uniformiteetin kanta.
+%
 %Olkoot $X$ ja $I$ epätyhjiä joukkoja ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$. %, jollain indeksijoukolla $I$. 
 Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$, jollain indeksijoukolla $I$. 
 %Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
@@ -663,26 +662,26 @@ Siis joukko $B$ on joukon $X$ erään uniformiteetin kanta.
 \end{proof}
 %TODO epäselvyyksien korjauksia
 \end{lause}
-%\begin{maar}\label{kuvausperheen indusoima}
-%\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
-%Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
-%%Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
-%Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
-%Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
-%%Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
-%%kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
-%%kuvauksia 
-%kaikilla $i\in I$.
-%Olkoon 
-%$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
-%\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
-%joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
-%%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
-%Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
-%avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
-%Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
-%%TODO epäselvyyksien korjauksia
-%\end{maar}
+\begin{maar}\label{kuvausperheen indusoima}
+\emph{Kuvausperheen indusoima uniformiteetti} (initial uniformity).
+Olkoon $X$ joukko ja $Y_i$ uniformiteetilla varustettuja joukkoja kaikilla $i\in I$, jollain indeksijoukolla $I$. 
+%Olkoon $\U_i$ joukon $Y_i$ uniformiteetti kaikilla $i\in I$.
+Olkoon $f_i\colon X\rightarrow Y_i$ kuvauksia kaikilla $i\in I$. 
+Olkoon nyt $g_i=f_i\times f_i$ kuvaus joukolta $X\times X$ joukolle $Y_i\times Y_i$ 
+%Olkoon $g_i=f_i\times f_i\colon X\times X\rightarrow Y_i\times Y_i$ %sellainen 
+%kuvaus, jolla pätee $g(x,y)=(f_i(x),f_i(y))$ kaikilla $x,y\in X$. 
+%kuvauksia 
+kaikilla $i\in I$.
+Olkoon 
+$$B=\left\{\bigcap_{k=0}^{n}g^{\leftarrow}_{i_k}(V_{i_k})
+\mid V_{i_k} \in\U_{i_k},i_k \in I,n\in\N \right\}$$
+joukko missä $\U_{i_k}$ on avaruuden $Y_{i_k}$ uniformiteetti.
+%Tällöin $B$ on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
+Tällöin $B$ on kanta kuvausperheen $ (f_i)_{i\in I}$ 
+avaruudelle $X$ indusoimalle uniformiteetille $\U$. 
+Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
+%TODO epäselvyyksien korjauksia
+\end{maar}
 \begin{lause}
 Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$, jollain indeksijoukolla $I$. 
 Olkoon $f_i\colon X\rightarrow Y_i$ kuvaus jokaisella $i\in I$.
@@ -1490,6 +1489,7 @@ Olkoon $X$ ja $Y$ uniformeja avaruuksia ja $i_X\colon X\rightarrow\hat{X}$ ja $i
 Jokaiselle tasaisesti jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ 
 löytyy yksikäsitteinen tasaisesti jatkuva kuvaus $\hat{f}\colon \hat{X}\rightarrow \hat{Y}$, jolla oheinen diagrammi kommutoi. 
 %TODO diagrammi 
+\\\\(diagrammi puuttuu)
 %X--->Y
 %|    |
 %v    v
@@ -1510,11 +1510,11 @@ jos se on uniformisoituva ja Hausdorff.
 %TODO muistiinpanoista lisätietoja tähän
 \end{maar}
 
-\begin{maar}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
-ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-
-\end{maar}
+%\begin{maar}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
+%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+%
+%\end{maar}
 
 
 %\begin{huom}
