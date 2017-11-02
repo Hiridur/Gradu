@@ -1407,25 +1407,27 @@ Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0
 \end{lause}
 \begin{lause}
 Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+%$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
 %Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-Olkoon $Y$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-jatkuva kuvaus (topologian $\T$ suhteen). 
-%niin $f$ on tasaisesti jatkuva (uniformiteetin $\U_0$ suhteen). 
-Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
-jos ja vain jos uniformiteetti $\U$ on 
-avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon $(Y,\T')$ uniformisoituva avaruus ja $f\colon X\rightarrow Y$ 
+%jatkuva kuvaus (topologian $\T$ suhteen). 
+kuvaus. 
+Jos kuvaus $f$ on jatkuva, %(topologian $\T$ suhteen), 
+niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen). 
+%Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
+%jos ja vain jos uniformiteetti $\U$ on 
+%avaruuden $(X,\T)$ universaali uniformiteetti. 
 \begin{proof}
-Osoitetaan väitteen implikaatio molempiin suuntiin.
-\begin{enumerate}
-\item[$\Rightarrow$]
-Olkoon kuvaus $f$ tasaisesti jatkuva. 
-\item[$\Leftarrow$]
-Olkoon uniformiteetti $\U$ on 
-avaruuden $(X,\T)$ universaali uniformiteetti. 
-Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
-\end{enumerate}
+%%Osoitetaan väitteen implikaatio molempiin suuntiin.
+%%\begin{enumerate}
+%%\item[$\Rightarrow$]
+%%Olkoon kuvaus $f$ tasaisesti jatkuva. 
+%%\item[$\Leftarrow$]
+%Olkoon uniformiteetti $\U$ on 
+%avaruuden $(X,\T)$ universaali uniformiteetti. 
+%Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
+%%\end{enumerate}
 %TODO
 \end{proof}
 \end{lause}
@@ -1514,13 +1516,6 @@ löytyy yksikäsitteinen tasaisesti jatkuva kuvaus $\hat{f}\colon \hat{X}\righta
 %^X->^Y
 \end{lause}
 \chapter{Kompakti uniforminen avaruus}
-\begin{maar}
-%\emph{Esikompakti avaruus. Uniformisen avaruuden kompaktius.} 
-Uniformi avaruus $X,\U$ on \emph{esikompakti}, 
-jos Hausdorff täydennys (completion) $\hat{X}$ on kompakti. 
-Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikompakti. 
-(Rajoitettu uniformiteetti $\U\vert _A=\{U\cap (A\times A)\mid U\in\U\}$.)
-\end{maar}
 
 \begin{maar}
 Topologinen avaruus on \emph{täysin säännöllinen} (completely regular), 
@@ -1528,11 +1523,80 @@ jos se on uniformisoituva ja Hausdorff.
 %TODO muistiinpanoista lisätietoja tähän
 \end{maar}
 
-%\begin{maar}
-%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
+\begin{maar}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
+ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+Olkoon $(f_i)_{i\in I}$ kaikkien uniformiteetin $\U$ suhteen tasaisesti jatkuvien kuvausten $f_i\colon X\rightarrow [0,1]$ perhe. 
+Tällöin merkitään symbolilla $\U^*$ sitä uniformiteettia, 
+joka on karkein niistä uniformiteeteista, 
+joilla kaikki kuvausperheen $(f_i)_{i\in I}$ 
+kuvaukset %$f\colon X\rightarrow [0,1]$ 
+ovat tasaisesti jatkuvia. 
+%joilla kaikki uniformiteetin $\U$ suhteen tasaisesti jatkuvat 
+%kuvaukset $f\colon X\rightarrow [0,1]$ ovat tasaisesti jatkuvia. 
+%uniformiteetin $\U^*$ suhteen. 
+\end{maar}
+
+\begin{lause}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
 %ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-%
-%\end{maar}
+Tällöin uniformiteetti $\U^*$ on Hausdorff ja yhteensopiva topologian $\T$ kanssa. 
+\end{lause}
+
+\begin{maar}
+%\emph{Esikompakti avaruus. Uniformisen avaruuden kompaktius.} 
+Uniforminen avaruus $X,\U$ on \emph{esikompakti}, 
+jos sen Hausdorff täydennys %(completion) 
+$\hat{X}$ on kompakti. 
+Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikompakti. 
+(Rajoitettu uniformiteetti $\U\vert _A=\{U\cap (A\times A)\mid U\in\U\}$.)
+\end{maar}
+
+\begin{lause}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
+%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+Tällöin avaruus $(X,\U^*)$ on esikompakti.
+\end{lause}
+
+\begin{lause}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
+ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+Olkoon $(K,\T')$ kompakti (topologinen) avaruus ja 
+$\U_{\T'}$ topologian $\T'$ kanssa yhteensopiva uniformiteetti. 
+Olkoon $f\colon X\rightarrow K$ kuvaus, joka on tasaisesti jatkuva uniformiteetin $\U$ suhteen. 
+%$f\colon (X,\U)\rightarrow (K,\U_{\T'})$ tasaisesti jatkuva kuvaus. 
+%Tällöin myös $f\colon (X,\U^*)\rightarrow (K,\U_{\T'})$ on 
+%tasaisesti jatkuva. 
+Tällöin kuvaus $f$ on tasaisesti jatkuva myös uniformiteetin $\U^*$ suhteen. 
+\end{lause}
+
+\begin{kor}
+Uniformiteetti $\U^*$ on hienoin niistä topologian $\T$ 
+kanssa yhteensopivista uniformiteeteista $\U$, 
+joilla $(X,\U)$ on esikompakti. 
+\end{kor}
+
+\begin{maar}
+\emph{Stone–Čech kompaktisointi.}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon $\U^{*}_{0}$ karkein uniformiteetti, 
+jolla kaikki jatkuvat kuvaukset $f_i\colon X\rightarrow [0,1]$ 
+ovat tasaisesti jatkuvia. 
+Olkoon $\beta X$ avaruuden $(X,\U^{*}_{0})$ Hausdorf täydennys.
+%kompakti (topologinen) avaruus, 
+%joka saadaan täydentämällä avaruus $(X,\U^{*}_{0})$.
+Avaruutta $\beta X$ sanotaan avaruuden $(X,\T)$ 
+Stone–Čech kompaktisoinniksi.
+\end{maar}
+
+\begin{lause}
+Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
+$(K,\T')$ kompakti topologinen avaruus. 
+Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
+\end{lause}
+
+
 
 
 %\begin{huom}
