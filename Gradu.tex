@@ -798,6 +798,7 @@ kaikilla $x,y\in X$
 on pseudometriikka.
 \end{esim}
 \begin{esim}%3
+\label{pseudometriikkaperheen sup}
 Olkoon $(f_i)_{i\in I}$ perhe joukon $X$ pseudometriikoita. 
 Tällöin kaikilla alkioilla $x,y\in X$ epäyhtälöstä 
 $f_i(x,y)\leq f_i(x,z)+f_i(z,y)$ seuraa epäyhtälö 
@@ -970,33 +971,88 @@ Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittelemät uni
 %\begin{esim}
 %Olkoon $X$ joukko ja $(f_i)_{i\in I}$ mielivaltainen perhe (äärellisiä) reaaliarvoisia kuvauksia $f_i\colon X\rightarrow \R$ kaikilla $i\in I$.
 %\end{esim}
-\begin{maar}
+\begin{lause}\label{saturoitu lause}
+%TODO
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-Olkoon $H'\subset I$ äärellinen joukko ja $g_{H'}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
-jolla $g_{H'}(x)=\sup_{i\in H'}f_i(x)$.
-Nyt 
-$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
-on joukon $X$ erään uniformiteetin kanta. 
-%Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
-%Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ 
-Olkoon nyt $J=\{H\mid H\subset I, H\text{ äärellinen }\}$ 
-potenssijoukon $\Pot(I)$ äärellinen osajoukko ja $g_{J}$ kuvaus, 
-jolla $\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $. 
-
-Nyt siis 
-%$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
-$\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $ 
-ja $H\subset I$ on äärellinen joukko.
-Tällöin sanotaan, että perhe $(g_H)$ on \emph{saturoitu} (saturated), 
-\emph{ekvivalentti} perheen $(f_i)_{i\in I}$ kanssa 
-ja saatu saturoimalla perhe $(f_i)_{i\in I}$. 
-
+%%Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
+%Esimerkin \ref{pseudometriikkaperheen sup} mukaisesti kuvaus 
+%$g_{H}\colon X\times X\rightarrow [0,\infty]$, 
+%jolla $H\subset I$ äärellinen ja $g_{H}(x)=\sup_{i\in H}f_i(x)$ on joukon $X$ pseudometriikka, 
+%kun $H\subset I$ on äärellinen. 
+%%Näin ollen olkoon $(g_{H})_{H\subset I}$ pseudometriikkaperhe, 
+%
+%Tällöin voidaan muodostaa pseudometriikkaperhe 
+%$$\{g_{H}\colon X\times X\rightarrow [0,\infty]\mid g_{H}(x)=\sup_{i\in H}f_i(x), H\subset I\text{ äärellinen } \}$$ 
+%%Olkoon nyt $(g_{H})$ kokoelma sellaisista kuvauksista 
+%Tällöin voidaan muodostaa pseudometriikkaperhe 
+Olkoon tällöin 
+$(g_{H}):=(g_{H})_{H\subset I \text{ äärellinen}}$ 
+pseudometriikkaperhe, johon 
+%niin, että siihen 
+% joka koostuu kuvauksista 
+kuuluvat sellaiset kuvaukset 
+$g_{H}\colon X\times X\rightarrow [0,\infty]$, joilla 
+$g_{H}(x)=\sup_{i\in H}f_i(x)$, 
+kun $H$ käy läpi joukon $I$ äärelliset osa\-joukot. 
+Näin muodostetusta pseudometriikkaperheestä $(g_{H})$ otetun 
+äärellisen osaperheen 
+$\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ supremum 
+$\sup_{j=1}^{n}g_{A_j}(x)$ kuuluu perheeseen $(g_H)$. 
+%Tällöin sanotaan, että perhe $(g_H)$ 
+%on \emph{saturoitu} (saturated) ja 
+%%että perhe $(g_H)$ on 
+%saatu saturoimalla perhe $(f_i)_{i\in I}$. 
+\begin{proof}
+\end{proof}
+\end{lause}
+\begin{maar}\label{saturoitu maar}
+Lauseen \ref{saturoitu lause} tilanteessa sanotaan, 
+että pseudometriikkaperhe $(g_H)$ on \emph{saturoitu} (saturated) ja 
+%että perhe $(g_H)$ on 
+saatu saturoimalla perhe $(f_i)_{i\in I}$. 
+\end{maar}
+\begin{lause}
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
+Olkoon $(g_H) $ pseudometriikkaperhe, 
+joka on saatu saturoimalla perhe $(f_i)_{i\in I} $. 
+Tällöin perhe $(g_H) $ on ekvivalentti 
+perheen $(f_i)_{i\in I}$ kanssa.
+\begin{proof}
+%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
+\end{proof}
+\end{lause}
+\begin{kor}\label{saturoitu oletus}
+Pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe, 
+joten pseudometriikkaperheen voidaan olettaa olevan saturoitu 
+[without loss of generality].
+\end{kor}
+\begin{lause}
+%Nyt 
+%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
+%on joukon $X$ erään uniformiteetin kanta. 
+%%Olkoon nyt $g_{H'}$ pseudometriikka jokaisella äärellisellä potenssijoukon osajoukolla $H'\subset\Pot(I)$. 
+%%Olkoon nyt $J=\{H\mid H\subset I\text{ äärellinen }\}$ 
+%Olkoon nyt $J=\{H\mid H\subset I, H\text{ äärellinen }\}$ 
+%potenssijoukon $\Pot(I)$ äärellinen osajoukko ja $g_{J}:=\sup_{H\in J}(g_H)$ kuvaus, 
+%jolla $g_{J}\in (g_H)_{H\subset I} $. 
+%
+%Nyt siis 
+%%$\sup_{H\in H'}(g_H)\in (g_H)_{H\subset I} $ 
+%$\sup_{H\in J}(g_H)\in (g_H)_{H\subset I} $ 
+%ja $H\subset I$ on äärellinen joukko.
+%Tällöin sanotaan, että perhe $(g_H)$ on \emph{saturoitu} (saturated), 
+%\emph{ekvivalentti} perheen $(f_i)_{i\in I}$ kanssa 
+%ja saatu saturoimalla perhe $(f_i)_{i\in I}$. 
+%
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
 Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määräämä 
 %uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
-uniformiteetti on sama kuin pseudometriikan $g=\sup_{i\in I} f_i$ määräämä.
+uniformiteetti on sama kuin pseudometriikan $g\colon X\times X\rightarrow [0,\infty]$, $g(x)=\sup_{i\in I} f_i(x)$ määräämä.
 %TODO epäselvyyksien korjauksia
-\end{maar}
-\begin{lause}\label{saturoitu}
+\begin{proof}
+\end{proof}
+\end{lause}
+\begin{lause}
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
@@ -1356,7 +1412,7 @@ jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
 Näytetään ensin, että ehto on välttämätön. 
 Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
 määritellä pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa määritelmän \ref{saturoitu} 
+Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa korollaarin \ref{saturoitu oletus} 
 nojalla olevan saturoitu. 
 Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\R_+$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
