@@ -262,7 +262,14 @@ jolle pätee $V''\subset V\cap V'$ ja siis $V''\subset W\cap W'$.
 Näin ollen leikkaus $W\cap W'$ kuuluu kokoelmaan $\U_B$. 
 Lisäksi joukoiksi $W$ ja $W'$ voidaan valita mielivaltaisia kokoelman $\U_B$ alkioita, 
 joten induktiivisesti jokainen äärellinen leikkaus joukon $\U_B$ alkioista kuuluu joukkoon $\U_B$.
-\item[\ref{U_I}] Vastaa ehtoa \ref{U'_I}.
+\item[\ref{U_I}] 
+%Joukon $\U_B$ määrittelystä seuraa, 
+%että j
+Jokaiselle alkiolle $W\in\U_B$ löytyy 
+kannan alkio $V\in B$, jolla pätee $V\subset W$. 
+%Näin ollen ehdon \ref{U'_I} nojalla $\{(x,x)\mid x\in X\}\subset V\subset W$. 
+Ehdon \ref{U'_I} nojalla $\{(x,x)\mid x\in X\}\subset V$, 
+joten $\{(x,x)\mid x\in X\}\subset W$.
 \item[\ref{U_II}] Olkoon $W\in\U_B$. 
 Tällöin joukon $\U_B$ määrittelyn nojalla on olemassa sellainen $V\in B$, 
 jolla $V\subset W$. %(Jos $W\in B$, niin voidaan valita $V=W$.) 
@@ -276,7 +283,12 @@ jolla $V'\subset V^{-1}$.
 Näin ollen joukon $\U_B$ määrittelyn nojalla $V^{-1}\in\U_B$ ja 
 edelleen $W^{-1}\in\U_B$. 
 %Nyt $V\subset W$ ja $V^{-1}\in\U_B $
-\item[\ref{U_III}] Vastaa ehtoa \ref{U'_III}.
+\item[\ref{U_III}] Olkoon $W\in\U_B$. 
+Tällöin joukon $\U_B$ määrittelyn nojalla on olemassa sellainen $V'\in B$, 
+jolla $V'\subset W$. 
+Ehdon \ref{U'_III} nojalla on olemassa sellainen $V\in B$, jolla $ V^2\subset V'$. 
+Joukon $\U_B$ määrittelyn nojalla tällöin $V\in \U_B$ ja siis $ V^2\subset W$.
+%Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W^2\subset V$.
 \end{enumerate}
 \end{proof}
 \end{lause}
@@ -551,13 +563,21 @@ Näin ollen
 %Siis 
 \begin{equation*}
 U^{-1}=\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}))^{-1}
-=\bigcap_{i\in J}g^{\leftarrow}_{i}(V^{-1}_{i})\in B.
+=\bigcap_{i\in J}g^{\leftarrow}_{i}(V^{-1}_{i})\in B,
 %,\quad\text{ jossa }V_i\in\U_i.
 %,\quad V_i\in\U_i.
 \end{equation*}
-Nyt $U\in B$ ja $U^{-1}\in B$, joten ehdon \ref{F_II} nojalla $U\cap U^{-1}\in B$. 
-Tällöin joukolle $ U\in B$ on löydetty 
-joukko $U\cap U^{-1}\in B$, jolla $U\cap U^{-1}\subset U^{-1}$.
+%%Edelleen $V_i,V_i^{-1}\in\U_i$, joten myös $V_i\cap V_i^{-1}\in\U_i$ ja näin ollen 
+%%\begin{equation*}
+%%B\ni\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}\cap V_{i}^{-1}))
+%%=\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i}\cap V_{i}^{-1})\in B.
+%%%,\quad\text{ jossa }V_i\in\U_i.
+%%%,\quad V_i\in\U_i.
+%%\end{equation*}
+%%Nyt $U\in B$ ja $U^{-1}\in B$, joten ehdon \ref{F_II} nojalla $U\cap U^{-1}\in B$. 
+%Siis joukolle $ U\in B$ on löydetty 
+%joukko $U^{-1}\in B$, 
+jolloin vaadittu ehto pätee muodossa $U^{-1}\subset U^{-1}$.
 %
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
 %$,
@@ -579,7 +599,7 @@ jolloin $A\in B$ ja näin ollen riittää osoittaa, että $A^2\subset U$. %ja er
 %A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}
 %\end{equation*}
 Määritelmän mukaan $A^2=\{(x,z)\mid (x,y)\in A\text{ ja }(y,z)\in A\}$. 
-Siis alkioilla $x,z\in X$ pätee $(x,z)\in A^2$ tasan silloin, 
+Siis alkioilla $x,z\in X$ pätee $(x,z)\in A^2$ täsmälleen silloin, 
 kun on olemassa sellainen $y\in X$, 
 jolla $(x,y)\in A$ ja $(y,z)\in A$. 
 Toisaalta jos $(x,y)\in A$ ja $(y,z)\in A$ 
@@ -676,7 +696,8 @@ $i\in I$.
 Tällöin joukko 
 $$B=\left\{\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i})
 \mid J\subset I\text{ äärellinen},V_{i} \in\U_{i}\text{ kaikilla } i\in J\right\}$$
-on kuvausperheen $(f_i)_{i\in I}$ indusoiman uniformiteetin kanta.
+on kuvausperheen $(f_i)_{i\in I}$ indusoiman uniformiteetin kanta. 
+(Vrt. edellinen lause.)
 %on kanta eräälle avaruuden $X$ uniformiteetille $\U$. 
 %Kyseistä uniformiteettia $\U$ sanotaan 
 %%kuvausten $f_i$, tai 
@@ -992,12 +1013,13 @@ pseudometriikkaperhe, johon
 % joka koostuu kuvauksista 
 kuuluvat sellaiset kuvaukset 
 $g_{H}\colon X\times X\rightarrow [0,\infty]$, joilla 
-$g_{H}(x)=\sup_{i\in H}f_i(x)$, 
+$g_{H}(x,y)=\sup_{i\in H}f_i(x,y)$ kaikilla $x,y\in X$, 
 kun $H$ käy läpi joukon $I$ äärelliset osa\-joukot. 
 Näin muodostetusta pseudometriikkaperheestä $(g_{H})$ otetun 
 äärellisen osaperheen 
 $\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ supremum 
-$\sup_{j=1}^{n}g_{A_j}(x)$ kuuluu perheeseen $(g_H)$. 
+%$\sup_{j=1}^{n}g_{A_j}$ 
+kuuluu perheeseen $(g_H)$. 
 %Tällöin sanotaan, että perhe $(g_H)$ 
 %on \emph{saturoitu} (saturated) ja 
 %%että perhe $(g_H)$ on 
@@ -1558,7 +1580,7 @@ tasaisesti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}.
 Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
 \end{maar}
 \begin{kor}
-Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorf uniforminen avaruus. 
+Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorff uniforminen avaruus. 
 Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
 isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
 \end{kor}
@@ -1653,7 +1675,7 @@ $\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti.
 Olkoon $\U^{*}_{0}$ karkein uniformiteetti, 
 jolla kaikki jatkuvat kuvaukset $f_i\colon X\rightarrow [0,1]$ 
 ovat tasaisesti jatkuvia. 
-Olkoon $\beta X$ avaruuden $(X,\U^{*}_{0})$ Hausdorf täydennys.
+Olkoon $\beta X$ avaruuden $(X,\U^{*}_{0})$ Hausdorff täydennys.
 %kompakti (topologinen) avaruus, 
 %joka saadaan täydentämällä avaruus $(X,\U^{*}_{0})$.
 Avaruutta $\beta X$ sanotaan avaruuden $(X,\T)$ 
