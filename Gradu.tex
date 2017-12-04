@@ -1283,8 +1283,10 @@ Filtterit $\F_1$ ja $\F_2$ ovat samoja, eli $\F_1=\F_2$,
 jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
 \end{maar}
 \begin{lause}
-Joukon $X$ filtteri $\F$ kantana $B$ on hienompi kuin 
-filtteri $\F'$ kantana $B'$ jos ja vain jos jokaiselle $M\in B$ löytyy 
+Olkoon $X$ joukko ja $\F$ ja $\F'$ filttereitä joukolle $X$. 
+Olkoon $B$ filtterin $\F$ kanta ja $B'$ filtterin $\F'$ kanta. 
+Filtteri $\F'$ on hienompi kuin filtteri $\F'$ jos ja vain jos 
+jokaiselle $M\in B$ löytyy 
 sellainen $M'\in B'$, jolla $M'\subset M$.
 \end{lause}
 \begin{maar}\label{Cauchy_filtteri}
@@ -1293,7 +1295,7 @@ Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi,
 jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
 joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
 \end{maar}
-\noindent Cauchy filtterit ovat siis mielivaltaisen pieniä joukkoja. 
+\noindent Cauchy filtterit sisältävät siis mielivaltaisen pieniä joukkoja. 
 \begin{lause}
 Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
 \end{lause}
@@ -1344,7 +1346,7 @@ Uniformisessa avaruudessa jokainen suppeneva filtteri on Cauchy filtteri.
 Olkoon $(X,\U)$ uniforminen avaruus, $\F$ suppeneva filtteri joukolle $X$ ja $x\in X$ 
 sellainen alkio, jota kohti $\F$ suppenee. 
 Tällöin alkion $x$ ympäristöfiltteri $B(x)$ sisältyy filtteriin $\F$. 
-Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'\in\F$. 
+Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'(x)\in\F$. 
 
 Olkoon nyt $V\in\U$ lähistö ja $x\in X$ alkio. Huomautuksen \ref{UaHuom} ehdon \ref{Uaehto} nojalla on olemassa 
 sellainen lähistö $W\in\U$, jolla $W^{-1}\circ W\subset V$. 
@@ -1352,7 +1354,7 @@ Huomataan, että joukko
 $$W(x)\times W(x)=\{ (y_1,y_2)\mid (x,y_1)\in W,(x,y_2)\in W\} $$
 sisältyy joukkoon 
 $$W^{-1}\circ W=\{ (y_1,y_2)\mid \text{on olemassa }x',\text{ jolla }(y_1,x')\in W^{-1},(x',y_2)\in W\}.$$ 
-Näin ollen lähistölle $V$ löydettiin osajoukko $W(x)\in X$, 
+Siis lähistölle $V$ löydettiin osajoukko $W(x)\subset X$, 
 jolla $W(x)\times W(x)\subset W^{-1}\circ W\subset V$ ja $W(x)\in\F$. 
 Määritelmän \ref{Cauchy_filtteri} nojalla $\F$ on Cauchy filtteri.
 \end{proof}
