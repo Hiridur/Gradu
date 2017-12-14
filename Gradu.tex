@@ -1290,7 +1290,7 @@ jos $\F_1$ on hienompi tai karkeampi kuin $\F_2$.
 Filtterit $\F_1$ ja $\F_2$ ovat samoja, eli $\F_1=\F_2$,
 jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
 \end{maar}
-\begin{lause}
+\begin{lause}\label{filtterikantavertailu}
 Olkoon $X$ joukko ja $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
 Olkoon lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
 %Tällöin filtteri $\F_2$ on karkeampi kuin filtteri $\F_1$ 
@@ -1375,8 +1375,11 @@ Jokaiselle joukon $X$ Cauchy filtterille $\F$ on olemassa yksikäsitteinen
 minimaalinen Cauchy filtteri $\F_0$, joka on karkeampi kuin $\F$, 
 eli $\F_0\subset \F$. 
 Jos $B$ on kanta filtterille $\F$ ja $G$ on uniformiteetin $\U$ symmetristen lähistöjen kanta, 
-niin joukot $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ missä $M\in B$ ja $V\in G$ muodostavat 
-filtterin $\F$ minimaalisen Cauchy filtterin $\F_0$ kannan $B_0$. 
+niin kokoelma $B_0=\{V(M)\mid M\in B,V\in G\}$ 
+missä $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ on 
+filtterin $\F$ minimaalisen Cauchy filtterin $\F_0$ kanta. 
+%niin joukot $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ missä $M\in B$ ja $V\in G$ muodostavat 
+%filtterin $\F$ minimaalisen Cauchy filtterin $\F_0$ kannan $B_0$. 
 %niin joukko $\{V(M)\mid M\in B, V\in G \}$ muodostaa 
 %filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
 %niin joukko $\{y\mid (x,y)\in V,x\in M, M\in B, V\in G \}$ muodostaa 
@@ -1391,19 +1394,20 @@ Nyt $M_1,M_2\in B$, joten on olemassa joukko $M_3\in B$,
 jolla pätee $M_3\subset M_1\cap M_2$. 
 Toisaalta $V_1,V_2\in \U$, joten on olemassa joukko $V_3\in\U$, 
 jolla pätee $V_3\subset V_1\cap V_2$. 
-Nyt joukko $ V_3(M_3)=\{ y\mid (x,y)\in V_3, x\in M_3 \}$ on joukon 
+Näin ollen joukko $ V_3(M_3)=\{ y\mid (x,y)\in V_3, x\in M_3 \}$ on joukon 
 $(V_1\cap V_2)(M_1\cap M_2)= V_1(M_1)\cap V_2(M_2)$ osajoukko, 
 eli $ V_3(M_3)\subset V_1(M_1)\cap V_2(M_2)$.
 \item Olkoon $M\in B$ joukko ja $V\in \U$ lähistö. 
 Tällöin joukko $M$ on epätyhjä, joten myös joukko $V(M)$ on epätyhjä. 
 Näin ollen tyhjä joukko ei ole joukon $B_0$ alkio.
 \end{enumerate}
-Kannan $B_0$ virittämä filtteri $\F_0$ on karkeampi kuin kannan $B$ virittämä $\F$, 
-sillä jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$. 
-\\
-%TODO
-\\
-Jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$. Näin ollen minimaalinen Cauchy filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
+%Kannan $B_0$ virittämä filtteri $\F_0$ on karkeampi kuin kannan $B$ virittämä $\F$, 
+%sillä jokaisella $M\in B$ ja jokaisella $V\in \U$ pätee $M\subset V(M)$. 
+Jokaisella $M\in B$ ja $V\in \U$ pätee $M\subset V(M)$, 
+joten erityisesti jokaiselle $V(M)\in B_0$ löytyy sellainen $M\in B$, 
+jolla $M\subset V(M)$. 
+Näin ollen lauseen \ref{filtterikantavertailu} nojalla 
+minimaalinen Cauchy filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
 %TODO 1-käs
 \end{proof}
 \end{lause}
