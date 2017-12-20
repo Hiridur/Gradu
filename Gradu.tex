@@ -992,32 +992,55 @@ Perheet $(f_i)$ ja $(g_j) $ ovat ekvivalentteja, jos niiden määrittelemät uni
 %\begin{esim}
 %Olkoon $X$ joukko ja $(f_i)_{i\in I}$ mielivaltainen perhe (äärellisiä) reaaliarvoisia kuvauksia $f_i\colon X\rightarrow \R$ kaikilla $i\in I$.
 %\end{esim}
+\begin{maar}\label{saturoitu maar}
+%TODO
+Olkoon $X$ joukko
+%, $I$ indeksijoukko 
+ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
+Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
+jolla $g_{H}(x,y)=\sup_{i\in H}f_i(x,y)$ kaikilla $x,y\in X$. 
+Kuvaus $g_{H}$ on pseudometriikka 
+(esimerkki \ref{pseudometriikkaperheen sup}) 
+ja voidaan siis muodostaa pseudometriikkaperhe 
+%Olkoon tällöin 
+$(g_{H}):=(g_{H})_{H\subset I \text{ äärellinen}}$. 
+Näin 
+%muodostetun pseudometriikkaperheen $(g_H)$ sanotaan olevan 
+muodostettu pseudometriikkaperhe $(g_H)$ on
+%että pseudometriikkaperhe $(g_H)$ on
+ \emph{saturoitu} (saturated) ja 
+%että perhe $(g_H)$ on 
+saatu saturoimalla perhe $(f_i)_{i\in I}$. 
+\end{maar}
 \begin{lause}\label{saturoitu lause}
 %TODO
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-%%Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
-%Esimerkin \ref{pseudometriikkaperheen sup} mukaisesti kuvaus 
-%$g_{H}\colon X\times X\rightarrow [0,\infty]$, 
-%jolla $H\subset I$ äärellinen ja $g_{H}(x)=\sup_{i\in H}f_i(x)$ on joukon $X$ pseudometriikka, 
-%kun $H\subset I$ on äärellinen. 
-%%Näin ollen olkoon $(g_{H})_{H\subset I}$ pseudometriikkaperhe, 
-%
-%Tällöin voidaan muodostaa pseudometriikkaperhe 
-%$$\{g_{H}\colon X\times X\rightarrow [0,\infty]\mid g_{H}(x)=\sup_{i\in H}f_i(x), H\subset I\text{ äärellinen } \}$$ 
-%%Olkoon nyt $(g_{H})$ kokoelma sellaisista kuvauksista 
-%Tällöin voidaan muodostaa pseudometriikkaperhe 
-Olkoon tällöin 
-$(g_{H}):=(g_{H})_{H\subset I \text{ äärellinen}}$ 
-pseudometriikkaperhe, johon 
-%niin, että siihen 
-% joka koostuu kuvauksista 
-kuuluvat sellaiset kuvaukset 
-$g_{H}\colon X\times X\rightarrow [0,\infty]$, joilla 
-$g_{H}(x,y)=\sup_{i\in H}f_i(x,y)$ kaikilla $x,y\in X$, 
-kun $H$ käy läpi joukon $I$ äärelliset osa\-joukot. 
-Näin muodostetusta pseudometriikkaperheestä $(g_{H})$ otetun 
+%%%Olkoon $H\subset I$ äärellinen joukko ja $g_{H}\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
+%%Esimerkin \ref{pseudometriikkaperheen sup} mukaisesti kuvaus 
+%%$g_{H}\colon X\times X\rightarrow [0,\infty]$, 
+%%jolla $H\subset I$ äärellinen ja $g_{H}(x)=\sup_{i\in H}f_i(x)$ on joukon $X$ pseudometriikka, 
+%%kun $H\subset I$ on äärellinen. 
+%%%Näin ollen olkoon $(g_{H})_{H\subset I}$ pseudometriikkaperhe, 
+%%
+%%Tällöin voidaan muodostaa pseudometriikkaperhe 
+%%$$\{g_{H}\colon X\times X\rightarrow [0,\infty]\mid g_{H}(x)=\sup_{i\in H}f_i(x), H\subset I\text{ äärellinen } \}$$ 
+%%%Olkoon nyt $(g_{H})$ kokoelma sellaisista kuvauksista 
+%%Tällöin voidaan muodostaa pseudometriikkaperhe 
+%Olkoon tällöin 
+%$(g_{H}):=(g_{H})_{H\subset I \text{ äärellinen}}$ 
+%pseudometriikkaperhe, johon 
+%%niin, että siihen 
+%% joka koostuu kuvauksista 
+%kuuluvat sellaiset kuvaukset 
+%$g_{H}\colon X\times X\rightarrow [0,\infty]$, joilla 
+%$g_{H}(x,y)=\sup_{i\in H}f_i(x,y)$ kaikilla $x,y\in X$, 
+%kun $H$ käy läpi joukon $I$ äärelliset osa\-joukot. 
+%Näin muodostetusta pseudometriikkaperheestä $(g_{H})$ otetun 
+Olkoon $(g_{H})$ pseudometriikkaperhe, joka on saatu saturoimalla $(f_{i})_{i\in I}$. 
+Saturoidusta pseudometriikkaperheestä $(g_{H})$ otetun 
 äärellisen osaperheen 
-$\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ supremum 
+$(g_A):=\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ supremum 
+$\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ 
 %$\sup_{j=1}^{n}g_{A_j}$ 
 kuuluu perheeseen $(g_H)$. 
 %Tällöin sanotaan, että perhe $(g_H)$ 
@@ -1027,12 +1050,6 @@ kuuluu perheeseen $(g_H)$.
 \begin{proof}
 \end{proof}
 \end{lause}
-\begin{maar}\label{saturoitu maar}
-Lauseen \ref{saturoitu lause} tilanteessa sanotaan, 
-että pseudometriikkaperhe $(g_H)$ on \emph{saturoitu} (saturated) ja 
-%että perhe $(g_H)$ on 
-saatu saturoimalla perhe $(f_i)_{i\in I}$. 
-\end{maar}
 \begin{lause}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
 Olkoon $(g_H) $ pseudometriikkaperhe, 
