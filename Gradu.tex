@@ -1277,8 +1277,8 @@ seuraava ehto:
 \begin{maar}
 \emph{Filtterin kanta.} 
 Olkoon $X$ joukko ja $\F\subset \Pot(X)$ filtteri joukolle $X$. 
-Tällöin joukko $B$ on filtterin $F$ kanta, 
-jos jokaiselle filtterin alkiolle $V\in F$ 
+Tällöin joukko $B\subset \F$ on filtterin $\F$ kanta, 
+jos jokaiselle filtterin alkiolle $V\in \F$ 
 löytyy kannan alkio $W\in B $, jolla pätee $W\subset V$.
 \end{maar}
 \begin{lause}
@@ -1310,13 +1310,63 @@ Filtterit $\F_1$ ja $\F_2$ ovat samoja, eli $\F_1=\F_2$,
 jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
 \end{maar}
 \begin{lause}\label{filtterikantavertailu}
+%\emph{Filttereiden vertailu kantojen avulla.}
 Olkoon $X$ joukko ja $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
 Olkoon lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
 %Tällöin filtteri $\F_2$ on karkeampi kuin filtteri $\F_1$ 
 Tällöin filtteri $\F_1$ on hienompi kuin filtteri $\F_2$ 
 jos ja vain jos jokaiselle $A_2\in B_2$ löytyy 
 sellainen $A_1\in B_1$, jolla $A_1\subset A_2$.
+\begin{proof}
+Olkoon $X$ joukko, $\F_1$ ja $\F_2$ filttereitä joukolle $X$, 
+$B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
+\begin{enumerate}
+\item[$\Rightarrow$] 
+Olkoon filtteri $\F_1$ on hienompi kuin filtteri $\F_2$, eli $\F_2\subset \F_1$. 
+Olkoon $A_2\in B_2$ alkio. 
+Tällöin pätee $A_2\in F_1$, 
+sillä $B_2\subset\F_2\subset \F_1$. 
+Näin ollen filtterin kannan määritelmän nojalla 
+alkiolle $A_2\in F_1$ löytyy kannan $B_1$ 
+alkio $A_1$, jolla $A_1\subset A_2$.
+%jokaisella $A_2\in B_2$ pätee $A_2\in \F_2$ 
+\item[$\Leftarrow$] 
+Oletetaan, että 
+jokaiselle $A_2'\in B_2$ löytyy 
+sellainen $A_1'\in B_1$, jolla $A_1'\subset A_2'$. 
+%Toisaalta 
+%tiedetään, että $B_2\subset \F_2$, joten 
+Olkoon $ V\in\F_2$ alkio. Tällöin 
+filtterin määritelmän nojalla 
+%jokaiselle $ V\in\F_2$ 
+löytyy $A_2\in B_2$, jolla $A_2\subset V$. 
+Toisaalta oletuksen nojalla 
+%jokaiselle $A_2\in B_2$ 
+löytyy $A_1\in B_1$, jolla $A_1\subset A_2$. 
+%Siis jokaiselle $ V\in\F_2$ löytyy 
+Siis alkiolle $ V$ löytyy 
+$A_1\in B_1$, jolla $A_1\subset V$. 
+Toisaalta $B_1\subset \F_1$, 
+joten $A_1\in \F_1$. 
+
+Siis alkiolle $ V\in\F_2$ löytyy alkio
+$A_1\in \F_1$, jolla $A_1\subset V$. 
+%Näin ollen filtterin määritelmän nojalla 
+Näin ollen ehdon \ref{F_I} nojalla $ V\in\F_1$ 
+ja edelleen $\F_2\subset \F_1$. 
+Siis filtteri $\F_1$ on hienompi kuin filtteri $\F_2$. 
+\end{enumerate}
+\end{proof}
 \end{lause}
+\begin{maar}
+%\emph{Filttereiden kantojen vertailu.}
+Olkoon $X$ joukko ja $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
+Olkoon lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
+%Jos filtterit $\F_1$ ja $\F_2$ ovat samoja, 
+%niin kannat $B_1$ ja $B_2$ ovat \emph{ekvivalentteja}.
+Kannat $B_1$ ja $B_2$ ovat \emph{ekvivalentteja}, 
+jos filtterit $\F_1$ ja $\F_2$ ovat samoja.
+\end{maar}
 \begin{maar}\label{Cauchy_filtteri}
 Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
 Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
@@ -1326,6 +1376,7 @@ joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$.
 \noindent Cauchy filtterit sisältävät siis mielivaltaisen pieniä joukkoja. 
 \begin{lause}
 Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
+\qed
 \end{lause}
 \begin{maar}
 \emph{Filtterin raja-arvo.} 
