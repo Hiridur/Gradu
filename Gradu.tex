@@ -1050,6 +1050,28 @@ kuuluu perheeseen $(g_H)$.
 %%että perhe $(g_H)$ on 
 %saatu saturoimalla perhe $(f_i)_{i\in I}$. 
 \begin{proof}
+Saturoidun pseudometriikkaperheen $(g_{H})$ 
+äärellisen osaperheen 
+$(g_A)$ jäsenet ovat kuvauksia, joilla 
+$g_{A_j}(x,y)=\sup_{i\in A_j}f_i(x,y)$ kaikilla $x,y\in X$.
+Näin ollen osaperheen 
+$(g_A)$ supremum 
+$\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ on kuvaus, 
+jolla 
+$$\sup_{j\in \{1,2,\dots , n\}}g_{A_j}(x,y)
+=\sup_{j\in \{1,2,\dots , n\}}\left(\sup_{i\in A_j}f_i(x,y)\right)
+=\sup_{\substack{j\in \{1,2,\dots , n\}\\i\in A_j}}f_i(x,y)
+%=\sup_{i\in \bigcup_{j\in \{1,2,\dots , n\}} A_j}f_i(x,y)
+=\sup_{i\in \bigcup_{j=1}^n A_j}f_i(x,y)
+%=\sup_{i\in A_1\cup A_2\cup\dots \cup A_n}f_i(x,y)
+.$$ 
+%$\sup_{i\in \bigcup_{j=1}^n A_j}f_i(x,y)\in (g_H)$
+Joukko $\bigcup_{j=1}^n A_j\subset I$ on äärellisten joukkojen 
+%$A_j\subset I$ 
+yhdisteenä äärellinen ja siten 
+%Siis 
+osaperheen 
+$(g_A)$ supremum $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -1060,12 +1082,12 @@ Tällöin perhe $(g_H) $ on ekvivalentti
 perheen $(f_i)_{i\in I}$ kanssa.
 \begin{proof}
 %$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
+%TODO
 \end{proof}
 \end{lause}
 \begin{kor}\label{saturoitu oletus}
-Pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe 
-ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu 
-[without loss of generality].
+Jokaiselle pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe 
+ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.
 \end{kor}
 \begin{lause}
 %Nyt 
