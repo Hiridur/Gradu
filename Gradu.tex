@@ -1083,11 +1083,12 @@ perheen $(f_i)_{i\in I}$ kanssa.
 \begin{proof}
 %$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
 %TODO
+Puuttuu.
 \end{proof}
 \end{lause}
 \begin{kor}\label{saturoitu oletus}
 Jokaiselle pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe 
-ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.
+ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.\qed
 \end{kor}
 \begin{lause}
 %Nyt 
@@ -1113,6 +1114,7 @@ Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määr�
 uniformiteetti on sama kuin pseudometriikan $g\colon X\times X\rightarrow [0,\infty]$, $g(x)=\sup_{i\in I} f_i(x)$ määräämä.
 %TODO epäselvyyksien korjauksia
 \begin{proof}
+Puuttuu.
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -1286,13 +1288,13 @@ Tällöin alkioparit $(x,z)$ ja $(z,y)$ kuuluvat lähistöön $V$
 ja näin ollen alkiopari $(x,y)$ kuuluu joukkoon $V^2$.
 \end{proof}
 \end{lause}
-\begin{maar}
+\begin{maar}\label{filtteri_maar}
 \emph{Filtteri.} Olkoon $X$ joukko ja $\F\subset \Pot(X)$ potenssijoukon epätyhjä osa\-joukko. 
 Joukko $\F$ on \emph{filtteri} joukolle $X$, jos sille pätee 
 uniformiteetin ehtojen \ref{F_I} ja \ref{F_II} lisäksi 
 seuraava ehto:
-\begin{enumerate}
-\item[(F)] Joukko $\F$ on epätyhjä eikä tyhjä joukko kuulu joukkoon $\F$.
+\begin{enumerate} [label=(F),ref=(F)]
+\item\label{filtteriehto} Joukko $\F$ on epätyhjä eikä tyhjä joukko kuulu joukkoon $\F$.
 \end{enumerate} 
 %Tällöin sanotaan, että
 \end{maar}
@@ -1304,11 +1306,13 @@ jos jokaiselle filtterin alkiolle $V\in \F$
 löytyy kannan alkio $W\in B $, jolla pätee $W\subset V$.
 \end{maar}
 \begin{lause}
-Olkoon $X$ uniforminen avaruus. Joukko $B\subset\Pot(X)$ on erään filtterin $\F$ kanta, jos seuraavat ehdot pätevät:
-\begin{enumerate} 
-\item Jos $A_1,A_2\in B$, niin on olemassa sellainen $A_3\in B$, 
+Olkoon $X$ uniforminen avaruus. Joukko $B\subset\Pot(X)$ on erään filtterin $\F$ kanta, 
+%jos seuraavat ehdot pätevät:
+jos ehdon \ref{filtteriehto} lisäksi pätee ehto: 
+\begin{enumerate} [label=($B_F$),ref=($B_F$)]
+\item\label{filtterikantaehto} Jos $A_1,A_2\in B$, niin on olemassa sellainen $A_3\in B$, 
 jolla $A_3\subset A_1\cap A_2$.
-\item joukko $B$ on epätyhjä eikä tyhjä joukko ole joukon $B$ alkio.
+%\item[(F)] joukko $B$ on epätyhjä eikä tyhjä joukko kuulu joukoon $B$.
 \end{enumerate}
 %Tällöin kanta $B$ virittää filtterin $\F$. 
 %%Lisäksi filttereiden $\F_1$ ja $\F_2$ kannat $B_1$ ja $B_2$ ovat 
@@ -1316,6 +1320,41 @@ jolla $A_3\subset A_1\cap A_2$.
 %Lisäksi kaksi kantaa ovat 
 %\emph{ekvivalentteja}, jos ne virittävät saman filtterin.
 %%TODO lisäys kannan suhteesta filtteriin
+\begin{proof}
+Olkoon $X$ uniforminen avaruus ja $B\subset\Pot(X)$ sellainen joukko, 
+jolle pätevät ehdot \ref{filtteriehto} ja \ref{filtterikantaehto}.
+
+Tällöin olkoon 
+$$\F_B=\{W\subset X\mid V\subset W\text{ jollain } V\in B\}$$ 
+joukko. 
+%$\U_B\subset\Pot (X\times X)$ sellainen kokoelma, 
+%jonka alkioina ovat kaikki sellaiset joukot $V'\subset$
+%jolla pätee seuraava ehto: Jos $V\in B$ ja $V\subset W\subset X\times X$ niin $ W\in\U_B$. 
+Joukon $\F_B$ määrittelystä seuraa, 
+että jokaiselle alkiolle $W\in\F_B$ löytyy 
+kannan alkio $V\in B$, jolla pätee $V\subset W$. 
+Lisäksi $ B\subset\F_B$.
+Näin ollen riittää tarkistaa, että $\F_B$ on filtteri. 
+Käydään läpi filtterin määritelmän \ref{filtteri_maar} ehdot:
+\begin{enumerate} 
+\item[\ref{F_I}] 
+Jos $W\in \F_B$, niin on olemassa sellainen $V\in B$, jolla pätee $V\subset W$. 
+Toisaalta jos osajoukolle $W'\subset X$ pätee $V\subset W \subset W'$, 
+niin $W'\in\F_B$. \\
+Siis jos $W\in \F_B$ ja $W\subset W'\subset X$ niin $ W'\in\F_B$.
+\item[\ref{F_II}] Olkoon $W\in\F_B$ ja $W'\in\F_B$ joukkoja. 
+Joukon $\F_B$ määrittelyn nojalla tällöin on olemassa 
+sellaiset $V\in B$ ja $V'\in B$, 
+joille pätee $V\subset W$ ja $V'\subset W'$ ja 
+erityisesti $V\cap V'\subset W\cap W'$. 
+Edelleen ehdon \ref{filtterikantaehto} nojalla on olemassa sellainen $V''\in B$, 
+jolle pätee $V''\subset V\cap V'$ ja siis $V''\subset W\cap W'$. 
+Näin ollen leikkaus $W\cap W'$ kuuluu kokoelmaan $\F_B$. 
+Lisäksi joukoiksi $W$ ja $W'$ voidaan valita mielivaltaisia kokoelman $\F_B$ alkioita, 
+joten induktiivisesti jokainen äärellinen leikkaus joukon $\F_B$ alkioista kuuluu joukkoon $\F_B$.
+\item[\ref{filtteriehto}] Ehto \ref{filtteriehto} pätee joukolle $B$, joten joukon $\F_B$ määrittelyn nojalla $\F_B$ ei ole tyhjä joukko eikä tyhjä joukko kuulu joukkoon $\F_B$.
+\end{enumerate}
+\end{proof}
 \end{lause}
 \begin{maar}
 \emph{Filttereiden vertailu.}
@@ -1414,8 +1453,8 @@ niin alkio $x$ on myös kannan $B$ raja-arvo ja
 kanta $B$ suppenee kohti alkiota $x$.
 \end{maar}
 \begin{lause}
-Filtterikanta $B$ suppenee kohti alkiota $x\in X$, jos ja vain jos 
-jokainen alkion $x$ ympäristö sisältää filtterikannan jäsenen.\qed
+Olkoon $(X,\T)$ topologinen avaruus, $x\in X$ alkio ja $B\subset\Pot(X)$ erään filtterin kanta. Kanta $B$ suppenee kohti alkiota $x$, jos ja vain jos 
+jokainen alkion $x$ ympäristö sisältää jonkin kannan $B$ jäsenen.\qed
 %\begin{proof}
 %TODO ?
 %\end{proof}
@@ -1591,10 +1630,10 @@ jota merkitsemme symbolilla $\U_0$.
 \end{maar}
 \begin{lause}
 Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
-%\begin{proof}
+\begin{proof}
 %TODO
-%\end{proof}
-\qed
+Puuttuu.
+\end{proof}
 \end{lause}
 \begin{lause}
 Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
@@ -1620,6 +1659,7 @@ niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen).
 %Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
 %%\end{enumerate}
 %TODO
+Puuttuu.
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -1634,6 +1674,8 @@ uniformiteetilla $\U'$, jolla
 $\U\subset\U'\subset\U_0$.
 \begin{proof}
 %Cauchy filtterit ovat samoja.
+%TODO
+Puuttuu.
 \end{proof}
 \end{lause}
 %
@@ -1643,32 +1685,44 @@ Tässä luvussa määritellään Hausdorff uniformiset avaruudet ja
 esitetään niiden ominaisuuksia, 
 oleellisimpana täydelliseen Hausdorff uniformiseen avaruuteen laajentaminen.
 \begin{maar}
-Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
-Olkoon lisäksi $(f_i)_{i\in I}$ pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
-Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille alkioille $x,y\in X$ on 
-olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, 
-jolla ehdosta $x\neq y$ seuraa $f_i(x,y)\neq 0$. 
+%Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
+%Olkoon lisäksi $(f_i)_{i\in I}$ sellainen pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
+%Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille alkioille $x,y\in X$ on 
+%olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, 
+%jolla ehdosta $x\neq y$ seuraa $f_i(x,y)\neq 0$. 
+Olkoon $(X,\U)$ uniforminen avaruus ja $(f_i)_{i\in I}$ sellainen 
+pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
+Uniformiteetti $\U$ on \emph{Hausdorff}, jos jokaisilla alkioilla 
+$x,y\in X$ ehdosta $x\neq y$ seuraa $f_k(x,y)\neq 0$ 
+jollain pseudometriikalla $f_k\in(f_i)_{i\in I}$. 
 Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
 ja yhden pseudometriikan $f$ määrittelemä, 
 niin $f(x,y)\neq 0$ kaikilla $x,y\in X$, $x\neq y$.
-
-Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_i(x,y)=0$ kaikilla $i\in I$.
 \end{maar}
-\begin{lem}
-Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
-ja $f$ pseudometriikka joukolle $X$. 
-Tällöin pseudometriikan rajoittuma 
-$f|_A\colon A\times A\rightarrow [0,\infty]$ kaavalla $ f|_A(x)=f(x)$ 
-kaikilla $x\in A\times A$ 
-on pseudometriikka joukolle $A$. 
-\end{lem}
-\begin{lem}
-Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
-ja $(f_i)_{i\in I}$ pseudometriikkaperhe, 
-joka määrää joukon $X$ uniformiteetin. 
-Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
-kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
-\end{lem}
+\begin{huom}
+%Olkoon $X$ joukko ja $\U$ pseudometriikkaperheen $(f_i)_{i\in I}$ 
+%määrittelemä uniformiteetti. 
+%Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
+Olkoon $X$ joukko ja $(f_i)_{i\in I}$ pseudometriikkaperhe joukolle $X$. 
+Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti ei ole 
+Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, 
+joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
+\end{huom}
+%\begin{lem}
+%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+%ja $f$ pseudometriikka joukolle $X$. 
+%Tällöin pseudometriikan rajoittuma 
+%$f|_A\colon A\times A\rightarrow [0,\infty]$ kaavalla $ f|_A(x)=f(x)$ 
+%kaikilla $x\in A\times A$ 
+%on pseudometriikka joukolle $A$. \qed
+%\end{lem}
+%\begin{lem}
+%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+%ja $(f_i)_{i\in I}$ pseudometriikkaperhe, 
+%joka määrää joukon $X$ uniformiteetin. 
+%Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
+%kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
+%\end{lem}
 \begin{lause}\label{complete}
 Olkoon $X$ uniforminen avaruus. 
 Tällöin on olemassa täydellinen (com\-plete) Hausdorff 
@@ -1687,6 +1741,7 @@ jolla pätee $f=g\circ i$.
 Tällöin sanotaan, että avaruus $\hat X$ on avaruuden $X$ \emph{Hausdorff täydennys}.
 \begin{proof}
 %TODO
+Puuttuu.
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -1695,11 +1750,19 @@ Olkoon lisäksi $X_1$ täydellinen Hausdorff
 uniforminen avaruus ja $i_1\colon X\rightarrow X_1$
 tasaisesti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
 Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 \begin{kor}
 Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorff uniforminen avaruus. 
 Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
 isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{kor}
 \begin{lause}
 Olkoon $X$ ja $Y$ uniformeja avaruuksia ja $i_X\colon X\rightarrow\hat{X}$ ja $i_Y\colon Y\rightarrow\hat{Y}$ kanonisia kuvauksia. 
@@ -1723,6 +1786,10 @@ X & Y \\
 (m-1-2) edge node [right] {$i_Y$} (m-2-2);
 \end{tikzpicture}
 \end{equation*}
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 \chapter{Kompakti uniforminen avaruus}
 
@@ -1750,6 +1817,10 @@ ovat tasaisesti jatkuvia.
 Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
 %ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
 Tällöin uniformiteetti $\U^*$ on Hausdorff ja yhteensopiva topologian $\T$ kanssa. 
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 
 \begin{maar}
@@ -1765,6 +1836,10 @@ Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikom
 Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
 %ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
 Tällöin avaruus $(X,\U^*)$ on esikompakti.
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 
 \begin{lause}
@@ -1777,12 +1852,20 @@ Olkoon $f\colon X\rightarrow K$ kuvaus, joka on tasaisesti jatkuva uniformiteeti
 %Tällöin myös $f\colon (X,\U^*)\rightarrow (K,\U_{\T'})$ on 
 %tasaisesti jatkuva. 
 Tällöin kuvaus $f$ on tasaisesti jatkuva myös uniformiteetin $\U^*$ suhteen. 
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 
 \begin{kor}
 Uniformiteetti $\U^*$ on hienoin niistä topologian $\T$ 
 kanssa yhteensopivista uniformiteeteista $\U$, 
 joilla $(X,\U)$ on esikompakti. 
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{kor}
 
 \begin{maar}
@@ -1803,6 +1886,10 @@ Stone–Čech kompaktisoinniksi.
 Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
 $(K,\T')$ kompakti topologinen avaruus. 
 Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
+\begin{proof}
+%TODO
+Puuttuu.
+\end{proof}
 \end{lause}
 
 
