@@ -1041,7 +1041,9 @@ Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe.
 Olkoon $(g_{H})$ pseudometriikkaperhe, joka on saatu saturoimalla $(f_{i})_{i\in I}$. 
 Saturoidusta pseudometriikkaperheestä $(g_{H})$ otetun 
 äärellisen osaperheen 
-$(g_A):=\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ supremum 
+$(g_A):=\{g_{A_1},g_{A_2},\dots,g_{A_n}\}\subset (g_{H})$ 
+pienin yläraja 
+%supremum 
 $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ 
 %$\sup_{j=1}^{n}g_{A_j}$ 
 kuuluu perheeseen $(g_H)$. 
@@ -1055,7 +1057,8 @@ Saturoidun pseudometriikkaperheen $(g_{H})$
 $(g_A)$ jäsenet ovat kuvauksia, joilla 
 $g_{A_j}(x,y)=\sup_{i\in A_j}f_i(x,y)$ kaikilla $x,y\in X$.
 Näin ollen osaperheen 
-$(g_A)$ supremum 
+$(g_A)$ pienin yläraja 
+%$(g_A)$ supremum 
 $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ on kuvaus, 
 jolla 
 $$\sup_{j\in \{1,2,\dots , n\}}g_{A_j}(x,y)
@@ -1071,8 +1074,10 @@ Joukko $\bigcup_{j=1}^n A_j\subset I$ on äärellisten joukkojen
 yhdisteenä äärellinen ja siten 
 %Siis 
 osaperheen 
-$(g_A)$ supremum $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
+$(g_A)$ pienin yläraja $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
+%$(g_A)$ supremum $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
 \end{proof}
+\newpage
 \end{lause}
 \begin{lause}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
@@ -1081,6 +1086,47 @@ joka on saatu saturoimalla perhe $(f_i)_{i\in I} $.
 Tällöin perhe $(g_H) $ on ekvivalentti 
 perheen $(f_i)_{i\in I}$ kanssa.
 \begin{proof}
+Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
+uniformiteettiperheen $(\U_{f_i})_{i\in I}$ pienin yläraja $\sup_{i\in I}\U_{f_i}$, 
+eli pienin uniformiteetti, 
+%jolle pätee $\U_{f_i}\subset \U$ kaikilla $i\in I$. 
+joka sisältää $\U_{f_i}$ kaikilla $i\in I$. 
+Vastaavasti Pseudometriikkaperheen $(g_H)$ määrittelemä 
+uniformiteetti on $\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$. 
+
+Pseudometriikkaperheet $(f_i)_{i\in I}$ ja $(g_H)$ 
+ovat ekvivalentteja, 
+jos niiden määrittelemät uniformiteetit 
+$\U_f:=\sup_{i\in I}\U_{f_i}$ ja 
+$\U_g:=\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ 
+ovat samoja. 
+
+Määritelmän \ref{saturoitu maar} nojalla 
+jokaiselle pseudometriikalle $f_j\in(f_i)_{i\in I}$ löytyy 
+pseudometriikka $g_{\{j\}}\in (g_H)$ niin, 
+että $g_{\{j\}}(x,y)=\sup_{i\in\{j\}}f_i(x,y)=f_j(x,y)$ 
+kaikilla $x,y\in X$. 
+%Tällöin uniformiteetti $\sup_{i\in I}\U_{f_i}$ on uniformiteetin 
+%$\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ osajoukko
+Siis $\U_f\subset\U_g$. 
+%Näin ollen riittää osoittaa, että 
+%jokainen perheen $(g_H)$ pseudometriikan määrittelemä 
+%uniformiteetti sisältyy perheen $(f_i)_{i\in I}$ 
+%määrittelemään uniformiteettiin $\sup_{i\in I}\U_{f_i}$.
+%
+%
+%Näin ollen 
+%ja siten riittää osoittaa, että 
+Osoitetaan seuraavaksi, että 
+%$\U_{g_{H'}}\subset\sup_{i\in I}\U_{f_i}$ 
+$\U_{g_{H'}}\subset\U_{f}$ 
+jokaisella äärellisellä osajoukolla $H'\subset I$. 
+%%pseudometriikalla $g_{H'}\in (g_H)$ ja 
+%$\U_{f_j}\subset\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$
+%jokaisella $j\in I$.
+
+
+
 %$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\R_+ \}$$
 %TODO
 Puuttuu.
@@ -1625,12 +1671,21 @@ Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja
 $(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
 jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
 kaikilla $i\in I$. 
-Perheen $(f_i)_{i\in I}$ määrittelemää uniformiteettia sanotaan avaruuden $(X,\T)$ universaaliksi (universal) uniformiteetiksi, 
+Perheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
+avaruuden $(X,\T)$ \emph{universaali uniformiteetti} (universal uniformity), 
 jota merkitsemme symbolilla $\U_0$. 
 \end{maar}
 \begin{lause}
 Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
 \begin{proof}
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon lisäksi $\U$ joukon $X$ uniformiteetti, 
+joka on yhteensopiva topologian $\T$ kanssa. 
+
+
+
+
 %TODO
 Puuttuu.
 \end{proof}
