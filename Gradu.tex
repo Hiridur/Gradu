@@ -984,7 +984,10 @@ määritelmistä \ref{uniformi_vertailu} ja \ref{pseudo_equiv} seuraa, että jos
 \end{kor}
 \begin{maar}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-Pseudometriikkojen $f_i$ määrittelemien uniformiteettien $\U_{f_i}$ perheen $(\U_{f_i})_{i\in I}$ pienintä ylärajaa sanotaan perheen $(f_i)_{i\in I}$ määrittelemäksi uniformiteetiksi. 
+Pseudometriikkojen $f_i$ määrittelemien uniformiteettien $\U_{f_i}$ perheen $(\U_{f_i})_{i\in I}$ pienintä ylärajaa 
+%$$\sup_{i\in I}\U_{f_i}=$$
+%$$\U=\left\{\right\}$$
+sanotaan perheen $(f_i)_{i\in I}$ määrittelemäksi uniformiteetiksi. 
 %uniformiteettien pienin yläraja
 \end{maar}
 \begin{maar}
@@ -1154,12 +1157,59 @@ ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.\qed
 %\emph{ekvivalentti} perheen $(f_i)_{i\in I}$ kanssa 
 %ja saatu saturoimalla perhe $(f_i)_{i\in I}$. 
 %
-Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-Mikäli indeksijoukko $I$ on äärellinen, niin perheen $(f_i)_{i\in I}$ määräämä 
+Olkoon $X$ joukko ja 
+$(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
+Olkoon lisäksi $g\colon X\times X\rightarrow [0,\infty]$, 
+$g(x,y)=\sup_{i\in I} f_i(x,y)$ kaikilla $x,y\in X$ 
+joukon $X$ pseudometriikka. 
+Mikäli indeksijoukko $I$ on äärellinen on perheen $(f_i)_{i\in I}$ määräämä 
 %uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
-uniformiteetti on sama kuin pseudometriikan $g\colon X\times X\rightarrow [0,\infty]$, $g(x)=\sup_{i\in I} f_i(x)$ määräämä.
+uniformiteetti sama kuin pseudometriikan $g$ määräämä uniformiteetti.
 %TODO epäselvyyksien korjauksia
 \begin{proof}
+Olkoon $X$ joukko, $I$ äärellinen indeksijoukko, 
+$(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe ja 
+$g\colon X\times X\rightarrow [0,\infty]$, 
+$g(x,y)=\sup_{i\in I} f_i(x,y)$ kaikilla $x,y\in X$ 
+joukon $X$ pseudometriikka. 
+Pseudometriikkaperheen $(f_i)_{i\in I} $ määräämä uniformiteetti on 
+uniformiteettiperheen $(\U_{f_i})_{i\in I} $ pienin yläraja, 
+jonka kanta on joukko 
+$$B_f=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}.$$
+%
+Indeksijoukko $I$ on äärellinen, 
+joten jokaiselle alkioparille $(x,y)\in X\times X$ löytyy indeksi $i_{x,y}\in I$ niin, 
+että $f_i(x,y)\leq f_{i_x}(x,y)$ kaikilla $i\in I$.
+%joten pseudometriikka $g$ 
+%saavuttaa suurimman pisteittäisen arvonsa jollain 
+%indeksillä $i\in I$. 
+%%$\sup_{i\in I} f_i(x)=\max_{i\in I} f_i(x)$. 
+%Olkoon $a\in\R_+$ alkio. 
+Näin ollen jokaisella $a\in [0,\infty]$ pätee  
+$$g^\leftarrow[0,a]=\{(x,y)\subset X\times X\mid 
+f_i(x,y)\leq a \text{ kaikilla } i\in I
+\}=\bigcap_{i\in I} f_i^\leftarrow[0,a].$$
+%%$g^\leftarrow[0,a]=(\max_{i\in I} f_i)^\leftarrow[0,a]$ 
+%koostuu niistä alkioista, joiden arvo 
+%on enintään $a$ jokaisella kuvauksella $f_i$, 
+%kun $i\in I$.
+%Siis $g^\leftarrow[0,a]=\bigcap_{i\in I} f_i^\leftarrow[0,a]$.
+%
+Pseudometriikan $g
+%\colon X\times X\rightarrow [0,\infty], g(x)
+%=\sup_{i\in I} f_i(x)
+%%=\max_{i\in I} f_i(x)
+%$ kaikilla $x\in X
+$
+määräämän uniformiteetin kanta on siis
+%$$B=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}.$$
+$$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in\R_+\right\}
+=\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in\R_+\right\}.$$
+Nyt $B_f\subset B_g$, sillä  $ f_i^\leftarrow[0,a]\in\U_{f_i}$, kun $i\in I$ ja $a\in [0,\infty]$.
+
+Osoitetaan seuraavaksi, että $\U_{B_g}\subset \U_{B_f}$.
+\\
+\\
 Puuttuu.
 \end{proof}
 \end{lause}
