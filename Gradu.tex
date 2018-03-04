@@ -1173,9 +1173,11 @@ $g\colon X\times X\rightarrow [0,\infty]$,
 $g(x,y)=\sup_{i\in I} f_i(x,y)$ kaikilla $x,y\in X$ 
 joukon $X$ pseudometriikka. 
 Pseudometriikkaperheen $(f_i)_{i\in I} $ määräämä uniformiteetti on 
-uniformiteettiperheen $(\U_{f_i})_{i\in I} $ pienin yläraja, 
+uniformiteettiperheen $(\U_{f_i})_{i\in I} $ pienin yläraja $\U_f$, 
 jonka kanta on joukko 
-$$B_f=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}.$$
+$$B_f=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}$$
+ja siis 
+$\U_f=\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_f\}$.
 %
 Indeksijoukko $I$ on äärellinen, 
 joten jokaiselle alkioparille $(x,y)\in X\times X$ löytyy indeksi $i_{x,y}\in I$ niin, 
@@ -1205,12 +1207,25 @@ määräämän uniformiteetin kanta on siis
 %$$B=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}.$$
 $$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}
 =\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}.$$
-Nyt $B_f\subset B_g$, sillä  $ f_i^\leftarrow[0,a]\in\U_{f_i}$, kun $i\in I$ ja $a\in [0,\infty]$.
-
-Osoitetaan seuraavaksi, että $\U_{B_g}\subset \U_{B_f}$.
-\\
-\\
-Puuttuu.
+Lauseen \ref{pseudo_uniformi_maar} nojalla jokaisella $i\in I$ 
+alkukuvat $f_i^\leftarrow[0,a]$, $a\in[0,\infty]$ 
+muodostavat kannan uniformiteetille $\U_i$. 
+%Nyt $B_f\subset B_g$, koska  $ f_i^\leftarrow[0,a]\in\U_{f_i}$ 
+%kaikilla $i\in I$ ja $a\in [0,\infty]$. 
+Erityisesti jokaiselle $V_i\in\U_i$ löytyy $a\in [0,\infty]$, 
+jolla $ f_i^\leftarrow[0,a]\subset V_i$.
+Näin ollen kannan $B_g$ määrittelemälle uniformiteetille $\U_g$ pätee 
+\begin{equation*}
+\begin{split}
+\U_g=&\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_g\}\\
+=&\left\{W\subset X\times X\mid \bigcap_{i\in I} f_i^\leftarrow[0,a]\subset W\text{ jollain }a\in[0,\infty]\right\}\\
+=&\left\{W\subset X\times X\mid \bigcap_{i\in I} V_i\subset W\text{ jollain }V_i\in \U_i,i\in I\right\}\\
+=&\left\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_f\right\}\\
+=&\U_f
+\end{split}
+\end{equation*}
+Siis $\U_{f}= \U_{g}$ 
+%Osoitetaan seuraavaksi, että $\U_{B_g}\subset \U_{B_f}$.
 \end{proof}
 \end{lause}
 \begin{lause}
