@@ -1132,7 +1132,7 @@ jokaisella äärellisellä osajoukolla $H'\subset I$.
 
 %$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in[0,\infty] \}$$
 %TODO
-Puuttuu.
+Kesken.
 \end{proof}
 \end{lause}
 \begin{kor}\label{saturoitu oletus}
@@ -1693,13 +1693,14 @@ jolla $f(x)=0$ ja $f(y)=1$ kaikilla $y\in X\setminus V$.
 \end{enumerate}
 \begin{proof}
 Näytetään ensin, että ehto on välttämätön. 
-Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille voidaan 
-määritellä pseudometriikkaperhe, joka indusoi kyseisen uniformiteetin. 
-Lisäksi uniformiteetin indusoiman pseudometriikkaperheen voidaan olettaa korollaarin \ref{saturoitu oletus} 
-nojalla olevan saturoitu. 
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus, $x_0$ alkio ja $V_0$ alkion $x_0$ ympäristö. Olkoon $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille $\U$ voidaan 
+määritellä pseudometriikkaperhe $(f_i)_{i\in I}$, joka indusoi uniformiteetin $\U$. 
+Lisäksi korollaarin \ref{saturoitu oletus} nojalla voidaan olettaa 
+pseudometriikkaperheen $(f_i)_{i\in I}$ olevan saturoitu. 
 Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in[0,\infty]$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
-jolla $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$ ja $f_\alpha(x_0,x)=0$. 
+jolla $f_\alpha(x_0,x_0)=0$ ja $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$. 
 Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
 pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
 
@@ -1752,18 +1753,19 @@ joka on yhteensopiva topologian $\T$ kanssa.
 
 
 %TODO
-Puuttuu.
+Kesken.
 \end{proof}
 \end{lause}
 \begin{lause}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus, 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti, 
 %$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
 %Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-Olkoon $(Y,\T')$ uniformisoituva avaruus ja $f\colon X\rightarrow Y$ 
+%Olkoon 
+$(Y,\U)$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
 %jatkuva kuvaus (topologian $\T$ suhteen). 
 kuvaus. 
-Jos kuvaus $f$ on jatkuva, %(topologian $\T$ suhteen), 
+Jos kuvaus $f$ on jatkuva uniformiteetin $\U$ määräämän topologian suhteen, %(topologian $\T$ suhteen), 
 niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen). 
 %Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
 %jos ja vain jos uniformiteetti $\U$ on 
@@ -1779,7 +1781,26 @@ niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen).
 %Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
 %%\end{enumerate}
 %TODO
-Puuttuu.
+Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+Olkoon lisäksi $(Y,\U)$ uniforminen avaruus, $\T_{\U}$ uniformiteetin $\U$ määräämä topologia avaruudelle $Y$ ja $f\colon X\rightarrow Y$ 
+jatkuva kuvaus (topologian $\T_{\U}$ suhteen). 
+
+Olkoon $V\in \U$ lähistö ja $y\in Y$ alkio. 
+Tällöin $V(y)$ on alkion $y$ ympäristö topologiassa $\T_{\U}$. 
+Kuvaus $f$ on jatkuva, 
+joten alkukuva $f^\leftarrow V(y)\subset X$ on topologian $\T$ ympäristö. 
+Olkoon $x\in f^\leftarrow V(y)$, eli $f(x)\in V(y)$. 
+Oletetaan, että $x'\in X$ on sellainen alkio, jolla $f(x')= y$.
+Tällöin $(x,x')\in f^\leftarrow V$ 
+ja $(f(x),y)\in V$. 
+
+
+Kesken. Puuttuu osoitus, että on olemassa lähistö $W\in\U_0$ niin, että $(x,x')\in W$ ja $W\subset f^\leftarrow V$.
+
+
+%niin $f$ on myös tasaisesti jatkuva. 
+%Kesken.
 \end{proof}
 \end{lause}
 \begin{lause}
@@ -2002,15 +2023,15 @@ Avaruutta $\beta X$ sanotaan avaruuden $(X,\T)$
 Stone–Čech kompaktisoinniksi.
 \end{maar}
 
-\begin{lause}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
-$(K,\T')$ kompakti topologinen avaruus. 
-Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
+%\begin{lause}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
+%$(K,\T')$ kompakti topologinen avaruus. 
+%Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
 
 
 
