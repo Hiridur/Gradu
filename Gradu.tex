@@ -125,9 +125,9 @@ kokoelman $B(x)$ jonkin jäsenen.
 %\item Jos 
 %\end{enumerate} 
 %\end{maar}
-\begin{kor}\label{kaikki_ystöt}
+\begin{huom}\label{kaikki_ystöt}
 Topologisen avaruuden $(X,\T)$ alkion $x\in X$ kaikkien ympäristöjen kokoelma $B(x)$ on alkion $x$ ympäristökanta.
-\end{kor}
+\end{huom}
 \begin{esim}
 Jos joukkoperhe $B\subset\Pot(X)$ on avaruuden $(X,\T)$ kanta ja 
 $x\in X$ alkio, niin joukko 
@@ -144,7 +144,7 @@ Olkoon $A$ joukon $X$ peite. Tällöin $A$ on joukon $X$ erään topologian $\T$
 Lisäksi $\T$ on karkein niistä joukon $X$ topologioista, joilla $A\subset\T$. 
 Tämä topologia $\T$ on peitteen $A$ yksikäsitteisesti määräämä, ja sitä sanotaan peitteen $A$ virittämäksi joukon $X$ topologiaksi.
 \begin{proof}
-Topologia II \cite{Topo2} lause 2.19.
+Topologia II \cite{Topo2} Lause 2.19.
 %topo2 2.19
 \end{proof}
 \end{lause}
@@ -161,7 +161,7 @@ Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin 
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
 \begin{maar}\label{uniformi_maar}
-Uniforminen rakenne (tai uniformiteetti) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
+\emph{Uniforminen rakenne} (tai \emph{uniformiteetti}) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
 \begin{enumerate} [label=(U\arabic*),ref=(U\arabic*)]
 \item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
 \item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
@@ -179,7 +179,7 @@ tarpeeksi lähellä tai mielivaltaisen lähellä toisiaan.
 \end{huom}
 \begin{huom}\label{UaHuom}
 %Mikäli muut ehdot pätevät, voidaan ehdot (U$\ref{U_II}$) ja (U$\ref{U_III}$) korvata yhtäpitävällä ehdolla 
-Mikäli muut ehdot pätevät voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla: 
+Mikäli muut ehdot pätevät, voidaan ehdot \ref{U_II} ja \ref{U_III} korvata yhtäpitävällä ehdolla: 
 \begin{enumerate} [label=(Ua),ref=(Ua)]
 %\item[(U$\ref{U_II}$a)] \label{Uaehto} 
 \item \label{Uaehto} 
@@ -331,13 +331,13 @@ V(x)\cap W(x) =&\{ y\in X\mid (x,y)\in V \text{ ja } (x,y)\in W \}\\
 \end{align*} 
 %sillä määritelmän \ref{uniformi_maar} ehtojen \ref{F_I} ja \ref{F_II} nojalla $ V\cup W \in B$ ja $ V\cap W \in B$. 
 sillä määritelmän \ref{uniformi_maar} ehdon \ref{F_II} 
-nojalla pätee $ V\cap W \in B$. 
+nojalla pätee $ V\cap W \in \U$. 
 %Olkoon lisäksi $U\subset X$ joukko, jolle pätee $V(x)\subset U$. 
 %Nyt joukkoa $U$ vastaa jokin $U'\in X\times X$, 
 %jolla pätee  $U'\in \U$.
 Ehdosta \ref{F_I} seuraa, että 
 joukko $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko ja siten 
-korollaarin \ref{kaikki_ystöt} nojalla ympäristökanta.
+huomautuksen \ref{kaikki_ystöt} nojalla ympäristökanta.
 %Tällöin on olemassa yksikäsitteinen topologia, jossa $B(x)$ on alkion $x$ kaikkien ympäristöjen joukko.\cite{Eom1}
 %yhdisteen kohdassa tarvitaan yleisempi tapaus. ehto V_4 puuttuu sivu19 Eom1
 \end{proof}
@@ -512,8 +512,8 @@ Selvitetään, onko joukko $B$ uniformiteetin kanta käymällä läpi
 kantalauseen \ref{uniformin kannan maar} ehdot:
 \begin{enumerate} %[label=(B\arabic*)]
 \item[\ref{B_I}] 
-Olkoon $U_1,U_2\in B$. 
-Tällöin olemassa äärelliset osajoukot $J_1,J_2\subset I$ 
+Olkoot $U_1,U_2\in B$. 
+Tällöin on olemassa äärelliset osajoukot $J_1,J_2\subset I$ 
 ja lähistöt $V_i\in\U_i$ kaikilla $i\in J_1$ 
 ja $V_j\in\U_j$ kaikilla $j\in J_2$, 
 %ja $V_i\in\U_i$
@@ -723,7 +723,7 @@ on kuvausperheen $(f_i)_{i\in I}$ indusoiman uniformiteetin kanta.
 %Kyseinen uniformiteetti $\U$ on karkein niistä uniformiteeteista, joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
 %%TODO epäselvyyksien korjauksia
 \end{maar}
-\begin{lause}
+\begin{kor}
 Olkoon $X$ joukko ja $(Y_i,\U_i)$ uniforminen avaruus jokaisella $i\in I$, jollain indeksijoukolla $I$. 
 Olkoon $f_i\colon X\rightarrow Y_i$ kuvaus jokaisella $i\in I$.
 Tällöin kuvausperheen $(f_i)_{i\in I}$ indusoima uniformiteetti $\U$ on karkein niistä uniformiteeteista, 
@@ -733,7 +733,7 @@ joiden suhteen kaikki kuvaukset $f_i$ ovat tasaisesti jatkuvia.
 %
 %%TODO
 %\end{proof}
-\end{lause}
+\end{kor}
 \begin{maar}
 \emph{Uniformiteettien pienin yläraja.}
 %Olkoon $X$ joukko%, $I$ indeksijoukko
@@ -743,7 +743,7 @@ Olkoon $(\U_i)_{i\in I}$ perhe uniformiteetteja joukolle $X$.
 Tällöin perheen $(\U_i)_{i\in I}$ \emph{pienin yläraja} on uniformiteetti $\U$, joka on kuvausten $id\colon X\rightarrow (X,\U_i)$ määritelmän \ref{kuvausperheen indusoima} mukaisesti indusoima.
 \end{maar}
 \chapter{Pseudometriikat}
-Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. Lisää aiheesta \cite{Eom2}.
+Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %\\
 \begin{maar}\label{pseudo_maar}
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ 
@@ -779,11 +779,11 @@ f(x,y) = \begin{cases} 0, & \mbox{jos } x=y\\
 Tällöin $f$ on pseudometriikka.
 \end{esim}
 \begin{esim}%3)
-Olkoon $X$ epätyhjä joukko ja $g\colon X\rightarrow \R$ (äärellisarvoinen) kuvaus. Tällöin kuvaus $f\colon X\times X\rightarrow[0,+\infty]$ kaavalla $f(x,y)=|g(x)-g(y)|$ on pseudometriikka.
+Olkoon $X$ epätyhjä joukko ja $g\colon X\rightarrow \R$ (äärellisarvoinen) kuvaus. Tällöin kaavalla $f(x,y)=|g(x)-g(y)|$ määritelty kuvaus $f\colon X\times X\rightarrow[0,+\infty]$ on pseudometriikka.
 \end{esim}
 \begin{esim}%4)
 Olkoon $X$ kaikkien muotoa $g\colon [0,1]\rightarrow \R$ olevien jatkuvien kuvausten joukko. % väliltä $[0,1]$ reaaliluvuille. 
-Tällöin kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määrittelee pseudometriikan joukolle $X$.
+Tällöin kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määritelty kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ määrittelee pseudometriikan joukolle $X$.
 \end{esim}
 \begin{huom}
 %Metriikoista tutut ominaisuudet, kuten
@@ -803,9 +803,9 @@ Olkoon $f$ pseudometriikka joukolle $X$ ja
 $\lambda\in\R$ reaaliluku, jolla $\lambda >0$. 
 Tällöin kuvaus $\lambda f$, jolla 
 %$(\lambda f) (x,y)=\lambda (f (x,y))$ 
-$(\lambda f) (x)=\lambda (f (x))$ 
+$(\lambda f) (x,y)=\lambda (f (x,y))$ 
 %kaikilla $x,y\in X$ on pseudometriikka.
-kaikilla $x\in X\times X$ on pseudometriikka.
+kaikilla $(x,y)\in X\times X$ on pseudometriikka.
 %Tällöin myös $\lambda f$ on pseudometriikka, jos määritellään kuvaus $\lambda f$ pisteittäin $(\lambda f) (x)=\lambda (f (x))$.
 \end{esim}
 \begin{esim}%2
@@ -845,9 +845,11 @@ on pseudometriikka.
 \chapter{Pseudometriikan määrittelemä uniformiteetti}\label{luku_pseudo_uniformi}
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $[0,\infty]=\{a\in\R\mid a>0\}$.
 \begin{lause}
-Olkoon $a\in[0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko kaavalla
+Olkoon $a\in[0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko, 
+joka on määritelty kaavalla
 $$U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
-Kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
+Kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa 
+joukon $\R^n$ erään uniformiteetin kannan.
 \begin{proof}
 Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
@@ -869,7 +871,10 @@ U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
 Siis jokaiselle $U_a$ pätee $U_a\subset  U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in\R^n$ sellaisia pisteitä, joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, eli $|x-z|\leq a$ ja $|z-y|\leq a$.
+Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in\R^n$ sellaisia pisteitä, 
+joilla $(x,z),(z,y)\in U_a$, 
+%joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, 
+eli $|x-z|\leq a$ ja $|z-y|\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin kolmioepäyhtälön avulla saadaan 
 $$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$ 
@@ -883,9 +888,10 @@ Siis kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa joukon $\R^n$ uniformitee
 \begin{lause}\label{pseudo_uniformi_maar}
 Olkoon $X$ joukko ja $f$ pseudometriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittelee sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $$B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in[0,\infty]\}.$$
 \begin{proof}
-Olkoon $a\in[0,\infty]$ luku ja merkitään 
-joukkoa $f^{\leftarrow}[0,a]\subset X\times X$ kaavalla $f^{\leftarrow}[0,a]=U_a$. 
-Lauseen \ref{uniformin kannan maar} ehdot pätevät:
+Olkoon $a\in[0,\infty]$ luku. 
+Näin ollen $f^{\leftarrow}[0,a]\subset X\times X$ on joukko. 
+Merkitään $U_a=f^{\leftarrow}[0,a]$ ja 
+käydään läpi lauseen \ref{uniformin kannan maar} ehdot:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 Olkoot $a_1,a_2\in[0,\infty]$ lukuja, joilla $a_1\leq a_2$. 
@@ -900,7 +906,10 @@ Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\
 Tällöin $(x,y)\in U_a\Leftrightarrow (y,x)\in U_a$ ja siis $U_a^{-1}=U_a$, eli jokaiselle $U_a$ pätee $U_a\subset U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in X$ sellaisia alkioita, joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, eli $f(x,z)\leq a$ ja $f(z,y)\leq a$.
+Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in X$ sellaisia alkioita, 
+joilla $(x,z),(z,y)\in U_a$, 
+%joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, 
+eli $f(x,z)\leq a$ ja $f(z,y)\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin pseudometriikan ehdosta \ref{EC_III} seuraa 
 $$f(x,y)\leq f(x,z)+f(z,y)\leq a+a=2a,$$ 
@@ -909,7 +918,7 @@ eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2\subset U_{2a} $, joten jokaise
 \end{enumerate}
 Siis kokoelma $B=\{U_a\mid a\in[0,\infty]\}
 =\{f^{\leftarrow}[0,a]\mid a\in[0,\infty]\}
-$ muodostaa joukon $\R^n$ uniformiteetin kannan ja voimme nyt muodostaa seuraavan määritelmän.
+$ muodostaa joukon $X$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
 \begin{maar}\label{pseudo_equiv}
@@ -926,7 +935,7 @@ $\U_f$
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
 $a\in[0,\infty]$ on olemassa sellainen $b\in[0,\infty]$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
 
-Lisäksi, jos jokaiselle $a\in[0,\infty]$ on olemassa $b\in[0,\infty]$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+Jos lisäksi jokaiselle $a\in[0,\infty]$ on olemassa $b\in[0,\infty]$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
 \begin{proof}
 Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittelemän uniformiteetin $\U_f$ kannan muodostaa kokoelma 
@@ -963,6 +972,7 @@ eli %}
 $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a],$ 
 kaikilla $x,y\in X$. 
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
+\\
 Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle 
 $f^{\leftarrow}[0,a']$ missä $a'\in[0,\infty] $ on olemassa uniformiteetin $\U_g$ 
 kannan jäsen $g^{\leftarrow}[0,b']$ missä $b'\in[0,\infty]$ niin, 
@@ -1094,7 +1104,7 @@ uniformiteettiperheen $(\U_{f_i})_{i\in I}$ pienin yläraja $\sup_{i\in I}\U_{f_
 eli pienin uniformiteetti, 
 %jolle pätee $\U_{f_i}\subset \U$ kaikilla $i\in I$. 
 joka sisältää $\U_{f_i}$ kaikilla $i\in I$. 
-Vastaavasti Pseudometriikkaperheen $(g_H)$ määrittelemä 
+Vastaavasti pseudometriikkaperheen $(g_H)$ määrittelemä 
 uniformiteetti on $\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$. 
 
 Pseudometriikkaperheet $(f_i)_{i\in I}$ ja $(g_H)$ 
@@ -1180,8 +1190,8 @@ ja siis
 $\U_f=\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_f\}$.
 %
 Indeksijoukko $I$ on äärellinen, 
-joten jokaiselle alkioparille $(x,y)\in X\times X$ löytyy indeksi $i_{x,y}\in I$ niin, 
-että $f_i(x,y)\leq f_{i_x}(x,y)$ kaikilla $i\in I$.
+joten jokaiselle alkioparille $(x,y)\in X\times X$ löytyy indeksi $i_{(x,y)}\in I$ niin, 
+että $f_i(x,y)\leq f_{i_{(x,y)}}(x,y)$ kaikilla $i\in I$.
 %joten pseudometriikka $g$ 
 %saavuttaa suurimman pisteittäisen arvonsa jollain 
 %indeksillä $i\in I$. 
@@ -1209,10 +1219,10 @@ $$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}
 =\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}.$$
 Lauseen \ref{pseudo_uniformi_maar} nojalla jokaisella $i\in I$ 
 alkukuvat $f_i^\leftarrow[0,a]$, $a\in[0,\infty]$ 
-muodostavat kannan uniformiteetille $\U_i$. 
+muodostavat kannan uniformiteetille $\U_{f_i}$. 
 %Nyt $B_f\subset B_g$, koska  $ f_i^\leftarrow[0,a]\in\U_{f_i}$ 
 %kaikilla $i\in I$ ja $a\in [0,\infty]$. 
-Erityisesti jokaiselle $V_i\in\U_i$ löytyy $a\in [0,\infty]$, 
+Erityisesti jokaiselle $V_i\in\U_{f_i}$ löytyy $a\in [0,\infty]$, 
 jolla $ f_i^\leftarrow[0,a]\subset V_i$.
 Näin ollen kannan $B_g$ määrittelemälle uniformiteetille $\U_g$ pätee 
 \begin{equation*}
@@ -1221,14 +1231,14 @@ Näin ollen kannan $B_g$ määrittelemälle uniformiteetille $\U_g$ pätee
 =&\left\{W\subset X\times X\mid \bigcap_{i\in I} f_i^\leftarrow[0,a]\subset W\text{ jollain }a\in[0,\infty]\right\}\\
 =&\left\{W\subset X\times X\mid \bigcap_{i\in I} V_i\subset W\text{ jollain }V_i\in \U_i,i\in I\right\}\\
 =&\left\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_f\right\}\\
-=&\U_f
+=&\U_f.
 \end{split}
 \end{equation*}
-Siis $\U_{f}= \U_{g}$ 
+Siis $\U_{f}= \U_{g}$. 
 %Osoitetaan seuraavaksi, että $\U_{B_g}\subset \U_{B_f}$.
 \end{proof}
 \end{lause}
-\begin{lause}
+\begin{kor}
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
@@ -1238,23 +1248,31 @@ Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.
 %\begin{proof}
 %TODO ?
 %\end{proof}
-\end{lause}
+\end{kor}
 %Toisaalta on myös mahdollista määritellä i
 \begin{lem}\label{pseudo_uniformista}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Tällöin on olemassa pseudometriikkaperhe $(f_i)_{i\in I}$, joka määrittelee uniformiteetin $\U$.
 \begin{proof}
-Jokaiselle lähistölle $U\in\U$ määritellään karteesisen tulon $X\times X$ osajoukoista muodostuva perhe $(V_n)$, 
-jolla $V_1\subset U$ ja $V_{n+1}^2\subset V_n$ kaikilla $n\in\N, n\geq 1$. 
-Nyt perhe $(V_n)$ on kanta eräälle joukon $X$ uniformiteetille $\U_V$, 
+Jokaiselle lähistölle $V\in\U$ määritellään karteesisen tulon $X\times X$ osajoukoista muodostuva perhe $B_V=(U_n)$, 
+jolla $U_1\subset V$ ja $U_{n+1}^2\subset U_n$ kaikilla $n\in\N, n\geq 1$. 
+Nyt $B_V$ on kanta eräälle joukon $X$ uniformiteetille $\U_V$, 
 joka on karkeampi kuin $\U$. 
 Erityisesti $\U$ on uniformiteettien 
 $\U_V,V\in\U$ pienin yläraja. %uniformiteetti $\U$. 
-Tällöin lemma on seuraus seuraavasta lauseesta, sillä 
-$(U_n)$ on uniformiteetin $\U$ numeroituva kanta.
+%Merkitään $(U_n)=B_V$.
+Näin ollen kantojen leikkaus
+$$\left\{\bigcap_{V\in H}U_V\mid H\subset\U \text{ äärellinen }, U_V\in B_V\right\}$$
+on numeroituva kanta uniformiteetille $\U$.
+%Tällöin lemma on seuraus seuraavasta lauseesta.
+Tällöin lemma on seuraus lauseesta \ref{numeroituvakantalause}.
+%, sillä 
+%$(U_n)$ on uniformiteetin $\U$ numeroituva kanta.
+\\Kesken: Onko $\U$:n mahtavuudella vaikutusta?
+%TODO
 \end{proof}
 \end{lem}
-\begin{lause}
+\begin{lause}\label{numeroituvakantalause}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
 Jos uniformiteetilla $\U$ on numeroituva kanta, 
 niin on olemassa pseudometriikka $f\colon X\times X\rightarrow [0,\infty]$, 
@@ -1297,7 +1315,7 @@ Näytetään seuraavaksi, että epäyhtälöt
 pätevät. 
 Kaavan oikea puoli, eli $f(x,y)\leq g(x,y)$ seuraa siitä, 
 että 
-$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1})\leq\sum_{i=0}^1g(z_i,z_i+1)=g(z_0,z_1)=g(x,y).$$
+$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1})\leq\sum_{i=0}^1g(z_i,z_{i+1})=g(z_0,z_1)=g(x,y).$$
 Kaavan \ref{numeroituvakantapm} vasen puoli, 
 eli $\frac{1}{2}\,g(x,y)\leq f(x,y)$ 
 osoitetaan induktion avulla. 
@@ -1376,12 +1394,13 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %
 %
 \chapter{Täydellinen uniforminen avaruus}
-Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy filtterien avulla.
+Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy-filtterien avulla.
 
-Sellaiselle joukolle, jolle on määritelty uniformiteetti voidaan määritellä myös 
-\emph{tarpeeksi pieni} osa\-jouk\-ko kyseisen uniformiteetin suhteen. 
-Osajoukko on tarpeeksi pieni silloin, kun kaikki osajoukon alkiot ovat 
-tarpeeksi lähellä toisiaan (huomautus \ref{V-close}). 
+Sellaiselle joukolle, jolle on määritelty uniformiteetti voidaan määritellä 
+uniformiteetin lähistöjen suhteen \emph{tarpeeksi pienet} osa\-jou\-kot. 
+Osajoukko on lähistön suhteen tarpeeksi pieni silloin, 
+kun kaikki osajoukon alkiot ovat 
+tarpeeksi lähellä toisiaan kyseisen lähistön suhteen (huomautus \ref{V-close}). 
 Näin saadaan seuraava määritelmä.
 \begin{maar}
 Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
@@ -1411,7 +1430,7 @@ seuraava ehto:
 \end{maar}
 \begin{maar}
 \emph{Filtterin kanta.} 
-Olkoon $X$ joukko ja $\F\subset \Pot(X)$ filtteri joukolle $X$. 
+Olkoon $X$ joukko ja $\F\subset \Pot(X)$ filtteri joukossa $X$. 
 Tällöin joukko $B\subset \F$ on filtterin $\F$ kanta, 
 jos jokaiselle filtterin alkiolle $V\in \F$ 
 löytyy kannan alkio $W\in B $, jolla pätee $W\subset V$.
@@ -1496,10 +1515,10 @@ $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$.
 \item[$\Rightarrow$] 
 Olkoon filtteri $\F_1$ on hienompi kuin filtteri $\F_2$, eli $\F_2\subset \F_1$. 
 Olkoon $A_2\in B_2$ alkio. 
-Tällöin pätee $A_2\in F_1$, 
+Tällöin pätee $A_2\in \F_1$, 
 sillä $B_2\subset\F_2\subset \F_1$. 
 Näin ollen filtterin kannan määritelmän nojalla 
-alkiolle $A_2\in F_1$ löytyy kannan $B_1$ 
+alkiolle $A_2\in \F_1$ löytyy kannan $B_1$ 
 alkio $A_1$, jolla $A_1\subset A_2$.
 %jokaisella $A_2\in B_2$ pätee $A_2\in \F_2$ 
 \item[$\Leftarrow$] 
@@ -1539,24 +1558,24 @@ Olkoon lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$
 Kannat $B_1$ ja $B_2$ ovat \emph{ekvivalentteja}, 
 jos filtterit $\F_1$ ja $\F_2$ ovat samoja.
 \end{maar}
-\begin{maar}\label{Cauchy_filtteri}
-Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukolle $X$. 
-Filtteriä $\F$ sanotaan \emph{Cauchy} filtteriksi, 
+\begin{maar}\label{Cauchy-filtteri}
+Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $\F$ filtteri joukossa $X$. 
+Filtteriä $\F$ sanotaan \emph{Cauchy}-filtteriksi, 
 jos jokaiselle lähistölle $V\in\U$ löytyy osajoukko $A\subset X$, 
 joka on $V-$pieni ja kuuluu filtteriin $\F$. %$A\in F$. 
 \end{maar}
-\noindent Cauchy filtterit sisältävät siis mielivaltaisen pieniä joukkoja. 
+\noindent Cauchy-filtterit sisältävät siis mielivaltaisen pieniä joukkoja. 
 \begin{lause}
 Topologisessa avaruudessa osajoukon (vastaavasti alkion) kaikkien ympäristöjen joukko on filtteri, jota sanotaan ympäristöfiltteriksi.
 \qed
 \end{lause}
 \begin{maar}
 \emph{Filtterin raja-arvo.} 
-Olkoon $(X,\T)$ topologinen avaruus ja $\F$ filtteri joukolle $X$. 
+Olkoon $(X,\T)$ topologinen avaruus ja $\F$ filtteri joukossa $X$. 
 Alkio $x\in X$ on filtterin $\F$ \emph{raja-arvo}, 
 jos filtteri $\F$ on hienompi kuin 
 alkion $x$ ympäristöfiltteri. % $B(x)$. 
-Näin ollen filtteri $\F$ \emph{suppenee} (converge) kohti alkiota $x$. 
+Sanomme, että filtteri $\F$ \emph{suppenee} (converge) kohti alkiota $x$. 
 
 Lisäksi, jos $B$ on filtterin $\F$ kanta 
 ja alkio $x$ on filtterin $\F$ raja-arvo, 
@@ -1579,22 +1598,22 @@ jokainen alkion $x$ ympäristö sisältää jonkin kannan $B$ jäsenen.\qed
 %\end{proof}
 %\end{lause}
 
-\noindent Uniformeissa avaruuksissa Cauchy filttereillä ei välttämättä ole raja-arvoa.
+\noindent Uniformeissa avaruuksissa Cauchy-filttereillä ei välttämättä ole raja-arvoa.
 
 \begin{maar}
 %\emph{Täydellinen uniforminen avaruus} 
 %on uniforminen avaruus, 
-%jossa jokainen Cauchy filtteri suppenee. 
+%jossa jokainen Cauchy-filtteri suppenee. 
 %Olkoon $X$ uniforminen avaruus. 
 Uniforminen avaruus on \emph{täydellinen}, 
-jos sen jokainen Cauchy filtteri suppenee.
+jos sen jokainen Cauchy-filtteri suppenee.
 \end{maar}
 \begin{lause}
-%Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy filtteri.
-Uniformisessa avaruudessa jokainen suppeneva filtteri on Cauchy filtteri.
+%Olkoon $X$ uniforminen avaruus. Tällöin jokainen suppeneva filtteri on Cauchy-filtteri.
+Uniformisessa avaruudessa jokainen suppeneva filtteri on Cauchy-filtteri.
 \begin{proof}
 %TODO uniformisen avaruuden formaatti
-Olkoon $(X,\U)$ uniforminen avaruus, $\F$ suppeneva filtteri joukolle $X$ ja $x\in X$ 
+Olkoon $(X,\U)$ uniforminen avaruus, $\F$ suppeneva filtteri joukossa $X$ ja $x\in X$ 
 sellainen alkio, jota kohti $\F$ suppenee. 
 Tällöin alkion $x$ ympäristöfiltteri $B(x)$ sisältyy filtteriin $\F$. 
 Näin ollen jokaisella lähistöllä $V'\in\U$ pätee $V'(x)\in\F$. 
@@ -1607,25 +1626,25 @@ sisältyy joukkoon
 $$W^{-1}\circ W=\{ (y_1,y_2)\mid \text{on olemassa }x',\text{ jolla }(y_1,x')\in W^{-1},(x',y_2)\in W\}.$$ 
 Siis lähistölle $V$ löydettiin osajoukko $W(x)\subset X$, 
 jolla $W(x)\times W(x)\subset W^{-1}\circ W\subset V$ ja $W(x)\in\F$. 
-Määritelmän \ref{Cauchy_filtteri} nojalla $\F$ on Cauchy filtteri.
+Määritelmän \ref{Cauchy-filtteri} nojalla $\F$ on Cauchy-filtteri.
 \end{proof}
 \end{lause}
 \begin{lause}
-\emph{Minimaalinen Cauchy filtteri.} 
+\emph{Minimaalinen Cauchy-filtteri.} 
 Olkoon $(X,\U)$ uniforminen avaruus. 
-Jokaiselle joukon $X$ Cauchy filtterille $\F$ on olemassa yksikäsitteinen 
-minimaalinen Cauchy filtteri $\F_0$, joka on karkeampi kuin $\F$, 
+Jokaiselle joukon $X$ Cauchy-filtterille $\F$ on olemassa yksikäsitteinen 
+minimaalinen Cauchy-filtteri $\F_0$, joka on karkeampi kuin $\F$, 
 eli $\F_0\subset \F$. 
 Jos $B$ on kanta filtterille $\F$ ja $G$ on uniformiteetin $\U$ symmetristen lähistöjen kanta, 
 niin kokoelma $B_0=\{V(M)\mid M\in B,V\in G\}$ 
 missä $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ on 
-filtterin $\F$ minimaalisen Cauchy filtterin $\F_0$ kanta. 
+filtterin $\F$ minimaalisen Cauchy-filtterin $\F_0$ kanta. 
 %niin joukot $V(M)=\{ y\mid (x,y)\in V,x\in M \}$ missä $M\in B$ ja $V\in G$ muodostavat 
-%filtterin $\F$ minimaalisen Cauchy filtterin $\F_0$ kannan $B_0$. 
+%filtterin $\F$ minimaalisen Cauchy-filtterin $\F_0$ kannan $B_0$. 
 %niin joukko $\{V(M)\mid M\in B, V\in G \}$ muodostaa 
-%filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
+%filtterin $\F$ minimaalisen Cauchy-filtterin kannan $B_0$. 
 %niin joukko $\{y\mid (x,y)\in V,x\in M, M\in B, V\in G \}$ muodostaa 
-%filtterin $\F$ minimaalisen Cauchy filtterin kannan $B_0$. 
+%filtterin $\F$ minimaalisen Cauchy-filtterin kannan $B_0$. 
 %$V(M)=\{ y\mid (x,y)\in V,x\in M \}$
 \begin{proof}
 %Lauseessa määritelty $B_0$ on kanta, sillä kannan ehdot pätevät: 
@@ -1649,7 +1668,7 @@ Jokaisella $M\in B$ ja $V\in \U$ pätee $M\subset V(M)$,
 joten erityisesti jokaiselle $V(M)\in B_0$ löytyy sellainen $M\in B$, 
 jolla $M\subset V(M)$. 
 Näin ollen lauseen \ref{filtterikantavertailu} nojalla 
-minimaalinen Cauchy filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
+minimaalinen Cauchy-filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
 %TODO 1-käs
 \end{proof}
 \end{lause}
@@ -1814,7 +1833,7 @@ Tällöin myös $(X,\U')$ on täydellinen jokaisella
 uniformiteetilla $\U'$, jolla 
 $\U\subset\U'\subset\U_0$.
 \begin{proof}
-%Cauchy filtterit ovat samoja.
+%Cauchy-filtterit ovat samoja.
 %TODO
 Puuttuu.
 \end{proof}
