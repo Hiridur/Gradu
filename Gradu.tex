@@ -39,6 +39,7 @@
 
 \theoremstyle{remark}
 \newtheorem{huom}[equation]{Huomautus}
+\newtheorem{sopimus}[equation]{Sopimus}
 
 \pagestyle{plain}
 \setcounter{page}{1}
@@ -1677,7 +1678,7 @@ minimaalinen Cauchy-filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
 %\end{maar}
 %
 %
-\chapter{Uniformisoituvat avaruudet}
+\chapter{Täysin säännölliset avaruudet}
 %Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
 Tässä luvussa esitellään uniformisoituva (uniformizable) topologinen avaruus ja annetaan tätä karakterisoiva ehto.
 \begin{maar}
@@ -1698,7 +1699,7 @@ jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
 \begin{maar}
 Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
 \end{maar}
-\begin{lause}
+\begin{lause}\label{unizable}
 Olkoon $(X,\T)$ topologinen avaruus.
 %Topologinen avaruus $(X,\T)$ on uniformisoituva, jos seuraava ominaisuus pätee:
 Avaruuden $(X,\T)$ uniformisoituvuus on yhtäpitävää seuraavan ehdon kanssa:
@@ -1750,6 +1751,108 @@ on alkion $x_0$ ympäristökanta topologiassa $\T$.
 Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
 \end{proof}
 \end{lause}
+
+\begin{maar}
+Topologinen avaruus on \emph{Hausdorff}, jos jokaisella pisteellä on erilliset ympäristöt.
+\end{maar}
+
+\begin{maar}
+Topologinen avaruus on \emph{säännöllinen}, jos jokaisella pisteellä ja jokaisella suljetulla joukolla on erilliset ympäristöt.
+\end{maar}
+
+\begin{maar}
+Topologinen avaruus on \emph{täysin säännöllinen} (completely regular), 
+jos se on uniformisoituva ja Hausdorff.
+%TODO muistiinpanoista lisätietoja tähän
+\end{maar}
+
+\begin{lause}
+Täysin säännöllisen topologisen avaruuden aliavaruus on täysin säännöllinen.
+\begin{proof}
+Olkoon $(X,\T)$ täysin säännöllinen avaruus ja $A\subset X$ aliavaruus. 
+%Olkoon $(X,\T)$ täysin säännöllinen avaruus ja osajoukko $A\subset X$ varustettu rajoitetulla topologialla $\T_{\mid A}$. 
+%Olkoon lisäksi $x\in A$ alkio ja $V\subset A$ sen avoin ympäristö. 
+Olkoon lisäksi $V\subset A$ avoin osajoukko ja $x\in V$ alkio. 
+Nyt $V=B\cap U$ jollain avoimella osajoukolla $U\subset X$. 
+%Lauseen \ref{unizable} nojalla on olemassa 
+Lauseen \ref{unizable} ominaisuuden \ref{O_IV} nojalla on olemassa 
+jatkuva kuvaus $f\colon X\rightarrow [0,1]$, jolla $f(x)=0$ ja $ f(y)=1$ kaikilla $y\in X\setminus U$. 
+Näin ollen kuvauksen $f$ rajoittuma 
+$f\vert_A\colon A\rightarrow [0,1]$, $f\vert_A(a)= f(a)$ 
+kaikilla $a\in A$ on ominaisuuden \ref{O_IV} mukainen jatkuva kuvaus 
+pisteelle $x\in A$ ja pisteen $x$ ympäristölle $V\subset A$. 
+%Siis aliavaruus $(A,\T\vert_A)$ on täysin säännöllinen. 
+Siis $A$ on täysin säännöllinen. 
+\end{proof}
+\end{lause}
+
+Merkitään $I=[0,1]$.
+
+\begin{sopimus}
+Oletetaan, että $X$ on topologinen avaruus. 
+Merkitään kaikkien jatkuvien 
+kuvausten $f\colon X\rightarrow I$ joukkoa symbolilla $I^X$. 
+Tällöin $(I_f)_{f\in I^X}$ on yksikkövälien perhe, 
+joka on indeksoitu joukolla $I^X$. 
+Merkitään yksikkövälien perheen $(I_f)_{f\in I^X}$ tuloa 
+$$P^X=\prod_{f\in I^X}I_f
+=\left\{\prod_{f\in I^X}\{t_f\}\mid t_f\in I \text{ kaikilla } f\in I^X\right\}
+%=\{(t_f)_{f\in I^X}\mid t_f\in I \text{ kaikilla } f\in I^X\}
+.$$
+%yksikkövälien tulo. 
+\end{sopimus}
+
+\begin{lause}
+Olkoon $X$ täysin säännöllinen topologinen avaruus. 
+%Tällöin on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty upotus $\rho\colon X\rightarrow P^X$. 
+Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
+joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
+\begin{proof}
+Olkoon $X$ täysin säännöllinen topologinen avaruus ja 
+$\rho\colon X\rightarrow P^X$ kuvaus, 
+joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $. 
+Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
+
+Ensinnäkin kuvaus $\rho$ on injektio: 
+%Riittää osoittaa, että jokin $f\in I^X$ on 
+Olkoon $x,y\in X, x\neq y$. 
+Avaruus $X$ on Hausdorff, 
+joten pisteellä $x$ on sellainen ympäristö $A\subset X$, 
+johon alkio $y$ ei kuulu. 
+%johon alkio $y\not\in A$. 
+Avaruus $X$ on täysin säännöllinen, 
+joten on olemassa sellainen kuvaus $f\in I^X$, 
+jolla $f(x)=0$ ja $f(z)=1$ kaikilla $z\in X\setminus A$. 
+Erityisesti $f(y)=1\neq 0=f(x)$ ja näin ollen $\rho(x)\neq \rho(y)$. 
+
+Toiseksi kuvaus $\rho$ on projektiokuvausten 
+$P_f\circ\rho(x)=f(x),x\in X,f\in I^X$ yhdisteenä jatkuva.
+
+Viimeiseksi kuvaus $\rho$ on avoin: 
+Avointen joukkojen perhe 
+$$(U_f)_{f\in I^X}=\{f^\leftarrow [0,1[\subset X\mid f\in I^X\}$$
+muodostaa ympäristökannan: 
+
+
+\end{proof}
+\end{lause}
+
+
+\newpage
+\begin{huom}
+\end{huom}
+\begin{lause}
+\end{lause}
+\begin{maar}
+\end{maar}
+\begin{kor}
+\end{kor}
+\begin{esim}
+\end{esim}
+\begin{lem}
+\end{lem}
+
+\chapter{Universaali uniforminen rakenne}
 \begin{maar}
 \emph{Universaali uniformiteetti.} 
 Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
@@ -1952,12 +2055,6 @@ Puuttuu.
 \end{proof}
 \end{lause}
 \chapter{Kompakti uniforminen avaruus}
-
-\begin{maar}
-Topologinen avaruus on \emph{täysin säännöllinen} (completely regular), 
-jos se on uniformisoituva ja Hausdorff.
-%TODO muistiinpanoista lisätietoja tähän
-\end{maar}
 
 \begin{maar}
 Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
