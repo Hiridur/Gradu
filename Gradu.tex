@@ -1757,7 +1757,9 @@ Topologinen avaruus on \emph{Hausdorff}, jos jokaisella pisteellä on erilliset 
 \end{maar}
 
 \begin{maar}
-Topologinen avaruus on \emph{säännöllinen}, jos jokaisella pisteellä ja jokaisella suljetulla joukolla on erilliset ympäristöt.
+%\emph{Säännöllinen} avaruus on topologinen avaruus, jossa jokaisella suljetulla joukolla ja jokaisella pisteellä on erilliset ympäristöt.
+Topologinen avaruus $X$ on \emph{säännöllinen} (regular), 
+jos jokaisella suljetulla joukolla $A\subset X$ ja jokaisella pisteellä $x\in X,x\not\in A$ on erilliset ympäristöt.
 \end{maar}
 
 \begin{maar}
@@ -1767,7 +1769,7 @@ jos se on uniformisoituva ja Hausdorff.
 \end{maar}
 
 \begin{lause}
-Täysin säännöllisen topologisen avaruuden aliavaruus on täysin säännöllinen.
+Täysin säännöllisen avaruuden aliavaruus on täysin säännöllinen.
 \begin{proof}
 Olkoon $(X,\T)$ täysin säännöllinen avaruus ja $A\subset X$ aliavaruus. 
 %Olkoon $(X,\T)$ täysin säännöllinen avaruus ja osajoukko $A\subset X$ varustettu rajoitetulla topologialla $\T_{\mid A}$. 
@@ -1799,21 +1801,32 @@ $$P^X=\prod_{f\in I^X}I_f
 =\left\{\prod_{f\in I^X}\{t_f\}\mid t_f\in I \text{ kaikilla } f\in I^X\right\}
 %=\{(t_f)_{f\in I^X}\mid t_f\in I \text{ kaikilla } f\in I^X\}
 .$$
+Käytämme koko luvun ajan joukon $P^X$ alkioista merkintää $\{t_f\}$ tarkoittamaan alkiota $\prod_{f\in I^X}\{t_f\}$, jossa $t_f\in I$ kaikilla $f\in I^X$.
 %yksikkövälien tulo. 
 \end{sopimus}
 
 \begin{lause}
-Olkoon $X$ täysin säännöllinen topologinen avaruus. 
-%Tällöin kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
-%kuvaus $\rho\colon X\rightarrow \rho(X)\subset P^X$ on homeomorfismi. 
-Tällöin on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty homeomorfismi $\rho\colon X\rightarrow \rho X\subset P^X$. 
+Olkoon $X$ täysin säännöllinen avaruus. 
+%Täysin säännöllinen avaruus voidaan upottaa yksikkövälien tuloon. 
+Tällöin $X$ voidaan upottaa yksikkövälien tuloon $P^X$, 
+%Toisin sanoen, jos $X$ on täysin säännöllinen avaruus, niin 
+%Olkoon $X$ täysin säännöllinen avaruus. 
+%%Tällöin kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
+%%kuvaus $\rho\colon X\rightarrow \rho(X)\subset P^X$ on homeomorfismi. 
+%Tällöin 
+%on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty upotus $\rho\colon X\rightarrow P^X$. 
+eli on olemassa 
+%kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
+homeomorfismi $\rho\colon X\rightarrow \rho X\subset P^X$. 
 %Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
 %joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
 \begin{proof}
-Olkoon $X$ täysin säännöllinen topologinen avaruus ja 
-$\rho\colon X\rightarrow \rho X\subset P^X$ kuvaus, 
+Olkoon $X$ täysin säännöllinen avaruus ja 
+$\rho\colon X\rightarrow 
+\rho X\subset 
+P^X$ kuvaus, 
 %$\rho\colon X\rightarrow P^X$ kuvaus, 
-joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $. 
+joka on määritelty kaavalla $\rho(x)=\{f(x)\}$ kaikilla $x\in X $. 
 %Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
 Kuvaus $\rho$ on homeomorfismi, jos se on injektiivinen, jatkuva ja avoin kuvaus. 
 
@@ -1849,14 +1862,54 @@ Näin ollen avoimelle osajoukolle $U\subset X$ löydettiin joukko
 $V\in (U_f)_{f\in I^X}$, jolla $V\subset U$. 
 Perhe $(U_f)_{f\in I^X}$ on siis ympäristökanta. 
 Ympäristökannan jäsenen $V_{f_0}\in (U_f)_{f\in I^X}$ kuva 
-$$\rho V_{f_0}=\left\{\prod_{f\in I^X}\mid t_f\in I \text{ kaikilla }f\in I^X, t_{f_0}<1\right\}\cap \rho X$$
+$$\rho V_{f_0}=\left\{\{t_f\}\mid t_{f_0}<1\right\}\cap \rho X$$
+%$$\rho V_{f_0}=\left\{\prod_{f\in I^X}\{t_f\}\mid t_f\in I \text{ kaikilla }f\in I^X, t_{f_0}<1\right\}\cap \rho X$$
 on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin.
 \end{proof}
 \end{lause}
 
+\begin{lem}
+Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ kuvaus, joka on määritelty kaavalla 
+%$\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $. 
+$\rho(x)=\{f(x)\}$ kaikilla $x\in X $. 
+Olkoon lisäksi $Y$ topologialla varustettu joukko ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
+Tällöin on olemassa yksikäsitteinen jatkuva kuvaus $g\colon \rho X\rightarrow Y$, jolla $h(x)=(g\circ\rho)(x)$ kaikilla $x\in X$.
+\qed
+\end{lem}
 \begin{lause}
-
+Olkoot $X$ ja $Y$ täysin säännöllisiä avaruuksia ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
+Tällöin on olemassa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$ niin, 
+että oheinen kaavio kommutoi.
+\begin{equation*}
+\begin{tikzpicture}
+\matrix (m) 
+[matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+{
+X & Y \\
+P^X & P^Y \\
+};
+\path[-stealth]
+(m-1-1) edge node [left] {$\rho$} (m-2-1) edge node [above] {$h$} (m-1-2)
+(m-2-1) edge node [below] {$H$} (m-2-2)
+(m-1-2) edge node [right] {$\rho_1$} (m-2-2);
+\end{tikzpicture}
+\end{equation*}
+Erityisesti $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline{\rho_1 Y}$. 
+%eli $H\overline{\rho X}\subset \overline{\rho_1 Y}$.
 \begin{proof}
+Olkoot $X$ ja $Y$ täysin säännöllisiä avaruuksia ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
+%Nyt jokaiselle $g\in I^Y$ löytyy $(g\circ h)\in I^X$, 
+Olkoon $g\in I^Y$ kuvaus. Tällöin $(g\circ h)\in I^X$ ja kaavalla 
+$h_g\left(\{t_f\}\right)=t_{g\circ h}$%, $t_f\in I$ 
+%$$h_g\left(\prod_{f\in I^X}\{t_f\}\right)=t_{g\circ h}\qquad\text{ kaikilla }t\in I$$ 
+voidaan määritellä kuvaus $h_g\colon P^X\rightarrow I_g$. 
+Nyt $h_g$ on projektiokuvaus, joka samaistaa yksikkövälit $I_g$ ja $I_{g\circ h}$. 
+%Näin ollen tullaan samaistaneeksi yksikkövälit $I_g$ ja $I_{g\circ h}$ projektiokuvauksella $h_g$. 
+Kuvaus $h_g$ on jatkuva, joten kaavalla 
+$$H\left(\prod_{f\in I^X}\{t_f\}\right)=\left(h_g\left(\prod_{f\in I^X}\{t_f\}\right)\right)_{g\in I^Y},t\in I$$ 
+voidaan muodostaa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$. 
+Nyt 
+$$(H\circ \rho)(x)=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{(g\circ h)(x)\}=(g(h(x)))_{g\in I^Y}.$$
 
 \end{proof}
 \end{lause}
