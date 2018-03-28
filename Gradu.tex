@@ -1804,14 +1804,18 @@ $$P^X=\prod_{f\in I^X}I_f
 
 \begin{lause}
 Olkoon $X$ täysin säännöllinen topologinen avaruus. 
-%Tällöin on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty upotus $\rho\colon X\rightarrow P^X$. 
-Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
-joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
+%Tällöin kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
+%kuvaus $\rho\colon X\rightarrow \rho(X)\subset P^X$ on homeomorfismi. 
+Tällöin on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty homeomorfismi $\rho\colon X\rightarrow \rho X\subset P^X$. 
+%Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
+%joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
 \begin{proof}
 Olkoon $X$ täysin säännöllinen topologinen avaruus ja 
-$\rho\colon X\rightarrow P^X$ kuvaus, 
+$\rho\colon X\rightarrow \rho X\subset P^X$ kuvaus, 
+%$\rho\colon X\rightarrow P^X$ kuvaus, 
 joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $. 
-Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
+%Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
+Kuvaus $\rho$ on homeomorfismi, jos se on injektiivinen, jatkuva ja avoin kuvaus. 
 
 Ensinnäkin kuvaus $\rho$ on injektio: 
 %Riittää osoittaa, että jokin $f\in I^X$ on 
@@ -1826,13 +1830,33 @@ jolla $f(x)=0$ ja $f(z)=1$ kaikilla $z\in X\setminus A$.
 Erityisesti $f(y)=1\neq 0=f(x)$ ja näin ollen $\rho(x)\neq \rho(y)$. 
 
 Toiseksi kuvaus $\rho$ on projektiokuvausten 
-$P_f\circ\rho(x)=f(x),x\in X,f\in I^X$ yhdisteenä jatkuva.
+$(P_f\circ\rho)(x)
+%=P_f(\rho(x))
+=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
 
 Viimeiseksi kuvaus $\rho$ on avoin: 
 Avointen joukkojen perhe 
 $$(U_f)_{f\in I^X}=\{f^\leftarrow [0,1[\subset X\mid f\in I^X\}$$
 muodostaa ympäristökannan: 
+Avoimelle osajoukolle $U\subset X$ ja sen alkiolle $x\in U$ 
+on olemassa kuvaus $f_1\in I^X$, 
+jolla $f_1(x)=0$ ja $f_1(y)=1,y\in X\setminus U$. 
+%Toisaalta $f^\leftarrow[0,1/2[\subset X$ on avoin sisältyy osajoukkoon $U$. 
+%Nyt $V=f_1^\leftarrow [0,1[$ on avoin joukossa $X$,
+Nyt $V=f_1^\leftarrow [0,1[\subset X$ on avoin,
+$V\in (U_f)_{f\in I^X}$ ja $V\subset U$. 
+Näin ollen avoimelle osajoukolle $U\subset X$ löydettiin joukko
+$V\in (U_f)_{f\in I^X}$, jolla $V\subset U$. 
+Perhe $(U_f)_{f\in I^X}$ on siis ympäristökanta. 
+Ympäristökannan jäsenen $V_{f_0}\in (U_f)_{f\in I^X}$ kuva 
+$$\rho V_{f_0}=\left\{\prod_{f\in I^X}\mid t_f\in I \text{ kaikilla }f\in I^X, t_{f_0}<1\right\}\cap \rho X$$
+on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin.
+\end{proof}
+\end{lause}
 
+\begin{lause}
+
+\begin{proof}
 
 \end{proof}
 \end{lause}
