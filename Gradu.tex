@@ -1805,19 +1805,19 @@ Käytämme koko luvun ajan joukon $P^X$ alkioista merkintää $\{t_f\}$ tarkoitt
 %yksikkövälien tulo. 
 \end{sopimus}
 
-\begin{lause}
+\begin{lause}\label{comp_reg_upotus}
 Olkoon $X$ täysin säännöllinen avaruus. 
 %Täysin säännöllinen avaruus voidaan upottaa yksikkövälien tuloon. 
-Tällöin $X$ voidaan upottaa yksikkövälien tuloon $P^X$, 
+Tällöin $X$ voidaan upottaa yksikkövälien tuloon $P^X$. 
 %Toisin sanoen, jos $X$ on täysin säännöllinen avaruus, niin 
 %Olkoon $X$ täysin säännöllinen avaruus. 
 %%Tällöin kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
 %%kuvaus $\rho\colon X\rightarrow \rho(X)\subset P^X$ on homeomorfismi. 
 %Tällöin 
 %on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty upotus $\rho\colon X\rightarrow P^X$. 
-eli on olemassa 
-%kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty 
-homeomorfismi $\rho\colon X\rightarrow \rho X\subset P^X$. 
+%on olemassa 
+Erityisesti kaavalla $\rho(x)=\{f(x)_f\}$, $x\in X $ määritelty 
+kuvaus $\rho\colon X\rightarrow \rho X\subset P^X$ on homeomorfismi. 
 %Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
 %joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
 \begin{proof}
@@ -1826,7 +1826,7 @@ $\rho\colon X\rightarrow
 \rho X\subset 
 P^X$ kuvaus, 
 %$\rho\colon X\rightarrow P^X$ kuvaus, 
-joka on määritelty kaavalla $\rho(x)=\{f(x)\}$ kaikilla $x\in X $. 
+joka on määritelty kaavalla $\rho(x)=\{f(x)_f\}$ kaikilla $x\in X $. 
 %Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
 Kuvaus $\rho$ on homeomorfismi, jos se on injektiivinen, jatkuva ja avoin kuvaus. 
 
@@ -1906,11 +1906,20 @@ voidaan määritellä kuvaus $h_g\colon P^X\rightarrow I_g$.
 Nyt $h_g$ on projektiokuvaus, joka samaistaa yksikkövälit $I_g$ ja $I_{g\circ h}$. 
 %Näin ollen tullaan samaistaneeksi yksikkövälit $I_g$ ja $I_{g\circ h}$ projektiokuvauksella $h_g$. 
 Kuvaus $h_g$ on jatkuva, joten kaavalla 
-$$H\left(\prod_{f\in I^X}\{t_f\}\right)=\left(h_g\left(\prod_{f\in I^X}\{t_f\}\right)\right)_{g\in I^Y},t\in I$$ 
+$$H\left(\{t_f\}\right)=\{h_g\left(\{t_f\}\right)\},\quad\{t_f\}\in P^X$$ 
 voidaan muodostaa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$. 
-Nyt 
-$$(H\circ \rho)(x)=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{(g\circ h)(x)\}=(g(h(x)))_{g\in I^Y}.$$
+Nyt kuvauksen $H$ määrittelyn nojalla pätee 
+$$(H\circ \rho)(x)=(H ( \rho(x))=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{((g\circ h)(x))_g\}$$
+ja lauseen \ref{comp_reg_upotus} nojalla
+$$(\rho_1\circ h)(x)=\rho_1( h(x))=\{g( h(x))_g\}=\{((g\circ h)(x))_g\}.$$
+Näin ollen annettu kaavio kommutoi. 
 
+Kaavion kommutoinnin nojalla $H(\rho (X))\subset \rho_1(Y)$ 
+ja edelleen $\overline{H(\rho (X))}\subset \overline{\rho_1(Y)}$. 
+Kuvauksen $H$ jatkuvuuden nojalla 
+$H(\overline{\rho(X)}\subset \overline{H(\rho(X)}$. 
+Näin ollen $H(\overline{\rho(X)}\subset\overline{\rho_1(Y)}$ 
+ja siis $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline{\rho_1 Y}$. 
 \end{proof}
 \end{lause}
 
