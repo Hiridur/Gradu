@@ -1876,7 +1876,7 @@ Olkoon lisäksi $Y$ topologialla varustettu joukko ja $h\colon X\rightarrow Y$ j
 Tällöin on olemassa yksikäsitteinen jatkuva kuvaus $g\colon \rho X\rightarrow Y$, jolla $h(x)=(g\circ\rho)(x)$ kaikilla $x\in X$.
 \qed
 \end{lem}
-\begin{lause}
+\begin{lause}\label{kommutoiva_kaavio}
 Olkoot $X$ ja $Y$ täysin säännöllisiä avaruuksia ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
 Tällöin on olemassa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$ niin, 
 että oheinen kaavio kommutoi.
@@ -1914,11 +1914,13 @@ ja lauseen \ref{comp_reg_upotus} nojalla
 $$(\rho_1\circ h)(x)=\rho_1( h(x))=\{g( h(x))_g\}=\{((g\circ h)(x))_g\}.$$
 Näin ollen annettu kaavio kommutoi. 
 
-Kaavion kommutoinnin nojalla $H(\rho (X))\subset \rho_1(Y)$ 
-ja edelleen $\overline{H(\rho (X))}\subset \overline{\rho_1(Y)}$. 
+Kaavion kommutoinnin nojalla $H(\rho X)\subset \rho_1 Y$ 
+%Kaavion kommutoinnista seuraa, että $H(\rho (X))\subset \rho_1(Y)$ 
+ja näin ollen $\overline{H(\rho X)}\subset \overline{\rho_1 Y}$. 
+%ja edelleen $\overline{H(\rho X)}\subset \overline{\rho_1 Y}$. 
 Kuvauksen $H$ jatkuvuuden nojalla 
-$H(\overline{\rho(X)}\subset \overline{H(\rho(X)}$. 
-Näin ollen $H(\overline{\rho(X)}\subset\overline{\rho_1(Y)}$ 
+$H(\overline{\rho X})\subset \overline{H(\rho X)}$. 
+Nyt $H(\overline{\rho X})\subset\overline{\rho_1 Y}$ 
 ja siis $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline{\rho_1 Y}$. 
 \end{proof}
 \end{lause}
@@ -1932,7 +1934,7 @@ jossa $\hat{X}$ on kompakti Hausdorff avaruus
 ja $h$ on homeomorfismi $X\rightarrow h(X)\subset\hat{X}$, jossa $h(X)$ on tiheä avaruudessa $\hat{X}$. 
 \end{maar}
 \begin{huom}
-Usein samaistetaan avaruus $X$ ja $h(X)\subset\hat{X}$ ja sanotaan, 
+Usein samaistetaan avaruus $X$ ja osajoukko $h(X)\subset\hat{X}$ ja sanotaan, 
 että $\hat{X}$ on avaruuden $X$ kompaktisointi. 
 \end{huom}
 
@@ -1943,11 +1945,88 @@ Erityisesti $\overline{\rho X}$ on kompaktin joukon suljettuna osajoukkona kompa
 Merkitään $\beta X=\overline{\rho X}$ ja sanotaan, 
 että pari $(\beta X,\rho)$ on avaruuden $X$ \emph{Stone-Čech kompaktisointi}.
 \end{lem}
+\begin{lause}\label{SC-ominaisuus}
+Olkoon $X$ täysin säännöllinen avaruus. 
+%ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
+Avaruuden $X$ Stone-Čech kompaktisoinnille $(\beta X,\rho)$ pätee seuraava ominaisuus: 
+%Tällöin seuraavat ominaisuudet pätevät:
+%1
+\begin{itemize}
+\item
+Jokaiselle kompaktille $Y$ ja jokaiselle jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ on olemassa yksikäsitteinen jatkuva kuvaus $F\colon\beta X\rightarrow Y$ niin, että $f=F\circ \rho$.
+\end{itemize}
+\begin{proof}
+Olkoon $X$ täysin säännöllinen avaruus, $Y$ kompakti avaruus ja 
+$f\colon X\rightarrow Y$ jatkuva kuvaus. 
+Tällöin lauseen \ref{kommutoiva_kaavio} nojalla on olemassa jatkuva 
+kuvaus $\phi\colon \beta X\rightarrow \beta Y$ niin, 
+että oheinen kaavio kommutoi.
+\begin{equation*}
+\begin{tikzpicture}
+\matrix (m) 
+[matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+{
+X & Y \\
+\beta X & \beta Y \\
+};
+\path[-stealth]
+(m-1-1) edge node [left] {$\rho$} (m-2-1) edge node [above] {$f$} (m-1-2)
+(m-2-1) edge node [below] {$\phi$} (m-2-2)
+(m-1-2) edge node [right] {$\rho_1$} (m-2-2);
+\end{tikzpicture}
+\end{equation*}
+Avaruus $Y$ on kompakti, joten kuvaus $\rho_1\colon Y \rightarrow \beta Y$ on homeomorfismi. 
+Näin ollen on olemassa jatkuva käänteiskuvaus $\rho_1^{-1}\colon\beta Y\rightarrow Y$. 
+Voidaan nyt valita $F\colon\beta X\rightarrow Y$ asettamalla $F(a)=(\rho_1^{-1}\circ \phi)(a)=\rho_1^{-1}( \phi(a))$ kaikilla $a\in\beta X$.
+Nyt $f(x)=(F\circ\rho)(x)$ kaikilla $x\in X$. 
+%Lisäksi $\beta X$ on avaruuden $X$ kompaktisointi, joten 
+Lisäksi kompaktisoinnin määritelmän nojalla 
+$X$ on tiheä joukossa $\beta X$ ja 
+näin ollen 
+%lemman ??? nojalla 
+kuvaus $F$ on yksikäsitteinen. 
+\end{proof}
+\end{lause}
+\begin{lause}
+Stone-Čech kompaktisoinnin yksikäsitteisyys. 
+Olkoon $X$ täysin säännöllinen avaruus 
+%ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
+%%2 Yksikäsitteisyys. 
+%Olkoon
+ja $(\hat{X},h)$ sellainen avaruuden $X$ kompaktisointi, 
+%Jokainen avaruuden $X$ kompaktisointi $(\hat{X},h)$, 
+jolla on lauseen \ref{SC-ominaisuus} kuvaileva ominaisuus. 
+Tällöin $\hat{X} $ ja Stone-Čech kompaktisointi $\beta X$ ovat homeomorfisia. 
+%Tällöin $\hat{X} $ on homeomorfinen Stone-Čech kompaktisoinnin $\beta X$ kanssa. 
+\begin{proof}
+Olkoon $X$ täysin säännöllinen avaruus, 
+$(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi 
+ja $(\hat{X},h)$ sellainen avaruuden $X$ kompaktisointi, 
+jolla on lauseen \ref{SC-ominaisuus} kuvaileva ominaisuus. 
+Samaistetaan $X$, $hX$ ja $\rho X$, jolloin voidaan mieltää $X$ joukkojen $\beta X$ ja $\hat{X}$ osajoukoksi. 
+Olkoon $i\colon X\rightarrow X$ identtinen kuvaus. 
+Nyt lauseen \ref{SC-ominaisuus} ominaisuuden nojalla 
+kompaktisoinnille $\beta X$, kompaktille joukolle $\hat{X}$ ja kuvaukselle $i$ 
+on olemassa jatkuva kuvaus 
+$F\colon\beta X\rightarrow \hat{X}$, 
+jolla $F(x)=(F\circ\rho)(x)=i(x)=x$ kaikilla $x\in X$. 
+Vastaavasti on olemassa jatkuva kuvaus $G\colon \hat{X}\rightarrow \beta X$,
+jolla $G(x)=x$ kaikilla $x\in X$. 
+Nyt kuvaukset $(F\circ G)\vert_X$ ja $(G\circ F)\vert_X$ ovat 
+identtisiä kuvauksia. 
+Lisäksi $X$ on tiheä joukoissa $\beta X$ ja $\hat{X}$, joten 
+kuvaukset $F\circ G=1_{\hat{X}}$ ja $G\circ F=1_{\beta X}$ ovat identtisiä kuvauksia. 
+Siis kuvaus $F$ on homeomorfismi avaruuksien $\beta X$ ja $\hat{X}$ välille.
+\end{proof}
+\end{lause}
 \begin{lause}
 Olkoon $X$ täysin säännöllinen avaruus 
-ja $\beta X$ avaruuden $X$ Stone-Čech kompaktisointi. 
-Tällöin seuraavat ominaisuudet pätevät:
+ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
+%3
+$\beta X$ on laajin kompaktisointi avaruudelle $X$: Jos $\hat{X}$ on avaruuden $X$ kompaktisointi, niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus, eli $\hat{X}$ on homeomorfinen $\beta X / K(F)$ kanssa jollain $K(F)$.
+\begin{proof}
 
+\end{proof}
 \end{lause}
 
 \newpage
