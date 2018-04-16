@@ -2021,14 +2021,18 @@ Siis kuvaus $F$ on homeomorfismi avaruuksien $\beta X$ ja $\hat{X}$ välille.
 \end{proof}
 \end{lause}
 \begin{lause}
-Olkoon $X$ täysin säännöllinen avaruus 
-ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
+Olkoon $X$ täysin säännöllinen avaruus. 
+%ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
 %3
-$\beta X$ on laajin kompaktisointi avaruudelle $X$: 
+Stone-Čech kompaktisointi $\beta X$ on laajin 
+kompaktisointi avaruudelle $X$: 
+%Olkoon $\hat{X}$ avaruuden $X$ kompaktisointi ja 
 Jos $\hat{X}$ on avaruuden $X$ kompaktisointi, 
 niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus. 
-Kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden $\beta X / \sim$ kanssa, 
-kun $\sim$ on ekvivalenssirelaatio $a\sim a'$, kun $F(a)=F(a')$, $a,a'\in \beta X$.
+%$\sim$ sellainen ekvivalenssirelaatio, jolla $a\sim a'$ jos ja vain jos $F(a)=F(a')$, kun $a,a'\in \beta X$.
+%Tällöin kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
+%$\beta X / \sim$ kanssa. 
+%%ekvivalenssirelaatiolla $\sim$, jolla $a\sim a'$ jos ja vain jos $F(a)=F(a')$, $a,a'\in \beta X$.
 \begin{proof}
 Lauseen \ref{SC-ominaisuus} nojalla on olemassa 
 jatkuva kuvaus $F\colon \beta X\rightarrow \hat{X}$, 
@@ -2037,321 +2041,336 @@ $\beta X$ on kompakti, joten $F(\beta X)$ on suljettu joukko,
 joka sisältää tiheän osajoukon $X\subset \hat{X}$. 
 Näin ollen $\overline{X}\subset F(\beta X)= \hat{X}$ 
 ja siten kuvaus $F$ on surjektio. 
+Olkoon $\sim$ sellainen ekvivalenssirelaatio, jolla $a\sim a'$ jos ja vain jos $F(a)=F(a')$, kun $a,a'\in \beta X$. 
+Nyt voidaan määritellä kuvaus 
+$F_{\sim}\colon \beta X /\sim\,\rightarrow \hat{X}$, jolla $F_{\sim}([a])=F(a)$. 
+Kuvaus $F_{\sim}$ on injektio, sillä jos $x,y\in \beta X$ ja $[x]\neq [y]$ niin $F_{\sim}([x])=F(x)\neq F(y)=F_{\sim}([y])$. 
+Olkoon $\rho\colon \beta X\rightarrow \beta X/\sim$ projektiokuvaus, 
+jolla $\rho(a)=[a]$ kaikilla $a\in\beta X$. Kuvaus $F$ on jatkuva, 
+$\rho$ on projektiokuvauksena jatkuva ja $F=F_{\sim}\circ \rho$, 
+joten $F_{\sim}$ on jatkuva. 
+
+(Puuttuu perustelu miksi $F_{\sim}$ on avoin.)
+
+Tällöin kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
+$\beta X / \sim$ kanssa. 
 \end{proof}
 \end{lause}
 
-\newpage
-\begin{huom}
-\end{huom}
-\begin{lause}
-\end{lause}
-\begin{maar}
-\end{maar}
-\begin{kor}
-\end{kor}
-\begin{esim}
-\end{esim}
-\begin{lem}
-\end{lem}
 
-\chapter{Universaali uniforminen rakenne}
-\begin{maar}
-\emph{Universaali uniformiteetti.} 
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
-jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
-kaikilla $i\in I$. 
-Perheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
-avaruuden $(X,\T)$ \emph{universaali uniformiteetti} (universal uniformity), 
-jota merkitsemme symbolilla $\U_0$. 
-\end{maar}
-\begin{lause}
-Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
-\begin{proof}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-Olkoon lisäksi $\U$ joukon $X$ uniformiteetti, 
-joka on yhteensopiva topologian $\T$ kanssa. 
-
-
-
-
-%TODO
-Kesken.
-\end{proof}
-\end{lause}
-\begin{lause}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus, 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti, 
-%$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
-%Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-%Olkoon 
-$(Y,\U)$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
-%jatkuva kuvaus (topologian $\T$ suhteen). 
-kuvaus. 
-Jos kuvaus $f$ on jatkuva uniformiteetin $\U$ määräämän topologian suhteen, %(topologian $\T$ suhteen), 
-niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen). 
-%Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
-%jos ja vain jos uniformiteetti $\U$ on 
-%avaruuden $(X,\T)$ universaali uniformiteetti. 
-\begin{proof}
-%%Osoitetaan väitteen implikaatio molempiin suuntiin.
-%%\begin{enumerate}
-%%\item[$\Rightarrow$]
-%%Olkoon kuvaus $f$ tasaisesti jatkuva. 
-%%\item[$\Leftarrow$]
-%Olkoon uniformiteetti $\U$ on 
-%avaruuden $(X,\T)$ universaali uniformiteetti. 
-%Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
-%%\end{enumerate}
-%TODO
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-Olkoon lisäksi $(Y,\U)$ uniforminen avaruus, $\T_{\U}$ uniformiteetin $\U$ määräämä topologia avaruudelle $Y$ ja $f\colon X\rightarrow Y$ 
-jatkuva kuvaus (topologian $\T_{\U}$ suhteen). 
-
-Olkoon $V\in \U$ lähistö ja $y\in Y$ alkio. 
-Tällöin $V(y)$ on alkion $y$ ympäristö topologiassa $\T_{\U}$. 
-Kuvaus $f$ on jatkuva, 
-joten alkukuva $f^\leftarrow V(y)\subset X$ on topologian $\T$ ympäristö. 
-Olkoon $x\in f^\leftarrow V(y)$, eli $f(x)\in V(y)$. 
-Oletetaan, että $x'\in X$ on sellainen alkio, jolla $f(x')= y$.
-Tällöin $(x,x')\in f^\leftarrow V$ 
-ja $(f(x),y)\in V$. 
-
-
-Kesken. Puuttuu osoitus, että on olemassa lähistö $W\in\U_0$ niin, että $(x,x')\in W$ ja $W\subset f^\leftarrow V$.
-
-
-%niin $f$ on myös tasaisesti jatkuva. 
-%Kesken.
-\end{proof}
-\end{lause}
-\begin{lause}
-Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-Olkoon tällöin  
-$\U$ sellainen joukon $X$ uniformiteetti, 
-joka on yhteensopiva topologian $\T$ kanssa ja 
-jolla avaruus $(X,\U)$ on täydellinen. 
-Tällöin myös $(X,\U')$ on täydellinen jokaisella 
-uniformiteetilla $\U'$, jolla 
-$\U\subset\U'\subset\U_0$.
-\begin{proof}
-%Cauchy-filtterit ovat samoja.
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
 %
-%
-\chapter{Hausdorff uniforminen avaruus}
-Tässä luvussa määritellään Hausdorff uniformiset avaruudet ja 
-esitetään niiden ominaisuuksia, 
-oleellisimpana täydelliseen Hausdorff uniformiseen avaruuteen laajentaminen.
-\begin{maar}
-%Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
-%Olkoon lisäksi $(f_i)_{i\in I}$ sellainen pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
-%Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille alkioille $x,y\in X$ on 
-%olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, 
-%jolla ehdosta $x\neq y$ seuraa $f_i(x,y)\neq 0$. 
-Olkoon $(X,\U)$ uniforminen avaruus ja $(f_i)_{i\in I}$ sellainen 
-pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
-Uniformiteetti $\U$ on \emph{Hausdorff}, jos jokaisilla alkioilla 
-$x,y\in X$ ehdosta $x\neq y$ seuraa $f_k(x,y)\neq 0$ 
-jollain pseudometriikalla $f_k\in(f_i)_{i\in I}$. 
-Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
-ja yhden pseudometriikan $f$ määrittelemä, 
-niin $f(x,y)\neq 0$ kaikilla $x,y\in X$, $x\neq y$.
-\end{maar}
-\begin{huom}
-%Olkoon $X$ joukko ja $\U$ pseudometriikkaperheen $(f_i)_{i\in I}$ 
-%määrittelemä uniformiteetti. 
-%Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
-Olkoon $X$ joukko ja $(f_i)_{i\in I}$ pseudometriikkaperhe joukolle $X$. 
-Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti ei ole 
-Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, 
-joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
-\end{huom}
-%\begin{lem}
-%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
-%ja $f$ pseudometriikka joukolle $X$. 
-%Tällöin pseudometriikan rajoittuma 
-%$f|_A\colon A\times A\rightarrow [0,\infty]$ kaavalla $ f|_A(x)=f(x)$ 
-%kaikilla $x\in A\times A$ 
-%on pseudometriikka joukolle $A$. \qed
-%\end{lem}
-%\begin{lem}
-%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
-%ja $(f_i)_{i\in I}$ pseudometriikkaperhe, 
-%joka määrää joukon $X$ uniformiteetin. 
-%Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
-%kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
-%\end{lem}
-\begin{lause}\label{complete}
-Olkoon $X$ uniforminen avaruus. 
-Tällöin on olemassa täydellinen (com\-plete) Hausdorff 
-uniforminen avaruus $\hat X$ ja tasaisesti jatkuva 
-kuvaus $i\colon X\rightarrow\hat X$, jolle pätee seuraava ominaisuus:
-\begin{enumerate} [label=(P),ref=(P)]
-%\begin{enumerate}
-\item %[(P)] 
-\label{ominaisuusP}
-Olkoon $Y$ täydellinen Hausdorff uniforminen avaruus 
-ja $f\colon X\rightarrow Y$ tasaisesti jatkuva kuvaus. 
-Tällöin on olemassa yksikäsitteinen tasaisesti 
-jatkuva $g\colon \hat X\rightarrow Y$, 
-jolla pätee $f=g\circ i$.
-\end{enumerate}
-Tällöin sanotaan, että avaruus $\hat X$ on avaruuden $X$ \emph{Hausdorff täydennys}.
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-\begin{lause}
-Olkoon $X$ uniforminen avaruus ja $\hat X$ Hausdorff täydennys avaruudelle $X$. 
-Olkoon lisäksi $X_1$ täydellinen Hausdorff 
-uniforminen avaruus ja $i_1\colon X\rightarrow X_1$
-tasaisesti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
-Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-\begin{kor}
-Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorff uniforminen avaruus. 
-Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
-isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{kor}
-\begin{lause}
-Olkoon $X$ ja $Y$ uniformeja avaruuksia ja $i_X\colon X\rightarrow\hat{X}$ ja $i_Y\colon Y\rightarrow\hat{Y}$ kanonisia kuvauksia. 
-Jokaiselle tasaisesti jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ 
-löytyy yksikäsitteinen tasaisesti jatkuva kuvaus $\hat{f}\colon \hat{X}\rightarrow \hat{Y}$, jolla oheinen diagrammi kommutoi. 
-%X--->Y
-%|    |
-%v    v
-%^X->^Y
-\begin{equation*}
-\begin{tikzpicture}
-\matrix (m) 
-[matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
-{
-X & Y \\
-\hat{X} & \hat{Y} \\
-};
-\path[-stealth]
-(m-1-1) edge node [left] {$i_X$} (m-2-1) edge node [above] {$f$} (m-1-2)
-(m-2-1) edge node [below] {$\hat{f}$} (m-2-2)
-(m-1-2) edge node [right] {$i_Y$} (m-2-2);
-\end{tikzpicture}
-\end{equation*}
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-\chapter{Kompakti uniforminen avaruus}
-
-\begin{maar}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
-ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-Olkoon $(f_i)_{i\in I}$ kaikkien uniformiteetin $\U$ suhteen tasaisesti jatkuvien kuvausten $f_i\colon X\rightarrow [0,1]$ perhe. 
-Tällöin merkitään symbolilla $\U^*$ sitä uniformiteettia, 
-joka on karkein niistä uniformiteeteista, 
-joilla kaikki kuvausperheen $(f_i)_{i\in I}$ 
-kuvaukset %$f\colon X\rightarrow [0,1]$ 
-ovat tasaisesti jatkuvia. 
-%joilla kaikki uniformiteetin $\U$ suhteen tasaisesti jatkuvat 
-%kuvaukset $f\colon X\rightarrow [0,1]$ ovat tasaisesti jatkuvia. 
-%uniformiteetin $\U^*$ suhteen. 
-\end{maar}
-
-\begin{lause}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
-%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-Tällöin uniformiteetti $\U^*$ on Hausdorff ja yhteensopiva topologian $\T$ kanssa. 
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-
-\begin{maar}
-%\emph{Esikompakti avaruus. Uniformisen avaruuden kompaktius.} 
-Uniforminen avaruus $X,\U$ on \emph{esikompakti}, 
-jos sen Hausdorff täydennys %(completion) 
-$\hat{X}$ on kompakti. 
-Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikompakti. 
-(Rajoitettu uniformiteetti $\U\vert _A=\{U\cap (A\times A)\mid U\in\U\}$.)
-\end{maar}
-
-\begin{lause}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
-%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-Tällöin avaruus $(X,\U^*)$ on esikompakti.
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-
-\begin{lause}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
-ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
-Olkoon $(K,\T')$ kompakti (topologinen) avaruus ja 
-$\U_{\T'}$ topologian $\T'$ kanssa yhteensopiva uniformiteetti. 
-Olkoon $f\colon X\rightarrow K$ kuvaus, joka on tasaisesti jatkuva uniformiteetin $\U$ suhteen. 
-%$f\colon (X,\U)\rightarrow (K,\U_{\T'})$ tasaisesti jatkuva kuvaus. 
-%Tällöin myös $f\colon (X,\U^*)\rightarrow (K,\U_{\T'})$ on 
-%tasaisesti jatkuva. 
-Tällöin kuvaus $f$ on tasaisesti jatkuva myös uniformiteetin $\U^*$ suhteen. 
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{lause}
-
-\begin{kor}
-Uniformiteetti $\U^*$ on hienoin niistä topologian $\T$ 
-kanssa yhteensopivista uniformiteeteista $\U$, 
-joilla $(X,\U)$ on esikompakti. 
-\begin{proof}
-%TODO
-Puuttuu.
-\end{proof}
-\end{kor}
-
-\begin{maar}
-\emph{Stone–Čech kompaktisointi.}
-Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
-$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
-Olkoon $\U^{*}_{0}$ karkein uniformiteetti, 
-jolla kaikki jatkuvat kuvaukset $f_i\colon X\rightarrow [0,1]$ 
-ovat tasaisesti jatkuvia. 
-Olkoon $\beta X$ avaruuden $(X,\U^{*}_{0})$ Hausdorff täydennys.
-%kompakti (topologinen) avaruus, 
-%joka saadaan täydentämällä avaruus $(X,\U^{*}_{0})$.
-Avaruutta $\beta X$ sanotaan avaruuden $(X,\T)$ 
-Stone–Čech kompaktisoinniksi.
-\end{maar}
-
+%\newpage
+%\begin{huom}
+%\end{huom}
 %\begin{lause}
-%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
-%$(K,\T')$ kompakti topologinen avaruus. 
-%Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
+%\end{lause}
+%\begin{maar}
+%\end{maar}
+%\begin{kor}
+%\end{kor}
+%\begin{esim}
+%\end{esim}
+%\begin{lem}
+%\end{lem}
+%
+%\chapter{Universaali uniforminen rakenne}
+%\begin{maar}
+%\emph{Universaali uniformiteetti.} 
+%Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$(f_i)_{i\in I}$ kaikkien jatkuvien pseudometriikkojen perhe, 
+%jossa $f_i\colon X\times X\rightarrow [0,\infty]$ 
+%kaikilla $i\in I$. 
+%Perheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
+%avaruuden $(X,\T)$ \emph{universaali uniformiteetti} (universal uniformity), 
+%jota merkitsemme symbolilla $\U_0$. 
+%\end{maar}
+%\begin{lause}
+%Uniformisoituvan topologisen avaruuden $(X,\T)$ universaali uniformiteetti $\U_0$ on hienoin niistä uniformiteeteista, jotka ovat yhteensopivia topologian $\T$ kanssa. 
+%\begin{proof}
+%Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+%Olkoon lisäksi $\U$ joukon $X$ uniformiteetti, 
+%joka on yhteensopiva topologian $\T$ kanssa. 
+%
+%
+%
+%
+%%TODO
+%Kesken.
+%\end{proof}
+%\end{lause}
+%\begin{lause}
+%Olkoon $(X,\T)$ uniformisoituva topologinen avaruus, 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti, 
+%%$\U$ joukon $X$ uniformiteetti, joka on yhteensopiva topologian $\T$ kanssa. 
+%%Jos $Y$ on uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+%%Olkoon 
+%$(Y,\U)$ uniforminen avaruus ja $f\colon X\rightarrow Y$ 
+%%jatkuva kuvaus (topologian $\T$ suhteen). 
+%kuvaus. 
+%Jos kuvaus $f$ on jatkuva uniformiteetin $\U$ määräämän topologian suhteen, %(topologian $\T$ suhteen), 
+%niin $f$ on myös tasaisesti jatkuva. %(uniformiteetin $\U_0$ suhteen). 
+%%Kuvaus $f$ on tasaisesti jatkuva (uniformiteetin $\U$ suhteen), 
+%%jos ja vain jos uniformiteetti $\U$ on 
+%%avaruuden $(X,\T)$ universaali uniformiteetti. 
+%\begin{proof}
+%%%Osoitetaan väitteen implikaatio molempiin suuntiin.
+%%%\begin{enumerate}
+%%%\item[$\Rightarrow$]
+%%%Olkoon kuvaus $f$ tasaisesti jatkuva. 
+%%%\item[$\Leftarrow$]
+%%Olkoon uniformiteetti $\U$ on 
+%%avaruuden $(X,\T)$ universaali uniformiteetti. 
+%%Tällöin uniformiteetin $\U$ indusoiman topologian $\T$ ympäristöt ovat muotoa $ V(x)$, jossa $V\in\T$ ja $x\in X$
+%%%\end{enumerate}
+%%TODO
+%Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+%Olkoon lisäksi $(Y,\U)$ uniforminen avaruus, $\T_{\U}$ uniformiteetin $\U$ määräämä topologia avaruudelle $Y$ ja $f\colon X\rightarrow Y$ 
+%jatkuva kuvaus (topologian $\T_{\U}$ suhteen). 
+%
+%Olkoon $V\in \U$ lähistö ja $y\in Y$ alkio. 
+%Tällöin $V(y)$ on alkion $y$ ympäristö topologiassa $\T_{\U}$. 
+%Kuvaus $f$ on jatkuva, 
+%joten alkukuva $f^\leftarrow V(y)\subset X$ on topologian $\T$ ympäristö. 
+%Olkoon $x\in f^\leftarrow V(y)$, eli $f(x)\in V(y)$. 
+%Oletetaan, että $x'\in X$ on sellainen alkio, jolla $f(x')= y$.
+%Tällöin $(x,x')\in f^\leftarrow V$ 
+%ja $(f(x),y)\in V$. 
+%
+%
+%Kesken. Puuttuu osoitus, että on olemassa lähistö $W\in\U_0$ niin, että $(x,x')\in W$ ja $W\subset f^\leftarrow V$.
+%
+%
+%%niin $f$ on myös tasaisesti jatkuva. 
+%%Kesken.
+%\end{proof}
+%\end{lause}
+%\begin{lause}
+%Olkoon $(X,\T)$ uniformisoituva topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+%Olkoon tällöin  
+%$\U$ sellainen joukon $X$ uniformiteetti, 
+%joka on yhteensopiva topologian $\T$ kanssa ja 
+%jolla avaruus $(X,\U)$ on täydellinen. 
+%Tällöin myös $(X,\U')$ on täydellinen jokaisella 
+%uniformiteetilla $\U'$, jolla 
+%$\U\subset\U'\subset\U_0$.
+%\begin{proof}
+%%Cauchy-filtterit ovat samoja.
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%%
+%%
+%\chapter{Hausdorff uniforminen avaruus}
+%Tässä luvussa määritellään Hausdorff uniformiset avaruudet ja 
+%esitetään niiden ominaisuuksia, 
+%oleellisimpana täydelliseen Hausdorff uniformiseen avaruuteen laajentaminen.
+%\begin{maar}
+%%Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
+%%Olkoon lisäksi $(f_i)_{i\in I}$ sellainen pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
+%%Uniformiteetti $\U$ on \emph{Hausdorff}, jos kaikille alkioille $x,y\in X$ on 
+%%olemassa pseudometriikka $f_i\in(f_i)_{i\in I}$, 
+%%jolla ehdosta $x\neq y$ seuraa $f_i(x,y)\neq 0$. 
+%Olkoon $(X,\U)$ uniforminen avaruus ja $(f_i)_{i\in I}$ sellainen 
+%pseudometriikkaperhe, joka määrittelee uniformiteetin $\U$. 
+%Uniformiteetti $\U$ on \emph{Hausdorff}, jos jokaisilla alkioilla 
+%$x,y\in X$ ehdosta $x\neq y$ seuraa $f_k(x,y)\neq 0$ 
+%jollain pseudometriikalla $f_k\in(f_i)_{i\in I}$. 
+%Erityisesti, jos uniformiteetti $\U$ on Hausdorff 
+%ja yhden pseudometriikan $f$ määrittelemä, 
+%niin $f(x,y)\neq 0$ kaikilla $x,y\in X$, $x\neq y$.
+%\end{maar}
+%\begin{huom}
+%%Olkoon $X$ joukko ja $\U$ pseudometriikkaperheen $(f_i)_{i\in I}$ 
+%%määrittelemä uniformiteetti. 
+%%Uniformiteetti $\U$ ei ole Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
+%Olkoon $X$ joukko ja $(f_i)_{i\in I}$ pseudometriikkaperhe joukolle $X$. 
+%Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti ei ole 
+%Hausdorff, jos on olemassa sellaiset alkiot $x,y\in X$, 
+%joilla $x\neq y$ ja $f_k(x,y)=0$ kaikilla $f_k\in (f_i)_{i\in I}$.
+%\end{huom}
+%%\begin{lem}
+%%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+%%ja $f$ pseudometriikka joukolle $X$. 
+%%Tällöin pseudometriikan rajoittuma 
+%%$f|_A\colon A\times A\rightarrow [0,\infty]$ kaavalla $ f|_A(x)=f(x)$ 
+%%kaikilla $x\in A\times A$ 
+%%on pseudometriikka joukolle $A$. \qed
+%%\end{lem}
+%%\begin{lem}
+%%Olkoon $X$ uniforminen avaruus, $A\subset X$ epätyhjä osajoukko 
+%%ja $(f_i)_{i\in I}$ pseudometriikkaperhe, 
+%%joka määrää joukon $X$ uniformiteetin. 
+%%Tällöin joukon $X$ uniformiteetti määrää joukolle $A$ saman uniformiteetin 
+%%kuin pseudometriikkaperhe $(f_i|_A)_{i\in I}$.
+%%\end{lem}
+%\begin{lause}\label{complete}
+%Olkoon $X$ uniforminen avaruus. 
+%Tällöin on olemassa täydellinen (com\-plete) Hausdorff 
+%uniforminen avaruus $\hat X$ ja tasaisesti jatkuva 
+%kuvaus $i\colon X\rightarrow\hat X$, jolle pätee seuraava ominaisuus:
+%\begin{enumerate} [label=(P),ref=(P)]
+%%\begin{enumerate}
+%\item %[(P)] 
+%\label{ominaisuusP}
+%Olkoon $Y$ täydellinen Hausdorff uniforminen avaruus 
+%ja $f\colon X\rightarrow Y$ tasaisesti jatkuva kuvaus. 
+%Tällöin on olemassa yksikäsitteinen tasaisesti 
+%jatkuva $g\colon \hat X\rightarrow Y$, 
+%jolla pätee $f=g\circ i$.
+%\end{enumerate}
+%Tällöin sanotaan, että avaruus $\hat X$ on avaruuden $X$ \emph{Hausdorff täydennys}.
 %\begin{proof}
 %%TODO
 %Puuttuu.
 %\end{proof}
 %\end{lause}
-
-
+%\begin{lause}
+%Olkoon $X$ uniforminen avaruus ja $\hat X$ Hausdorff täydennys avaruudelle $X$. 
+%Olkoon lisäksi $X_1$ täydellinen Hausdorff 
+%uniforminen avaruus ja $i_1\colon X\rightarrow X_1$
+%tasaisesti jatkuva kuvaus, jolla on ominaisuus \ref{ominaisuusP}. 
+%Tällöin on olemassa yksikäsitteinen isomorfismi $\varphi\colon\hat X\rightarrow X_1$, jolla pätee $i_1=\varphi\circ i$.
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%\begin{kor}
+%Olkoon $X$ on Hausdorff uniforminen avaruus ja $\hat X$ määritelmän \ref{complete} mukainen täydellinen Hausdorff uniforminen avaruus. 
+%Niin sanottu kanoninen kuvaus $i\colon X\rightarrow\hat X$ määrää 
+%isomorfismin $X\rightarrow X'$, jossa $X'\subset \hat X$ on tiheä joukossa $\hat X$.
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{kor}
+%\begin{lause}
+%Olkoon $X$ ja $Y$ uniformeja avaruuksia ja $i_X\colon X\rightarrow\hat{X}$ ja $i_Y\colon Y\rightarrow\hat{Y}$ kanonisia kuvauksia. 
+%Jokaiselle tasaisesti jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ 
+%löytyy yksikäsitteinen tasaisesti jatkuva kuvaus $\hat{f}\colon \hat{X}\rightarrow \hat{Y}$, jolla oheinen diagrammi kommutoi. 
+%%X--->Y
+%%|    |
+%%v    v
+%%^X->^Y
+%\begin{equation*}
+%\begin{tikzpicture}
+%\matrix (m) 
+%[matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
+%{
+%X & Y \\
+%\hat{X} & \hat{Y} \\
+%};
+%\path[-stealth]
+%(m-1-1) edge node [left] {$i_X$} (m-2-1) edge node [above] {$f$} (m-1-2)
+%(m-2-1) edge node [below] {$\hat{f}$} (m-2-2)
+%(m-1-2) edge node [right] {$i_Y$} (m-2-2);
+%\end{tikzpicture}
+%\end{equation*}
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%\chapter{Kompakti uniforminen avaruus}
+%
+%\begin{maar}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
+%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+%Olkoon $(f_i)_{i\in I}$ kaikkien uniformiteetin $\U$ suhteen tasaisesti jatkuvien kuvausten $f_i\colon X\rightarrow [0,1]$ perhe. 
+%Tällöin merkitään symbolilla $\U^*$ sitä uniformiteettia, 
+%joka on karkein niistä uniformiteeteista, 
+%joilla kaikki kuvausperheen $(f_i)_{i\in I}$ 
+%kuvaukset %$f\colon X\rightarrow [0,1]$ 
+%ovat tasaisesti jatkuvia. 
+%%joilla kaikki uniformiteetin $\U$ suhteen tasaisesti jatkuvat 
+%%kuvaukset $f\colon X\rightarrow [0,1]$ ovat tasaisesti jatkuvia. 
+%%uniformiteetin $\U^*$ suhteen. 
+%\end{maar}
+%
+%\begin{lause}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
+%%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+%Tällöin uniformiteetti $\U^*$ on Hausdorff ja yhteensopiva topologian $\T$ kanssa. 
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%
+%\begin{maar}
+%%\emph{Esikompakti avaruus. Uniformisen avaruuden kompaktius.} 
+%Uniforminen avaruus $X,\U$ on \emph{esikompakti}, 
+%jos sen Hausdorff täydennys %(completion) 
+%$\hat{X}$ on kompakti. 
+%Epätyhjä osajoukko $A\subset X$ on esikompakti, jos $(A,\U\vert _A)$ on esikompakti. 
+%(Rajoitettu uniformiteetti $\U\vert _A=\{U\cap (A\times A)\mid U\in\U\}$.)
+%\end{maar}
+%
+%\begin{lause}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus. 
+%%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+%Tällöin avaruus $(X,\U^*)$ on esikompakti.
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%
+%\begin{lause}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus 
+%ja $\U$ topologian $\T$ kanssa yhteensopiva uniformiteetti. 
+%Olkoon $(K,\T')$ kompakti (topologinen) avaruus ja 
+%$\U_{\T'}$ topologian $\T'$ kanssa yhteensopiva uniformiteetti. 
+%Olkoon $f\colon X\rightarrow K$ kuvaus, joka on tasaisesti jatkuva uniformiteetin $\U$ suhteen. 
+%%$f\colon (X,\U)\rightarrow (K,\U_{\T'})$ tasaisesti jatkuva kuvaus. 
+%%Tällöin myös $f\colon (X,\U^*)\rightarrow (K,\U_{\T'})$ on 
+%%tasaisesti jatkuva. 
+%Tällöin kuvaus $f$ on tasaisesti jatkuva myös uniformiteetin $\U^*$ suhteen. 
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{lause}
+%
+%\begin{kor}
+%Uniformiteetti $\U^*$ on hienoin niistä topologian $\T$ 
+%kanssa yhteensopivista uniformiteeteista $\U$, 
+%joilla $(X,\U)$ on esikompakti. 
+%\begin{proof}
+%%TODO
+%Puuttuu.
+%\end{proof}
+%\end{kor}
+%
+%\begin{maar}
+%\emph{Stone–Čech kompaktisointi.}
+%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
+%$\U_0$ avaruuden $(X,\T)$ universaali uniformiteetti. 
+%Olkoon $\U^{*}_{0}$ karkein uniformiteetti, 
+%jolla kaikki jatkuvat kuvaukset $f_i\colon X\rightarrow [0,1]$ 
+%ovat tasaisesti jatkuvia. 
+%Olkoon $\beta X$ avaruuden $(X,\U^{*}_{0})$ Hausdorff täydennys.
+%%kompakti (topologinen) avaruus, 
+%%joka saadaan täydentämällä avaruus $(X,\U^{*}_{0})$.
+%Avaruutta $\beta X$ sanotaan avaruuden $(X,\T)$ 
+%Stone–Čech kompaktisoinniksi.
+%\end{maar}
+%
+%%\begin{lause}
+%%Olkoon $(X,\T)$ täysin säännöllinen topologinen avaruus ja 
+%%$(K,\T')$ kompakti topologinen avaruus. 
+%%Tällöin jokainen jatkuva kuvaus $f\colon X\rightarrow K$, voidaan laajentaa kuvaukseksi $f'\colon \beta X\rightarrow K$.
+%%\begin{proof}
+%%%TODO
+%%Puuttuu.
+%%\end{proof}
+%%\end{lause}
+%
+%
 
 
 %\begin{huom}
