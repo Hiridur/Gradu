@@ -1931,7 +1931,8 @@ ja siis $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline
 \begin{maar}
 Topologisen avaruuden $X$ kompaktisointi on pari $(\hat{X},h)$, 
 jossa $\hat{X}$ on kompakti Hausdorff avaruus 
-ja $h$ on homeomorfismi $X\rightarrow h(X)\subset\hat{X}$, jossa $h(X)$ on tiheä avaruudessa $\hat{X}$. 
+ja $h$ on sellainen homeomorfismi $X\rightarrow h(X)\subset\hat{X}$, 
+jolla $h(X)$ on tiheä avaruudessa $\hat{X}$, eli $\overline{ h(X)}=\hat{X}$. 
 \end{maar}
 \begin{huom}
 Usein samaistetaan avaruus $X$ ja osajoukko $h(X)\subset\hat{X}$ ja sanotaan, 
@@ -2023,9 +2024,19 @@ Siis kuvaus $F$ on homeomorfismi avaruuksien $\beta X$ ja $\hat{X}$ välille.
 Olkoon $X$ täysin säännöllinen avaruus 
 ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
 %3
-$\beta X$ on laajin kompaktisointi avaruudelle $X$: Jos $\hat{X}$ on avaruuden $X$ kompaktisointi, niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus, eli $\hat{X}$ on homeomorfinen $\beta X / K(F)$ kanssa jollain $K(F)$.
+$\beta X$ on laajin kompaktisointi avaruudelle $X$: 
+Jos $\hat{X}$ on avaruuden $X$ kompaktisointi, 
+niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus. 
+Kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden $\beta X / \sim$ kanssa, 
+kun $\sim$ on ekvivalenssirelaatio $a\sim a'$, kun $F(a)=F(a')$, $a,a'\in \beta X$.
 \begin{proof}
-
+Lauseen \ref{SC-ominaisuus} nojalla on olemassa 
+jatkuva kuvaus $F\colon \beta X\rightarrow \hat{X}$, 
+jolla $F(x)=x$ kaikilla $x\in X$. 
+$\beta X$ on kompakti, joten $F(\beta X)$ on suljettu joukko, 
+joka sisältää tiheän osajoukon $X\subset \hat{X}$. 
+Näin ollen $\overline{X}\subset F(\beta X)= \hat{X}$ 
+ja siten kuvaus $F$ on surjektio. 
 \end{proof}
 \end{lause}
 
@@ -2372,6 +2383,9 @@ Nicolas Bourbaki: General Topology Part 2, 1.\ painos, Hermann, 1966.
 %
 \bibitem{Topo2}
 Jussi Väisälä: Topologia II, 2.\ korjattu painos, Limes ry, 2005.
+
+\bibitem{Dugu}
+James Dugundji: Topology, 11.\ korjattu painos, Allyn and Bacon, 1976.
 
 %\bibitem{Hei}
 %Juha Heinonen: Geometric embeddings of metric spaces, luentomoniste, Jyväskylän yliopisto, 2003
