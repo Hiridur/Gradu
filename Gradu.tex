@@ -84,9 +84,11 @@
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
 \chapter{Esitietoja}
+Tässä luvussa käydään läpi tutkielmassa käytettäviä topologiaan ja joukkomerkintöihin liittyviä käsitteitä ja merkintätapoja. 
+Perusteellisemmin näistä aiheesta löytyy muun muassa kirjoista General Topology Part 1 \cite{Eom1} ja Topologia II \cite{Topo2}.
+\begin{sopimus}
 Käytämme koko tutkielman ajan merkintää $\R_+=\{a\in\R\mid a>0\}$.
-\\
-\\
+\end{sopimus}
 \begin{maar}
 Olkoon $X$ joukko ja $V$ ja $W$ karteesisen tulon $X\times X$ osajoukkoja.
 Merkitään tällöin %joukkoilla $V$ ja $W$ 
@@ -109,8 +111,10 @@ osa\-jouk\-ko $A\subset X$ on alkion $x$ \emph{ympäristö},
 jos on olemassa sellainen avoin osajoukko $B\subset X $, jolla $x\in B\subset A$.
 \end{maar}
 \begin{huom}
-Topologisen avaruuden $(X,\T)$ avoin osajoukko $A\subset X$ on 
-jokaisen alkionsa $x\in A$ ympäristö.
+%Topologisen avaruuden $(X,\T)$ avoin osajoukko $A\subset X$ on 
+%jokaisen alkionsa $x\in A$ ympäristö.
+Topologisen avaruuden avoin osajoukko on 
+jokaisen alkionsa ympäristö.
 \end{huom}
 \begin{maar}%Topo2 2.14
 \emph{Ympäristökanta.} 
@@ -157,7 +161,7 @@ jos jokaisella $ U\in\T_2$ pätee $ U\in\T_1$, eli $ \T_2\subset\T_1$.
 Tällöin $\T_1$ on hienompi kuin $\T_2$.
 \end{maar}
 \chapter{Uniformiset rakenteet}
-Tässä kappaleessa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
+Tässä luvussa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
 %\\
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
