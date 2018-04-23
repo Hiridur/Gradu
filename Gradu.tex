@@ -891,38 +891,38 @@ Siis kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa joukon $\R^n$ uniformitee
 \end{lause}
 \noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
 \begin{lause}\label{pseudo_uniformi_maar}
-Olkoon $X$ joukko ja $f$ pseudometriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittelee sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $$B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in[0,\infty]\}.$$
+Olkoon $X$ joukko ja $f$ pseudometriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittelee sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $$B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}.$$
 \begin{proof}
-Olkoon $a\in[0,\infty]$ luku. 
+Olkoon $a\in\,]0,\infty]$ luku. 
 Näin ollen $f^{\leftarrow}[0,a]\subset X\times X$ on joukko. 
 Merkitään $U_a=f^{\leftarrow}[0,a]$ ja 
 käydään läpi lauseen \ref{uniformin kannan maar} ehdot:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
-Olkoot $a_1,a_2\in[0,\infty]$ lukuja, joilla $a_1\leq a_2$. 
+Olkoot $a_1,a_2\in\,]0,\infty]$ lukuja, joilla $a_1\leq a_2$. 
 Tällöin pätee $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
 Kuvaus $f$ on pseudometriikka, joten pseudometriikan määritelmän \ref{pseudo_maar} ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. 
-Toisin sanoen pistepareista $(x,x)$ muodostuvan joukon $\{(x,x)\mid x\in X\}$ jokainen alkio kuvautuu pseudometriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ kaikilla $a\in [0,\infty]$.
+Toisin sanoen pistepareista $(x,x)$ muodostuvan joukon $\{(x,x)\mid x\in X\}$ jokainen alkio kuvautuu pseudometriikassa nollaksi. Näin ollen joukko $\{(x,x)\mid x\in X\}$ sisältyy jokaisen suljetun välin $[0,a]$ alkukuvaan $f^{\leftarrow}[0,a]$ jokaisella $a\in \,]0,\infty]$.
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
 Pseudometriikan ehdosta \ref{EC_II} seuraa, että $f(x,y)=f(y,x)$ kaikilla $x,y\in X$. 
 Tällöin $(x,y)\in U_a\Leftrightarrow (y,x)\in U_a$ ja siis $U_a^{-1}=U_a$, eli jokaiselle $U_a$ pätee $U_a\subset U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in X$ sellaisia alkioita, 
+Olkoon $a\in\,]0,\infty]$ luku ja $x,y,z\in X$ sellaisia alkioita, 
 joilla $(x,z),(z,y)\in U_a$, 
 %joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, 
 eli $f(x,z)\leq a$ ja $f(z,y)\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin pseudometriikan ehdosta \ref{EC_III} seuraa 
 $$f(x,y)\leq f(x,z)+f(z,y)\leq a+a=2a,$$ 
-eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2\subset U_{2a} $, joten jokaiselle luvun $b\in[0,\infty]$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
+eli $f(x,y)\leq 2a$. Tästä seuraa, että $U_a^2\subset U_{2a} $, joten jokaiselle luvun $b\in\,]0,\infty]$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Siis kokoelma $B=\{U_a\mid a\in[0,\infty]\}
-=\{f^{\leftarrow}[0,a]\mid a\in[0,\infty]\}
+Siis kokoelma $B=\{U_a\mid a\in\,]0,\infty]\}
+=\{f^{\leftarrow}[0,a]\mid a\in\,]0,\infty]\}
 $ muodostaa joukon $X$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
@@ -930,7 +930,7 @@ $ muodostaa joukon $X$ uniformiteetin kannan.
 Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Tällöin lauseen \ref{pseudo_uniformi_maar} nojalla 
 pseudometriikat $f$ ja $g$ määrittelevät jotkut uniformiteetit joukolle $X$.
-%kokoelmat $B_f=\{ f^{\leftarrow}[0,a]\mid a\in[0,\infty]\}$ ja $B_g=\{ g^{\leftarrow}[0,a]\mid a\in[0,\infty]\}$ ovat uniformiteettien kantoja joukolle $X$. 
+%kokoelmat $B_f=\{ f^{\leftarrow}[0,a]\mid a\in\,]0,\infty]\}$ ja $B_g=\{ g^{\leftarrow}[0,a]\mid a\in\,]0,\infty]\}$ ovat uniformiteettien kantoja joukolle $X$. 
 Pseudometriikat $f$ ja $g$ ovat \emph{ekvivalentteja}, jos ne määräävät saman uniformiteetin.
 \end{maar}
 \begin{kor}
@@ -938,17 +938,17 @@ Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$.
 Määritelmästä \ref{pseudo_equiv} seuraa, että pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
-$a\in[0,\infty]$ on olemassa sellainen $b\in[0,\infty]$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
+$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
 
-Jos lisäksi jokaiselle $a\in[0,\infty]$ on olemassa $b\in[0,\infty]$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+Jos lisäksi jokaiselle $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
 \begin{proof}
 Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittelemän uniformiteetin $\U_f$ kannan muodostaa kokoelma 
-$$B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in[0,\infty]\}.$$ 
+$$B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}.$$ 
 Tällöin uniformiteetti $ \U_f$ on kokoelma 
-$$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in[0,\infty]\}.$$
-Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $$B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in[0,\infty]\}$$ ja uniformiteetti $ \U_g$ on kokoelma 
-$$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in[0,\infty]\}.$$ 
+$$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\,]0,\infty]\}.$$
+Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $$B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}$$ ja uniformiteetti $ \U_g$ on kokoelma 
+$$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\,]0,\infty]\}.$$ 
 Osoitetaan väitteen implikaatio molempiin suuntiin.
 \begin{enumerate}
 \item[$\Rightarrow$] 
@@ -965,12 +965,12 @@ jokaiselle $(x,y)\in V$ pätee $(x,y)\in V'$ kaikilla $x,y\in X$.
 Tarkas\-tele\-mal\-la uniformiteettien kantojen jäseniä 
 %saamme edeltävän ehdon seuraavaan muotoon: 
 voidaan edeltävä ehto muotoilla seuraavasti: 
-Jokaisella $a\in[0,\infty]$ on olemassa $b\in[0,\infty]$ niin, 
+Jokaisella $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$ niin, 
 että kaikilla $x,y\in X$ pätee 
 $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, 
 eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
 \item[$\Leftarrow$] Oletetaan, että jokaiselle luvulle 
-$a\in[0,\infty]$ on olemassa sellainen $b\in[0,\infty]$, jolla 
+$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, jolla 
 $g(x,y)\leq b \Rightarrow f(x,y)\leq a,
 $ %\text{ 
 eli %}
@@ -979,8 +979,8 @@ kaikilla $x,y\in X$.
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
 \\
 Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle 
-$f^{\leftarrow}[0,a']$ missä $a'\in[0,\infty] $ on olemassa uniformiteetin $\U_g$ 
-kannan jäsen $g^{\leftarrow}[0,b']$ missä $b'\in[0,\infty]$ niin, 
+$f^{\leftarrow}[0,a']$ missä $a'\in\,]0,\infty] $ on olemassa uniformiteetin $\U_g$ 
+kannan jäsen $g^{\leftarrow}[0,b']$ missä $b'\in\,]0,\infty]$ niin, 
 että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$. 
 %että ehdosta $(x,y)\in g^{\leftarrow}[0,b']$ 
 %%\Rightarrow 
@@ -1095,7 +1095,6 @@ osaperheen
 $(g_A)$ pienin yläraja $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
 %$(g_A)$ supremum $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
 \end{proof}
-\newpage
 \end{lause}
 \begin{lause}
 Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
@@ -1145,7 +1144,7 @@ jokaisella äärellisellä osajoukolla $H'\subset I$.
 
 
 
-%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in[0,\infty] \}$$
+%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\,]0,\infty] \}$$
 %TODO
 Kesken.
 \end{proof}
@@ -1202,7 +1201,7 @@ että $f_i(x,y)\leq f_{i_{(x,y)}}(x,y)$ kaikilla $i\in I$.
 %indeksillä $i\in I$. 
 %%$\sup_{i\in I} f_i(x)=\max_{i\in I} f_i(x)$. 
 %Olkoon $a\in[0,\infty]$ alkio. 
-Näin ollen jokaisella $a\in [0,\infty]$ pätee  
+Näin ollen jokaisella $a\in \,]0,\infty]$ pätee  
 $$g^\leftarrow[0,a]=\{(x,y)\subset X\times X\mid 
 f_i(x,y)\leq a \text{ kaikilla } i\in I
 \}=\bigcap_{i\in I} f_i^\leftarrow[0,a].$$
@@ -1220,20 +1219,20 @@ Pseudometriikan $g
 $
 määräämän uniformiteetin kanta on siis
 %$$B=\left\{\bigcap_{i\in J}V_i\mid J\subset I, V_i\in \U_{f_i} \text{ kaikilla }i\in J\right\}.$$
-$$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}
-=\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in[0,\infty]\right\}.$$
+$$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in\,]0,\infty]\right\}
+=\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in\,]0,\infty]\right\}.$$
 Lauseen \ref{pseudo_uniformi_maar} nojalla jokaisella $i\in I$ 
-alkukuvat $f_i^\leftarrow[0,a]$, $a\in[0,\infty]$ 
+alkukuvat $f_i^\leftarrow[0,a]$, $a\in\,]0,\infty]$ 
 muodostavat kannan uniformiteetille $\U_{f_i}$. 
 %Nyt $B_f\subset B_g$, koska  $ f_i^\leftarrow[0,a]\in\U_{f_i}$ 
 %kaikilla $i\in I$ ja $a\in [0,\infty]$. 
-Erityisesti jokaiselle $V_i\in\U_{f_i}$ löytyy $a\in [0,\infty]$, 
+Erityisesti jokaiselle $V_i\in\U_{f_i}$ löytyy $a\in \,]0,\infty]$, 
 jolla $ f_i^\leftarrow[0,a]\subset V_i$.
 Näin ollen kannan $B_g$ määrittelemälle uniformiteetille $\U_g$ pätee 
 \begin{equation*}
 \begin{split}
 \U_g=&\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_g\}\\
-=&\left\{W\subset X\times X\mid \bigcap_{i\in I} f_i^\leftarrow[0,a]\subset W\text{ jollain }a\in[0,\infty]\right\}\\
+=&\left\{W\subset X\times X\mid \bigcap_{i\in I} f_i^\leftarrow[0,a]\subset W\text{ jollain }a\in\,]0,\infty]\right\}\\
 =&\left\{W\subset X\times X\mid \bigcap_{i\in I} V_i\subset W\text{ jollain }V_i\in \U_i,i\in I\right\}\\
 =&\left\{W\subset X\times X\mid V\subset W\text{ jollain }V\in B_f\right\}\\
 =&\U_f.
@@ -1247,7 +1246,7 @@ Siis $\U_{f}= \U_{g}$.
 Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
-jos jokaisella $i\in I$ ja $a\in[0,\infty]$ löytyy $j\in J$ ja $b\in[0,\infty]$, 
+jos jokaisella $i\in I$ ja $a\in\,]0,\infty]$ löytyy $j\in J$ ja $b\in\,]0,\infty]$, 
 joilla ehdosta $g_j(x,y)\leq b$ seuraa $f_i(x,y)\leq a$. 
 Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.$\qed$
 %\begin{proof}
@@ -1270,10 +1269,9 @@ Näin ollen kantojen leikkaus
 $$\left\{\bigcap_{V\in H}U_V\mid H\subset\U \text{ äärellinen }, U_V\in B_V\right\}$$
 on numeroituva kanta uniformiteetille $\U$.
 %Tällöin lemma on seuraus seuraavasta lauseesta.
-Tällöin lemma on seuraus lauseesta \ref{numeroituvakantalause}.
+Tällöin lemma seuraa suoraan lauseesta \ref{numeroituvakantalause}.
 %, sillä 
 %$(U_n)$ on uniformiteetin $\U$ numeroituva kanta.
-\\Kesken: Onko $\U$:n mahtavuudella vaikutusta?
 %TODO
 \end{proof}
 \end{lem}
@@ -1722,21 +1720,21 @@ Lauseen \ref{pseudo_uniformista} nojalla uniformiteetille $\U$ voidaan
 määritellä pseudometriikkaperhe $(f_i)_{i\in I}$, joka indusoi uniformiteetin $\U$. 
 Lisäksi korollaarin \ref{saturoitu oletus} nojalla voidaan olettaa 
 pseudometriikkaperheen $(f_i)_{i\in I}$ olevan saturoitu. 
-Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in[0,\infty]$, $\alpha\in I$ 
+Tällöin määritelmän \ref{pseudo_uniformi_maar} nojalla on olemassa $ a\in\,]0,\infty]$, $\alpha\in I$ 
 ja pseudometriikka $f_\alpha\in (f_i)_{i\in I}$, 
 jolla $f_\alpha(x_0,x_0)=0$ ja $f_\alpha (x_0,x)\geq a$ kaikilla $x\in X\setminus V_0$. 
-Tämän seurauksena kuvaus $g\colon X\to [0,1]$ kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ 
-pisteelle $x_0$ ja ympäristölle $V_0$ toteuttaa ehdon \ref{O_IV}.
+Tämän seurauksena kaavalla $g(x)=\inf \left( 1,\frac{1}{a}f_\alpha(x_0,x) \right)$ määritelty kuvaus $g\colon X\to [0,1]$ 
+toteuttaa ehdon \ref{O_IV} pisteelle $x_0$ ja ympäristölle $V_0$.
 
 Toisaalta ehto on myös riittävä:
 Olkoon $(X,\T)$ topologinen avaruus, jolla ehto \ref{O_IV} pätee. 
 Olkoon $x_0\in X$ alkio, $V_0\subset X$ alkion $x_0$ ympäristö 
 ja $f\colon X\rightarrow [0,1]$ ehdon \ref{O_IV} antama kuvaus alkiolle $x_0$ ja sen ympäristölle $V_0$. 
-Tällöin kuvaus $g\colon X\times X\to [0,\infty]$ kaavalla $g(x_0,x)=f(x)$ on pseudometriikka. 
+Tällöin kaavalla $g(x_0,x)=f(x)$ määritelty kuvaus $g\colon X\times X\to [0,\infty]$ on pseudometriikka. 
 %Olkoon $(g_i)_{i\in I}$ näin muodostettujen pseudometriikkojen perhe ja olkoon $\U$ kyseisen pseudometriikkaperheen määräämä uniformiteetti.
 %, jonka määrää pseudometriikkaperhe $(g_i)_{i\in I}$ joukon $X$.
 Olkoon $\U$ pseudometriikan $g$ määräämä uniformiteetti ja 
-$ a\in [0,\infty]$ luku. 
+$ a\in \,]0,\infty]$ luku. 
 Tällöin $g^\leftarrow[0,a]=\{(x,y)\mid g(x,y)\leq a\}$ on 
 lähistö pseudometriikan $g$ määräämässä uniformiteetissa $\U$. 
 %Merkitään $U_a=g^\leftarrow[0,a]$ joukko.
@@ -1747,8 +1745,8 @@ joukko $U_a(x_0)=\{y\mid g(x_0,y)\leq a\}$ on alkion $x_0$ ympäristö uniformit
 indusoimassa topologiassa $\T'$. 
 Joukkojen määrittelyistä seuraa, että jos $a<1$, niin $U_a(x)\subset V_0$ ja tällöin kokoelma $B=\{U_a(x_0)\mid g(x_0,y)\leq a\}$ 
 on alkion $x_0$ ympäristökanta topologiassa $\T$.
-%Toisaalta kokoelma $B=\{U_a\mid a\in[0,\infty] \}$ muodostaa kannan uniformiteetille $\U$ 
-%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in[0,\infty] \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
+%Toisaalta kokoelma $B=\{U_a\mid a\in\,]0,\infty] \}$ muodostaa kannan uniformiteetille $\U$ 
+%ja tällöin kokoelma $B(x)=\{U_a(x)\mid a\in\,]0,\infty] \}$ on alkion $x$ ympäristökanta topologiassa $\T'$. 
 %
 %Toisaalta topologian $\T$ ympäristökanta on myös 
 
@@ -2054,7 +2052,7 @@ jolla $\rho(a)=[a]$ kaikilla $a\in\beta X$. Kuvaus $F$ on jatkuva,
 $\rho$ on projektiokuvauksena jatkuva ja $F=F_{\sim}\circ \rho$, 
 joten $F_{\sim}$ on jatkuva. 
 
-(Puuttuu perustelu miksi $F_{\sim}$ on avoin.)
+(Puuttuu perustelu miksi $F_{\sim}$ on avoin kuvaus.)
 
 Tällöin kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
 $\beta X / \sim$ kanssa. 
