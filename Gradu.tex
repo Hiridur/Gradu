@@ -161,7 +161,13 @@ jos jokaisella $ U\in\T_2$ pätee $ U\in\T_1$, eli $ \T_2\subset\T_1$.
 Tällöin $\T_1$ on hienompi kuin $\T_2$.
 \end{maar}
 \chapter{Uniformiset rakenteet}
-Tässä luvussa tutustutaan uniformisiin rakenteisiin ja näiden keskeisiin ominaisuuksiin \cite{Eom1}.
+%Tässä luvussa tutustutaan uniformisiin rakenteisiin. 
+Topologian kannalta kahden eri pisteen etäisyyttä toisiinsa voidaan tutkia lähinnä siltä kannalta, että kuuluvatko ne toistensa jokaiseen ympäristöön, eli ovatko ne hyvin lähellä toisiaan. 
+Metriikka puolestaan antaa jokaiselle kahdelle pisteelle tarkan etäisyyden. 
+Topologian ja metriikan väliltä löytyy uniforminen rakenne \cite{Eom1}, 
+jossa vertaillaan pisteparien etäisyyksiä toisiinsa. 
+Tässä luvussa tutustutaan uniformisiin rakenteisiin. 
+Lisäksi käsitellään uniformisen rakenteen yhteyttä topologiaan. 
 %\\
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
@@ -748,7 +754,9 @@ Olkoon $(\U_i)_{i\in I}$ perhe uniformiteetteja joukolle $X$.
 Tällöin perheen $(\U_i)_{i\in I}$ \emph{pienin yläraja} on uniformiteetti $\U$, joka on kuvausten $id\colon X\rightarrow (X,\U_i)$ määritelmän \ref{kuvausperheen indusoima} mukaisesti indusoima.
 \end{maar}
 \chapter{Pseudometriikat}
-Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
+Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. 
+
+Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %\\
 \begin{maar}\label{pseudo_maar}
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ 
@@ -848,6 +856,12 @@ f(x,y)=\sup_{i\in I}f_i(x,y)
 on pseudometriikka. 
 \end{esim}
 \chapter{Pseudometriikan määrittelemä uniformiteetti}\label{luku_pseudo_uniformi}
+Tässä luvussa käsitellään pseudometriikan ja uniformiteetin yhteyttä. 
+Näytetään miten pseudometriikan ja pseudometriikkaperheen avulla voidaan muodostaa uniformiteetti 
+ja toisaalta miten mille tahansa uniformiteetille löytyy pseudometriikka, 
+jonka avulla kyseinen uniformiteetti voidaan muodostaa. 
+Lisäksi esitellään pseudometriikkaperheen saturointi. 
+Lisätietoja tämän luvun aiheista löytyy teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $[0,\infty]=\{a\in\R\mid a>0\}$.
 \begin{lause}
 Olkoon $a\in[0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko, 
@@ -1397,9 +1411,11 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %
 %
 \chapter{Täydellinen uniforminen avaruus}
-Tässä luvussa määritellään täydellinen uniforminen avaruus minimaalisten Cauchy-filtterien avulla.
-
-Sellaiselle joukolle, jolle on määritelty uniformiteetti voidaan määritellä 
+Tässä luvussa esitellään filtterit ja täydellinen uniforminen avaruus, joka määritellään Cauchy-filtterien avulla. 
+Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 1 \cite{Eom1} luvusta III ja General Topology part 2 \cite{Eom2} luvuista IX.
+\\
+\\
+Uniformiselle avaruudelle voidaan määritellä 
 uniformiteetin lähistöjen suhteen \emph{tarpeeksi pienet} osa\-jou\-kot. 
 Osajoukko on lähistön suhteen tarpeeksi pieni silloin, 
 kun kaikki osajoukon alkiot ovat 
@@ -1682,7 +1698,11 @@ minimaalinen Cauchy-filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
 %
 \chapter{Täysin säännölliset avaruudet}
 %Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
-Tässä luvussa esitellään uniformisoituva (uniformizable) topologinen avaruus ja annetaan tätä karakterisoiva ehto.
+Tässä luvussa esitellään uniformisoituva topologinen avaruus  
+%ja esitetään uniformisoituvuuden kanssa yhtäpitävä ehto. 
+täysin säännöllinen avaruus, joka määritellään uniformisoituvuuden avulla. 
+Lisäksi esitellään merkittävä tulos, jossa täysin säännöllinen avaruus upotetaan yksikkövälien tuloon. 
+Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 2 \cite{Eom2} luvuista IX ja Dugundji: Topology \cite{Dugu}.
 \begin{maar}
 Olkoon $(X,\T)$ topologinen avaruus ja 
 $\U$ uniformiteetti joukolle $X$. 
@@ -1699,7 +1719,7 @@ jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
 %
 %\end{kor}
 \begin{maar}
-Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva}, jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
+Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva} (uniformizable), jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
 \end{maar}
 \begin{lause}\label{unizable}
 Olkoon $(X,\T)$ topologinen avaruus.
@@ -1928,7 +1948,8 @@ ja siis $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline
 \end{lause}
 
 \chapter{Kompaktisointi}
-
+Tässä luvussa esitellään topologisen avaruuden kompaktisointi sekä rakennetaan täysin säännöllisen avaruuden Stone-Čech kompaktisointi käyttäen hyväksi edellisen luvun upotusta yksikkövälien tuloon.
+Lisätietoja tämän luvun aiheista löytyy teoksesta Dugundji: Topology \cite{Dugu}.
 
 \begin{maar}
 Topologisen avaruuden $X$ kompaktisointi on pari $(\hat{X},h)$, 
