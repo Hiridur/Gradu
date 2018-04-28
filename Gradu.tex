@@ -857,8 +857,8 @@ on pseudometriikka.
 \end{esim}
 \chapter{Pseudometriikan määrittelemä uniformiteetti}\label{luku_pseudo_uniformi}
 Tässä luvussa käsitellään pseudometriikan ja uniformiteetin yhteyttä. 
-Näytetään miten pseudometriikan ja pseudometriikkaperheen avulla voidaan muodostaa uniformiteetti 
-ja toisaalta miten mille tahansa uniformiteetille löytyy pseudometriikka, 
+Näytetään, miten pseudometriikan ja pseudometriikkaperheen avulla voidaan muodostaa uniformiteetti 
+ja toisaalta miten uniformiteetille löydetään pseudometriikka, 
 jonka avulla kyseinen uniformiteetti voidaan muodostaa. 
 Lisäksi esitellään pseudometriikkaperheen saturointi. 
 Lisätietoja tämän luvun aiheista löytyy teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
@@ -1411,14 +1411,15 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 %
 %
 \chapter{Täydellinen uniforminen avaruus}
-Tässä luvussa esitellään filtterit ja täydellinen uniforminen avaruus, joka määritellään Cauchy-filtterien avulla. 
+Tässä luvussa esitellään Cauchy-filtterit, joiden avulla rakennetaan täydellinen uniforminen avaruus.
+%, joka määritellään Cauchy-filtterien avulla. 
 Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 1 \cite{Eom1} luvusta III ja General Topology part 2 \cite{Eom2} luvuista IX.
 \\
 \\
 Uniformiselle avaruudelle voidaan määritellä 
 uniformiteetin lähistöjen suhteen \emph{tarpeeksi pienet} osa\-jou\-kot. 
 Osajoukko on lähistön suhteen tarpeeksi pieni silloin, 
-kun kaikki osajoukon alkiot ovat 
+kun kaikki osa\-jou\-kon alkiot ovat 
 tarpeeksi lähellä toisiaan kyseisen lähistön suhteen (huomautus \ref{V-close}). 
 Näin saadaan seuraava määritelmä.
 \begin{maar}
@@ -1698,10 +1699,13 @@ minimaalinen Cauchy-filtteri $\F_0$ on karkeampi kuin filtteri $\F$.
 %
 \chapter{Täysin säännölliset avaruudet}
 %Tässä luvussa perehdytään uniformisoituviin (uniformizable) avaruuksiin. 
-Tässä luvussa esitellään uniformisoituva topologinen avaruus  
+Tässä luvussa esitellään uniformisoituva topologinen avaruus, 
+jonka avulla määritellään
 %ja esitetään uniformisoituvuuden kanssa yhtäpitävä ehto. 
-täysin säännöllinen avaruus, joka määritellään uniformisoituvuuden avulla. 
-Lisäksi esitellään merkittävä tulos, jossa täysin säännöllinen avaruus upotetaan yksikkövälien tuloon. 
+täysin säännöllinen avaruus.
+%, joka määritellään uniformisoituvuuden avulla. 
+Lisäksi esitellään tutkielman kannalta merkittävä 
+tulos, jossa täysin säännöllinen avaruus upotetaan yksikkövälien tuloon. 
 Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 2 \cite{Eom2} luvuista IX ja Dugundji: Topology \cite{Dugu}.
 \begin{maar}
 Olkoon $(X,\T)$ topologinen avaruus ja 
@@ -1810,11 +1814,10 @@ Siis $A$ on täysin säännöllinen.
 \end{proof}
 \end{lause}
 
-Merkitään $I=[0,1]$.
-
 \begin{sopimus}
+Merkitään $I=[0,1]\subset\R$. 
 Oletetaan, että $X$ on topologinen avaruus. 
-Merkitään kaikkien jatkuvien 
+Merkitään tällöin kaikkien jatkuvien 
 kuvausten $f\colon X\rightarrow I$ joukkoa symbolilla $I^X$. 
 Tällöin $(I_f)_{f\in I^X}$ on yksikkövälien perhe, 
 joka on indeksoitu joukolla $I^X$. 
@@ -1826,6 +1829,18 @@ $$P^X=\prod_{f\in I^X}I_f
 Käytämme koko luvun ajan joukon $P^X$ alkioista merkintää $\{t_f\}$ tarkoittamaan alkiota $\prod_{f\in I^X}\{t_f\}$, jossa $t_f\in I$ kaikilla $f\in I^X$.
 %yksikkövälien tulo. 
 \end{sopimus}
+
+\begin{lem}
+Kompaktien joukkojen mielivaltainen tulo on kompakti.
+\begin{proof}
+Topologia II \cite{Topo2} Lause ?.?.
+\end{proof}
+\end{lem}
+
+\begin{kor}
+Olkoon $X$ täysin säännöllinen avaruus. 
+Tällöin yksikkövälien tulo $P^X$ on kompakti.
+\end{kor}
 
 \begin{lause}\label{comp_reg_upotus}
 Olkoon $X$ täysin säännöllinen avaruus. 
