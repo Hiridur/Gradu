@@ -864,23 +864,23 @@ Lisäksi esitellään pseudometriikkaperheen saturointi.
 Lisätietoja tämän luvun aiheista löytyy teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $[0,\infty]=\{a\in\R\mid a>0\}$.
 \begin{lause}
-Olkoon $a\in[0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko, 
+Olkoon $a\in\,]0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko, 
 joka on määritelty kaavalla
 $$U_a=\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}.$$
-Kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa 
+Kokoelma $B=\{U_a\mid a\in\,]0,\infty]\}$ muodostaa 
 joukon $\R^n$ erään uniformiteetin kannan.
 \begin{proof}
 Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 %Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $U_{a_3}\subset U_{a_1}\cap U_{a_2}$
-Olkoon $a_1,a_2\in[0,\infty]$ lukuja, joilla $a_1\leq a_2$. Tällöin kaavasta $|x-y|\leq a_1$ seuraa $|x-y|\leq a_2$ kaikilla $x,y\in\R$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
+Olkoon $a_1,a_2\in\,]0,\infty]$ lukuja, joilla $a_1\leq a_2$. Tällöin kaavasta $|x-y|\leq a_1$ seuraa $|x-y|\leq a_2$ kaikilla $x,y\in\R$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
-Olkoon $x\in\R^n$. Tällöin kaikilla $a\in[0,\infty]$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $U_a\in B$ osajoukko,
+Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\,]0,\infty]$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $U_a\in B$ osajoukko,
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
-Olkoon $x',y'\in\R^n$ ja $a\in[0,\infty]$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
+Olkoon $x',y'\in\R^n$ ja $a\in\,]0,\infty]$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
 %Olkoon $a\in[0,\infty]$ ja $(x,y)\in U_a$. Tällöin koska $(x,y)\in U_a$ niin $|x'-y'|\leq a$ ja koska $U_a\subset \R^n\times\R^n$ niin $|y'-x'|\leq a$. Näin ollen 
 \begin{align*}
 U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
@@ -890,7 +890,7 @@ U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
 Siis jokaiselle $U_a$ pätee $U_a\subset  U_a^{-1}. $
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}$,
 \item%\ref{U'_III} 
-Olkoon $a\in[0,\infty]$ luku ja $x,y,z\in\R^n$ sellaisia pisteitä, 
+Olkoon $a\in\,]0,\infty]$ luku ja $x,y,z\in\R^n$ sellaisia pisteitä, 
 joilla $(x,z),(z,y)\in U_a$, 
 %joilla $(x,z)\in U_a$ ja $(z,y)\in U_a$, 
 eli $|x-z|\leq a$ ja $|z-y|\leq a$.
@@ -900,7 +900,7 @@ $$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$
 eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2\subset U_{2a} $, joten jokaiselle luvun $b\in[0,\infty]$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
-Siis kokoelma $B=\{U_a\mid a\in[0,\infty]\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
+Siis kokoelma $B=\{U_a\mid a\in\,]0,\infty]\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
 \noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
@@ -1110,76 +1110,7 @@ $(g_A)$ pienin yläraja $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen
 %$(g_A)$ supremum $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen $(g_H)$.
 \end{proof}
 \end{lause}
-\begin{lause}
-Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
-Olkoon $(g_H) $ pseudometriikkaperhe, 
-joka on saatu saturoimalla perhe $(f_i)_{i\in I} $. 
-Tällöin perhe $(g_H) $ on ekvivalentti 
-perheen $(f_i)_{i\in I}$ kanssa.
-\begin{proof}
-Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
-uniformiteettiperheen $(\U_{f_i})_{i\in I}$ pienin yläraja $\sup_{i\in I}\U_{f_i}$, 
-eli pienin uniformiteetti, 
-%jolle pätee $\U_{f_i}\subset \U$ kaikilla $i\in I$. 
-joka sisältää $\U_{f_i}$ kaikilla $i\in I$. 
-Vastaavasti pseudometriikkaperheen $(g_H)$ määrittelemä 
-uniformiteetti on $\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$. 
 
-Pseudometriikkaperheet $(f_i)_{i\in I}$ ja $(g_H)$ 
-ovat ekvivalentteja, 
-jos niiden määrittelemät uniformiteetit 
-$\U_f:=\sup_{i\in I}\U_{f_i}$ ja 
-$\U_g:=\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ 
-ovat samoja. 
-
-Määritelmän \ref{saturoitu maar} nojalla 
-jokaiselle pseudometriikalle $f_j\in(f_i)_{i\in I}$ löytyy 
-pseudometriikka $g_{\{j\}}\in (g_H)$ niin, 
-että $g_{\{j\}}(x,y)=\sup_{i\in\{j\}}f_i(x,y)=f_j(x,y)$ 
-kaikilla $x,y\in X$. 
-%Tällöin uniformiteetti $\sup_{i\in I}\U_{f_i}$ on uniformiteetin 
-%$\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ osajoukko
-Näin ollen $(f_i)_{i\in I}\subset (g_H)$ ja 
-siis $\U_f\subset\U_g$. 
-%Näin ollen riittää osoittaa, että 
-%jokainen perheen $(g_H)$ pseudometriikan määrittelemä 
-%uniformiteetti sisältyy perheen $(f_i)_{i\in I}$ 
-%määrittelemään uniformiteettiin $\sup_{i\in I}\U_{f_i}$.
-%
-%
-%%Näin ollen 
-%%ja siten riittää osoittaa, että 
-%Osoitetaan seuraavaksi, että 
-%%$\U_{g_{H'}}\subset\sup_{i\in I}\U_{f_i}$ 
-%$\U_{g_{H'}}\subset\U_{f}$ 
-%jokaisella äärellisellä osajoukolla $H'\subset I$. 
-%%%pseudometriikalla $g_{H'}\in (g_H)$ ja 
-%%$\U_{f_j}\subset\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$
-%%jokaisella $j\in I$.
-
-
-
-%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\,]0,\infty] \}$$
-%Lauseen \ref{sup ja finite perhe samoja} nojalla jokaisella äärellisellä osajoukolla $H'\subset I$ uniformiteetti $\U_{g_{H'}}$ on sama kuin äärellisen perheen $(f_i)_{i\in H'}$ määräämä uniformiteetti $(\U_{f_i})_{i\in H'}$. 
-Olkoon $H'\subset I$ äärellinen osajoukko. 
-Lauseen \ref{sup ja finite perhe samoja} nojalla  uniformiteetti $\U_{g_{H'}}$ on sama kuin äärellisen perheen $(f_i)_{i\in H'}$ määräämä uniformiteetti $\sup_{i\in H'}\U_{f_i}$. 
-Toisaalta uniformiteetti $\sup_{i\in H'}\U_{f_i}$ on karkeampi kuin uniformiteetti $\sup_{i\in I}\U_{f_i}=\U_{f}$, 
-%Nyt $\sup_{i\in H'}\U_{f_i}\subset\sup_{i\in I}\U_{f_i}$. 
-%Tällöin $(\U_{f_i})_{i\in H'}=\sup_{i\in H'}\U_{f_i}\subset\sup_{i\in I}\U_{f_i}=(\U_{f_i})_{i\in I}$. 
-%, kun $H'\subset I$ on äärellinen osajoukko. 
-%joten uniformiteetti $\U_{g_{H'}}$ on karkeampi kuin uniformiteetti $\U_f$. 
-joten $\U_{g_{H'}}\subset\U_f$. 
-%, kun $H'\subset I$ on äärellinen osajoukko.
-Näin ollen $\U_g=\sup_{H\subset I\text{ äärellinen}}\U_{g_H}\subset \U_f$. 
-%ja siis $\U_g\subset \U_f$.
-
-Siis $\U_g= \U_f$ ja perhe $(g_H)$ on ekvivalentti perheen $(f_i)_{i\in I}$ kanssa.
-\end{proof}
-\end{lause}
-\begin{kor}\label{saturoitu oletus}
-Jokaiselle pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe 
-ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.\qed
-\end{kor}
 \begin{lause}\label{sup ja finite perhe samoja}
 %Nyt 
 %$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in[0,\infty] \}$$
@@ -1280,6 +1211,78 @@ Vastaavasti tällöin uniformiteetti $\U'$ on hienompi kuin uniformiteetti $\U$.
 %TODO ?
 %\end{proof}
 \end{kor}
+
+\begin{lause}
+Olkoon $X$ joukko ja $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
+Olkoon $(g_H) $ pseudometriikkaperhe, 
+joka on saatu saturoimalla perhe $(f_i)_{i\in I} $. 
+Tällöin perhe $(g_H) $ on ekvivalentti 
+perheen $(f_i)_{i\in I}$ kanssa.
+\begin{proof}
+Pseudometriikkaperheen $(f_i)_{i\in I}$ määrittelemä uniformiteetti on 
+uniformiteettiperheen $(\U_{f_i})_{i\in I}$ pienin yläraja $\sup_{i\in I}\U_{f_i}$, 
+eli pienin uniformiteetti, 
+%jolle pätee $\U_{f_i}\subset \U$ kaikilla $i\in I$. 
+joka sisältää $\U_{f_i}$ kaikilla $i\in I$. 
+Vastaavasti pseudometriikkaperheen $(g_H)$ määrittelemä 
+uniformiteetti on $\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$. 
+
+Pseudometriikkaperheet $(f_i)_{i\in I}$ ja $(g_H)$ 
+ovat ekvivalentteja, 
+jos niiden määrittelemät uniformiteetit 
+$\U_f:=\sup_{i\in I}\U_{f_i}$ ja 
+$\U_g:=\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ 
+ovat samoja. 
+
+Määritelmän \ref{saturoitu maar} nojalla 
+jokaiselle pseudometriikalle $f_j\in(f_i)_{i\in I}$ löytyy 
+pseudometriikka $g_{\{j\}}\in (g_H)$ niin, 
+että $g_{\{j\}}(x,y)=\sup_{i\in\{j\}}f_i(x,y)=f_j(x,y)$ 
+kaikilla $x,y\in X$. 
+%Tällöin uniformiteetti $\sup_{i\in I}\U_{f_i}$ on uniformiteetin 
+%$\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$ osajoukko
+Näin ollen $(f_i)_{i\in I}\subset (g_H)$ ja 
+siis $\U_f\subset\U_g$. 
+%Näin ollen riittää osoittaa, että 
+%jokainen perheen $(g_H)$ pseudometriikan määrittelemä 
+%uniformiteetti sisältyy perheen $(f_i)_{i\in I}$ 
+%määrittelemään uniformiteettiin $\sup_{i\in I}\U_{f_i}$.
+%
+%
+%%Näin ollen 
+%%ja siten riittää osoittaa, että 
+%Osoitetaan seuraavaksi, että 
+%%$\U_{g_{H'}}\subset\sup_{i\in I}\U_{f_i}$ 
+%$\U_{g_{H'}}\subset\U_{f}$ 
+%jokaisella äärellisellä osajoukolla $H'\subset I$. 
+%%%pseudometriikalla $g_{H'}\in (g_H)$ ja 
+%%$\U_{f_j}\subset\sup_{H\subset I\text{ äärellinen}}\U_{g_H}$
+%%jokaisella $j\in I$.
+
+
+
+%$$\{g_{H}^\leftarrow ([0,a])\subset X\times X\mid H\subset I \text{ äärellinen}, a\in\,]0,\infty] \}$$
+%Lauseen \ref{sup ja finite perhe samoja} nojalla jokaisella äärellisellä osajoukolla $H'\subset I$ uniformiteetti $\U_{g_{H'}}$ on sama kuin äärellisen perheen $(f_i)_{i\in H'}$ määräämä uniformiteetti $(\U_{f_i})_{i\in H'}$. 
+Olkoon $H'\subset I$ äärellinen osajoukko. 
+Lauseen \ref{sup ja finite perhe samoja} nojalla  uniformiteetti $\U_{g_{H'}}$ on sama kuin äärellisen perheen $(f_i)_{i\in H'}$ määräämä uniformiteetti $\sup_{i\in H'}\U_{f_i}$. 
+Toisaalta uniformiteetti $\sup_{i\in H'}\U_{f_i}$ on karkeampi kuin uniformiteetti $\sup_{i\in I}\U_{f_i}=\U_{f}$, 
+%Nyt $\sup_{i\in H'}\U_{f_i}\subset\sup_{i\in I}\U_{f_i}$. 
+%Tällöin $(\U_{f_i})_{i\in H'}=\sup_{i\in H'}\U_{f_i}\subset\sup_{i\in I}\U_{f_i}=(\U_{f_i})_{i\in I}$. 
+%, kun $H'\subset I$ on äärellinen osajoukko. 
+%joten uniformiteetti $\U_{g_{H'}}$ on karkeampi kuin uniformiteetti $\U_f$. 
+joten $\U_{g_{H'}}\subset\U_f$. 
+%, kun $H'\subset I$ on äärellinen osajoukko.
+Näin ollen $\U_g=\sup_{H\subset I\text{ äärellinen}}\U_{g_H}\subset \U_f$. 
+%ja siis $\U_g\subset \U_f$.
+
+Siis $\U_g= \U_f$ ja perhe $(g_H)$ on ekvivalentti perheen $(f_i)_{i\in I}$ kanssa.
+\end{proof}
+\end{lause}
+\begin{kor}\label{saturoitu oletus}
+Jokaiselle pseudometriikkaperheelle löytyy aina ekvivalentti saturoitu pseudometriikkaperhe 
+ja näin ollen pseudometriikkaperheen voidaan olettaa olevan saturoitu.\qed
+\end{kor}
+
 %Toisaalta on myös mahdollista määritellä i
 \begin{lem}\label{pseudo_uniformista}
 Olkoon $X$ joukko ja $\U$ uniformiteetti joukolle $X$. 
