@@ -83,9 +83,14 @@
 
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
+
+
+
 \chapter{Esitietoja}
 Tässä luvussa käydään läpi tutkielmassa käytettäviä topologiaan ja joukkomerkintöihin liittyviä käsitteitä ja merkintätapoja. 
-Perusteellisemmin näistä aiheesta löytyy muun muassa kirjoista General Topology Part 1 \cite{Eom1} ja Topologia II \cite{Topo2}.
+Perusteellisemmin näistä aiheesta löytyy muun muassa kirjoista 
+\cite{Eom1} ja \cite{Topo2}.
+%General Topology Part 1 \cite{Eom1} ja Topologia II \cite{Topo2}.
 \begin{sopimus}
 Käytämme koko tutkielman ajan merkintää $\R_+=\{a\in\R\mid a>0\}$.
 \end{sopimus}
@@ -164,7 +169,7 @@ Tällöin $\T_1$ on hienompi kuin $\T_2$.
 %Tässä luvussa tutustutaan uniformisiin rakenteisiin. 
 Topologian kannalta kahden eri pisteen etäisyyttä toisiinsa voidaan tutkia lähinnä siltä kannalta, että kuuluvatko ne toistensa jokaiseen ympäristöön, eli ovatko ne hyvin lähellä toisiaan. 
 Metriikka puolestaan antaa jokaiselle kahdelle pisteelle tarkan etäisyyden. 
-Topologian ja metriikan väliltä löytyy uniforminen rakenne \cite{Eom1}, 
+Topologian ja metriikan väliltä löytyy uniforminen rakenne \cite[luku~II]{Eom1}, 
 jossa vertaillaan pisteparien etäisyyksiä toisiinsa. 
 Tässä luvussa tutustutaan uniformisiin rakenteisiin. 
 Lisäksi käsitellään uniformisen rakenteen yhteyttä topologiaan. 
@@ -754,9 +759,9 @@ Olkoon $(\U_i)_{i\in I}$ perhe uniformiteetteja joukolle $X$.
 Tällöin perheen $(\U_i)_{i\in I}$ \emph{pienin yläraja} on uniformiteetti $\U$, joka on kuvausten $id\colon X\rightarrow (X,\U_i)$ määritelmän \ref{kuvausperheen indusoima} mukaisesti indusoima.
 \end{maar}
 \chapter{Pseudometriikat}
-Tässä kappaleessa tutustutaan pseudometriikoihin, jotka ovat tavanomaisten metriikoiden yleistys. 
+Tässä kappaleessa tutustutaan pseudometriikoihin\cite[luku~IX]{Eom2}, jotka ovat tavanomaisten metriikoiden yleistys. 
 
-Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
+%Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %\\
 \begin{maar}\label{pseudo_maar}
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ 
@@ -861,7 +866,8 @@ Näytetään, miten pseudometriikan ja pseudometriikkaperheen avulla voidaan muo
 ja toisaalta miten uniformiteetille löydetään pseudometriikka, 
 jonka avulla kyseinen uniformiteetti voidaan muodostaa. 
 Lisäksi esitellään pseudometriikkaperheen saturointi. 
-Lisätietoja tämän luvun aiheista löytyy teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
+Lisätietoja tämän luvun aiheista löytyy kirjasta \cite[luku~IX]{Eom2}.
+%General Topology part 2 \cite{Eom2} luvusta IX.
 %Oletamme koko luvun \ref{luku_pseudo_uniformi} ajan, että $[0,\infty]=\{a\in\R\mid a>0\}$.
 \begin{lause}
 Olkoon $a\in\,]0,\infty]$ luku ja $U_a\subset \R^n\times\R^n$ joukko, 
@@ -1429,7 +1435,9 @@ Siis löydettiin pseudometriikka $f$, joka määrittelee uniformiteetin $\U$.
 \chapter{Täydellinen uniforminen avaruus}
 Tässä luvussa esitellään Cauchy-filtterit, joiden avulla rakennetaan täydellinen uniforminen avaruus.
 %, joka määritellään Cauchy-filtterien avulla. 
-Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 1 \cite{Eom1} luvusta III ja General Topology part 2 \cite{Eom2} luvuista IX.
+Lisätietoja tämän luvun aiheista löytyy kirjoista 
+%General Topology part 1 \cite{Eom1} luvusta III ja General Topology part 2 \cite{Eom2} luvuista IX.
+\cite[luku~II]{Eom1} ja \cite[luku~IX]{Eom2}.
 \\
 \\
 Uniformiselle avaruudelle voidaan määritellä 
@@ -1722,7 +1730,8 @@ täysin säännöllinen avaruus.
 %, joka määritellään uniformisoituvuuden avulla. 
 Lisäksi esitellään tutkielman kannalta merkittävä 
 tulos, jossa täysin säännöllinen avaruus upotetaan yksikkövälien tuloon. 
-Lisätietoja tämän luvun aiheista löytyy teoksista General Topology part 2 \cite{Eom2} luvuista IX ja Dugundji: Topology \cite{Dugu}.
+Lisätietoja tämän luvun aiheista löytyy kirjoista \cite[luku~IX]{Eom2} ja \cite{Dugu}.
+%teoksista General Topology part 2 \cite{Eom2} luvuista IX ja Dugundji: Topology \cite{Dugu}.
 \begin{maar}
 Olkoon $(X,\T)$ topologinen avaruus ja 
 $\U$ uniformiteetti joukolle $X$. 
@@ -1817,7 +1826,7 @@ Olkoon $(X,\T)$ täysin säännöllinen avaruus ja $A\subset X$ aliavaruus.
 %Olkoon $(X,\T)$ täysin säännöllinen avaruus ja osajoukko $A\subset X$ varustettu rajoitetulla topologialla $\T_{\mid A}$. 
 %Olkoon lisäksi $x\in A$ alkio ja $V\subset A$ sen avoin ympäristö. 
 Olkoon lisäksi $V\subset A$ avoin osajoukko ja $x\in V$ alkio. 
-Nyt $V=B\cap U$ jollain avoimella osajoukolla $U\subset X$. 
+Nyt $V=A\cap U$ jollain avoimella osajoukolla $U\subset X$. 
 %Lauseen \ref{unizable} nojalla on olemassa 
 Lauseen \ref{unizable} ominaisuuden \ref{O_IV} nojalla on olemassa 
 jatkuva kuvaus $f\colon X\rightarrow [0,1]$, jolla $f(x)=0$ ja $ f(y)=1$ kaikilla $y\in X\setminus U$. 
@@ -1900,24 +1909,35 @@ $(P_f\circ\rho)(x)
 %=P_f(\rho(x))
 =f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
 
+Toiseksi kuvauksen $\rho$ komponenttikuvaukset ovat joukon $I^X$ alkioina jatkuvia. 
+Näin ollen myös kuvaus $\rho$ on jatkuva \cite[lause~?.?]{Topo2}. 
+%$(P_f\circ\rho)(x)
+%%=P_f(\rho(x))
+%=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
+
 Viimeiseksi kuvaus $\rho$ on avoin: 
 Avointen joukkojen perhe 
-$$(U_f)_{f\in I^X}=\{f^\leftarrow [0,1[\subset X\mid f\in I^X\}$$
+%$$(U_f)_{f\in I^X}=\{f^\leftarrow [0,1[\subset X\mid f\in I^X\}$$
+$(U_f)_{f\in I^X}$, ${U_f=f^\leftarrow [0,1[\subset X}$ kaikilla $ f\in I^X$ 
+%\begin{equation*}
+%(U_f)_{f\in I^X}\quad\text{ missä }U_f=f^\leftarrow [0,1[\subset X\text{ kaikilla } f\in I^X 
+%\end{equation*}
 muodostaa ympäristökannan: 
 Avoimelle osajoukolle $U\subset X$ ja sen alkiolle $x\in U$ 
 on olemassa kuvaus $f_1\in I^X$, 
 jolla $f_1(x)=0$ ja $f_1(y)=1,y\in X\setminus U$. 
 %Toisaalta $f^\leftarrow[0,1/2[\subset X$ on avoin sisältyy osajoukkoon $U$. 
 %Nyt $V=f_1^\leftarrow [0,1[$ on avoin joukossa $X$,
-Nyt $V=f_1^\leftarrow [0,1[\subset X$ on avoin,
-$V\in (U_f)_{f\in I^X}$ ja $V\subset U$. 
-Näin ollen avoimelle osajoukolle $U\subset X$ löydettiin joukko
-$V\in (U_f)_{f\in I^X}$, jolla $V\subset U$. 
-Perhe $(U_f)_{f\in I^X}$ on siis ympäristökanta. 
+Näin ollen ${V=f_1^\leftarrow [0,1[\subset X}$ on avoin,
+$V\in (U_f)_{f\in I^X}$ ja $V\subset U$, 
+eli avoimelle osajoukolle ${U\subset X}$ löydettiin joukon
+%$V\in (U_f)_{f\in I^X}$, jolla $x\in V\subset U$. 
+$(U_f)_{f\in I^X}$ alkio $V$, jolla $x\in V\subset U$. 
+Tällöin perhe $(U_f)_{f\in I^X}$ on ympäristökanta \cite[lause~?.?]{Topo2}. 
 Ympäristökannan jäsenen $V_{f_0}\in (U_f)_{f\in I^X}$ kuva 
 $$\rho V_{f_0}=\left\{\{t_f\}\mid t_{f_0}<1\right\}\cap \rho X$$
 %$$\rho V_{f_0}=\left\{\prod_{f\in I^X}\{t_f\}\mid t_f\in I \text{ kaikilla }f\in I^X, t_{f_0}<1\right\}\cap \rho X$$
-on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin.
+on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin \cite[lause~?.?]{Topo2}.
 \end{proof}
 \end{lause}
 
@@ -1925,7 +1945,7 @@ on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin.
 Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ kuvaus, joka on määritelty kaavalla 
 %$\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $. 
 $\rho(x)=\{f(x)\}$ kaikilla $x\in X $. 
-Olkoon lisäksi $Y$ topologialla varustettu joukko ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
+Olkoon lisäksi $Y$ topologinen avaruus ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
 Tällöin on olemassa yksikäsitteinen jatkuva kuvaus $g\colon \rho X\rightarrow Y$, jolla $h(x)=(g\circ\rho)(x)$ kaikilla $x\in X$.
 \qed
 \end{lem}
@@ -1953,7 +1973,7 @@ Erityisesti $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \over
 Olkoot $X$ ja $Y$ täysin säännöllisiä avaruuksia ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
 %Nyt jokaiselle $g\in I^Y$ löytyy $(g\circ h)\in I^X$, 
 Olkoon $g\in I^Y$ kuvaus. Tällöin $(g\circ h)\in I^X$ ja kaavalla 
-$h_g\left(\{t_f\}\right)=t_{g\circ h}$%, $t_f\in I$ 
+$h_g\left(\{t_f\}\right)=t_{g\circ h}$ %, $t_f\in I$ 
 %$$h_g\left(\prod_{f\in I^X}\{t_f\}\right)=t_{g\circ h}\qquad\text{ kaikilla }t\in I$$ 
 voidaan määritellä kuvaus $h_g\colon P^X\rightarrow I_g$. 
 Nyt $h_g$ on projektiokuvaus, joka samaistaa yksikkövälit $I_g$ ja $I_{g\circ h}$. 
@@ -1962,7 +1982,7 @@ Kuvaus $h_g$ on jatkuva, joten kaavalla
 $$H\left(\{t_f\}\right)=\{h_g\left(\{t_f\}\right)\},\quad\{t_f\}\in P^X$$ 
 voidaan muodostaa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$. 
 Nyt kuvauksen $H$ määrittelyn nojalla pätee 
-$$(H\circ \rho)(x)=(H ( \rho(x))=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{((g\circ h)(x))_g\}$$
+$$(H\circ \rho)(x)=(H ( \rho(x)))=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{((g\circ h)(x))_g\}$$
 ja lauseen \ref{comp_reg_upotus} nojalla
 $$(\rho_1\circ h)(x)=\rho_1( h(x))=\{g( h(x))_g\}=\{((g\circ h)(x))_g\}.$$
 Näin ollen annettu kaavio kommutoi. 
@@ -1980,7 +2000,8 @@ ja siis $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline
 
 \chapter{Kompaktisointi}
 Tässä luvussa esitellään topologisen avaruuden kompaktisointi sekä rakennetaan täysin säännöllisen avaruuden Stone-Čech kompaktisointi käyttäen hyväksi edellisen luvun upotusta yksikkövälien tuloon.
-Lisätietoja tämän luvun aiheista löytyy teoksesta Dugundji: Topology \cite{Dugu}.
+Lisätietoja tämän luvun aiheista löytyy kirjasta %Dugundji: Topology 
+\cite{Dugu}.
 
 \begin{maar}
 Topologisen avaruuden $X$ kompaktisointi on pari $(\hat{X},h)$, 
@@ -1989,13 +2010,12 @@ ja $h$ on sellainen homeomorfismi $X\rightarrow h(X)\subset\hat{X}$,
 jolla $h(X)$ on tiheä avaruudessa $\hat{X}$, eli $\overline{ h(X)}=\hat{X}$. 
 \end{maar}
 \begin{huom}
-Usein samaistetaan avaruus $X$ ja osajoukko $h(X)\subset\hat{X}$ ja sanotaan, 
+Usein samastetaan avaruus $X$ ja osajoukko $h(X)\subset\hat{X}$ ja sanotaan, 
 että $\hat{X}$ on avaruuden $X$ kompaktisointi. 
 \end{huom}
 
 \begin{lem}
-Olkoon $X$ täysin säännöllinen avaruus. 
-Tällöin olkoon $\rho\colon X\rightarrow P^X$ lauseen \ref{comp_reg_upotus} mukainen upotus missä $P^X$ on yksikkövälien tulona kompakti. 
+Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ lauseen \ref{comp_reg_upotus} mukainen upotus missä $P^X$ on yksikkövälien tulona kompakti. 
 Erityisesti $\overline{\rho X}$ on kompaktin joukon suljettuna osajoukkona kompakti. 
 Merkitään $\beta X=\overline{\rho X}$ ja sanotaan, 
 että pari $(\beta X,\rho)$ on avaruuden $X$ \emph{Stone-Čech kompaktisointi}.
@@ -2058,7 +2078,7 @@ Olkoon $X$ täysin säännöllinen avaruus,
 $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi 
 ja $(\hat{X},h)$ sellainen avaruuden $X$ kompaktisointi, 
 jolla on lauseen \ref{SC-ominaisuus} kuvaileva ominaisuus. 
-Samaistetaan $X$, $hX$ ja $\rho X$, jolloin voidaan mieltää $X$ joukkojen $\beta X$ ja $\hat{X}$ osajoukoksi. 
+Samastetaan $X$, $hX$ ja $\rho X$, jolloin voidaan mieltää $X$ joukkojen $\beta X$ ja $\hat{X}$ osajoukoksi. 
 Olkoon $i\colon X\rightarrow X$ identtinen kuvaus. 
 Nyt lauseen \ref{SC-ominaisuus} ominaisuuden nojalla 
 kompaktisoinnille $\beta X$, kompaktille joukolle $\hat{X}$ ja kuvaukselle $i$ 
@@ -2091,7 +2111,7 @@ niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus.
 Lauseen \ref{SC-ominaisuus} nojalla on olemassa 
 jatkuva kuvaus $F\colon \beta X\rightarrow \hat{X}$, 
 jolla $F(x)=x$ kaikilla $x\in X$. 
-$\beta X$ on kompakti, joten $F(\beta X)$ on suljettu joukko, 
+Avaruus $\beta X$ on kompakti, joten $F(\beta X)$ on suljettu joukko, 
 joka sisältää tiheän osajoukon $X\subset \hat{X}$. 
 Näin ollen $\overline{X}\subset F(\beta X)= \hat{X}$ 
 ja siten kuvaus $F$ on surjektio. 
@@ -2099,6 +2119,7 @@ Olkoon $\sim$ sellainen ekvivalenssirelaatio, jolla $a\sim a'$ jos ja vain jos $
 Nyt voidaan määritellä kuvaus 
 $F_{\sim}\colon \beta X /\sim\,\rightarrow \hat{X}$, jolla $F_{\sim}([a])=F(a)$. 
 Kuvaus $F_{\sim}$ on injektio, sillä jos $x,y\in \beta X$ ja $[x]\neq [y]$ niin $F_{\sim}([x])=F(x)\neq F(y)=F_{\sim}([y])$. 
+%TODO tästä eteenpäin topo2:sta samastuskuvaus määritelmineen ja tekijätopologian tuloksien avulla todistuksen loppuosa
 Olkoon $\rho\colon \beta X\rightarrow \beta X/\sim$ projektiokuvaus, 
 jolla $\rho(a)=[a]$ kaikilla $a\in\beta X$. Kuvaus $F$ on jatkuva, 
 $\rho$ on projektiokuvauksena jatkuva ja $F=F_{\sim}\circ \rho$, 
