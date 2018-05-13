@@ -83,7 +83,28 @@
 
 %Nicolas Bourbaki is the pseudonym for a group of mathematicians that included Henri Cartan, Claude Chevalley, Jean Dieudonne, and Andres Weil. Mostly French, they emphasized an axiomatic and abstract treatment on all aspects of modern mathematics in Elements de mathematique. The first volume of Elements appeared in 1939. Subsequently, a wide variety of topics have been covered, including works on set theory, algebra, general topology, functions of a real variable, topological vector spaces, and integration. One of the goals of the Bourbaki series is to make the logical structure of mathematical concepts as transparent and intelligible as possible. The books listed below are typical of volumes written in the Bourbaki spirit and now available in English.
 
+Tämän tutkielman tavoitteena on esitellä ja konstruoida Stone–Čech kompaktisointi täysin säännöllisille avaruuksille. Tutkielmassa esitellään myös uniforminen avaruus ja käsitellään tämän yhteyttä pseudometriikoihin. 
 
+Venäläinen matemaatikko Andrey Tihonov (1906-1993) viittasi Stone–Čech kompaktisointina myöhemmin tunnettuun tulokseen jo vuonna 1930. 
+Tulos pohjautuukin juuri Tihonovin työhön ja osa tutkielmassa käytetyistä aputuloksista on alun perin Tihonovin todistamia. 
+Amerikkalainen Marshall Stone (1903-1989) ja tšekkiläinen Eduard Čech (1893-1960) todistivat vuonna 1937 Stone–Čech kompaktisoinnin olemassaolon ja sen ominaisuuksia. 
+Čech tunnetaan saavutuksistaan algebrallisen topologian parissa, muun muassa hänen mukaansa nimetty Čech-kohomologia. 
+Stone on puolestaan tunnettu muun muassa työstään funktionaali analyysin ja boolean algebran parissa. 
+
+Tutkielman alussa käydään läpi käytettäviä topologiaan ja joukkomerkintöihin liittyviä käsitteitä ja merkintätapoja. 
+Lukijan oletetaan tuntevan yleisen topologisen avaruuden määritelmä ja tähän liittyviä perustuloksia. 
+
+%Täysin säännöllinen avaruus määritellään uniformisen avaruuden avulla. 
+Peruskäsitteiden jälkeen esitellään uniforminen avaruus, eli 
+%Uniforminen avaruus on 
+topologinen avaruus, johon on lisätty uniforminen rakenne. 
+Tämä rakenne mahdollistaa muun muassa täydellisyyden ja tasaisen jatkuvuuden määrittelyn ilman metriikkaa. 
+Hausdorff uniformisoituvalle avaruudelle, eli täysin säännölliselle avaruudelle voidaan konstruoida Stone–Čech kompaktisointi.
+
+%Stone–Čech kompaktisointi voidaan konstruoida useilla keskenään yhtäpitävillä tavoilla, muun muassa ultrafilttereillä tai $C^*$-algebroilla. 
+Tässä tutkielmassa Stone–Čech kompaktisointi konstruoidaan käyttäen upotusta yksikkövälien tuloon. 
+Tulos voitaisiin konstruoida yhtäpitävästi myös muilla tavoilla, muun muassa ultrafilttereillä tai $C^*$-algebroilla. 
+Näitä muita tapoja emme kuitenkaan tässä työssä käsittele. 
 
 
 \chapter{Esitietoja}
@@ -1855,16 +1876,17 @@ Käytämme koko luvun ajan joukon $P^X$ alkioista merkintää $\{t_f\}$ tarkoitt
 %yksikkövälien tulo. 
 \end{sopimus}
 
-\begin{lem}
-Kompaktien joukkojen mielivaltainen tulo on kompakti.
+\begin{lause}
+\emph{Tihonovin lause.} Kompaktien avaruuksien mielivaltainen tulo on kompakti.
 \begin{proof}
-Topologia II \cite{Topo2} Lause ?.?.
+Topologia II \cite{Topo2} Lause 18.4.
 \end{proof}
-\end{lem}
+\end{lause}
 
 \begin{kor}
 Olkoon $X$ täysin säännöllinen avaruus. 
 Tällöin yksikkövälien tulo $P^X$ on kompakti.
+\qed
 \end{kor}
 
 \begin{lause}\label{comp_reg_upotus}
@@ -1903,17 +1925,16 @@ Avaruus $X$ on täysin säännöllinen,
 joten on olemassa sellainen kuvaus $f\in I^X$, 
 jolla $f(x)=0$ ja $f(z)=1$ kaikilla $z\in X\setminus A$. 
 Erityisesti $f(y)=1\neq 0=f(x)$ ja näin ollen $\rho(x)\neq \rho(y)$. 
-
-Toiseksi kuvaus $\rho$ on projektiokuvausten 
-$(P_f\circ\rho)(x)
-%=P_f(\rho(x))
-=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
-
-Toiseksi kuvauksen $\rho$ komponenttikuvaukset ovat joukon $I^X$ alkioina jatkuvia. 
-Näin ollen myös kuvaus $\rho$ on jatkuva \cite[lause~?.?]{Topo2}. 
+%
+%Toiseksi kuvaus $\rho$ on projektiokuvausten 
 %$(P_f\circ\rho)(x)
 %%=P_f(\rho(x))
 %=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
+
+Toiseksi kuvauksen $\rho$ komponenttikuvaukset
+$(P_f\circ\rho)(x)
+%=P_f(\rho(x))
+=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ ovat jatkuvia, joten myös kuvaus $\rho$ on jatkuva \cite[lause~7.10]{Topo2}. 
 
 Viimeiseksi kuvaus $\rho$ on avoin: 
 Avointen joukkojen perhe 
@@ -1933,11 +1954,11 @@ $V\in (U_f)_{f\in I^X}$ ja $V\subset U$,
 eli avoimelle osajoukolle ${U\subset X}$ löydettiin joukon
 %$V\in (U_f)_{f\in I^X}$, jolla $x\in V\subset U$. 
 $(U_f)_{f\in I^X}$ alkio $V$, jolla $x\in V\subset U$. 
-Tällöin perhe $(U_f)_{f\in I^X}$ on ympäristökanta \cite[lause~?.?]{Topo2}. 
+Tällöin perhe $(U_f)_{f\in I^X}$ on ympäristökanta \cite[lause~2.4~ja~2.15]{Topo2}. 
 Ympäristökannan jäsenen $V_{f_0}\in (U_f)_{f\in I^X}$ kuva 
 $$\rho V_{f_0}=\left\{\{t_f\}\mid t_{f_0}<1\right\}\cap \rho X$$
 %$$\rho V_{f_0}=\left\{\prod_{f\in I^X}\{t_f\}\mid t_f\in I \text{ kaikilla }f\in I^X, t_{f_0}<1\right\}\cap \rho X$$
-on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin \cite[lause~?.?]{Topo2}.
+on avoin joukossa $\rho X$ ja näin ollen kuvaus $\rho$ on avoin.
 \end{proof}
 \end{lause}
 
@@ -2102,7 +2123,7 @@ Stone-Čech kompaktisointi $\beta X$ on laajin
 kompaktisointi avaruudelle $X$: 
 %Olkoon $\hat{X}$ avaruuden $X$ kompaktisointi ja 
 Jos $\hat{X}$ on avaruuden $X$ kompaktisointi, 
-niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus. 
+niin $\hat{X}$ on homeomorfinen avaruuden $\beta X$ tekijäavaruuden kanssa. 
 %$\sim$ sellainen ekvivalenssirelaatio, jolla $a\sim a'$ jos ja vain jos $F(a)=F(a')$, kun $a,a'\in \beta X$.
 %Tällöin kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
 %$\beta X / \sim$ kanssa. 
@@ -2111,23 +2132,34 @@ niin $\hat{X}$ on avaruuden $\beta X$ tekijäavaruus.
 Lauseen \ref{SC-ominaisuus} nojalla on olemassa 
 jatkuva kuvaus $F\colon \beta X\rightarrow \hat{X}$, 
 jolla $F(x)=x$ kaikilla $x\in X$. 
-Avaruus $\beta X$ on kompakti, joten $F(\beta X)$ on suljettu joukko, 
-joka sisältää tiheän osajoukon $X\subset \hat{X}$. 
-Näin ollen $\overline{X}\subset F(\beta X)= \hat{X}$ 
-ja siten kuvaus $F$ on surjektio. 
+Avaruus $\beta X$ on kompakti, $\hat{X}$ on Hausdorff ja kuvaus $F$ on jatkuva, joten $F$ on suljettu kuvaus \cite[lause~15.15]{Topo2}.
+%Avaruus $\beta X$ on kompakti, joten 
+Kuvajoukko $F(\beta X)$ on suljettu ja  
+%joka 
+sisältää joukossa $\hat{X}$ tiheän osajoukon $X$, 
+%Näin ollen 
+joten $\overline{X}\subset F(\beta X)= \hat{X}$. 
+%ja siten 
+Näin ollen kuvaus $F$ on surjektio. 
+Kuvaus $F$ on siis suljettu jatkuva surjektio, 
+%ja näin ollen 
+joten $F$ on samastuskuvaus \cite[lause~8.9]{Topo2}. 
+
 Olkoon $\sim$ sellainen ekvivalenssirelaatio, jolla $a\sim a'$ jos ja vain jos $F(a)=F(a')$, kun $a,a'\in \beta X$. 
 Nyt voidaan määritellä kuvaus 
 $F_{\sim}\colon \beta X /\sim\,\rightarrow \hat{X}$, jolla $F_{\sim}([a])=F(a)$. 
-Kuvaus $F_{\sim}$ on injektio, sillä jos $x,y\in \beta X$ ja $[x]\neq [y]$ niin $F_{\sim}([x])=F(x)\neq F(y)=F_{\sim}([y])$. 
+%Kuvaus $F_{\sim}$ on injektio, sillä jos $x,y\in \beta X$ ja $[x]\neq [y]$ niin $F_{\sim}([x])=F(x)\neq F(y)=F_{\sim}([y])$. 
 %TODO tästä eteenpäin topo2:sta samastuskuvaus määritelmineen ja tekijätopologian tuloksien avulla todistuksen loppuosa
-Olkoon $\rho\colon \beta X\rightarrow \beta X/\sim$ projektiokuvaus, 
-jolla $\rho(a)=[a]$ kaikilla $a\in\beta X$. Kuvaus $F$ on jatkuva, 
-$\rho$ on projektiokuvauksena jatkuva ja $F=F_{\sim}\circ \rho$, 
-joten $F_{\sim}$ on jatkuva. 
-
-(Puuttuu perustelu miksi $F_{\sim}$ on avoin kuvaus.)
-
-Tällöin kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
+%Olkoon $\rho\colon \beta X\rightarrow \beta X/\sim$ projektiokuvaus, 
+%jolla $\rho(a)=[a]$ kaikilla $a\in\beta X$. Kuvaus $F$ on jatkuva, 
+%$\rho$ on projektiokuvauksena jatkuva ja $F=F_{\sim}\circ \rho$, 
+%joten $F_{\sim}$ on jatkuva. 
+%
+%(Puuttuu perustelu miksi $F_{\sim}$ on avoin kuvaus.)
+%
+Kuvaus $F$ on samastuskuvaus, joten kuvaus $F_{\sim}$ %\colon \beta X /\sim\,\rightarrow \hat{X}$ 
+on homeomorfismi \cite[lause~9.10]{Topo2}.
+Siis kompaktisointi $\hat{X}$ on homeomorfinen tekijäavaruuden 
 $\beta X / \sim$ kanssa. 
 \end{proof}
 \end{lause}
