@@ -208,6 +208,7 @@ Lisäksi käsitellään uniformisen rakenteen yhteyttä topologiaan.
 \end{enumerate}
 Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformiteetin $\U$ lähistöiksi. 
 Uniformiteetilla $\U$ varustettua joukkoa $X$ sanotaan uniformiseksi avaruudeksi.
+Uniformista avaruutta voidaan myös merkitä parina $(X,\U)$.
 \end{maar}
 \begin{huom}\label{V-close}
 Uniformiteetin $\U$ lähistöön (entourage) $V\in\U $ kuuluvan 
@@ -232,7 +233,7 @@ Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W\circ W^{-1}\subse
 %Jos joukko $X$ on tyhjä, niin ehdon (U$\ref{U_I}$) 
 %Jos joukko $X$ on tyhjä, niin ehdon \ref{U_I} 
 %nojalla joukon $X$ uniformiteetti $\U$ on tyhjä. Erityisesti kokoelma $\{\emptyset\}$ on joukon $X$ ainoa ehdot täyttävä uniformiteetti, jos joukko $X$ on tyhjä.
-Kokoelma $\{\emptyset\}$ on ainoa ehdot täyttävä uniformiteetti tyhjälle joukolle.
+Kokoelma $\{\emptyset\}$ on ainoa uniformiteetin ehdot täyttävä kokoelma tyhjälle joukolle.
 \end{huom}
 \begin{maar}\label{uniformi_kanta}
 Olkoon $X$ joukko ja kokoelma $\U\subset \Pot (X\times X)$ uniformiteetti 
@@ -244,6 +245,7 @@ kannan alkio $W\in B$, jolla pätee $W\subset V$.
 %Uniformiteetin kannas
 %\end{kor}
 \begin{lause}\label{uniformin kannan maar}
+Kantalause. 
 Olkoon $X$ joukko. 
 %Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
 %Kokoelma $B\subset \U$ on uniformiteetin $\U$ kanta, 
@@ -1825,7 +1827,7 @@ Siis avaruus $(X,\T)$, joka toteuttaa ehdon \ref{O_IV} on uniformisoituva.
 \end{lause}
 
 \begin{maar}
-Topologinen avaruus on \emph{Hausdorff}, jos jokaisella pisteellä on erilliset ympäristöt.
+Topologinen avaruus on \emph{Hausdorff}, jos jokaisella kahdella eri pisteellä on erilliset ympäristöt.
 \end{maar}
 
 \begin{maar}
@@ -1931,15 +1933,21 @@ Erityisesti $f(y)=1\neq 0=f(x)$ ja näin ollen $\rho(x)\neq \rho(y)$.
 %%=P_f(\rho(x))
 %=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ yhdisteenä jatkuva.
 
-Toiseksi kuvauksen $\rho$ komponenttikuvaukset
-$(P_f\circ\rho)(x)
-%=P_f(\rho(x))
-=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ ovat jatkuvia, joten myös kuvaus $\rho$ on jatkuva \cite[lause~7.10]{Topo2}. 
+Toiseksi kuvauksen $\rho$ komponenttikuvaukset 
+$P_f\circ\rho\colon X\rightarrow I_f$, joilla $P_f\circ\rho=f\in I^X$ 
+%$(P_f\circ\rho)(x)
+%%=P_f(\rho(x))
+%=f(x)$ kaikilla $x\in X$ ja $f\in I^X$ 
+%$$(P_f\circ\rho)(x)
+%%=P_f(\rho(x))
+%=f(x)\quad\text{ kaikilla }x\in X\text{ ja }f\in I^X$$
+ovat jatkuvia. 
+Näin ollen myös kuvaus $\rho$ on jatkuva \cite[lause~7.10]{Topo2}. 
 
-Viimeiseksi kuvaus $\rho$ on avoin: 
-Avointen joukkojen perhe 
-%$$(U_f)_{f\in I^X}=\{f^\leftarrow [0,1[\subset X\mid f\in I^X\}$$
-$(U_f)_{f\in I^X}$, ${U_f=f^\leftarrow [0,1[\subset X}$ kaikilla $ f\in I^X$ 
+Viimeiseksi kuvaus $\rho$ on myös avoin: 
+Avointen osajoukkojen perhe 
+%$$(U_f)_{f\in I^X},\quad\text{ jossa } U_f=f^\leftarrow [0,1[\subset X\text{ kaikilla }  f\in I^X$$
+$(U_f)_{f\in I^X}$ missä ${U_f=f^\leftarrow [0,1[\subset X}$ kaikilla $ f\in I^X$ 
 %\begin{equation*}
 %(U_f)_{f\in I^X}\quad\text{ missä }U_f=f^\leftarrow [0,1[\subset X\text{ kaikilla } f\in I^X 
 %\end{equation*}
@@ -2134,11 +2142,12 @@ jatkuva kuvaus $F\colon \beta X\rightarrow \hat{X}$,
 jolla $F(x)=x$ kaikilla $x\in X$. 
 Avaruus $\beta X$ on kompakti, $\hat{X}$ on Hausdorff ja kuvaus $F$ on jatkuva, joten $F$ on suljettu kuvaus \cite[lause~15.15]{Topo2}.
 %Avaruus $\beta X$ on kompakti, joten 
-Kuvajoukko $F(\beta X)$ on suljettu ja  
-%joka 
-sisältää joukossa $\hat{X}$ tiheän osajoukon $X$, 
+Tällöin kuvajoukko $F(\beta X)\subset\hat{X}$ on suljettu. 
+%joka sisältää 
+Toisaalta osajoukko $X\subset F(\beta X)$ on tiheä joukossa $\hat{X}$, 
+%tiheän osajoukon $X$, 
 %Näin ollen 
-joten $\overline{X}\subset F(\beta X)= \hat{X}$. 
+joten $\overline{X}\subset F(\beta X) = \hat{X}$. 
 %ja siten 
 Näin ollen kuvaus $F$ on surjektio. 
 Kuvaus $F$ on siis suljettu jatkuva surjektio, 
