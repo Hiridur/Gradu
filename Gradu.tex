@@ -56,14 +56,15 @@
   \sloppy
   \large \textsc{Helsingin Yliopisto \\
                  Matemaattis-luonnontieteellinen tiedekunta \\
-                 Matematiikan ja tilastotieteen laitos}
+                 Matematiikan ja tilastotieteen osasto}
   \vspace{5mm}
   \hrule height3pt
   \vspace{20mm}
   \begin{center}
     \large Pro gradu -tutkielma
     \linebreak \vfill   
-    \huge \textbf{Stone–Čech kompaktisointi}
+    \huge \textbf{Uniformiset avaruudet ja \\
+                  Stone–Čech kompaktisointi}
     \vspace{20mm} \linebreak
     \Large Pekka Keipi \linebreak
     %\normalsize 0000000  % opiskelijanumero
@@ -85,11 +86,11 @@
 
 Tämän tutkielman tavoitteena on esitellä ja konstruoida Stone–Čech kompaktisointi täysin säännöllisille avaruuksille. Tutkielmassa esitellään myös uniforminen avaruus ja käsitellään tämän yhteyttä pseudometriikoihin. 
 
-Venäläinen matemaatikko Andrey Tihonov (1906-1993) viittasi Stone–Čech kompaktisointina myöhemmin tunnettuun tulokseen jo vuonna 1930. 
+Venäläinen matemaatikko Andrey Tihonov (1906--1993) viittasi Stone–Čech kompaktisointina myöhemmin tunnettuun tulokseen jo vuonna 1930. 
 Tulos pohjautuukin juuri Tihonovin työhön ja osa tutkielmassa käytetyistä aputuloksista on alun perin Tihonovin todistamia. 
-Amerikkalainen Marshall Stone (1903-1989) ja tšekkiläinen Eduard Čech (1893-1960) todistivat vuonna 1937 Stone–Čech kompaktisoinnin olemassaolon ja sen ominaisuuksia. 
+Amerikkalainen Marshall Stone (1903--1989) ja tšekkiläinen Eduard Čech (1893--1960) todistivat vuonna 1937 Stone–Čech kompaktisoinnin olemassaolon ja sen ominaisuuksia. 
 Čech tunnetaan saavutuksistaan algebrallisen topologian parissa, muun muassa hänen mukaansa nimetty Čech-kohomologia. 
-Stone on puolestaan tunnettu muun muassa työstään funktionaali analyysin ja boolean algebran parissa. 
+Stone on puolestaan tunnettu muun muassa työstään funktionaalianalyysin ja Boolen algebran parissa. 
 
 Tutkielman alussa käydään läpi käytettäviä topologiaan ja joukkomerkintöihin liittyviä käsitteitä ja merkintätapoja. 
 Lukijan oletetaan tuntevan yleisen topologisen avaruuden määritelmä ja tähän liittyviä perustuloksia. 
@@ -198,12 +199,12 @@ Lisäksi käsitellään uniformisen rakenteen yhteyttä topologiaan.
 %\\
 %Merkitään joukkoilla $V$ ja $W$ seuraavasti: $$V\circ W=\{(x,z)\mid \text{ on olemassa sellainen }y \in X\text{ jolla }(x,y)\in V\text{ ja }(y,z)\in W\}$$ ja $W^2=W\circ W$.
 \begin{maar}\label{uniformi_maar}
-\emph{Uniforminen rakenne} (tai \emph{uniformiteetti}) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee %kaikilla $V\in \U$
+\emph{Uniforminen rakenne} (tai \emph{uniformiteetti}) joukolle $X$ annetaan karteesisen tulon $X\times X$ potenssijoukon $\Pot(X\times X)$ osajoukkona $\U$, jolle pätee seuraavat ehdot: %kaikilla $V\in \U$
 \begin{enumerate} [label=(U\arabic*),ref=(U\arabic*)]
-\item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
-\item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$,
-\item\label{U_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in\U$ osajoukko,
-\item\label{U_II} Jos $V\in\U$, niin $V^{-1}=\{(y,x)\mid (x,y)\in V\}\in\U$,
+\item\label{F_I} Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$.
+\item\label{F_II} Jokainen äärellinen leikkaus joukon $\U$ alkioista kuuluu joukkoon $\U$.
+\item\label{U_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in\U$ osajoukko.
+\item\label{U_II} Jos $V\in\U$, niin $V^{-1}=\{(y,x)\mid (x,y)\in V\}\in\U$.
 \item\label{U_III} Jos $V\in \U$, niin on olemassa sellainen $W\in \U$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 Uniformisen rakenteen muodostavia joukkoja $ V\in\U$ sanotaan uniformiteetin $\U$ lähistöiksi. 
@@ -250,13 +251,13 @@ Olkoon $X$ joukko.
 %Olkoon joukko $X$ varustettu uniformiteetilla $\U$. 
 %Kokoelma $B\subset \U$ on uniformiteetin $\U$ kanta, 
 Kokoelma $B\subset \Pot (X\times X)$ on joukon $X$ erään uniformiteetin kanta, 
-jos kokoelmalle $B$ pätee
+jos kokoelmalle $B$ pätee seuraavat ehdot:
 %Olkoon $X$ joukko ja $B\subset \Pot (X\times X)$ sellainen joukko, jolla pätee
 \begin{enumerate} [label=(B\arabic*)]
-\item\label{B_I} Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
-\item\label{U'_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
+\item\label{B_I} Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$.
+\item\label{U'_I} Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko.
 \item\label{U'_II} Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
-$,
+$.
 \item\label{U'_III} Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 \begin{proof}
@@ -287,7 +288,7 @@ Käydään läpi uniformiteetin määritelmän \ref{uniformi_maar} ehdot:
 Jos $W\in \U_B$, niin on olemassa sellainen $V\in B$, jolla pätee $V\subset W$. 
 Toisaalta jos osajoukolle $W'\subset X\times X$ pätee $V\subset W \subset W'$, 
 niin $W'\in\U_B$. \\
-Siis jos $W\in \U_B$ ja $W\subset W'\subset X\times X$ niin $ W'\in\U_B$.
+Siis jos $W\in \U_B$ ja $W\subset W'\subset X\times X$, niin $ W'\in\U_B$.
 %Jos $V\in \U_B$ ja $V\subset W\subset X\times X$ 
 %niin joukon $\U_B$ määrittelyn nojalla $ W\in\U_B$,
 %Jos $V\in \U$ ja $V\subset W\subset X\times X$ niin $ W\in\U$,
@@ -331,23 +332,30 @@ Joukon $\U_B$ määrittelyn nojalla tällöin $V\in \U_B$ ja siis $ V^2\subset W
 \end{enumerate}
 \end{proof}
 \end{lause}
-\begin{lause}
+\begin{lause}\label{uniformi topologia}
 %\emph{Uniformisen avaruuden topologia.}
 Uniformisen avaruuden topologia.
-Olkoon joukko $X$ varustettu uniformiteetilla $\U$.
-Olkoon $x\in X$ 
-alkio ja $V\in\U$ lähistö. 
-%alkio, $V\in\U$ lähistö ja $B\subset\U$ uniformiteetin $\U$ kanta. 
-Olkoon tällöin %$V(x)\subset X$,
-\begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
-\quad\text{ ja }\quad
-B(x)=\{ V(x)\mid V\in\U \}
-\end{equation*}
-joukkoja.
-Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, 
-että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö 
-alkiolle $x$ ja joukko $B(x)$ on alkion $x$ 
-ympäristökanta kyseisessä topologiassa.
+%Olkoon joukko $X$ varustettu uniformiteetilla $\U$.
+Olkoon $(X,\U)$ uniforminen avaruus.
+On olemassa sellainen joukon $X$ topologia, 
+jossa jokaisella $x\in X$ ja $V\in\U$ joukko
+$$V(x)=\{ y\in X\mid (x,y)\in V \}$$
+on pisteen $x$ ympäristö. Lisäksi kokoelma
+$$B(x)=\{ V(x)\mid V\in\U \}$$
+on pisteen $x$ ympäristökanta tässä topologiassa.
+%Olkoon $x\in X$ 
+%alkio ja $V\in\U$ lähistö. 
+%%alkio, $V\in\U$ lähistö ja $B\subset\U$ uniformiteetin $\U$ kanta. 
+%Olkoon tällöin %$V(x)\subset X$,
+%\begin{equation*}V(x)=\{ y\in X\mid (x,y)\in V \}
+%\quad\text{ ja }\quad
+%B(x)=\{ V(x)\mid V\in\U \}
+%\end{equation*}
+%joukkoja.
+%Uniformiteetti $\U$ määrää topologian joukolle $X$ niin, 
+%että joukko $V(x)$ on (lähistön $V$ määräämä) ympäristö 
+%alkiolle $x$ ja joukko $B(x)$ on alkion $x$ 
+%ympäristökanta kyseisessä topologiassa.
 \begin{proof}
 Olkoon joukko $X$ varustettu uniformiteetilla $\U$, 
 $x\in X$ alkio ja $V\in\U$ lähistö avaruudessa $X$. Lisäksi olkoot joukot $V(x)$ ja $B(x)$ kuten edellä. 
@@ -382,7 +390,7 @@ huomautuksen \ref{kaikki_ystöt} nojalla ympäristökanta.
 \end{proof}
 \end{lause}
 \begin{huom}\label{unif_indusoitu_topo}
-Uniformiteetin määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
+Uniformiselle avaruudelle lauseen \ref{uniformi topologia} mukaisesti määräämää topologiaa sanotaan uniformiteetin indusoimaksi topologiaksi.
 \end{huom}
 \begin{maar}\label{tasaisesti_jatkuva}
 %Uniformisesti jatkuvat kuvaukset. 
@@ -435,7 +443,7 @@ Siis ympäristön alkukuva on ympäristö ja siten tasaisesti jatkuva kuvaus on 
 \end{lause}
 \begin{lause}
 Olkoot $X$, $X'$ ja $X''$ uniformeja avaruuksia 
-ja $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ 
+sekä $f\colon X\rightarrow X'$ ja $g\colon X'\rightarrow X''$ 
 tasaisesti jatkuvia kuvauksia. 
 Tällöin yhdistetty kuvaus $g\circ f\colon X\rightarrow X''$ on tasaisesti jatkuva.
 \begin{proof}
@@ -478,7 +486,9 @@ jos $\U_1$ on sekä hienompi että karkeampi kuin $\U_2$.
 \end{maar}
 \begin{kor}
 Olkoon $X$ joukko ja $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$. 
-Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$ jos ja vain jos jokaisella lähistöllä $V\in\U_2$ pätee $V\in\U_1$.
+Uniformiteetti $\U_1$ on hienompi kuin uniformiteetti $\U_2$ jos ja vain jos 
+$\U_2\subset\U_1$.
+%jokaisella lähistöllä $V\in\U_2$ pätee $V\in\U_1$.
 \end{kor}
 \begin{kor}
 Olkoon $X$ joukko, $\U_1$ ja $\U_2$ uniformiteetteja joukolle $X$ ja 
