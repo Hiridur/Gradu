@@ -612,7 +612,7 @@ Näin ollen
 %Siis 
 \begin{equation*}
 U^{-1}=\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}))^{-1}
-=\bigcap_{i\in J}g^{\leftarrow}_{i}(V^{-1}_{i})\in B,
+=\bigcap_{i\in J}g^{\leftarrow}_{i}(V^{-1}_{i})\in B
 %,\quad\text{ jossa }V_i\in\U_i.
 %,\quad V_i\in\U_i.
 \end{equation*}
@@ -626,7 +626,8 @@ U^{-1}=\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}))^{-1}
 %%Nyt $U\in B$ ja $U^{-1}\in B$, joten ehdon \ref{F_II} nojalla $U\cap U^{-1}\in B$. 
 %Siis joukolle $ U\in B$ on löydetty 
 %joukko $U^{-1}\in B$, 
-jolloin vaadittu ehto pätee muodossa $U^{-1}\subset U^{-1}$.
+%jolloin vaadittu ehto pätee muodossa $U^{-1}\subset U^{-1}$.
+ja voidaan valita $U'= U^{-1}$, jolloin erityisesti $U'\subset U^{-1}$.
 %
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
 %$,
@@ -637,7 +638,10 @@ joilla
 \begin{equation*}
 U=\bigcap_{i\in J}g^{\leftarrow}_{i}(V_{i}).
 \end{equation*}
-Uniformiteetin määritelmän ehdon \ref{U_III} nojalla jos $V_i\in\U_i$ niin on olemassa sellainen $W_i\in\U_i$, jolla $W^2_i\subset V_i$. 
+Uniformiteetin määritelmän ehdon \ref{U_III} nojalla 
+%jos $V_i\in\U_i$ niin 
+joukolle $V_i\in\U_i$ 
+on olemassa sellainen $W_i\in\U_i$, jolla $W^2_i\subset V_i$. 
 Olkoon 
 \begin{equation*}
 A=\bigcap_{i\in J}g^{\leftarrow}_{i}(W_{i}),
@@ -792,7 +796,7 @@ Olkoon $(\U_i)_{i\in I}$ perhe uniformiteetteja joukolle $X$.
 Tällöin perheen $(\U_i)_{i\in I}$ \emph{pienin yläraja} on uniformiteetti $\U$, joka on kuvausten $id\colon X\rightarrow (X,\U_i)$ määritelmän \ref{kuvausperheen indusoima} mukaisesti indusoima.
 \end{maar}
 \chapter{Pseudometriikat}
-Tässä kappaleessa tutustutaan pseudometriikoihin\cite[luku~IX]{Eom2}, jotka ovat tavanomaisten metriikoiden yleistys. 
+Tässä kappaleessa tutustutaan pseudometriikoihin \cite[luku~IX]{Eom2}, jotka ovat tavanomaisten metriikoiden yleistys. 
 
 %Lisää aiheesta teoksesta General Topology part 2 \cite{Eom2} luvusta IX.
 %\\
@@ -833,20 +837,21 @@ Tällöin $f$ on pseudometriikka.
 Olkoon $X$ epätyhjä joukko ja $g\colon X\rightarrow \R$ (äärellisarvoinen) kuvaus. Tällöin kaavalla $f(x,y)=|g(x)-g(y)|$ määritelty kuvaus $f\colon X\times X\rightarrow[0,+\infty]$ on pseudometriikka.
 \end{esim}
 \begin{esim}%4)
-Olkoon $X$ kaikkien muotoa $g\colon [0,1]\rightarrow \R$ olevien jatkuvien kuvausten joukko. % väliltä $[0,1]$ reaaliluvuille. 
+Olkoon $X$ kaikkien jatkuvien kuvausten $ [0,1]\rightarrow \R$ joukko. % väliltä $[0,1]$ reaaliluvuille. 
 Tällöin kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määritelty kuvaus $f\colon X\times X\rightarrow [0,+\infty]$ määrittelee pseudometriikan joukolle $X$.
 \end{esim}
 \begin{huom}
 %Metriikoista tutut ominaisuudet, kuten
 %Määritelmän \ref{pseudo_maar} ehdosta \ref{EC_III} seuraa, että jos $f(x,z)+f(z,y)<\infty$ niin $f(x,y)<\infty$. 
-Määritelmän \ref{pseudo_maar} ehdon \ref{EC_III} nojalla epäyhtälöstä $f(x,z)+f(z,y)<\infty$ seuraa $f(x,y)<\infty$. 
+Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ pseudometriikka.
+Määritelmän \ref{pseudo_maar} ehdon \ref{EC_III} nojalla epäyhtälöstä $f(x,z)+f(z,y)<\infty$ seuraa $f(x,y)<\infty$, kun $x,y,z\in X$. 
 %Tällöin koska kaavat $f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ pätevät, niin myös kaava $|f(x,z)-f(z,y)|\leq f(x,y)$ pätee.
 Näin ollen epäyhtälöistä 
 \begin{equation*}
 f(x,z)\leq f(x,y)+f(y,z)\text{ ja }f(y,z)\leq f(y,x)+f(x,z)
 \end{equation*}
 %$f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ 
-seuraa epäyhtälö $|f(x,z)-f(z,y)|\leq f(x,y)$.
+seuraa epäyhtälö $|f(x,z)-f(z,y)|\leq f(x,y)$, kun $x,y,z\in X$.
 \end{huom}
 \begin{esim}%1
 %Olkoon $f\colon X\times X\rightarrow$ pseudometriikka
