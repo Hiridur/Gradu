@@ -86,10 +86,10 @@
 
 Tämän tutkielman tavoitteena on esitellä ja konstruoida Stone–Čech kompaktisointi täysin säännöllisille avaruuksille. Tutkielmassa esitellään myös uniforminen avaruus ja käsitellään tämän yhteyttä pseudometriikoihin. 
 
-Venäläinen matemaatikko Andrey Tihonov (1906--1993) viittasi Stone–Čech kompaktisointina myöhemmin tunnettuun tulokseen jo vuonna 1930. 
+Venäläinen matemaatikko Andrei Tihonov (1906--1993) viittasi Stone–Čech kompaktisointina myöhemmin tunnettuun tulokseen jo vuonna 1930. 
 Tulos pohjautuukin juuri Tihonovin työhön ja osa tutkielmassa käytetyistä aputuloksista on alun perin Tihonovin todistamia. 
 Amerikkalainen Marshall Stone (1903--1989) ja tšekkiläinen Eduard Čech (1893--1960) todistivat vuonna 1937 Stone–Čech kompaktisoinnin olemassaolon ja sen ominaisuuksia. 
-Čech tunnetaan saavutuksistaan algebrallisen topologian parissa, muun muassa hänen mukaansa nimetty Čech-kohomologia. 
+Čech tunnetaan saavutuksistaan algebrallisen topologian parissa ja muun muassa Čech-kohomologia on hänen mukaansa nimetty. 
 Stone on puolestaan tunnettu muun muassa työstään funktionaalianalyysin ja Boolen algebran parissa. 
 
 Tutkielman alussa käydään läpi käytettäviä topologiaan ja joukkomerkintöihin liittyviä käsitteitä ja merkintätapoja. 
@@ -338,7 +338,7 @@ Uniformisen avaruuden topologia.
 %Olkoon joukko $X$ varustettu uniformiteetilla $\U$.
 Olkoon $(X,\U)$ uniforminen avaruus.
 On olemassa sellainen joukon $X$ topologia, 
-jossa jokaisella $x\in X$ ja $V\in\U$ joukko
+jossa jokaisella pisteellä $x\in X$ ja lähistöllä $V\in\U$ joukko
 $$V(x)=\{ y\in X\mid (x,y)\in V \}$$
 on pisteen $x$ ympäristö. Lisäksi kokoelma
 $$B(x)=\{ V(x)\mid V\in\U \}$$
@@ -627,7 +627,7 @@ U^{-1}=\bigcap_{i\in J}(g^{\leftarrow}_{i}(V_{i}))^{-1}
 %Siis joukolle $ U\in B$ on löydetty 
 %joukko $U^{-1}\in B$, 
 %jolloin vaadittu ehto pätee muodossa $U^{-1}\subset U^{-1}$.
-ja voidaan valita $U'= U^{-1}$, jolloin erityisesti $U'\subset U^{-1}$.
+ja voidaan valita $U'= U^{-1}$, jolloin $U'\in B$ ja $U'\subset U^{-1}$.
 %
 %Jos $V\in B$, niin on olemassa sellainen $V'\in B$, jolla $V'\subset V^{-1}%=\{(y,x)\mid (x,y)\in V\}
 %$,
@@ -846,12 +846,12 @@ Tällöin kaavalla $f(x,y)=\int_0^1 |x(t)-y(t)|dt$ määritelty kuvaus $f\colon 
 Olkoon $X$ joukko ja $f\colon X\times X\rightarrow [0,+\infty]$ pseudometriikka.
 Määritelmän \ref{pseudo_maar} ehdon \ref{EC_III} nojalla epäyhtälöstä $f(x,z)+f(z,y)<\infty$ seuraa $f(x,y)<\infty$, kun $x,y,z\in X$. 
 %Tällöin koska kaavat $f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ pätevät, niin myös kaava $|f(x,z)-f(z,y)|\leq f(x,y)$ pätee.
-Näin ollen epäyhtälöistä 
+Näin ollen kaikilla $x,y,z\in X$ epäyhtälöistä 
 \begin{equation*}
 f(x,z)\leq f(x,y)+f(y,z)\text{ ja }f(y,z)\leq f(y,x)+f(x,z)
 \end{equation*}
 %$f(x,z)\leq f(x,y)+f(y,z)$ ja $f(y,z)\leq f(y,x)+f(x,z)$ 
-seuraa epäyhtälö $|f(x,z)-f(z,y)|\leq f(x,y)$, kun $x,y,z\in X$.
+seuraa epäyhtälö $|f(x,z)-f(z,y)|\leq f(x,y)$.
 \end{huom}
 \begin{esim}%1
 %Olkoon $f\colon X\times X\rightarrow$ pseudometriikka
@@ -998,21 +998,23 @@ Olkoon $X$ joukko sekä $f$ ja $g$ pseudometriikoita joukolle $X$.
 Määritelmästä \ref{pseudo_equiv} seuraa, että pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
-$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, 
-jolla pätee $f(x,y)\leq a$, jos $g(x,y)\leq b$ kaikilla $x,y\in X$.
+$a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$ niin, 
+että ehdosta $g(x,y)\leq b$ seuraa $f(x,y)\leq a$ kaikilla $x,y\in X$.
 
-Jos lisäksi jokaiselle $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$, jolla pätee $g(x,y)\leq a$, jos $f(x,y)\leq b$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+Jos lisäksi jokaiselle $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$, 
+jolla ehdosta $f(x,y)\leq b$ seuraa $g(x,y)\leq a$ 
+kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
 \begin{proof}
 Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittelemän uniformiteetin $\U_f$ kannan muodostaa kokoelma 
 $$B_f=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}.$$ 
 Tällöin uniformiteetti $ \U_f$ on kokoelma 
-$$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\,]0,\infty]\}.$$
+$$\U_f=\{ V\subset X\times X\mid f^{\leftarrow}[0,a]\subset V \text{ jollain } a\in\,]0,\infty]\}.$$
 Vastaavasti uniformiteetin $\U_g$ kannan muodostaa kokoelma $$B_g=\{ g^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}$$ ja uniformiteetti $ \U_g$ on kokoelma 
-$$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V, \text{ jollain } a\in\,]0,\infty]\}.$$ 
-Osoitetaan väitteen implikaatio molempiin suuntiin.
+$$\U_g=\{ V\subset X\times X\mid g^{\leftarrow}[0,a]\subset V \text{ jollain } a\in\,]0,\infty]\}.$$ 
+Osoitetaan, että väite on riittävä ja välttämätön osoittamalla implikaatio molempiin suuntiin.
 \begin{enumerate}
-\item[$\Rightarrow$] 
+\item[''$\Rightarrow$''] 
 Olkoon uniformiteetti $\U_f$ karkeampi kuin $\U_g$ ja näin ollen määritelmän \ref{uniformi_vertailu} mukaan identtinen kuvaus $id\colon(X,\U_g)\rightarrow(X,\U_f)$ on tasaisesti jatkuva. 
 Tällöin määritelmän \ref{tasaisesti_jatkuva} 
 mukaan jokaiselle maalijoukon %avaruuden $(X,\U_f)$ 
@@ -1027,22 +1029,29 @@ Tarkas\-tele\-mal\-la uniformiteettien kantojen jäseniä
 %saamme edeltävän ehdon seuraavaan muotoon: 
 voidaan edeltävä ehto muotoilla seuraavasti: 
 Jokaisella $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$ niin, 
-että kaikilla $x,y\in X$ pätee 
-$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, 
-eli $g(x,y)\leq b\Rightarrow f(x,y) \leq a$.
-\item[$\Leftarrow$] Oletetaan, että jokaiselle luvulle 
-$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, jolla 
-$g(x,y)\leq b \Rightarrow f(x,y)\leq a,
+että kaikilla $x,y\in X$ %pätee 
+%$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, 
+ehdosta $(x,y)\in g^{\leftarrow}[0,b]$ seuraa $(x,y)\in f^{\leftarrow}[0,a]$, 
+%$(x,y)\in f^{\leftarrow}[0,a]$, kun $(x,y)\in g^{\leftarrow}[0,b]$, 
+eli $f(x,y) \leq a$, jos $g(x,y)\leq b$.
+\item[''$\Leftarrow$''] Oletetaan, että jokaiselle luvulle 
+$a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$ niin, että 
+kaikilla $x,y\in X$ 
+%$g(x,y)\leq b \Rightarrow f(x,y)\leq a,
+%ehdosta $g(x,y)\leq b$ seuraa $f(x,y)\leq a,
+pätee $f(x,y)\leq a,$ jos $g(x,y)\leq b,
 $ %\text{ 
 eli %}
-$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a],$ 
-kaikilla $x,y\in X$. 
+%$(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a],$ 
+$(x,y)\in f^{\leftarrow}[0,a],$ jos ${(x,y)\in g^{\leftarrow}[0,b].}$ 
 %Tällöin %kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b]\Rightarrow (x,y)\in f^{\leftarrow}[0,a]$, josta seuraa, että 
-\\
+%\\
 Siis jokaiselle uniformiteetin $\U_f$ kannan jäsenelle 
 $f^{\leftarrow}[0,a']$ missä $a'\in\,]0,\infty] $ on olemassa uniformiteetin $\U_g$ 
 kannan jäsen $g^{\leftarrow}[0,b']$ missä $b'\in\,]0,\infty]$ niin, 
-että kaikilla $x,y\in X$ pätee $(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$. 
+että kaikilla $x,y\in X$ pätee 
+%$(x,y)\in g^{\leftarrow}[0,b']\Rightarrow (x,y)\in f^{\leftarrow}[0,a']$. 
+$(x,y)\in f^{\leftarrow}[0,a']$, jos $(x,y)\in g^{\leftarrow}[0,b']$. 
 %että ehdosta $(x,y)\in g^{\leftarrow}[0,b']$ 
 %%\Rightarrow 
 %seuraa 
@@ -1179,7 +1188,7 @@ $(g_A)$ pienin yläraja $\sup_{j\in \{1,2,\dots , n\}}g_{A_j}$ kuuluu perheeseen
 Olkoon $X$ joukko ja 
 $(f_i)_{i\in I} $ joukon $X$ pseudometriikkaperhe. 
 Olkoon lisäksi $g\colon X\times X\rightarrow [0,\infty]$, 
-$g(x,y)=\sup_{i\in I} f_i(x,y)$ kaikilla $x,y\in X$ 
+$g(x,y)=\sup_{i\in I} f_i(x,y)$ kaikilla $x,y\in X$, 
 joukon $X$ pseudometriikka. 
 Mikäli indeksijoukko $I$ on äärellinen on perheen $(f_i)_{i\in I}$ määräämä 
 %uniformiteetti on sama kuin pseudometriikan $\sup_{i\in I} f_i$ määräämä.
@@ -1227,12 +1236,12 @@ määräämän uniformiteetin kanta on siis
 $$B_g=\left\{g^\leftarrow[0,a]\subset X\times X\mid a\in\,]0,\infty]\right\}
 =\left\{\bigcap_{i\in I} f_i^\leftarrow[0,a]\subset X\times X\mid a\in\,]0,\infty]\right\}.$$
 Lauseen \ref{pseudo_uniformi_maar} nojalla jokaisella $i\in I$ 
-alkukuvat $f_i^\leftarrow[0,a]$, $a\in\,]0,\infty]$ 
+alkukuvat $f_i^\leftarrow[0,a]$, kun $a\in\,]0,\infty]$, 
 muodostavat kannan uniformiteetille $\U_{f_i}$. 
 %Nyt $B_f\subset B_g$, koska  $ f_i^\leftarrow[0,a]\in\U_{f_i}$ 
 %kaikilla $i\in I$ ja $a\in [0,\infty]$. 
 Erityisesti jokaiselle $V_i\in\U_{f_i}$ löytyy $a\in \,]0,\infty]$, 
-jolla $ f_i^\leftarrow[0,a]\subset V_i$.
+jolla $ {f_i^\leftarrow[0,a]\subset V_i.}$
 Näin ollen kannan $B_g$ määrittelemälle uniformiteetille $\U_g$ pätee 
 \begin{equation*}
 \begin{split}
@@ -1248,7 +1257,7 @@ Siis $\U_{f}= \U_{g}$.
 \end{proof}
 \end{lause}
 \begin{kor}
-Olkoon uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
+Olkoot uniformiteetit $\U$ ja $\U'$ saturoitujen perheiden 
 $(f_i)_{i\in I}$ ja $(g_j)_{j\in J}$ määräämiä. 
 Uniformiteetti $\U$ on karkeampi kuin uniformiteetti $\U'$, 
 jos jokaisella $i\in I$ ja $a\in\,]0,\infty]$ löytyy $j\in J$ ja $b\in\,]0,\infty]$, 
@@ -1371,9 +1380,9 @@ Olkoon $g\colon X\times X\rightarrow [0,\infty]$ kuvaus, jolla
 \begin{equation*}
 g(x,y)=
 \begin{cases}
-0&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\geq 1, \\
-1&\text{, jos }(x,y)\not\in U_1, \\
-2^{-k}&\text{, jos }(x,y)\in U_n\text{ kaikilla }n\leq k 
+0,&\text{ jos }(x,y)\in U_n\text{ kaikilla }n\geq 1, \\
+1,&\text{ jos }(x,y)\not\in U_1, \\
+2^{-k},&\text{ jos }(x,y)\in U_n\text{ kaikilla }n\leq k 
 \text{ ja } (x,y)\not\in U_{k+1}.
 \end{cases}
 \end{equation*}
@@ -1381,7 +1390,7 @@ Nyt $g$ on symmetrinen, positiivinen ja $g(x,x)=0$ kaikilla $x\in X$.
 
 Olkoon nyt $f\colon X\times X\rightarrow [0,\infty]$ kuvaus, 
 jolla 
-$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1}),$$
+$$f(x,y)=\inf\sum_{i=0}^{p-1}g(z_i,z_{i+1})\quad\text{ kaikilla }x,y\in X,$$
 missä $p\in\N,p\geq 1$ ja $(z_i)_{0\leq i\leq p}$ 
 joukon $X$ alkioista muodostuva jono, jossa $z_0=x$ ja $z_p=y$. 
 Kuvauksen $f$ määrittelystä seuraa, 
@@ -1400,8 +1409,8 @@ Kaavan \ref{numeroituvakantapm} vasen puoli,
 eli $\frac{1}{2}\,g(x,y)\leq f(x,y)$ 
 osoitetaan induktion avulla. 
 Olkoon $p\in\N$ luonnollinen luku. 
-Nyt jokaisella $p+1$ alkion jonolla joukon $X$ 
-alkioita $ (z_i)_{0\leq i\leq p}$, 
+Nyt jokaisella $p+1$ alkion jonolla $ (z_i)_{0\leq i\leq p}$ joukon $X$ 
+alkioita, 
 jolla $z_0=x$ ja $z_p=y$, saadaan induktio-oletukseksi 
 \begin{equation}\label{numeroituvakantapm2}
 \sum_{i=0}^{p-1}g(z_i,z_{i+1})\geq \frac{1}{2}\,g(x,y).
@@ -1488,13 +1497,13 @@ kun kaikki osa\-jou\-kon alkiot ovat
 tarpeeksi lähellä toisiaan kyseisen lähistön suhteen (huomautus \ref{V-close}). 
 Näin saadaan seuraava määritelmä.
 \begin{maar}
-Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
+Olkoot $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
 Osajoukko $A\subset X$ on \emph{$V-$pieni}, jos 
 jokaisella pisteparilla $x,y\in A$ pätee $(x,y)\in V$, eli jos $A\times A\subset V$.
 \end{maar}
 \begin{lause}
-Olkoon $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
-Olkoon lisäksi $A\subset X$ ja $B\subset X$ $V-$pieniä osajoukkoja, 
+Olkoot $X$ joukko, $\U$ uniformiteetti joukolle $X$ ja $V\in\U$ lähistö. 
+Olkoot lisäksi $A\subset X$ ja $B\subset X$ $V-$pieniä osajoukkoja, 
 joiden leikkaus on epätyhjä. 
 Tällöin yhdiste $A\cup B$ on $V^2-$pieni.
 \begin{proof}
@@ -1557,7 +1566,7 @@ Jos $W\in \F_B$, niin on olemassa sellainen $V\in B$, jolla pätee $V\subset W$.
 Toisaalta jos osajoukolle $W'\subset X$ pätee $V\subset W \subset W'$, 
 niin $W'\in\F_B$. \\
 Siis jos $W\in \F_B$ ja $W\subset W'\subset X$ niin $ W'\in\F_B$.
-\item[\ref{F_II}] Olkoon $W\in\F_B$ ja $W'\in\F_B$ joukkoja. 
+\item[\ref{F_II}] Olkoot $W\in\F_B$ ja $W'\in\F_B$ joukkoja. 
 Joukon $\F_B$ määrittelyn nojalla tällöin on olemassa 
 sellaiset $V\in B$ ja $V'\in B$, 
 joille pätee $V\subset W$ ja $V'\subset W'$ ja 
@@ -1587,8 +1596,8 @@ jos $\F_1$ on sekä hienompi että karkeampi kuin $\F_2$.
 \end{maar}
 \begin{lause}\label{filtterikantavertailu}
 %\emph{Filttereiden vertailu kantojen avulla.}
-Olkoon $X$ joukko ja $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
-Olkoon lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
+Olkoon $X$ joukko sekä olkoot $\F_1$ ja $\F_2$ filttereitä joukolle $X$. 
+Olkoot lisäksi $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
 %Tällöin filtteri $\F_2$ on karkeampi kuin filtteri $\F_1$ 
 Tällöin filtteri $\F_1$ on hienompi kuin filtteri $\F_2$ 
 jos ja vain jos jokaiselle $A_2\in B_2$ löytyy 
@@ -1597,7 +1606,7 @@ sellainen $A_1\in B_1$, jolla $A_1\subset A_2$.
 Olkoon $X$ joukko, $\F_1$ ja $\F_2$ filttereitä joukolle $X$, 
 $B_1$ kanta filtterille $\F_1$ ja $B_2$ kanta filtterille $\F_2$. 
 \begin{enumerate}
-\item[$\Rightarrow$] 
+\item[''$\Rightarrow$''] 
 Olkoon filtteri $\F_1$ on hienompi kuin filtteri $\F_2$, eli $\F_2\subset \F_1$. 
 Olkoon $A_2\in B_2$ alkio. 
 Tällöin pätee $A_2\in \F_1$, 
@@ -1606,7 +1615,7 @@ Näin ollen filtterin kannan määritelmän nojalla
 alkiolle $A_2\in \F_1$ löytyy kannan $B_1$ 
 alkio $A_1$, jolla $A_1\subset A_2$.
 %jokaisella $A_2\in B_2$ pätee $A_2\in \F_2$ 
-\item[$\Leftarrow$] 
+\item[''$\Leftarrow$''] 
 Oletetaan, että 
 jokaiselle $A_2'\in B_2$ löytyy 
 sellainen $A_1'\in B_1$, jolla $A_1'\subset A_2'$. 
@@ -1774,10 +1783,10 @@ tulos, jossa täysin säännöllinen avaruus upotetaan yksikkövälien tuloon.
 Lisätietoja tämän luvun aiheista löytyy kirjoista \cite[luku~IX]{Eom2} ja \cite{Dugu}.
 %teoksista General Topology part 2 \cite{Eom2} luvuista IX ja Dugundji: Topology \cite{Dugu}.
 \begin{maar}
-Olkoon $(X,\T)$ topologinen avaruus ja 
-$\U$ uniformiteetti joukolle $X$. 
+Olkoot $(X,\T)$ topologinen avaruus, 
+$\U$ uniformiteetti joukolle $X$ ja 
 %Olkoon $X$ joukko, $\T$ topologia $X$:lle ja $\U$ uniformiteetti $X$:lle.
-Olkoon lisäksi $\T_{\U}$ uniformiteetin $\U$ indusoima topologia joukolle $X$. 
+$\T_{\U}$ uniformiteetin $\U$ indusoima topologia joukolle $X$. 
 %(Huom \ref{unif_indusoitu_topo}) 
 Uniformiteetti $\U$ on \emph{yhteensopiva} topologian $\T$ kanssa, 
 %jos uniformiteetin $\U$ indusoima topologia 
@@ -1789,7 +1798,7 @@ jos topologiat $\T_{\U}$ ja $\T$ ovat samoja.
 %
 %\end{kor}
 \begin{maar}
-Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva} (uniformizable), jos joukolle $X$ voidaan muodostaa topologian $\T$ kanssa yhteensopiva uniformiteetti.
+Topologinen avaruus $(X,\T)$ on \emph{uniformisoituva} (uniformizable), jos joukolle $X$ on olemassa topologian $\T$ kanssa yhteensopiva uniformiteetti.
 \end{maar}
 \begin{lause}\label{unizable}
 Olkoon $(X,\T)$ topologinen avaruus.
@@ -1851,7 +1860,10 @@ Topologinen avaruus on \emph{Hausdorff}, jos jokaisella kahdella eri pisteellä 
 \begin{maar}
 %\emph{Säännöllinen} avaruus on topologinen avaruus, jossa jokaisella suljetulla joukolla ja jokaisella pisteellä on erilliset ympäristöt.
 Topologinen avaruus $X$ on \emph{säännöllinen} (regular), 
-jos jokaisella suljetulla joukolla $A\subset X$ ja jokaisella pisteellä $x\in X,x\not\in A$ on erilliset ympäristöt.
+jos jokaisella suljetulla joukolla $A\subset X$ ja jokaisella pisteellä 
+%$x\in X,x\not\in A$ 
+$x\in X\setminus A$ 
+on erilliset ympäristöt.
 \end{maar}
 
 \begin{maar}
@@ -1897,7 +1909,7 @@ Käytämme koko luvun ajan joukon $P^X$ alkioista merkintää $\{t_f\}$ tarkoitt
 \end{sopimus}
 
 \begin{lause}
-\emph{Tihonovin lause.} Kompaktien avaruuksien mielivaltainen tulo on kompakti.
+\emph{Tihonovin lause.} Kompaktien avaruuksien mielivaltainen tulo (tulotopologialla varustettuna) on kompakti.
 \begin{proof}
 Topologia II \cite{Topo2} Lause 18.4.
 \end{proof}
@@ -1921,7 +1933,8 @@ Tällöin $X$ voidaan upottaa yksikkövälien tuloon $P^X$.
 %on olemassa kaavalla $\rho(x)=\prod_{f\in I^X}(f(x)),x\in X $ määritelty upotus $\rho\colon X\rightarrow P^X$. 
 %on olemassa 
 Erityisesti kaavalla $\rho(x)=\{f(x)_f\}$, $x\in X $ määritelty 
-kuvaus $\rho\colon X\rightarrow \rho X\subset P^X$ on homeomorfismi. 
+%kuvaus $\rho\colon X\rightarrow \rho X\subset P^X$ on homeomorfismi.
+kuvaus $\rho\colon X\rightarrow P^X$ on upotus. 
 %Tällöin on olemassa upotus $\rho\colon X\rightarrow P^X$, 
 %joka on määritelty kaavalla $\rho(x)=\prod_{f\in I^X}(f(x))$ kaikilla $x\in X $.
 \begin{proof}
@@ -1933,8 +1946,10 @@ P^X$ kuvaus,
 joka on määritelty kaavalla $\rho(x)=\{f(x)_f\}$ kaikilla $x\in X $. 
 %Kuvaus $\rho$ on upotus, jos se on injektio, jatkuva ja avoin. 
 Kuvaus $\rho$ on homeomorfismi, jos se on injektiivinen, jatkuva ja avoin kuvaus. 
+%Kuvaus $\rho'$ on upotus, jos kuvaus $\rho\colon X\rightarrow \rho' X$, 
+%joka on määritelty kaavalla $\rho(x)=\rho'(x)$ kaikilla $x\in X $ on injektiivinen, jatkuva ja avoin kuvaus. 
 
-Ensinnäkin kuvaus $\rho$ on injektio: 
+Osoitetaan ensin, että kuvaus $\rho$ on injektio. 
 %Riittää osoittaa, että jokin $f\in I^X$ on 
 Olkoon $x,y\in X, x\neq y$. 
 Avaruus $X$ on Hausdorff, 
@@ -1962,14 +1977,14 @@ $P_f\circ\rho\colon X\rightarrow I_f$, joilla $P_f\circ\rho=f\in I^X$
 ovat jatkuvia. 
 Näin ollen myös kuvaus $\rho$ on jatkuva \cite[lause~7.10]{Topo2}. 
 
-Viimeiseksi kuvaus $\rho$ on myös avoin: 
-Avointen osajoukkojen perhe 
+Osoitetaan lopuksi, että kuvaus $\rho$ on myös avoin. 
+Osoitetaan tätä varten, että avointen osajoukkojen perhe 
 %$$(U_f)_{f\in I^X},\quad\text{ jossa } U_f=f^\leftarrow [0,1[\subset X\text{ kaikilla }  f\in I^X$$
-$(U_f)_{f\in I^X}$ missä ${U_f=f^\leftarrow [0,1[\subset X}$ kaikilla $ f\in I^X$ 
+$(U_f)_{f\in I^X}$, missä ${U_f=f^\leftarrow [0,1[\subset X}$ kaikilla $ f\in I^X$ 
 %\begin{equation*}
 %(U_f)_{f\in I^X}\quad\text{ missä }U_f=f^\leftarrow [0,1[\subset X\text{ kaikilla } f\in I^X 
 %\end{equation*}
-muodostaa ympäristökannan: 
+muodostaa ympäristökannan. 
 Avoimelle osajoukolle $U\subset X$ ja sen alkiolle $x\in U$ 
 on olemassa kuvaus $f_1\in I^X$, 
 jolla $f_1(x)=0$ ja $f_1(y)=1,y\in X\setminus U$. 
@@ -1998,8 +2013,8 @@ Tällöin on olemassa yksikäsitteinen jatkuva kuvaus $g\colon \rho X\rightarrow
 \end{lem}
 \begin{lause}\label{kommutoiva_kaavio}
 Olkoot $X$ ja $Y$ täysin säännöllisiä avaruuksia ja $h\colon X\rightarrow Y$ jatkuva kuvaus. 
-Tällöin on olemassa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$ niin, 
-että oheinen kaavio kommutoi.
+Tällöin on olemassa sellainen jatkuva kuvaus $H\colon P^X\rightarrow P^Y$, 
+jolla kaavio 
 \begin{equation*}
 \begin{tikzpicture}
 \matrix (m) 
@@ -2014,6 +2029,7 @@ P^X & P^Y \\
 (m-1-2) edge node [right] {$\rho_1$} (m-2-2);
 \end{tikzpicture}
 \end{equation*}
+kommutoi. 
 Erityisesti $H\vert_{\overline{\rho X}}\colon \overline{\rho X}\rightarrow \overline{\rho_1 Y}$. 
 %eli $H\overline{\rho X}\subset \overline{\rho_1 Y}$.
 \begin{proof}
@@ -2026,7 +2042,7 @@ voidaan määritellä kuvaus $h_g\colon P^X\rightarrow I_g$.
 Nyt $h_g$ on projektiokuvaus, joka samaistaa yksikkövälit $I_g$ ja $I_{g\circ h}$. 
 %Näin ollen tullaan samaistaneeksi yksikkövälit $I_g$ ja $I_{g\circ h}$ projektiokuvauksella $h_g$. 
 Kuvaus $h_g$ on jatkuva, joten kaavalla 
-$$H\left(\{t_f\}\right)=\{h_g\left(\{t_f\}\right)\},\quad\{t_f\}\in P^X$$ 
+$$H\left(\{t_f\}\right)=\{h_g\left(\{t_f\}\right)\},\quad\text{ missä }\{t_f\}\in P^X,$$ 
 voidaan muodostaa jatkuva kuvaus $H\colon P^X\rightarrow P^Y$. 
 Nyt kuvauksen $H$ määrittelyn nojalla pätee 
 $$(H\circ \rho)(x)=(H ( \rho(x)))=H(\{f(x)\})=\{h_g(\{f(x)\})\}=\{((g\circ h)(x))_g\}$$
@@ -2062,11 +2078,20 @@ että $\hat{X}$ on avaruuden $X$ kompaktisointi.
 \end{huom}
 
 \begin{lem}
-Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ lauseen \ref{comp_reg_upotus} mukainen upotus missä $P^X$ on yksikkövälien tulona kompakti. 
-Erityisesti $\overline{\rho X}$ on kompaktin joukon suljettuna osajoukkona kompakti. 
+Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ lauseen \ref{comp_reg_upotus} mukainen upotus. 
+%missä $P^X$ on yksikkövälien tulona kompakti. 
+Tällöin sulkeuma $\overline{\rho X}$ on kompaktin avaruuden suljettuna osajoukkona kompakti. 
+\qed
+\end{lem}
+
+\begin{maar}
+\emph{Stone-Čech kompaktisointi.} 
+Olkoon $X$ täysin säännöllinen avaruus ja $\rho\colon X\rightarrow P^X$ lauseen \ref{comp_reg_upotus} mukainen upotus. 
+%missä $P^X$ on yksikkövälien tulona kompakti. 
 Merkitään $\beta X=\overline{\rho X}$ ja sanotaan, 
 että pari $(\beta X,\rho)$ on avaruuden $X$ \emph{Stone-Čech kompaktisointi}.
-\end{lem}
+\end{maar}
+
 \begin{lause}\label{SC-ominaisuus}
 Olkoon $X$ täysin säännöllinen avaruus. 
 %ja $(\beta X,\rho)$ avaruuden $X$ Stone-Čech kompaktisointi. 
@@ -2075,7 +2100,7 @@ Avaruuden $X$ Stone-Čech kompaktisoinnille $(\beta X,\rho)$ pätee seuraava omi
 %1
 \begin{itemize}
 \item
-Jokaiselle kompaktille $Y$ ja jokaiselle jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ on olemassa yksikäsitteinen jatkuva kuvaus $F\colon\beta X\rightarrow Y$ niin, että $f=F\circ \rho$.
+Jokaiselle kompaktille $Y$ ja jokaiselle jatkuvalle kuvaukselle $f\colon X\rightarrow Y$ on olemassa sellainen yksikäsitteinen jatkuva kuvaus $F\colon\beta X\rightarrow Y$, jolla $f=F\circ \rho$.
 \end{itemize}
 \begin{proof}
 Olkoon $X$ täysin säännöllinen avaruus, $Y$ kompakti avaruus ja 
