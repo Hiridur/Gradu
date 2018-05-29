@@ -918,13 +918,13 @@ Lauseen \ref{uniformin kannan maar} ehdot pätevät:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 %Olkoon $a_1,a_2\in\R$ ja $a_3=\min(a_1,a_2)$ reaalilukuja. Tällöin $U_{a_3}\subset U_{a_1}\cap U_{a_2}$
-Olkoon $a_1,a_2\in\,]0,\infty]$ lukuja, joilla $a_1\leq a_2$. Tällöin kaavasta $|x-y|\leq a_1$ seuraa $|x-y|\leq a_2$ kaikilla $x,y\in\R$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
+Olkoot $a_1,a_2\in\,]0,\infty]$ lukuja, joilla $a_1\leq a_2$. Tällöin kaavasta $|x-y|\leq a_1$ seuraa $|x-y|\leq a_2$ kaikilla $x,y\in\R$. Näin ollen $\, U_{a_1}\subset U_{a_2}$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
 Olkoon $x\in\R^n$. Tällöin kaikilla $a\in\,]0,\infty]$ pätee $|x-x|=0< a$, joten joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $U_a\in B$ osajoukko,
 %Joukko $\{(x,x)\mid x\in X\}$ on jokaisen joukon $V\in B$ osajoukko,
 \item%\ref{U'_II} 
-Olkoon $x',y'\in\R^n$ ja $a\in\,]0,\infty]$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
+Olkoot $x',y'\in\R^n$ ja $a\in\,]0,\infty]$. Tällöin jos $|x'-y'|\leq a$ niin myös $|y'-x'|\leq a$. Näin ollen 
 %Olkoon $a\in[0,\infty]$ ja $(x,y)\in U_a$. Tällöin koska $(x,y)\in U_a$ niin $|x'-y'|\leq a$ ja koska $U_a\subset \R^n\times\R^n$ niin $|y'-x'|\leq a$. Näin ollen 
 \begin{align*}
 U_a=&\{ (x,y)\mid x,y\in\R^n,|x-y|\leq a\}\\
@@ -940,14 +940,16 @@ joilla $(x,z),(z,y)\in U_a$,
 eli $|x-z|\leq a$ ja $|z-y|\leq a$.
 %Kolmioepäyhtälön $|x-y|\leq |x-z|+|z-y|$ nojalla . 
 Tällöin kolmioepäyhtälön avulla saadaan 
-$$|x-y|\stackrel{\triangle-\text{ey} }{\leq} |x-z|+|z-y|\leq a+a=2a,$$ 
+$$|x-y|
+%\stackrel{\triangle-\text{ey} }{\leq} 
+\leq|x-z|+|z-y|\leq a+a=2a,$$ 
 eli $|x-y|\leq 2a$. Tästä seuraa, että $ U_a^2\subset U_{2a} $, joten jokaiselle luvun $b\in[0,\infty]$ määräämälle joukolle $U_b$ löytyy joukko $U_{b/2}$, jolla $U_{b/2}^2\subset U_b$.
 %Jos $V\in B$, niin on olemassa sellainen $W\in B$, jolla $ W^2\subset V$.%$ W\circ W\subset V$.
 \end{enumerate}
 Siis kokoelma $B=\{U_a\mid a\in\,]0,\infty]\}$ muodostaa joukon $\R^n$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
-\noindent Edeltävää lausetta voidaan yleistää seuraavasti: 
+\noindent Edeltävää lausetta voidaan yleistää seuraavasti. 
 \begin{lause}\label{pseudo_uniformi_maar}
 Olkoon $X$ joukko ja $f$ pseudometriikka joukolle $X$. Tällöin pseudometriikka $f$ määrittelee sellaisen uniformiteetin joukolle $X$, jonka kannan muodostaa kokoelma $$B=\{ f^{\leftarrow}[0,a]\subset X\times X\mid a\in\,]0,\infty]\}.$$
 \begin{proof}
@@ -958,7 +960,7 @@ käydään läpi lauseen \ref{uniformin kannan maar} ehdot:
 \begin{enumerate} [label=(B\arabic*)]
 \item %\ref{B_I} 
 Olkoot $a_1,a_2\in\,]0,\infty]$ lukuja, joilla $a_1\leq a_2$. 
-Tällöin pätee $$U_{a_1}=f^{\leftarrow}[0,a]\subset f^{\leftarrow}[0,b]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
+Tällöin pätee $$U_{a_1}=f^{\leftarrow}[0,a_1]\subset f^{\leftarrow}[0,a_2]=U_{a_2}$$ ja siis $U_{a_1}\subset U_{a_1}\cap U_{a_2}$,
 %Jos $V_1,V_2\in B$ niin on olemassa sellainen $V_3\in B$, jolla $V_3\subset V_1\cap V_2$,
 \item%\ref{U'_I} 
 Kuvaus $f$ on pseudometriikka, joten pseudometriikan määritelmän \ref{pseudo_maar} ehdon \ref{EC_I} nojalla kaikilla $x\in X$ pätee $f(x,x)=0$. 
@@ -985,20 +987,21 @@ $ muodostaa joukon $X$ uniformiteetin kannan.
 \end{proof}
 \end{lause}
 \begin{maar}\label{pseudo_equiv}
-Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
+Olkoon $X$ joukko sekä $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Tällöin lauseen \ref{pseudo_uniformi_maar} nojalla 
 pseudometriikat $f$ ja $g$ määrittelevät jotkut uniformiteetit joukolle $X$.
 %kokoelmat $B_f=\{ f^{\leftarrow}[0,a]\mid a\in\,]0,\infty]\}$ ja $B_g=\{ g^{\leftarrow}[0,a]\mid a\in\,]0,\infty]\}$ ovat uniformiteettien kantoja joukolle $X$. 
 Pseudometriikat $f$ ja $g$ ovat \emph{ekvivalentteja}, jos ne määräävät saman uniformiteetin.
 \end{maar}
 \begin{kor}
-Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
+Olkoon $X$ joukko sekä $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmästä \ref{pseudo_equiv} seuraa, että pseudometriikan $f$ määräämä uniformiteetti 
 $\U_f$ 
 on karkeampi kuin pseudometriikan $g$ määräämä uniformiteetti $\U_g$, jos ja vain jos jokaiselle 
-$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, jolla $g(x,y)\leq b \Rightarrow f(x,y)\leq a$ kaikilla $x,y\in X$.
+$a\in\,]0,\infty]$ on olemassa sellainen $b\in\,]0,\infty]$, 
+jolla pätee $f(x,y)\leq a$, jos $g(x,y)\leq b$ kaikilla $x,y\in X$.
 
-Jos lisäksi jokaiselle $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$, jolla $f(x,y)\leq b \Rightarrow g(x,y)\leq a$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
+Jos lisäksi jokaiselle $a\in\,]0,\infty]$ on olemassa $b\in\,]0,\infty]$, jolla pätee $g(x,y)\leq a$, jos $f(x,y)\leq b$ kaikilla $x,y\in X$, niin $f$ ja $g$ ovat ekvivalentteja pseudometriikoita.
 \begin{proof}
 Olkoon $X$ joukko ja $f$ ja $g$ pseudometriikoita joukolle $X$. 
 Määritelmän \ref{pseudo_uniformi_maar} mukaan pseudometriikan $f$ määrittelemän uniformiteetin $\U_f$ kannan muodostaa kokoelma 
